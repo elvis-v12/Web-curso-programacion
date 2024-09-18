@@ -1,0 +1,30 @@
+.novedades {
+        max-height: 1000px;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        width: 90%;
+        background-color: aqua;
+}
+
+.novedades__item {
+        height: 400px;
+}
+
+.novedades__item-header {}
+
+.novedades__item-header>img {
+        width: 100px;
+}
+
+.novedades__item-content {}
+
+.novedades__item-info {}
+
+.novedades__item-title {}
+
+.novedades__item-description {}
+
+.novedades__item-footer {}
+
+.novedades__item-border {}
