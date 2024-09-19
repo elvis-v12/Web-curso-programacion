@@ -1,4 +1,4 @@
-import { Novedad } from "/model/Novedad.js";
+import { Novedad } from "../model/Novedad.js";
 
 export class NovedadService {
         static findAll = async () => {

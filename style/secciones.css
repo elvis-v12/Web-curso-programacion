@@ -4,7 +4,7 @@
         justify-content: center;
         gap: 30px;
         padding: 70px 0;
-        margin: 50px;
+        margin: 50px 0;
 }
 
 .secciones__item {
@@ -43,4 +43,39 @@
         background-color: #ffff;
         border-radius: 15px;
         padding: 5px 15px;
+}
+
+@media screen and (max-width:570px) {
+        .secciones__item-url {
+                font-size: 15px;
+        }
+
+        .secciones__item-info {
+                padding: 0;
+                margin: 0;
+        }
+
+}
+
+@media screen and (min-width:571px) {
+        .secciones__item-info {
+                padding: 0 20px;
+        }
+}
+
+@media screen and (max-width:1240px) {
+        .secciones {
+
+                flex-direction: column;
+                align-items: center;
+        }
+
+        .secciones__item {
+                width: 50%;
+        }
+
+        .secciones__item-url {
+                gap: 0;
+                justify-content: space-between;
+        }
 }
