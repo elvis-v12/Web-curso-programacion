@@ -7,10 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
         obtenerDetalleCurso(code)
                 .then(curso => {
                         titleHTML.textContent = curso.name;
-
                         renderHeader(curso);
-                        // newTitle(curso);
-
+                        renderMain(curso)
                 })
                 .catch(error => {
                         console.error(error)
@@ -23,7 +21,7 @@ const getStrella = () => {
      width="10px" height="10px" viewBox="0 0 10 10"
      preserveAspectRatio="xMidYMid meet">
      <g transform="translate(0.000000,10.000000) scale(0.00078125,-0.00078125)"
-     fill="#ffee00" stroke="none">
+     fill="#00c3ff" stroke="none">
      <path d="M6327 11292 c-60 -180 -161 -489 -227 -687 -65 -198 -233 -709 -373
      -1135 -141 -426 -367 -1114 -503 -1527 l-248 -753 -2358 0 c-1297 0 -2358 -3
      -2358 -7 0 -5 170 -130 378 -279 207 -149 1057 -758 1887 -1353 831 -596 1518
@@ -40,12 +38,20 @@ const getStrella = () => {
 }
 
 const renderHeader = curso => {
-        const header = document.querySelector(".header")
+        // secciones: 
+        const headerHTML = document.querySelector(".header")
+        const habilidadesHTML = document.querySelector(".habilidades");
+        const detallesHTML = document.querySelector(".detalles");
+        const ventajasHTML = document.querySelector(".ventajas");
+        const contenidoHTML = document.querySelector(".contenido");
+        const requisitosHTML = document.querySelector(".requisitos");
+        const descriptionHTML = document.querySelector(".descripcion");
+
         const data = document.createElement("div");
         data.classList.add("header__data")
         data.innerHTML = `
                 <h1 class="header__title">${curso.name}</h1>
-                <p class="header__description">${curso.description}</p>
+                <p class="header__description">${curso.shortDescription}</p>
                 <ul class="header__calification">
                         <li class="header__calification-score">Puntuación ${curso.score} ${getStrella()}${getStrella()}${getStrella()}${getStrella()}${getStrella()}</li>
                         <li class="header__calification-votes">(${curso.votes} votos)</li>
@@ -57,9 +63,38 @@ const renderHeader = curso => {
                         <span class="header__info-language">(${curso.language})</span>
                 </p>
         `;
-        header.appendChild(data);
+        headerHTML.appendChild(data);
+
+        const inner = (section, data, name, title) => {
+                if (data) {
+                        if (!title) {
+                                title = name;
+                        }
+                        section.innerHTML = `
+                        <h2 class="${name}__title">${title}:</h2>
+                        <div class="${name}__content content">${data}</div>`;
+                } else {
+                        section.remove();
+                }
+        }
+
+        inner(habilidadesHTML, curso.habilidades, "habilidades", "Habilidades Obtenidas:");
+        inner(detallesHTML, curso.detalles, "detalles", "Detalles");
+        inner(ventajasHTML, curso.ventajas, "ventajas", "Ventajas");
+        inner(contenidoHTML, curso.contenido, "contenido", "Contenido del Curso:");
+        inner(requisitosHTML, curso.requisitos, "requisitos", "Requisitos");
+        inner(descriptionHTML, curso.description, "description", "Descripción");
+        const contentStyle = document.querySelectorAll("main > section")
+        contentStyle.forEach((element, index) => {
+                if (index % 2 != 0) {
+                        element.classList.add("content-impar");
+                }
+        });
 }
 
+const renderMain = curso => {
+
+}
 const obtenerDetalleCurso = async code => {
         try {
                 let peticion = await fetch("/data/dataCourseDetails.json");
@@ -71,7 +106,6 @@ const obtenerDetalleCurso = async code => {
 
                 return new Curso(
                         detalleCurso.id,
-                        detalleCurso.url,
                         detalleCurso.author,
                         detalleCurso.name,
                         detalleCurso.score,
@@ -79,11 +113,15 @@ const obtenerDetalleCurso = async code => {
                         detalleCurso.votes,
                         detalleCurso.price,
                         detalleCurso.pricePrevous,
-                        detalleCurso.portada,
                         detalleCurso.matriculados,
                         detalleCurso.lastUpdate,
                         detalleCurso.language,
-                        detalleCurso.description
+                        detalleCurso.description,
+                        detalleCurso.shortDescription,
+                        detalleCurso.requisitos,
+                        detalleCurso.habilidades,
+                        detalleCurso.detalles,
+                        detalleCurso.ventajas
                 );
         } catch (error) {
                 console.log(error)

@@ -2,14 +2,11 @@
         margin: 0;
 }
 
-body {
-        font-family: Consolas, Arial, Helvetica, sans-serif;
-}
-
 .header {
+        font-family: System-ui, Helvetica, sans-serif;
         padding: 30px 0;
-        color: #e4e4e4;
-        background-color: rgb(0, 0, 90);
+        color: #ffffff;
+        background-color: #00003d;
 }
 
 .header__data {
@@ -38,5 +35,86 @@ body {
         gap: 20px;
         font-size: .8rem;
         margin: 10px 0;
-        color: #ffee00;
+        font-weight: bold;
+        color: #00c3ff;
+}
+
+main {
+        font-family: System-ui, Helvetica, sans-serif;
+        margin: 60px 0 50px 0;
+}
+
+.habilidades,
+.detalles,
+.ventajas,
+.contenido,
+.requisitos,
+.descripcion {
+        width: 100vw;
+        padding: 20px 13vw;
+}
+
+.habilidades__title,
+.detalles__title,
+.ventajas__title,
+.contenido__title,
+.requisitos__title,
+.description__title {
+        color: #001c77;
+}
+
+.habilidades__content,
+.detalles__content,
+.ventajas__content,
+.contenido__content,
+.requisitos__content,
+.description__content {
+        width: 640px;
+        line-height: 1.8rem;
+        margin: 10px 0;
+        font-size: .90rem;
+}
+
+.detalles__content span {
+        display: inline-block;
+        width: 50%;
+}
+
+.detalles__content span::before {
+        content: '•';
+        font-size: 15px;
+        margin-right: 10px;
+
+}
+
+.form__buy {
+        position: absolute;
+        top: 330px;
+        height: 100vh;
+        right: 30px;
+
+}
+
+.form__buy input[type="submit"] {
+        border-radius: 5px;
+        border: none;
+        padding: 10px 25px;
+        outline: none;
+        background: #00c3ff;
+        transition: background .3s;
+        font-weight: bold;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: .85em;
+        cursor: pointer;
+        position: sticky;
+        top: 10px;
+}
+
+
+.form__buy input[type="submit"]:hover {
+        background: #42d3ff;
+}
+
+.content-impar {
+        background-color: #e2e2e2;
 }
