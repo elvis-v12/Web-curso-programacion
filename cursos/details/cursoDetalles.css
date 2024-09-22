@@ -1,0 +1,42 @@
+* {
+        margin: 0;
+}
+
+body {
+        font-family: Consolas, Arial, Helvetica, sans-serif;
+}
+
+.header {
+        padding: 30px 0;
+        color: #e4e4e4;
+        background-color: rgb(0, 0, 90);
+}
+
+.header__data {
+        margin: auto;
+        position: relative;
+        width: 50%;
+        right: 15%;
+}
+
+.header__title {
+        font-weight: bold;
+        font-size: 2rem;
+}
+
+.header__description {
+        padding: 30px 0;
+        margin: auto;
+        width: 70%;
+        font-size: 1.25rem;
+}
+
+.header__calification {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        font-size: .8rem;
+        margin: 10px 0;
+        color: #ffee00;
+}

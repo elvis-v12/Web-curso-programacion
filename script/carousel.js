@@ -16,7 +16,7 @@ async function renderPopularItems(carousel) {
                                 const articlePopularItem = document.createElement('article');
                                 articlePopularItem.classList.add('popular__item');
                                 articlePopularItem.innerHTML = `
-                                        <a href="${popular.url}" class="popular__item-url">
+                                        <a href="${popular.url}?code=${popular.id}" class="popular__item-url">
                                         <header class="popular__item-header">
                                                 <img src="${popular.portada}" alt="${popular.name}">
                                         </header>
@@ -27,7 +27,6 @@ async function renderPopularItems(carousel) {
                                                                 <p class="popular__item-author">${popular.author}</p>
                                                                 <ul class="popular__item-calification">
                                                                         <li class="popular__item-score">${popular.score}</li>
-                                                                        <li class="popular__item-stars">${popular.stars}</li>
                                                                         <li class="popular__item-votes">(${popular.votes})</li>
                                                                 </ul>
                                                         </div>

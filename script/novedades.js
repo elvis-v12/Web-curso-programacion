@@ -1,6 +1,6 @@
 import { NovedadService } from "./service/NovedadService.js";
 document.addEventListener('DOMContentLoaded', () => {
-        const novedadesHTML = document.querySelector('.novedades');
+        const novedadesHTML = document.querySelector('.novedades__content');
         renderNovedadItems(novedadesHTML);
 })
 

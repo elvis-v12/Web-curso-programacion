@@ -3,7 +3,7 @@ import { Popular } from "../model/Popular.js";
 export class PortalService {
         static findAllPopular = async () => {
                 try {
-                        const response = await fetch('/pictures/dataCarousel.json');
+                        const response = await fetch('/data/dataCarousel.json');
                         const data = await response.json();
                         return data.map((jsonObject) => {
                                 return new Popular(
