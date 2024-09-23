@@ -87,7 +87,7 @@ const render = curso => {
 
         // contenido
         if (curso.sesiones) {
-                curso.innerHTML = `
+                contenidoHTML.innerHTML = `
                 <h2 class="contenido__title">Contenido del Curso:</h2>
                 <div class="contenido__content content"></div>`;
                 let contenidoContentHTML = document.querySelector(".contenido__content");
