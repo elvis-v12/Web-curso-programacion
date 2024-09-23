@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 .catch(error => {
                         console.error(error)
                 });
+        const btnComprarCurso = document.querySelector(".btn__buy");
+        btnComprarCurso.addEventListener('click', () => {
+                alert("Se compro")
+        })
+
 
 });
 
@@ -64,7 +69,11 @@ const render = curso => {
                         <span class="header__info-language">(${curso.language})</span>
                 </p>
         `;
+        const imgHeader = document.createElement("div");
+        imgHeader.classList.add("header__photo");
+        imgHeader.innerHTML = `<img src="../../pictures/image.png" alt="">`
         headerHTML.appendChild(data);
+        headerHTML.appendChild(imgHeader)
 
         const inner = (section, data, name, title) => {
                 if (data) {
@@ -101,7 +110,6 @@ const render = curso => {
                                         <span class="contenido__tema-duracion">${temas.duracion}</span>
                                 </p>`
                         })
-                        console.log(temasHTML)
                         sesionesListHTML += `
                                 <details class="contenido__item">
                                         <summary class="contenido__item-name">
