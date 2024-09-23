@@ -103,6 +103,103 @@ nav .search_box{
  nav .search_box  span:hover::after{
     width: 100%;
  }
+ /*Configuracion del Carito de compra*/
+
+
+.header-options a:nth-child(1){
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    
+}
+
+.header-options a:nth-child(3){
+    width: 15%;
+    height: 100%;
+    display: flex;
+    margin: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   padding: 2em;
+}
+
+.header-options .boton-menu {
+    background-color: transparent;
+    border: 0;
+    color: var(--clr-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    font-size: .85rem;
+    width: 100%;
+}
+
+.header-options .boton-menu.active {
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    position: relative;
+}
+
+.header-options .boton-menu.active::before {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    bottom: 100%;
+    right: 0;
+    background-color: transparent;
+    border-bottom-right-radius: .5rem;
+    box-shadow: 0 1rem 0 var(--clr-white);
+}
+
+.header-options .boton-menu.active::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    top: 100%;
+    right: 0;
+    background-color: transparent;
+    border-top-right-radius: .5rem;
+    box-shadow: 0 -1rem 0 var(--clr-white);
+}
+
+.header-options .boton-menu > i.bi-hand-index-thumb-fill,
+.header-options .boton-menu > i.bi-hand-index-thumb {
+    transform: rotateZ(90deg);
+}
+
+.header-options .boton-carrito {
+    margin-top: 8px;
+}
+
+.header-options  .numerito {
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    padding: .15rem .25rem;
+    border-radius: .25rem;
+}
+
+.header-options  .boton-carrito.active .numerito {
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+}
+
+.header-options .texto-footer {
+    color: var(--clr-main-light);
+    font-size: .85rem;
+}
+
+
  /*CONFIGURACION DEL CARUSEL*/
 .d-item{
     height: 500px;
