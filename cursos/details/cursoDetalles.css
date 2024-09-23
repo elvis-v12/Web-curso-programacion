@@ -50,7 +50,6 @@ main {
 .contenido,
 .requisitos,
 .descripcion {
-        width: 100vw;
         padding: 30px 13vw 20px 13vw;
 }
 
