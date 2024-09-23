@@ -1,4 +1,6 @@
 import { Curso } from "../../script/model/Curso.js";
+import { Contenido } from "../../script/model/SilaboCurso.js";
+import { Temas } from "../../script/model/SilaboCurso.js";
 
 document.addEventListener('DOMContentLoaded', () => {
         const urlParams = new URLSearchParams(window.location.search);
@@ -7,8 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         obtenerDetalleCurso(code)
                 .then(curso => {
                         titleHTML.textContent = curso.name;
-                        renderHeader(curso);
-                        renderMain(curso)
+                        render(curso);
                 })
                 .catch(error => {
                         console.error(error)
@@ -37,7 +38,7 @@ const getStrella = () => {
 </svg>`
 }
 
-const renderHeader = curso => {
+const render = curso => {
         // secciones: 
         const headerHTML = document.querySelector(".header")
         const habilidadesHTML = document.querySelector(".habilidades");
@@ -81,9 +82,41 @@ const renderHeader = curso => {
         inner(habilidadesHTML, curso.habilidades, "habilidades", "Habilidades Obtenidas:");
         inner(detallesHTML, curso.detalles, "detalles", "Detalles");
         inner(ventajasHTML, curso.ventajas, "ventajas", "Ventajas");
-        inner(contenidoHTML, curso.contenido, "contenido", "Contenido del Curso:");
         inner(requisitosHTML, curso.requisitos, "requisitos", "Requisitos");
         inner(descriptionHTML, curso.description, "description", "Descripción");
+
+        // contenido
+        if (curso.sesiones) {
+                curso.innerHTML = `
+                <h2 class="contenido__title">Contenido del Curso:</h2>
+                <div class="contenido__content content"></div>`;
+                let contenidoContentHTML = document.querySelector(".contenido__content");
+                let sesionesListHTML = "";
+                curso.sesiones.forEach(element => {
+                        let temasHTML = ""
+                        element.temas.forEach(temas => {
+                                temasHTML += `
+                                <p class="contenido__tema">
+                                        <span class="contenido__tema-name">${temas.name}</span>
+                                        <span class="contenido__tema-duracion">${temas.duracion}</span>
+                                </p>`
+                        })
+                        console.log(temasHTML)
+                        sesionesListHTML += `
+                                <details class="contenido__item">
+                                        <summary class="contenido__item-name">
+                                                <h3 class="contenido__item-title">${element.title}</h3>
+                                                <span class="contenido__item-duracion">${element.duracion}</span>
+                                        </summary>
+                                        ${temasHTML}
+                                </details>
+                        `
+                })
+                contenidoContentHTML.innerHTML = sesionesListHTML
+        } else {
+                contenidoHTML.remove();
+        }
+
         const contentStyle = document.querySelectorAll("main > section")
         contentStyle.forEach((element, index) => {
                 if (index % 2 != 0) {
@@ -92,9 +125,6 @@ const renderHeader = curso => {
         });
 }
 
-const renderMain = curso => {
-
-}
 const obtenerDetalleCurso = async code => {
         try {
                 let peticion = await fetch("/data/dataCourseDetails.json");
@@ -104,6 +134,18 @@ const obtenerDetalleCurso = async code => {
                 const data = await peticion.json()
                 let detalleCurso = data.find(element => element.id == code)
 
+                let sesionesDetalleCurso = detalleCurso.sesiones;
+                let sesionesProcesadas = []
+                sesionesDetalleCurso.forEach((element, indexSesiones) => {
+                        let temasDetalleCurso = element.temas;
+                        let temas = []
+                        temasDetalleCurso.forEach((t, indexTemas) => {
+                                temas[indexTemas] = new Temas(t.name, t.duracion)
+                        })
+                        sesionesProcesadas[indexSesiones] = new Contenido(element.title, element.duracion, temas)
+                })
+
+                new Contenido(detalleCurso.title, detalleCurso.duracion,)
                 return new Curso(
                         detalleCurso.id,
                         detalleCurso.author,
@@ -121,7 +163,8 @@ const obtenerDetalleCurso = async code => {
                         detalleCurso.requisitos,
                         detalleCurso.habilidades,
                         detalleCurso.detalles,
-                        detalleCurso.ventajas
+                        detalleCurso.ventajas,
+                        sesionesProcesadas
                 );
         } catch (error) {
                 console.log(error)

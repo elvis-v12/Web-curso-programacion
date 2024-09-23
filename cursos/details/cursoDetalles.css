@@ -41,7 +41,7 @@
 
 main {
         font-family: System-ui, Helvetica, sans-serif;
-        margin: 60px 0 50px 0;
+        margin: 20px 0 50px 0;
 }
 
 .habilidades,
@@ -51,22 +51,21 @@ main {
 .requisitos,
 .descripcion {
         width: 100vw;
-        padding: 20px 13vw;
+        padding: 30px 13vw 20px 13vw;
 }
 
 .habilidades__title,
 .detalles__title,
 .ventajas__title,
-.contenido__title,
 .requisitos__title,
 .description__title {
+        margin-bottom: 20px;
         color: #001c77;
 }
 
 .habilidades__content,
 .detalles__content,
 .ventajas__content,
-.contenido__content,
 .requisitos__content,
 .description__content {
         width: 640px;
@@ -74,6 +73,69 @@ main {
         margin: 10px 0;
         font-size: .90rem;
 }
+
+.contenido {
+        padding: 30px 0;
+}
+
+.contenido__title {
+        padding: 30px 13vw 20px 13vw;
+        margin-bottom: 20px;
+        color: #001c77;
+}
+
+.contenido__content {
+        margin: 30px auto;
+        width: 70%;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 4px 0px rgb(29, 29, 29);
+        line-height: 1.8rem;
+        font-size: .90rem;
+}
+
+.contenido__item {
+        background-color: #0c004e;
+        color: white;
+}
+
+.contenido__tema {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        background-color: #d4d4d4;
+        color: #111111;
+}
+
+.contenido__tema-name {
+        font-weight: bold;
+}
+
+.contenido__item-name {
+        position: relative;
+        padding: 25px 10px;
+        transition: background .1s, color .1s;
+        cursor: pointer;
+}
+
+.contenido__item-name:hover {
+        background-color: #ecc900;
+        color: #070707;
+}
+
+.contenido__item-title {
+
+        position: absolute;
+        display: inline-block;
+        left: 30px;
+}
+
+.contenido__item-duracion {
+        position: absolute;
+        display: inline-block;
+        right: 20px;
+}
+
 
 .detalles__content span {
         display: inline-block;
@@ -89,7 +151,7 @@ main {
 
 .form__buy {
         position: absolute;
-        top: 330px;
+        top: 35vh;
         height: 100vh;
         right: 30px;
 
@@ -100,7 +162,7 @@ main {
         border: none;
         padding: 10px 25px;
         outline: none;
-        background: #00c3ff;
+        background: #0099ff;
         transition: background .3s;
         font-weight: bold;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -112,7 +174,7 @@ main {
 
 
 .form__buy input[type="submit"]:hover {
-        background: #42d3ff;
+        background: #00c3ff;
 }
 
 .content-impar {
