@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         render(curso);
 
                         btnComprarCurso.addEventListener('click', () => {
-                                
+
                         })
                 })
                 .catch(() => {

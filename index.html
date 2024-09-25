@@ -9,15 +9,16 @@
         <link rel="stylesheet" href="/style/novedades.css">
         <link rel="stylesheet" href="/style/carousel.css">
         <link rel="stylesheet" href="/style/secciones.css">
+        <link rel="stylesheet" href="style/carouselPop.css">
         <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"> -->
 </head>
 
 <body>
-        <section class="novedades">
+        <section class="novedades hidden absolute">
                 <h2 class="novedades__title">Cursos</h2>
                 <div class="novedades__content"></div>
         </section>
-        <section class="secciones">
+        <section class="secciones hidden absolute">
                 <article class="secciones__item">
                         <a href="" class="secciones__item-url">
                                 <div class="secciones__item-info">
@@ -84,6 +85,24 @@
                         <button class="carousel-next carousel__btn-popular hidden">&gt;</button>
                 </div>
         </section>
+        <div class="details">
+                <header class="details__header">Detalles</header>
+                <main class="details__body">
+                        <section class="details__update">Ultima actualización: 9/2024</section>
+                        <section class="details__language">Español</section>
+                        <section class="details__details">
+                                <span>25,5 horas de vídeo bajo demanda</span>
+                                <span>21 artículos</span>
+                                <span>147 recursos descargables</span>
+                                <span>Acceso en dispositivos móviles y TV</span>
+                                <span>Certificado de finalización</span>
+                        </section>
+                </main>
+                <footer class="details__options">
+                        <button type="button">Comprar</button>
+                        <button type="button">Mas Detalles</button>
+                </footer>
+        </div>
         <script type="module" src="/script/novedades.js"></script>
         <script type="module" src="/script/carousel.js"></script>
 </body>

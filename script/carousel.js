@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const carousel = new Carousel();
         carousel.visibleItems = 5
         renderPopularItems(carousel)
-
 });
 
 async function renderPopularItems(carousel) {
@@ -87,6 +86,8 @@ class Carousel {
 
         setItems(items) {
                 this.items = items;
+                this.addEventHover();
+                this.addEventOut();
                 this.updateCarousel();
                 this.isVisibility();
         }
@@ -113,5 +114,20 @@ class Carousel {
                 } else {
                         this.btnNext.classList.remove("hidden");
                 }
+        }
+
+        addEventHover = () => {
+                this.items.forEach(element => {
+                        element.addEventListener('mouseenter', () => {
+                                console.log("Entro")
+                        })
+                });
+        }
+        addEventOut = () => {
+                this.items.forEach(element => {
+                        element.addEventListener('mouseleave', () => {
+                                console.log("Salio")
+                        })
+                })
         }
 }

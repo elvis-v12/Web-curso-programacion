@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "url": "cursos/details/cursos_detalles.html",
+        "url": "cursos/details/cursos-detalles.html",
         "author": "Alvaro Chirou",
         "name": "Python Practicando. Desde 0 hasta Desarrollador en Python",
         "score": "4,6",
@@ -9,7 +9,10 @@
         "votes": "21.363",
         "price": "49,90 S/",
         "pricePrevous": "199,90 S/",
-        "portada": "pictures/carousel/image.png"
+        "portada": "pictures/carousel/image.png",
+        "detalles": "<span>25,5 horas de vídeo bajo demanda</span><span>21 artículos</span><span>147 recursos descargables</span><span>Acceso en dispositivos móviles y TV</span><span>Certificado de finalización</span>",
+        "lastUpdate": "9/2024",
+        "language": "Español"
     },
     {
         "id": 2,
