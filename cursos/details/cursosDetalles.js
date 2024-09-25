@@ -71,7 +71,7 @@ const render = curso => {
         `;
         const imgHeader = document.createElement("div");
         imgHeader.classList.add("header__photo");
-        imgHeader.innerHTML = `<img src="../../pictures/image.png" alt="">`
+        imgHeader.innerHTML = `<img src="../../pictures/test.png" alt="">`
         headerHTML.appendChild(data);
         headerHTML.appendChild(imgHeader)
 
@@ -129,6 +129,8 @@ const render = curso => {
         contentStyle.forEach((element, index) => {
                 if (index % 2 != 0) {
                         element.classList.add("content-impar");
+                } else {
+                        element.classList.add("content-par")
                 }
         });
 }
