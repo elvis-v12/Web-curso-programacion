@@ -15,7 +15,6 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
         grid-column-gap: 35px;
-        width: 70vw;
 }
 
 .novedades__item {
@@ -103,11 +102,12 @@
 
 
 @media screen and (max-width:1450px) {
+
         .novedades__content {
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(3, 1fr);
                 grid-row-gap: 35px;
-                width: 40%;
+                width: 30vw;
         }
 
         .novedades__item-header {

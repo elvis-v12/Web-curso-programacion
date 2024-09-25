@@ -6,20 +6,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const urlParams = new URLSearchParams(window.location.search);
         var code = urlParams.get('code');
         const titleHTML = document.querySelector("title");
+        const btnComprarCurso = document.querySelector(".btn__buy");
         obtenerDetalleCurso(code)
                 .then(curso => {
                         titleHTML.textContent = curso.name;
                         render(curso);
+
+                        btnComprarCurso.addEventListener('click', () => {
+                                
+                        })
                 })
-                .catch(error => {
-                        console.error(error)
+                .catch(() => {
+                        window.location.href = "/"
                 });
-        const btnComprarCurso = document.querySelector(".btn__buy");
-        btnComprarCurso.addEventListener('click', () => {
-                alert("Se compro")
-        })
-
-
 });
 
 const getStrella = () => {
