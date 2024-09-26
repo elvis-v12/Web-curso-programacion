@@ -16,7 +16,10 @@ export class PortalService {
                                         jsonObject.votes,
                                         jsonObject.price,
                                         jsonObject.pricePrevous,
-                                        jsonObject.portada
+                                        jsonObject.portada,
+                                        jsonObject.detalles,
+                                        jsonObject.language,
+                                        jsonObject.lastUpdate
                                 );
                         });
                 } catch (error) {

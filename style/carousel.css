@@ -53,12 +53,12 @@
         gap: 13px;
         overflow: hidden;
         z-index: 10;
-        
 }
 
 .popular__item {
         height: 20rem;
         display: flex;
+       
 }
 
 .popular__item-url {
