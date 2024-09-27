@@ -1,7 +1,29 @@
 import { PortalService } from "/server/script/service/PortalService.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-        document.querySelector(".popular__item-buy-modal").showModal()
+  // Acciones de modales
+  document.querySelector(".cancel-button").addEventListener("click", () => {
+      document.querySelector(".popular__item-buy-modal").close();
+  });
+  document.querySelector(".cancel-button-mastercad").addEventListener("click", () => {
+      document.querySelector(".buy-modal-mastercad").close();
+      document.querySelector(".popular__item-buy-modal").showModal();
+  });
+  document.querySelector(".continue-button-modal-buy").addEventListener("click", () => {
+      const cardOption = document.getElementById("card-option");
+      const qrOption = document.getElementById("qr-option");
+      if (cardOption.checked) {
+          // Si está seleccionada la tarjeta, redirige a index.html
+          window.location.href = '/cliente/pago/index.html';
+      } else if (qrOption.checked) {
+          // Si está seleccionada la opción de Yape, redirige a Yape.html
+          window.location.href = '/cliente/pago/Yape.html';
+      } else {
+          alert("Por favor, selecciona un método de pago.");
+      }
+  });
+
+        // LLamada al carrusel
         const carousel = new Carousel();
         carousel.visibleItems = 5
         try {
@@ -145,7 +167,8 @@ class Carousel {
                 })
         }
         addEventComprar = () => {
-
+                document.querySelector(".popular__item-buy-modal").showModal()
+                
         }
         addEventOut = (popularItemHTML) => {
                 popularItemHTML.addEventListener('mouseleave', () => {

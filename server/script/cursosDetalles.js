@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
 
                 .catch(() => {
-                        window.location.href = "/"
+                     //   window.location.href = "/"
                 });
 });
 

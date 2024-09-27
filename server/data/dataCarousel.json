@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "url": "/cliente/cursos/cursos-detalles.html",
+        "url": "/cliente/cursos/cursosDetalles.html",
         "author": "Alvaro Chirou",
         "name": "Python Practicando. Desde 0 hasta Desarrollador en Python",
         "score": "4,6",
@@ -28,7 +28,7 @@
     },
     {
         "id": 3,
-        "url": "details_cursos/cursos_detalles.html",
+        "url": "/cliente/cursos/cursosDetalles.html",
         "author": "Juan Pérez",
         "name": "Introducción a la Inteligencia Artificial",
         "score": "4,4",
@@ -40,7 +40,7 @@
     },
     {
         "id": 4,
-        "url": "details_cursos/cursos_detalles.html",
+        "url": "/cliente/cursos/cursosDetalles.html",
         "author": "Ana García",
         "name": "Bases de Datos con MySQL",
         "score": "4,7",
@@ -52,7 +52,7 @@
     },
     {
         "id": 5,
-        "url": "details_cursos/cursos_detalles.html",
+        "url": "/cliente/cursos/cursosDetalles.html",
         "author": "Luis Martín",
         "name": "Seguridad Informática y Ciberseguridad",
         "score": "4,5",
@@ -64,7 +64,7 @@
     },
     {
         "id": 6,
-        "url": "details_cursos/cursos_detalles.html",
+        "url": "/cliente/cursos/cursosDetalles.html",
         "author": "Eva López",
         "name": "Diseño UX/UI para Aplicaciones Móviles",
         "score": "4,9",
@@ -76,7 +76,7 @@
     },
     {
         "id": 7,
-        "url": "details_cursos/index.html",
+        "url": "/cliente/cursos/index.html",
         "author": "Pedro Alonso",
         "name": "Desarrollo de Videojuegos con Unity",
         "score": "4,6",
@@ -88,7 +88,7 @@
     },
     {
         "id": 8,
-        "url": "details_cursos/index.html",
+        "url": "/cliente/cursos/index.html",
         "author": "Sofía Gómez",
         "name": "Marketing Digital y SEO",
         "score": "4,8",
@@ -100,7 +100,7 @@
     },
     {
         "id": 9,
-        "url": "details_cursos/index.html",
+        "url": "/cliente/cursos/index.html",
         "author": "Carlos Ruiz",
         "name": "Análisis de Datos con Tableau",
         "score": "4,7",
@@ -112,7 +112,7 @@
     },
     {
         "id": 10,
-        "url": "details_cursos/index.html",
+        "url": "/cliente/cursos/index.html",
         "author": "Daniel Sánchez",
         "name": "Programación en Java para Principiantes",
         "score": "4,5",
@@ -124,7 +124,7 @@
     },
     {
         "id": 11,
-        "url": "details_cursos/index.html",
+        "url": "/cliente/cursos/index.html",
         "author": "Rosa García",
         "name": "Diseño Gráfico con Adobe Creative Cloud",
         "score": "4,8",
@@ -136,7 +136,7 @@
     },
     {
         "id": 12,
-        "url": "details_cursos/index.html",
+        "url": "/cliente/cursos/index.html",
         "author": "José Luis",
         "name": "Desarrollo de Aplicaciones Móviles con Flutter",
         "score": "4,6",
@@ -148,7 +148,7 @@
     },
     {
         "id": 13,
-        "url": "details_cursos/index.html",
+        "url": "/cliente/cursos/index.html",
         "author": "Eva Hernández",
         "name": "Marketing en Redes Sociales",
         "score": "4,7",
@@ -160,7 +160,7 @@
     },
     {
         "id": 14,
-        "url": "details_cursos/index.html",
+        "url": "/cliente/cursos/index.html",
         "author": "Juan Carlos",
         "name": "Seguridad en la Nube con AWS",
         "score": "4,5",
@@ -172,7 +172,7 @@
     },
     {
         "id": 15,
-        "url": "details_cursos/index.html",
+        "url": "/cliente/cursos/index.html",
         "author": "María José",
         "name": "Introducción a la Programación con C++",
         "score": "4,4",
