@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago en línea - GuímarBot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pago en línea</h1>
+            <img src="/pictures/guimarbot-name.png" alt="GuímarBot Logo" class="logo">
+        </header>
+        <form class="payment-form">
+            <label for="card-number">Número de la tarjeta:</label>
+            <input type="text" id="card-number" placeholder="Ej. 4242 4242 4242 4242">
+
+            <div class="small-inputs">
+                <div class="cvc-section">
+                    <label for="cvc">Código CVC:</label>
+                    <input type="text" id="cvc" placeholder="Ej. 123">
+                </div>
+                <div class="expiration-section">
+                    <label for="expiration">Fecha de expiración:</label>
+                    <div class="expiration-inputs">
+                        <input type="text" id="exp-month" placeholder="MM">
+                        <input type="text" id="exp-year" placeholder="AA">
+                    </div>
+                </div>
+            </div>
+
+            <label for="name">Datos:</label>
+            <input type="text" id="name" placeholder="Ej. Juan Pérez">
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" placeholder="Ej. ejemplo@correo.com">
+
+            <label for="amount">Monto:</label>
+            <input type="text" id="amount" placeholder="Ej. 100">
+
+            <label for="description">Descripción:</label>
+            <input type="text" id="description" placeholder="Ej.Nombre de curso">
+
+            <button type="submit" class="pay-button">PAGAR</button>
+        </form>
+    </div>
+</body>
+</html>

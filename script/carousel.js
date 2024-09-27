@@ -1,6 +1,7 @@
 import { PortalService } from "./service/PortalService.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector(".popular__item-buy-modal").showModal()
         const carousel = new Carousel();
         carousel.visibleItems = 5
         try {
@@ -131,14 +132,21 @@ class Carousel {
                                         <section class="details__info">${popular.details}</section>
                                 </main>
                                 <footer class="details__options">
-                                        <button type="button">Comprar</button>
-                                        <button type="button">Mas Detalles</button>
+                                        <button type="button" class="details__options-buy">Comprar</button>
+                                        <a href="${popular.url}?code=${popular.id}">Mas Detalles</a>
                                 </footer>
                         </div>`;
-                        popularItemHTML.innerHTML += details
+
+                        popularItemHTML.innerHTML += details;
+
+                        document.querySelector(".details__options-buy").addEventListener('click', () => {
+                                this.addEventComprar()
+                        })
                 })
         }
+        addEventComprar = () => {
 
+        }
         addEventOut = (popularItemHTML) => {
                 popularItemHTML.addEventListener('mouseleave', () => {
                         if (!document.querySelector(".details")) {
