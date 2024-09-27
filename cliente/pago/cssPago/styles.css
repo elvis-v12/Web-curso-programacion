@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.logo {
+    margin-top: 10px;
+    width: 350px;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.payment-form input {
+    margin-bottom: 15px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.small-inputs {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start; /* Alinea los elementos al inicio */
+}
+
+.cvc-section,
+.expiration-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.expiration-inputs {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.expiration-inputs input {
+    width: 55px;
+    text-align: center;
+}
+
+.pay-button {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.pay-button:hover {
+    background-color: #218838;
+}
