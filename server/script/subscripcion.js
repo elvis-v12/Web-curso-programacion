@@ -1,5 +1,4 @@
 import { SubscriptionService } from "./service/SubscriptionService.js";
-import { Plan } from "./model/Plan.js";
 document.addEventListener("DOMContentLoaded", () => {
         const planes = document.querySelector(".planes > .planes__content");
         render(planes);

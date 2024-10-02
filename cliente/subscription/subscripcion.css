@@ -88,7 +88,7 @@ body {
 
 .planes__item-option {
         font-family: "Inconsolata", monospace, sans-serif;
-        background-color: #00b7ff;
+        background: #00b7ff;
         margin-top: 10px;
         padding: 6px 20px;
         border-radius: 5px;
@@ -98,8 +98,13 @@ body {
         cursor: pointer;
         transition: .3s;
         font-weight: bold;
+        position: relative;
+        transition: background .3s, box-shadow .3s, transform .3s ease-in-out;
+
 }
 
 .planes__item-option:hover {
-        background-color: #00b7ffa4;
+        background: #00b7ffa4;
+        box-shadow: 0 0 5px 0px #777777d0;
+        transform: translateY(-3px);
 }
