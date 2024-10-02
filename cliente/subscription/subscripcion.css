@@ -40,12 +40,14 @@ body {
         display: flex;
         align-items: center;
         flex-direction: column;
-        /* border: 1px solid black; */
         border-radius: 10px;
         padding: 10px;
         min-width: 400px;
         max-width: 500px;
-        box-shadow: 0 0 4px 3px #ffffff;
+}
+
+.planes__item:hover {
+        box-shadow: 0 0 10px 2px #00b7ffa4;
 }
 
 .planes__item-header .planes__item-title {
@@ -58,7 +60,7 @@ body {
 
 .planes__item-description {
         padding: 10px 0;
-        border-bottom: 1px solid;
+        border-bottom: 1px solid #110041;
 }
 
 .planes__item-caracteristicas {
@@ -78,7 +80,6 @@ body {
         position: absolute;
         top: 0;
         left: -15px;
-        content: "sadasd";
         content: '•';
         font-size: 1.5rem;
 }
@@ -87,7 +88,7 @@ body {
 
 .planes__item-option {
         font-family: "Inconsolata", monospace, sans-serif;
-        background-color: #d4d4d4;
+        background-color: #00b7ff;
         margin-top: 10px;
         padding: 6px 20px;
         border-radius: 5px;
@@ -96,8 +97,9 @@ body {
         border: none;
         cursor: pointer;
         transition: .3s;
+        font-weight: bold;
 }
 
 .planes__item-option:hover {
-        background-color: #999999;
+        background-color: #00b7ffa4;
 }
