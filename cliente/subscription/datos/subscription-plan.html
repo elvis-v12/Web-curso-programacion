@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Plan Mensual</title>
+        <link rel="stylesheet" href="subscription-plan.css">
+        <link rel="stylesheet" href="modal-comprar.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+        <header class="header">
+                <h1 class="header__logo">
+                        <img src="/cliente/principal/pictures/guimarbot.png" alt="GuímarBot Logo" class="logo">
+                </h1>
+                <h2 class="header__name">Plan Mensual</h2>
+        </header>
+        <main class="datos-container">
+                <section class="datos-form-container">
+                        <form action="" class="datos-form">
+                                <label class="datos-form__label" for="nombre-completo">Ingresa tus Datos:</label>
+                                <div class="datos-form__inputs">
+                                        <input type="text" name="nombre-completo" id="nombre-completo"
+                                                placeholder="Nombre completo" class="datos-form__input">
+                                        <input type="email" name="correo-electronico" id="correo-electronico"
+                                                placeholder="Correo electrónico" class="datos-form__input">
+                                </div>
+                                <input type="button" value="Continuar" class="datos-form__submit">
+                        </form>
+                </section>
+                <section class="informacion-plan">
+                        <article class="informacion-plan__item">
+                                <h3 class="informacion-plan__titulo">Precio:</h3>
+                                <p class="informacion-plan__precio">S/20</p>
+                        </article>
+                        <article class="informacion-plan__item">
+                                <h3 class="informacion-plan__titulo">Características:</h3>
+                                <ul class="informacion-plan__caracteristicas">
+                                        <span>Contenido profesional y actualizado</span>
+                                        <span>Certificados digitales</span>
+                                        <span>English Academy, Escuela de Startups. Liderazgo y Management</span>
+                                        <span>Eventos exclusivos como Platzi Conf</span>
+                                        <span>Descarga contenido en la app móvil</span>
+                                        <span>Certificados físicos para rutas de perfil profesional</span>
+                                </ul>
+                        </article>
+                </section>
+        </main>
+        <dialog class="popular__item-buy-modal">
+                <header>
+                        <h3>Pago en línea</h3>
+                </header>
+                <div class="payment-selection">
+                        <img src="/cliente/principal/pictures/guimarbot-logo.png" alt="GuímarBot Logo" class="logo" />
+                        <div class="payment-info">
+                                <br /><label for="Letras">¡Hola! Selecciona tu manera de pago:</label>
+                                <div class="payment-options">
+                                        <label>
+                                                <input type="radio" name="payment-method" id="card-option" />
+                                                <img src="/cliente/principal/pictures/pagos/visa-mastercard.png"
+                                                        alt="Visa/MasterCard" />
+                                        </label>
+                                        <label>
+                                                <input type="radio" name="payment-method" id="qr-option" />
+                                                <img src="/cliente/principal/pictures/pagos/yape-logo-3.png"
+                                                        alt="Yape" />
+                                        </label>
+                                </div>
+                        </div>
+                </div>
+                <div class="buttons">
+                        <button class="cancel-button">Cancelar</button>
+                        <button class="continue-button">Continuar</button>
+                </div>
+        </dialog>
+        <script src="/server/script/subscripcion-plan/subscription-plan.js"></script>
+</body>
+
+</html>
