@@ -29,22 +29,32 @@
     <nav>
       <div class="Icon"><b style="color: blue">Guima</b>rcito</div>
       <div class="search_box">
-        <input type="search" placeholder="Busque tus cursos" />
-        <span class="fa fa-search"></span>
+          <input type="search" placeholder="Busque tus cursos" />
+          <span class="fa fa-search"></span>
       </div>
       <ol>
-        <li><a href="#carouselExampleIndicators">Inicio</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Cursos</a></li>
-        <li>
-          <a class="boton-menu boton-carrito" href="V_Carrito/V_Carrito.html">
-              <i class="bi bi-cart-fill"></i><span id="numerito" class="numerito">0</span>
-          </a>
-        </li>
-        <li><a href="/View/autentificacion/login.html" class="Cuadro-ingreso">Ingresar</a></li>
-        <li><a href="/View/autentificacion/signup.html" class="Cuadro-ingreso">Registrarse</a></li>
+          <li><a href="#carouselExampleIndicators">Inicio</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Cursos</a></li>
+          <li>
+              <a class="boton-menu boton-carrito" href="V_Carrito/V_Carrito.html">
+                  <i class="bi bi-cart-fill"></i><span id="numerito" class="numerito">0</span>
+              </a>
+          </li>
+          <li><a href="/cliente/autentificacion/login.html" id="login-link" class="Cuadro-ingreso">Ingresar</a></li>
+          <li><a href="/cliente/autentificacion/signup.html" id="signup-link" class="Cuadro-ingreso">Registrarse</a></li>
+          <li>
+              <a href="#" id="dashboard-link" class="Cuadro-ingreso " style="display: none;" > f</a>
+              <div id="client-info">
+                  <h2>Información del Cliente</h2>
+                  <p id="client-name"></p>
+                  <p id="client-email"></p>
+              </div>
+          </li>
+          <li><a href="#" id="logout-link" class="Cuadro-ingreso" style="display: none;">Cerrar Sesión</a></li>
       </ol>
-    </nav>
+  </nav>
+
 
     <!--CARUCEL DE IMAGENES INFO DE ACADEMIA-->
     <div
@@ -223,6 +233,8 @@
         </div>
       </div>
     </header>
+
+
 <!--SECION DE CURSOS DE PRUEBA-->
     <section class="course-outline">
       <div class="content-container">
@@ -397,6 +409,72 @@
   </div>
 </section>
 
+<!-- SECCIÓN DE SUSCRIPCIÓN -->
+<section class="membership-plans">
+  <h2 data-class="PlansTable__title" class="Mensaje_Us">Elige el plan ideal para ti</h2>
+  <div class="plans-container">
+      <div class="plan-card">
+          <h2>Basic</h2>
+          <p><strong>Tipo:</strong> Mensual</p>
+          <p><strong>Para:</strong> 1 estudiante</p>
+          <p><strong>Precio:</strong> S/119/mes</p>
+          <p><strong>Cobro:</strong> Mensual recurrente</p>
+          <p><strong>Beneficios:</strong></p>
+          <ul>
+              <li> Contenido profesional y actualizado</li>
+              <li> Certificados digitales</li>
+              <li> English Academy, Escuela de Startups. Liderazgo y Management</li>
+              <li> Eventos exclusivos como Guimarbot Conf</li>
+              <li> Descarga de contenido en la app móvil</li>
+              <li> Certificados físicos para rutas de perfil Junior</li>
+          </ul>
+          <p><strong>Ahorro:</strong> 6 meses</p>
+          <a href="pagina.html" class="btnD">Suscribirse</a>
+      </div>
+
+      <div class="plan-card">
+          <h2>Expert</h2>
+          <p><strong>Tipo:</strong> Anual</p>
+          <p><strong>Para:</strong> 1 estudiante</p>
+          <p><strong>Precio:</strong> S/67/mes</p>
+          <p><strong>Cobro:</strong> Anual recurrente de S/799</p>
+          <p><strong>Beneficios:</strong></p>
+          <ul>
+              <li> Contenido profesional y actualizado</li>
+              <li> Certificados digitales</li>
+              <li> English Academy, Escuela de Startups. Liderazgo y Management</li>
+              <li> Eventos exclusivos como Guimarbot Conf</li>
+              <li> Descarga de contenido en la app móvil</li>
+              <li> Certificados físicos para rutas de perfil profesional</li>
+          </ul>
+          <p><strong>Pago:</strong> <i class="fa fa-clock"></i> Paga a 4 cuotas sin intereses de S/200 con tarjeta débito o crédito.</p>
+          <p><strong>Ahorro:</strong> 8 meses</p>
+          <a href="/cliente/suscripcion/Regitro.html" class="btnD">Suscribirse</a>
+      </div>
+
+      <div class="plan-card">
+          <h2>Expert Duo</h2>
+          <p><strong>Tipo:</strong> Anual</p>
+          <p><strong>Para:</strong> 2 estudiantes</p>
+          <p><strong>Precio:</strong> S/92/mes</p>
+          <p><strong>Cobro:</strong> Anual recurrente de S/1,099</p>
+          <p><strong>Beneficios:</strong></p>
+          <ul>
+              <li> Contenido profesional y actualizado</li>
+              <li> Certificados digitales</li>
+              <li> English Academy, Escuela de Startups. Liderazgo y Management</li>
+              <li> Eventos exclusivos como Guimarbot Conf</li>
+              <li> Descarga de contenido en la app móvil</li>
+              <li> Certificados físicos para rutas de perfil profesional</li>
+          </ul>
+          <p><strong>Pago:</strong> <i class="fa fa-clock"></i> Paga a 4 cuotas sin intereses de S/275 con tarjeta débito o crédito.</p>
+          <a href="pagina.html" class="btnD">Suscribirse</a>
+              </div>
+  </div>
+</section>
+
+
+
 
 <!--SECCION DE CONTACTOS -->
 <section class="contact section" id="contact">
@@ -479,7 +557,7 @@
         </div>
         <div class="row">
           <div class="form-item col-12 padd-15">
-            <button type="submit" class="btn"> Enviar Mensaje</button>
+                     <a href="pagina.html" class="btn">Suscribirse</a>
           </div>
         </div>
       </div>
@@ -498,13 +576,12 @@
 </ol>
 </Section>
 
-
-
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    
+    <script src="/server/Loginjs/scrip.js"></script>
   </body>
 </html>

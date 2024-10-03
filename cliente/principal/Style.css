@@ -46,8 +46,10 @@ nav ol li a{
     text-transform: capitalize;
     letter-spacing: 1px;
     padding: 2px 10px;
+    text-align: center;
 
 }
+
 nav ol li a:hover{
     color:blueviolet;
 }
@@ -103,6 +105,35 @@ nav .search_box{
  nav .search_box  span:hover::after{
     width: 100%;
  }
+
+
+
+
+
+#client-info {
+    display: none;
+    position: absolute;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center; /* Centrar el contenido del div */
+}
+
+#client-info h2 {
+    margin-top: 0;
+}
+
+.Icon {
+    font-size: 24px;
+    font-weight: bold;
+    color: blue;
+}
+
+.search_box {
+    display: inline-block;
+}
  /*Configuracion del Carito de compra*/
 
 
@@ -579,6 +610,113 @@ section .category-box .contenerdor-links .fas:hover{
     text-decoration: none;
     color: inherit;
 }
+
+
+/* SECTION DE SUSCRIPCION A CLASES DE CERTIFICADO */
+.membership-plans {
+    padding-top: 100px;
+    background-image: url(/cliente/principal/imagenes/LogoMn.jpg);
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    filter: contrast(1);
+    fill-opacity: initial;
+}
+
+.membership-plans .Mensaje_Us {
+    text-align: center;
+    padding-bottom: 36px;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 350px;
+    text-align: center;
+}
+.plan-card:hover{
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5); /* Sombra blanca */
+}
+.plan-card h2 {
+    color: #333;
+}
+
+.plan-card p {
+    margin: 8px 0;
+}
+
+.plan-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.plan-card ul li {
+    margin: 5px 0;
+}
+
+.plans-container .btnD {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.plans-container .btnD:hover {
+    background-color: #0056b3;
+}
+
+/* Colores para íconos */
+.fa-clock {
+    color: blue; /* Color azul para el ícono de reloj */
+}
+
+.plan-card ul li:before {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.plan-card ul li:before {
+    content: "✓"; /* Para los checks */
+    color: blue; /* Color azul para los checks */
+}
+
+.plan-card ul li:after {
+    content: "✗"; 
+    color: black; 
+    display: none; 
+}
+
+.plan-card ul li:nth-child(1)::before {
+    content: "✓"; 
+    color: blue; 
+}
+
+.plan-card ul li:nth-child(n+2)::before {
+    content: "✗"; 
+    color: black;
+}
+
+/* Para el resto de los planes */
+.plan-card:nth-child(n+2) ul li::before {
+    content: "✓"; 
+    color: blue; 
+}
+
+
 
 /*Contactos*/
 .row .section-title{
