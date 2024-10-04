@@ -1,20 +1,59 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.data-entry {
-    padding: 50px;
-    background-color: #f9f9f9; /* Fondo claro para resaltar el formulario */
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: auto;
+
+body {
+    background-image: url(/cliente/principal/imagenes/Logo_suscripcion.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: contrast(1);
+    display: flex; /* Habilita flexbox en el body */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
 }
 
-.data-entry h2 {
+.data-entry {
+    display: flex; /* Mantiene el display flex para los hijos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    padding: 50px;
+    background-image: url(/cliente/principal/imagenes/school_bg_computerscience_2x_efd708987d.png);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* Aumenta si es necesario */
+    margin: auto; /* Mantiene el centrado horizontal en pantallas grandes */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: contrast(1);
+    background-color: #0c1633;
+    color: #eff3f8;
+    opacity: 0.9;
+}
+
+.Contenedor_datos {
+    opacity: 0.9;
+    border-radius: 10px;
+    width: 60%; /* Ancho del contenedor de datos */
+    padding: 20px; /* Añade un poco de padding */
+}
+
+.plan-details {
+    width: 35%; /* Ancho del contenedor de detalles del plan */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)); /* Degradado de oscuro a claro */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    opacity: 1;
+    margin-left: 20px; /* Añade espacio entre los dos contenedores */
+}
+
+.data-entry h2, .plan-details h3 {
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .data-form {
@@ -24,6 +63,7 @@
 
 .data-form label {
     margin: 10px 0 5px;
+    color: #fff;
 }
 
 .data-form input {
@@ -41,30 +81,38 @@
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
+    text-decoration: none;
+    text-align: center;
 }
 
 .data-form .btn:hover {
     background-color: #0056b3;
 }
 
-.plan-details {
-    margin-top: 20px;
-    background-color: white; /* Fondo blanco para la sección del plan */
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.plan-details h3 {
-    color: #333; /* Color para el título del plan */
-}
-
 .coupon {
-    margin: 15px 0;
+    margin: 20px 14px;
+    color: #fff;
+    padding-right: 9px;
 }
 
 .coupon input {
-    padding: 10px;
+    margin: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    background: transparent;
+    border: 1px solid #007bff;
+height: 40px;
+    color: #fff;
+}
+
+.coupon input:hover {
+    border: 2px solid #007bff;
+}
+
+.plan-details h4 {
+    padding: 8px 9px;
+}
+
+.plan-details ul li {
+    text-transform: capitalize;
+    padding: 3px 5px;
 }

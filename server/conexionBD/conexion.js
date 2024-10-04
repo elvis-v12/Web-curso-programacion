@@ -4,7 +4,7 @@ let conexion=mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'uno'
+    database: 'webcursos'
 
 });
 conexion.connect(function(err){
@@ -16,6 +16,8 @@ conexion.connect(function(err){
     }
 });
 
+
+/*
 function mostrarDatos() {
     conexion.query("SELECT * FROM usuarios", function(err, filas) {
         if (err) {
@@ -25,5 +27,5 @@ function mostrarDatos() {
         }
     });
 }
-mostrarDatos();
+mostrarDatos();*/
 conexion.end();

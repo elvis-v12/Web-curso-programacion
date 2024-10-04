@@ -11,6 +11,7 @@
     --bg-text-black-200:#f2f2f2;
     --bg-text-black-90:#030918;
     --bg-text-black-91:#7933ff;
+    --bg-text-black-92:#007bff;
 }
 body.dark{
         --bg-black-900:#151515;
@@ -438,6 +439,10 @@ nav .search_box{
     margin-top: 10px;
     text-align: left;
     font-size: 0.8rem;
+
+}
+.register h1{
+    color:var(--bg-text-black-400);
 }
 
 .header-right {
@@ -508,6 +513,9 @@ nav .search_box{
 }
 
 /* Terms & Privacy links */
+.terms{
+    color:var(--bg-text-black-200);
+}
 .terms a {
     color: #00bfff; /* Light blue color for links */
     text-decoration: underline;
@@ -534,6 +542,7 @@ footer {
 .course-outline {
     padding: 30px 0;
     color: #000;
+    background: var(--bg-text-black-90);
 }
 
 .content-container {
@@ -541,11 +550,16 @@ footer {
     margin: 0 auto;
     text-align: center;
 }
-
+.content-container h2{
+    color: var(--bg-text-black-200);
+    padding-top: 30px;
+    padding-bottom: 45px;
+}
 .course-info-and-topics {
     display: flex;
     justify-content: space-between;
     text-align: left;
+    color: var(--bg-text-black-200);
     
 }
 
@@ -568,9 +582,9 @@ footer {
 
 /* Línea separadora */
 .separation-line {
-    border: none; /* Sin borde por defecto */
-    border-top: 1px solid white; /* Línea separadora */
-    margin: 15px 0; /* Margen para espaciar bien la línea */
+    border: none; 
+    border-top: 2px solid white; 
+    margin: 15px 0; 
 }
 
 /* Alineación de los iconos y textos */
@@ -619,12 +633,21 @@ footer {
 /* Estilos para las cajas contenedoras */
 .Categorias{
     margin-top: 35px;
+    background-color: #ffffff;
 }
-section .category-box h6 .fas {
+.row .col-md-12 a{
+    text-align: center;
+    padding: 20px 10px;
+}
+.row .form-item .btn{
+    text-align: center;
+    justify-content: center;
+}
+section .category-box a .fas {
     color:red;
     transition: box-shadow 0.4s, font-size 0.4s;
 }
-section .category-box h6 .fas:hover{
+section .category-box a .fas:hover{
     box-shadow: 
     0 2px 4px rgba(187, 23, 17, 0.4),  /* sombra pequeña con mayor opacidad */
     0 4px 12px rgba(173, 7, 7, 0.8); /* sombra grande con menor opacidad */
@@ -708,6 +731,7 @@ section .category-box .contenerdor-links .fas:hover{
 
 .plan-card {
     background-color: #fff;
+    opacity: 0.8;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -737,7 +761,7 @@ section .category-box .contenerdor-links .fas:hover{
 
 .plans-container .btnD {
     display: inline-block;
-    background-color: #007bff;
+    background-color: var(--bg-text-black-92);
     color: white;
     border: none;
     border-radius: 5px;
@@ -791,17 +815,23 @@ section .category-box .contenerdor-links .fas:hover{
 
 
 /*Contactos*/
+.contact{
+    background: var(--bg-text-black-90);
+}
 .row .section-title{
     margin-top: 35px;
+    text-align: center;
+    padding: 20px 10px;
+    color: var(--bg-text-black-200);
 }
 .contact-title{
-    color: #504e70;
+    color: var(--bg-text-black-92);
     text-align: center;
     font-size: 25px;
     margin-bottom: 20px;
 }
 .contact-sub-title{
-    color: var(--bg-text-black-900);
+    color: var(--bg-text-black-200);
     text-align: center;
     font-size: 15px;
     margin-bottom: 60px;
@@ -816,20 +846,20 @@ section .category-box .contenerdor-links .fas:hover{
     display: inline-block;
 }
 .contact .contact-info-item .icon .fa{
-    color: #172554;
+    color: var(--bg-black-900);
     font-size: 25px;
 }
 .contact .contact-info-item h4{
     font-size: 18px;
     font-weight: 700;
-    color: #0008;
+    color: var(--bg-text-black-200);
     text-transform: capitalize;
     margin: 15px 0 5px;
 }
 .contact .contact-info-item p{
     font-size: 16px;
     line-height: 25px;
-    color: var(--bg-text-black-700);
+    color: var(--bg-black-50);
     font-weight: 400;
 }
 .contact .contact-form{
@@ -853,8 +883,8 @@ section .category-box .contenerdor-links .fas:hover{
     width: 100%;
     height: 50px;
     border-radius: 25px;
-    background: var(--bg-black-100);
-    border: 1px solid var(--bg-black-50);
+    background: var(--bg-text-black-400);
+    border: 1px solid var(--bg-text-black-92);
     padding: 10px 25px;
     font-size: 16px;
     color: var(--bg-text-black-700);
