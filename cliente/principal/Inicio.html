@@ -27,7 +27,7 @@
   <body>
     <!--NAVAR ENCABEZADO DE LA WEB-->
     <nav>
-      <div class="Icon"><b style="color: blue">Guima</b>rcito</div>
+      <div class="Icon"><b>Drop</b>Code</div>
       <div class="search_box">
           <input type="search" placeholder="Busque tus cursos" />
           <span class="fa fa-search"></span>
@@ -44,7 +44,9 @@
           <li><a href="/cliente/autentificacion/login.html" id="login-link" class="Cuadro-ingreso">Ingresar</a></li>
           <li><a href="/cliente/autentificacion/signup.html" id="signup-link" class="Cuadro-ingreso">Registrarse</a></li>
           <li>
-              <a href="#" id="dashboard-link" class="Cuadro-ingreso " style="display: none;" > f</a>
+            <a href="#" id="dashboard-link" class="Cuadro-ingreso" style="display: none;">
+              <i class="fas fa-user"></i>
+          </a>
               <div id="client-info">
                   <h2>Información del Cliente</h2>
                   <p id="client-name"></p>
@@ -65,8 +67,8 @@
       <div class="carousel-inner">
         <div class="carousel-item active d-item">
           <img
-            src="imagenes/logo.jpg"
-            class="d-block w-100 d-img"
+            src="imagenes/MC_Wide_Big_2_V4.jpg"
+            class="d-block w-100% d-img"
             alt="slider 1"
           />
           <div class="carousel-caption top-0 mt-4">
@@ -74,7 +76,7 @@
               Empieza a estudiar con nosotros
             </p>
             <h1 class="display-1 fw-bolder text-capitalize">
-              Guimarbot Estudia
+              DropCOde Estudia
             </h1>
             <button class="btn btn-primary px-4 py-2 fs-5 mt-5">
               Inscribirse
@@ -92,7 +94,7 @@
               Empieza a estudiar con nosotros
             </p>
             <h1 class="display-1 fw-bolder text-capitalize">
-              Guimarbot Estudia
+              DropCOde Estudia
             </h1>
             <button class="btn btn-primary px-4 py-2 fs-5 mt-5">
               Inscribirse
@@ -110,7 +112,7 @@
               Empieza a estudiar con nosotros
             </p>
             <h1 class="display-1 fw-bolder text-capitalize">
-              Guimarbot Estudia
+              DropCOde Estudia
             </h1>
             <button class="btn btn-primary px-4 py-2 fs-5 mt-5">
               Inscribirse
@@ -149,20 +151,26 @@
       </div>
     </div>
     <!--PIE DE PAGINA DESPLEGABLES-->
-    <div class="cabezado">
-      <ol>
-        <li><a href="#">Informacion</a></li>
-        <li><a href="#">Informacion</a></li>
-        <li><a href="#">Informacion</a></li>
-        <li><a href="#">Informacion</a></li>
-        <li><a href="#">Informacion</a></li>
-        <li><a href="#">Informacion</a></li>
-        <li><a href="#">Informacion</a></li>
-        <li><a href="#">Informacion</a></li>
-        <li><a href="#">Informacion</a></li>
-      </ol>
+   <!--Base de busqueda-->
+   <section class="base_desp">
+    <div>
+        <div class="cajas caja1">
+            <a href=""><i class="fas fa-envelope"></i> CONTACTENOS</a>
+        </div>
+        <div class="cajas caja2">
+            <a href="">VIEW PRESENTATION</a>
+        </div>
+        <div class="cajas caja3">
+            <a href="">OUR BRANDS</a>
+        </div>
+        <div class="cajas caja4">
+            <a href=""><i class="fas fa-users"></i> CLIENTES</a>
+        </div>
     </div>
-    <header>
+</section>
+
+    <!--Completart cursos para certificacion gratis-->
+    <header class="contenedor_curso">
       <div class="header-container">
         <div class="logo-title">
           <img
@@ -176,15 +184,10 @@
         </div>
         <div class="header-content">
           <div class="description">
-            <div class="rating">
-              <span>⭐⭐⭐⭐⭐</span>
-              <span>3128 Opiniones</span>
-              <span class="level-box">BÁSICO</span>
-            </div>
             <p class="last-update">
               Última actualización el 19 de junio de 2024
             </p>
-            <p>
+            <p class="last-update" >
               Programa desde cero, domina Javascript, entiende HTML y aprende de
               algoritmos. Sí, desde cero. Entenderás la lógica del código, cómo
               piensan las programadoras expertas y cómo programar un videojuego
@@ -197,6 +200,11 @@
               desarrollo web. ¡Prepárate para transformar tus ideas en realidad
               con Gimarbot!
             </p>
+            <div class="rating">
+              <span class="Logos">⭐⭐⭐⭐⭐</span>
+              <span class="Logos">3128 Opiniones</span>
+              <span class="level-box">Beca</span>
+            </div>
             <div class="register">
               <h1>Regístrate para tomar este curso</h1>
             </div>
@@ -218,9 +226,7 @@
               class="header-image"
             />
             <div
-              class="certificate-box"
-              style="background-image: url('imagenes/certificado.jpg')"
-            >
+              class="certificate-box">
               <h2>Certificación disponible</h2>
               <p>
                 Las certificaciones reconocidas por la industria lo ayudan a
