@@ -1,5 +1,5 @@
 .secciones {
-        background-color: #F3F4F6;
+        background-color: #0055ff;
         display: flex;
         justify-content: center;
         gap: 30px;
@@ -10,6 +10,7 @@
 .secciones__item {
         border-radius: 5px;
         padding: 25px;
+        box-shadow: 0 0 5px 0 black;
 }
 
 .secciones__item:first-child {

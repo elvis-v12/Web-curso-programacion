@@ -18,7 +18,7 @@
 <body>
   <!--NAVAR ENCABEZADO DE LA WEB-->
   <nav>
-    <div class="Icon"><b style="color: blue">Guima</b>rcito</div>
+    <div class="Icon"><b>Drop</b>Code</div>
     <div class="search_box">
       <input type="search" placeholder="Busque tus cursos" />
       <span class="fa fa-search"></span>
@@ -32,22 +32,34 @@
           <i class="bi bi-cart-fill"></i><span id="numerito" class="numerito">0</span>
         </a>
       </li>
-      <li><a href="/View/autentificacion/login.html" class="Cuadro-ingreso">Ingresar</a></li>
-      <li><a href="/View/autentificacion/signup.html" class="Cuadro-ingreso">Registrarse</a></li>
+      <li><a href="/cliente/autentificacion/login.html" id="login-link" class="Cuadro-ingreso">Ingresar</a></li>
+      <li><a href="/cliente/autentificacion/signup.html" id="signup-link" class="Cuadro-ingreso">Registrarse</a></li>
+      <li>
+        <a href="#" id="dashboard-link" class="Cuadro-ingreso" style="display: none;">
+          <i class="fas fa-user"></i>
+        </a>
+        <div id="client-info">
+          <h2>Información del Cliente</h2>
+          <p id="client-name"></p>
+          <p id="client-email"></p>
+        </div>
+      </li>
+      <li><a href="#" id="logout-link" class="Cuadro-ingreso" style="display: none;">Cerrar Sesión</a></li>
     </ol>
   </nav>
+
 
   <!--CARUCEL DE IMAGENES INFO DE ACADEMIA-->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active d-item">
-        <img src="imagenes/logo.jpg" class="d-block w-100 d-img" alt="slider 1" />
+        <img src="imagenes/MC_Wide_Big_2_V4.jpg" class="d-block w-100% d-img" alt="slider 1" />
         <div class="carousel-caption top-0 mt-4">
           <p class="mt-5 fs-3 text-uppercase">
             Empieza a estudiar con nosotros
           </p>
           <h1 class="display-1 fw-bolder text-capitalize">
-            Guimarbot Estudia
+            DropCOde Estudia
           </h1>
           <button class="btn btn-primary px-4 py-2 fs-5 mt-5">
             Inscribirse
@@ -61,7 +73,7 @@
             Empieza a estudiar con nosotros
           </p>
           <h1 class="display-1 fw-bolder text-capitalize">
-            Guimarbot Estudia
+            DropCOde Estudia
           </h1>
           <button class="btn btn-primary px-4 py-2 fs-5 mt-5">
             Inscribirse
@@ -75,7 +87,7 @@
             Empieza a estudiar con nosotros
           </p>
           <h1 class="display-1 fw-bolder text-capitalize">
-            Guimarbot Estudia
+            DropCOde Estudia
           </h1>
           <button class="btn btn-primary px-4 py-2 fs-5 mt-5">
             Inscribirse
@@ -94,32 +106,39 @@
       <span class="visually-hidden">Next</span>
     </button>
 
-    <!-- Caja de contenido adicional -->
-    <div class="content-box">
-      <h1 class="ud-heading-serif-xxl">
-        Un mundo de aprendizaje desde solo 49,90&nbsp;S/
-      </h1>
-      <p class="ud-text-md">
-        Amplía tus horizontes gracias a un aprendizaje internacional. Ahorra
-        ya hasta el 19 de septiembre.
-      </p>
-    </div>
+    <!-- Caja de contenido adicional 
+      <div class="content-box">
+        <h1 class="ud-heading-serif-xxl">
+          Un mundo de aprendizaje desde solo 49,90&nbsp;S/
+        </h1>
+        <p class="ud-text-md">
+          Amplía tus horizontes gracias a un aprendizaje internacional. Ahorra
+          ya hasta el 19 de septiembre.
+        </p>
+      </div>
+    -->
   </div>
   <!--PIE DE PAGINA DESPLEGABLES-->
-  <div class="cabezado">
-    <ol>
-      <li><a href="#">Informacion</a></li>
-      <li><a href="#">Informacion</a></li>
-      <li><a href="#">Informacion</a></li>
-      <li><a href="#">Informacion</a></li>
-      <li><a href="#">Informacion</a></li>
-      <li><a href="#">Informacion</a></li>
-      <li><a href="#">Informacion</a></li>
-      <li><a href="#">Informacion</a></li>
-      <li><a href="#">Informacion</a></li>
-    </ol>
-  </div>
-  <header>
+  <!--Base de busqueda-->
+  <section class="base_desp">
+    <div>
+      <div class="cajas caja1">
+        <a href=""><i class="fas fa-laptop-code"></i> Development</a>
+      </div>
+      <div class="cajas caja2">
+        <a href=""><i class="fas fa-microchip"></i>Tecnologia</a>
+      </div>
+      <div class="cajas caja3">
+        <a href=""><i class="fas fa-code"></i>Software</a>
+      </div>
+      <div class="cajas caja4">
+        <a href=""><i class="fas fa-paint-brush"></i> Diseño</a>
+      </div>
+    </div>
+  </section>
+
+  <!--Completart cursos para certificacion gratis-->
+  <header class="contenedor_curso">
     <div class="header-container">
       <div class="logo-title">
         <img src="imagenes/academia.jpeg" alt="Logo Curso" class="logo rounded-left-image" />
@@ -129,15 +148,10 @@
       </div>
       <div class="header-content">
         <div class="description">
-          <div class="rating">
-            <span>⭐⭐⭐⭐⭐</span>
-            <span>3128 Opiniones</span>
-            <span class="level-box">BÁSICO</span>
-          </div>
           <p class="last-update">
             Última actualización el 19 de junio de 2024
           </p>
-          <p>
+          <p class="last-update">
             Programa desde cero, domina Javascript, entiende HTML y aprende de
             algoritmos. Sí, desde cero. Entenderás la lógica del código, cómo
             piensan las programadoras expertas y cómo programar un videojuego
@@ -148,8 +162,13 @@
             aprenderás los fundamentos, sino que también explorarás técnicas
             avanzadas y mejores prácticas que te convertirán en un experto en
             desarrollo web. ¡Prepárate para transformar tus ideas en realidad
-            con Gimarbot!
+            con DropCode!
           </p>
+          <div class="rating">
+            <span class="Logos">⭐⭐⭐⭐⭐</span>
+            <span class="Logos">3128 Opiniones</span>
+            <span class="level-box">Obten tu Beca</span>
+          </div>
           <div class="register">
             <h1>Regístrate para tomar este curso</h1>
           </div>
@@ -166,7 +185,7 @@
         </div>
         <div class="header-right">
           <img src="imagenes/referencia.jpg" alt="Imagen del curso" class="header-image" />
-          <div class="certificate-box" style="background-image: url('imagenes/certificado.jpg')">
+          <div class="certificate-box">
             <h2>Certificación disponible</h2>
             <p>
               Las certificaciones reconocidas por la industria lo ayudan a
@@ -179,6 +198,8 @@
       </div>
     </div>
   </header>
+
+
   <!--SECION DE CURSOS DE PRUEBA-->
   <section class="course-outline">
     <div class="content-container">
@@ -190,7 +211,7 @@
             <strong>15 Horas</strong> de contenido
           </p>
           <p>
-            <img src="imagenes/mejores-practicas.png" alt="Mejores prácticas" class="icon" />
+
             <strong>14 Horas</strong> de práctica
           </p>
 
@@ -261,62 +282,62 @@
           <div class="row">
             <div class="col-md-3 p-2">
               <div class="category-box">
-                <h6><i class="fas fa-laptop-code"></i> Development</h6>
+                <a href="/cliente/cursos/index.html"><i class="fas fa-laptop-code"></i> Development</a>
               </div>
             </div>
             <div class="col-md-3 p-2">
               <div class="category-box">
-                <h6><i class="fas fa-microchip"></i> Tecnologia</h6>
+                <a href="/cliente/cursos/index.html"><i class="fas fa-microchip"></i> Tecnologia</a>
               </div>
             </div>
             <div class="col-md-3 p-2">
               <div class="category-box">
-                <h6><i class="fas fa-code"></i> Software</h6>
+                <a href="/cliente/cursos/index.html"><i class="fas fa-code"></i> Software</a>
               </div>
             </div>
             <div class="col-md-3 p-2">
               <div class="category-box">
-                <h6><i class="fas fa-paint-brush"></i> Diseño</h6>
+                <a href="/cliente/cursos/index.html"><i class="fas fa-paint-brush"></i> Diseño</a>
               </div>
             </div>
             <div class="col-md-3 p-2">
               <div class="category-box">
-                <a href="" class="contenerdor-links"><i class="fab fa-java"></i> Java</a>
+                <a href="#" class="contenerdor-links"><i class="fab fa-java"></i> Java</a>
               </div>
             </div>
             <div class="col-md-3 p-2">
               <div class="category-box">
-                <a href="" class="contenerdor-links"><i class="fab fa-python"></i> Python</a>
+                <a href="#" class="contenerdor-links"><i class="fab fa-python"></i> Python</a>
               </div>
             </div>
             <div class="col-md-3 p-2">
               <div class="category-box">
-                <a href="" class="contenerdor-links"><i class="fas fa-database"></i> SQL Server</a>
+                <a href="#" class="contenerdor-links"><i class="fas fa-database"></i> SQL Server</a>
               </div>
             </div>
             <div class="col-md-3 p-2">
               <div class="category-box">
-                <a href="" class="contenerdor-links"><i class="fab fa-html5"></i> HTML</a>
+                <a href="#" class="contenerdor-links"><i class="fab fa-html5"></i> HTML</a>
               </div>
             </div>
             <div class="col-md-3 p-2">
               <div class="category-box">
-                <a href="" class="contenerdor-links Javascrip"><i class="fab fa-js-square"></i> JavaScript</a>
+                <a href="#" class="contenerdor-links Javascrip"><i class="fab fa-js-square"></i> JavaScript</a>
               </div>
             </div>
             <div class="col-md-3 p-2">
               <div class="category-box">
-                <a href="" class="contenerdor-links"><i class="fab fa-linux"></i> Kali Linux</a>
+                <a href="#" class="contenerdor-links"><i class="fab fa-linux"></i> Kali Linux</a>
               </div>
             </div>
             <div class="col-md-3 p-2">
               <div class="category-box">
-                <a href="" class="contenerdor-links"><i class="fab fa-css3-alt"></i> CSS</a>
+                <a href="#" class="contenerdor-links"><i class="fab fa-css3-alt"></i> CSS</a>
               </div>
             </div>
             <div class="col-md-3 p-2">
               <div class="category-box">
-                <a href="" class="contenerdor-links"><i class="fas fa-database"></i> Mongo DB</a>
+                <a href="#" class="contenerdor-links"><i class="fas fa-database"></i> Mongo DB</a>
               </div>
             </div>
           </div>
@@ -324,6 +345,73 @@
       </div>
     </div>
   </section>
+
+  <!-- SECCIÓN DE SUSCRIPCIÓN -->
+  <section class="membership-plans">
+    <h2 data-class="PlansTable__title" class="Mensaje_Us">Elige el plan ideal para ti</h2>
+    <div class="plans-container">
+      <div class="plan-card">
+        <h2>Basic</h2>
+        <p><strong>Tipo:</strong> Mensual</p>
+        <p><strong>Para:</strong> 1 estudiante</p>
+        <p><strong>Precio:</strong> S/119/mes</p>
+        <p><strong>Cobro:</strong> Mensual recurrente</p>
+        <p><strong>Beneficios:</strong></p>
+        <ul>
+          <li> Contenido profesional y actualizado</li>
+          <li> Certificados digitales</li>
+          <li> English Academy, Escuela de Startups. Liderazgo y Management</li>
+          <li> Eventos exclusivos como DropCode Conf</li>
+          <li> Descarga de contenido en la app móvil</li>
+          <li> Certificados físicos para rutas de perfil Junior</li>
+        </ul>
+        <p><strong>Ahorro:</strong> 6 meses</p>
+        <a href="/cliente/suscripcion/Regitro.html" class="btnD">Suscribirse</a>
+      </div>
+      <div class="plan-card">
+        <h2>Expert</h2>
+        <p><strong>Tipo:</strong> Anual</p>
+        <p><strong>Para:</strong> 1 estudiante</p>
+        <p><strong>Precio:</strong> S/67/mes</p>
+        <p><strong>Cobro:</strong> Anual recurrente de S/799</p>
+        <p><strong>Beneficios:</strong></p>
+        <ul>
+          <li> Contenido profesional y actualizado</li>
+          <li> Certificados digitales</li>
+          <li> English Academy, Escuela de Startups. Liderazgo y Management</li>
+          <li> Eventos exclusivos como DropCode Conf</li>
+          <li> Descarga de contenido en la app móvil</li>
+          <li> Certificados físicos para rutas de perfil profesional</li>
+        </ul>
+        <p><strong>Pago:</strong> <i class="fa fa-clock"></i> Paga a 4 cuotas sin intereses de S/200 con tarjeta débito
+          o crédito.</p>
+        <p><strong>Ahorro:</strong> 8 meses</p>
+        <a href="/cliente/suscripcion/Regitro.html" class="btnD">Suscribirse</a>
+      </div>
+
+      <div class="plan-card">
+        <h2>Expert Duo</h2>
+        <p><strong>Tipo:</strong> Anual</p>
+        <p><strong>Para:</strong> 2 estudiantes</p>
+        <p><strong>Precio:</strong> S/92/mes</p>
+        <p><strong>Cobro:</strong> Anual recurrente de S/1,099</p>
+        <p><strong>Beneficios:</strong></p>
+        <ul>
+          <li> Contenido profesional y actualizado</li>
+          <li> Certificados digitales</li>
+          <li> English Academy, Escuela de Startups. Liderazgo y Management</li>
+          <li> Eventos exclusivos como DropCode Conf</li>
+          <li> Descarga de contenido en la app móvil</li>
+          <li> Certificados físicos para rutas de perfil profesional</li>
+        </ul>
+        <p><strong>Pago:</strong> <i class="fa fa-clock"></i> Paga a 4 cuotas sin intereses de S/275 con tarjeta débito
+          o crédito.</p>
+        <a href="/cliente/suscripcion/Regitro.html" class="btnD">Suscribirse</a>
+      </div>
+    </div>
+  </section>
+
+
 
 
   <!--SECCION DE CONTACTOS -->
@@ -382,7 +470,7 @@
           <div class="row">
             <div class="form-item col-6 padd-15">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Name">
+                <input type="text" class="form-control" placeholder="Nombre">
               </div>
             </div>
             <div class="form-item col-6 padd-15">
@@ -394,20 +482,20 @@
           <div class="row">
             <div class="form-item col-12 padd-15">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" class="form-control" placeholder="Destino">
               </div>
             </div>
           </div>
           <div class="row">
             <div class="form-item col-12 padd-15">
               <div class="form-group">
-                <textarea name="" class="form-control" id="" placeholder="Message"></textarea>
+                <textarea name="" class="form-control" id="" placeholder="Mensaje"></textarea>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="form-item col-12 padd-15">
-              <button type="submit" class="btn"> Enviar Mensaje</button>
+              <a href="#" class="btn">Enviar</a>
             </div>
           </div>
         </div>
@@ -426,12 +514,11 @@
     </ol>
   </Section>
 
-
-
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+
+  <script src="/server/Loginjs/scrip.js"></script>
 </body>
 
 </html>

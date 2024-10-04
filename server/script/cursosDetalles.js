@@ -2,21 +2,23 @@ import { Curso } from "/server/script/model/Curso.js";
 import { Contenido } from "/server/script/model/SilaboCurso.js";
 import { Temas } from "/server/script/model/SilaboCurso.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
         const urlParams = new URLSearchParams(window.location.search);
-        var code = urlParams.get("code");
+        var code = urlParams.get('code');
         const titleHTML = document.querySelector("title");
         const btnComprarCurso = document.querySelector(".btn__buy");
         obtenerDetalleCurso(code)
-                .then((curso) => {
+                .then(curso => {
                         titleHTML.textContent = curso.name;
                         render(curso);
 
-                        btnComprarCurso.addEventListener("click", () => {});
+                        btnComprarCurso.addEventListener('click', () => {
+
+                        })
                 })
 
                 .catch(() => {
-                        //   window.location.href = "/"
+                       window.location.href = "/cliente/cursos/index.html"
                 });
 });
 
@@ -38,12 +40,12 @@ const getStrella = () => {
      -272 826 -403 1225 -131 399 -383 1166 -560 1705 -177 539 -325 983 -329 987
      -4 5 -55 -139 -114 -320z"/>
      </g>
-</svg>`;
-};
+</svg>`
+}
 
-const render = (curso) => {
-        // secciones:
-        const headerHTML = document.querySelector(".header");
+const render = curso => {
+        // secciones: 
+        const headerHTML = document.querySelector(".header")
         const habilidadesHTML = document.querySelector(".habilidades");
         const detallesHTML = document.querySelector(".detalles");
         const ventajasHTML = document.querySelector(".ventajas");
@@ -52,32 +54,26 @@ const render = (curso) => {
         const descriptionHTML = document.querySelector(".descripcion");
 
         const data = document.createElement("div");
-        data.classList.add("header__data");
+        data.classList.add("header__data")
         data.innerHTML = `
-		<h1 class="header__title">${curso.name}</h1>
-		<p class="header__description">${curso.shortDescription}</p>
-		<ul class="header__calification">
-			<li class="header__calification-score">Puntuación ${
-                                curso.score
-                        } ${getStrella()}${getStrella()}${getStrella()}${getStrella()}${getStrella()}</li>
-			<li class="header__calification-votes">(${curso.votes} votos)</li>
-			<li class="header__calification-matriculados">${
-                                curso.matriculados
-                        } estudiantes</li>
-		</ul>
-		<p class="header__author">Creado por ${curso.author}</p>
-		<p class="header__info">
-			<span class="header__info-update">Última actualización: ${
-                                curso.lastUpdate
-                        }</span>
-			<span class="header__info-language">(${curso.language})</span>
-		</p>
-	`;
+                <h1 class="header__title">${curso.name}</h1>
+                <p class="header__description">${curso.shortDescription}</p>
+                <ul class="header__calification">
+                        <li class="header__calification-score">Puntuación ${curso.score} ${getStrella()}${getStrella()}${getStrella()}${getStrella()}${getStrella()}</li>
+                        <li class="header__calification-votes">(${curso.votes} votos)</li>
+                        <li class="header__calification-matriculados">${curso.matriculados} estudiantes</li>
+                </ul>
+                <p class="header__author">Creado por ${curso.author}</p>
+                <p class="header__info">
+                        <span class="header__info-update">Última actualización: ${curso.lastUpdate}</span>
+                        <span class="header__info-language">(${curso.language})</span>
+                </p>
+        `;
         const imgHeader = document.createElement("div");
         imgHeader.classList.add("header__photo");
-        imgHeader.innerHTML = `<img src="/cliente/principal/pictures/test.png" alt="">`;
+        imgHeader.innerHTML = `<img src="/cliente/principal/pictures/test.png" alt="">`
         headerHTML.appendChild(data);
-        headerHTML.appendChild(imgHeader);
+        headerHTML.appendChild(imgHeader)
 
         const inner = (section, data, name, title) => {
                 if (data) {
@@ -85,19 +81,14 @@ const render = (curso) => {
                                 title = name;
                         }
                         section.innerHTML = `
-			<h2 class="${name}__title">${title}:</h2>
-			<div class="${name}__content content">${data}</div>`;
+                        <h2 class="${name}__title">${title}:</h2>
+                        <div class="${name}__content content">${data}</div>`;
                 } else {
                         section.remove();
                 }
-        };
+        }
 
-        inner(
-                habilidadesHTML,
-                curso.habilidades,
-                "habilidades",
-                "Habilidades Obtenidas:"
-        );
+        inner(habilidadesHTML, curso.habilidades, "habilidades", "Habilidades Obtenidas:");
         inner(detallesHTML, curso.detalles, "detalles", "Detalles");
         inner(ventajasHTML, curso.ventajas, "ventajas", "Ventajas");
         inner(requisitosHTML, curso.requisitos, "requisitos", "Requisitos");
@@ -106,76 +97,65 @@ const render = (curso) => {
         // contenido
         if (curso.sesiones) {
                 contenidoHTML.innerHTML = `
-		<h2 class="contenido__title">Contenido del Curso:</h2>
-		<div class="contenido__content content"></div>`;
-                let contenidoContentHTML = document.querySelector(
-                        ".contenido__content"
-                );
+                <h2 class="contenido__title">Contenido del Curso:</h2>
+                <div class="contenido__content content"></div>`;
+                let contenidoContentHTML = document.querySelector(".contenido__content");
                 let sesionesListHTML = "";
-                curso.sesiones.forEach((element) => {
-                        let temasHTML = "";
-                        element.temas.forEach((temas) => {
+                curso.sesiones.forEach(element => {
+                        let temasHTML = ""
+                        element.temas.forEach(temas => {
                                 temasHTML += `
-				<p class="contenido__tema">
-					<span class="contenido__tema-name">${temas.name}</span>
-					<span class="contenido__tema-duracion">${temas.duracion}</span>
-				</p>`;
-                        });
+                                <p class="contenido__tema">
+                                        <span class="contenido__tema-name">${temas.name}</span>
+                                        <span class="contenido__tema-duracion">${temas.duracion}</span>
+                                </p>`
+                        })
                         sesionesListHTML += `
-				<details class="contenido__item">
-					<summary class="contenido__item-name">
-						<h3 class="contenido__item-title">${element.title}</h3>
-						<span class="contenido__item-duracion">${element.duracion}</span>
-					</summary>
-					${temasHTML}
-				</details>
-			`;
-                });
-                contenidoContentHTML.innerHTML = sesionesListHTML;
+                                <details class="contenido__item">
+                                        <summary class="contenido__item-name">
+                                                <h3 class="contenido__item-title">${element.title}</h3>
+                                                <span class="contenido__item-duracion">${element.duracion}</span>
+                                        </summary>
+                                        ${temasHTML}
+                                </details>
+                        `
+                })
+                contenidoContentHTML.innerHTML = sesionesListHTML
         } else {
                 contenidoHTML.remove();
         }
 
-        const contentStyle = document.querySelectorAll("main > section");
+        const contentStyle = document.querySelectorAll("main > section")
         contentStyle.forEach((element, index) => {
                 if (index % 2 != 0) {
                         element.classList.add("content-impar");
                 } else {
-                        element.classList.add("content-par");
+                        element.classList.add("content-par")
                 }
         });
-};
+}
 
-const obtenerDetalleCurso = async (code) => {
+const obtenerDetalleCurso = async code => {
         try {
-                let peticion = await fetch(
-                        "/server/data/dataCourseDetails.json"
-                );
+                let peticion = await fetch("/server/data/dataCourseDetails.json");
                 if (!peticion.ok) {
-                        throw new Error("No existe el curso");
+                        throw new Error("No existe el curso")
                 }
-                const data = await peticion.json();
-                let detalleCurso = data.find((element) => element.id == code);
+                const data = await peticion.json()
+                let detalleCurso = data.find(element => element.id == code)
 
                 let sesionesDetalleCurso = detalleCurso.sesiones;
-                let sesionesProcesadas = [];
+                let sesionesProcesadas = []
                 sesionesDetalleCurso.forEach((element, indexSesiones) => {
                         let temasDetalleCurso = element.temas;
-                        let temas = [];
+                        let temas = []
                         temasDetalleCurso.forEach((t, indexTemas) => {
-                                temas[indexTemas] = new Temas(
-                                        t.name,
-                                        t.duracion
-                                );
-                        });
-                        sesionesProcesadas[indexSesiones] = new Contenido(
-                                element.title,
-                                element.duracion,
-                                temas
-                        );
-                });
+                                temas[indexTemas] = new Temas(t.name, t.duracion)
+                        })
+                        sesionesProcesadas[indexSesiones] = new Contenido(element.title, element.duracion, temas)
+                })
 
-                new Contenido(detalleCurso.title, detalleCurso.duracion);
+                new Contenido(detalleCurso.title, detalleCurso.duracion,)
                 return new Curso(
                         detalleCurso.id,
                         detalleCurso.author,
@@ -197,6 +177,7 @@ const obtenerDetalleCurso = async (code) => {
                         sesionesProcesadas
                 );
         } catch (error) {
-                console.log(error);
+                console.log(error)
         }
-};
+
+}

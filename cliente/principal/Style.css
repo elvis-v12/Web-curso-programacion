@@ -1,9 +1,17 @@
 :root{
-    --bg-black-900:#f2f2fc;
-    --bg-black-100:#fdf9ff;
-    --bg-black-50:#e8dfec;
-    --bg-text-black-900:#302e4d;
-    --bg-text-black-700:#504e70;
+    --bg-black-900:#F8E71C;
+    --bg-black-100:#7ED321;
+    --bg-black-50:#F8E71C;
+    --bg-text-black-900:#F5A623;
+    --bg-text-black-700:#FF6F61;
+    --bg-text-black-600:#9013FE;
+    --bg-text-black-500:#4A90E2;
+    --bg-text-black-400:#9B9B9B;
+    --bg-text-black-300:#4A4A4A;
+    --bg-text-black-200:#f2f2f2;
+    --bg-text-black-90:#030918;
+    --bg-text-black-91:#7933ff;
+    --bg-text-black-92:#007bff;
 }
 body.dark{
         --bg-black-900:#151515;
@@ -21,8 +29,8 @@ body.dark{
 nav{
     display: flex;
     width: 100%;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .08), 0 4px 12px rgba(0, 0, 0, .08);
+    background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 6px 16px rgba(0, 0, 0, 0.15);
     z-index: 1010;
     justify-content: space-between;
     text-align: center;
@@ -31,8 +39,11 @@ nav{
 nav .Icon{
     font-size: 36px;
     font-weight: 800;
-    color: #000;
+    color: var(--bg-black-100);
     cursor: pointer;
+}
+nav .Icon b{
+    color:var(--bg-text-black-500);
 }
 nav ol{
      display: flex;
@@ -40,25 +51,34 @@ nav ol{
      margin: auto 0;
 }
 nav ol li a{
-    color:#000;
+    color:var(--bg-text-black-200);
     font-size: 20px;
     text-decoration: none;
     text-transform: capitalize;
     letter-spacing: 1px;
     padding: 2px 10px;
+    text-align: center;
 
 }
+nav ol li .boton-carrito{
+    color: var(--bg-black-900);
+}
+nav ol li .boton-carrito:hover{
+    color: var(--bg-black-50);
+}
 nav ol li a:hover{
-    color:blueviolet;
+    color:#ffffff;
 }
 nav ol li .Cuadro-ingreso{
-    background-color: #008f39;
-    border: 2px solid #000;
+    background-color:transparent;
+    border: 2px solid var(--bg-black-100);
     margin:0 10px;
-    border-radius: 2px;
+    border-radius: 15px;
 }
 nav ol li .Cuadro-ingreso:hover{
-    background: #0005;
+    background: transparent;
+    color: var(--bg-black-100);
+    border:3px solid var(--bg-black-100);
 }
 nav .search_box{
     display: flex;
@@ -70,11 +90,12 @@ nav .search_box{
     border-top-left-radius: 5px;
     border: none;
     outline: none;
-    background: #f2f2f2;
+    background: #03091e;
     height: 100%;
     padding: 0 10px;
     font-size: 20px;
     width: 350px;
+    color:var(--bg-text-black-200);
  }
  nav .search_box span{
     color:#000 ;
@@ -87,13 +108,13 @@ nav .search_box{
     z-index: 1;
  }
  nav .search_box  span:hover{
-    color: #fff;
+    color: var(--bg-text-black-300);
  }
  nav .search_box  span::after{
     height: 100%;
     width: 0%;
     content:'' ;
-    background: #ff003c;
+    background: var(--bg-black-100);
     position: absolute;
     top: 0;
     right: 0;
@@ -103,6 +124,35 @@ nav .search_box{
  nav .search_box  span:hover::after{
     width: 100%;
  }
+
+
+
+
+
+#client-info {
+    display: none;
+    position: absolute;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center; /* Centrar el contenido del div */
+}
+
+#client-info h2 {
+    margin-top: 0;
+}
+
+.Icon {
+    font-size: 24px;
+    font-weight: bold;
+    color: blue;
+}
+
+.search_box {
+    display: inline-block;
+}
  /*Configuracion del Carito de compra*/
 
 
@@ -203,12 +253,14 @@ nav .search_box{
  /*CONFIGURACION DEL CARUSEL*/
 .d-item{
     height: 500px;
+    
 }
 .d-img{
     height: 100%;
     object-fit: cover;
     filter: brightness(0.8);
     height: auto;
+    
 }
 .carousel-inner {
     position: relative;
@@ -227,53 +279,97 @@ nav .search_box{
     transform: translateY(-50%);
     z-index: 10; 
     border-radius: 25px;
+    background: var(--bg-text-black-200);
   }
-  
   .ud-heading-serif-xxl {
     font-size: 24px; 
     margin: 0 0 10px 0;
     text-align: center;
+    color:var(--bg-text-black-900);
   }
   
   .ud-text-md {
     font-size: 16px; 
     text-align: center;
     margin: 0;
+    color: var(--bg-text-black-300);
+    
   }
+
+  .d-item .mt-4 {
+    background-color: var(--bg-black-100);
+    opacity: 0.6; /* 40% de opacidad */
+    height: 400px;
+    width: 750px;
+}
+
+.d-item p{
+    color: var(--bg-text-black-200);
+}
+.d-item h1{
+    color:#000000;
+    text-align: center;
+}
+
+
   /*REDERIGIMIENTO */
-.cabezado{
+  .base_desp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.base_desp div {
     display: flex;
     width: 100%;
-    background-color: #172554;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .08), 0 4px 12px rgba(0, 0, 0, .08);
-    z-index: 1010;
-    justify-content: space-between;
-    text-align: center;
-    padding: 15px 30px;
-    font-family: sans-serif;
 }
 
-.cabezado ol li a{
-    color:#fff;
-    font-size: 20px;
-    text-decoration: none;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-    padding: 2px 10px;
-}
-.cabezado ol li a:hover{
-    color: #f2f2f2;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .08), 0 4px 12px rgba(0, 0, 0, .08);
-}
-.cabezado ol{
+.cajas {
     display: flex;
-    list-style: none;
-    margin: auto 0;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 500;
+    font-size: 16px;
+}
 
+.cajas a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.caja1 {
+    background-color: var(--bg-black-100); /* Color for the first box */
+    opacity: 2;
+}
+.caja2 {
+    background-color: var(--bg-text-black-300); /* Color for the second box */
+}
+.caja3 {
+    background-color: var(--bg-black-100); /* Color for the third box */
+    opacity: 2;
+}
+.caja4 {
+    background-color: var(--bg-text-black-300); /* Color for the fourth box */
+}
+/* Icon styles */
+.fas {
+    font-size: 18px;
 }
 
 
 /*SECCION DE DISEÑO DE CURSOS PARA LA ACADEMIA*/
+.contenedor_curso{
+    background:var(--bg-text-black-90);
+
+
+}
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -285,7 +381,9 @@ nav .search_box{
     align-items: center;
     justify-content: flex-start; /* Ensure logo is on the left */
 }
-
+.logo-title div h1{
+ color:var(--bg-text-black-200);
+}
 .logo {
     width: 100px;
     margin-right: 20px;
@@ -302,21 +400,25 @@ nav .search_box{
     font-size: 1.1em;
     margin-bottom: 10px;
 }
-
+.rating .Logos{
+    color:var(--bg-text-black-900);
+}
 .last-update {
     margin-top: 5px;
+    color:var(--bg-text-black-200);
 }
 
 /* Styling for BÁSICO level box */
 .level-box {
     padding: 5px 10px;
-    border: 2px solid white;
+    border: 2px solid var(--bg-black-50);
     border-radius: 5px;
-    background-color: yellow;
+    background-color:transparent;
     font-weight: bold;
     box-shadow: 
     0 2px 4px rgba(240, 236, 13, 0.4),  /* sombra pequeña con mayor opacidad */
     0 4px 12px rgba(240, 227, 55, 0.8); /* sombra grande con menor opacidad */
+    color:var(--bg-text-black-200)
 }
 
 /* Main Layout */
@@ -337,6 +439,10 @@ nav .search_box{
     margin-top: 10px;
     text-align: left;
     font-size: 0.8rem;
+
+}
+.register h1{
+    color:var(--bg-text-black-400);
 }
 
 .header-right {
@@ -359,12 +465,14 @@ nav .search_box{
     padding: 30px;
     color: #ffffff;
     text-align: left;
-    background-size: cover; /* Use background image */
+    background: var(--bg-text-black-91); /* Use background image */
     max-width: 2000px;
     font-size: 1rem;
     border-radius: 10px;
 }
-
+.certificate-box h2{
+    color:var(--bg-text-black-200);
+}
 .certificate-box input {
     width: 100%;
     padding: 10px;
@@ -405,6 +513,9 @@ nav .search_box{
 }
 
 /* Terms & Privacy links */
+.terms{
+    color:var(--bg-text-black-200);
+}
 .terms a {
     color: #00bfff; /* Light blue color for links */
     text-decoration: underline;
@@ -431,6 +542,7 @@ footer {
 .course-outline {
     padding: 30px 0;
     color: #000;
+    background: var(--bg-text-black-90);
 }
 
 .content-container {
@@ -438,11 +550,16 @@ footer {
     margin: 0 auto;
     text-align: center;
 }
-
+.content-container h2{
+    color: var(--bg-text-black-200);
+    padding-top: 30px;
+    padding-bottom: 45px;
+}
 .course-info-and-topics {
     display: flex;
     justify-content: space-between;
     text-align: left;
+    color: var(--bg-text-black-200);
     
 }
 
@@ -465,9 +582,9 @@ footer {
 
 /* Línea separadora */
 .separation-line {
-    border: none; /* Sin borde por defecto */
-    border-top: 1px solid white; /* Línea separadora */
-    margin: 15px 0; /* Margen para espaciar bien la línea */
+    border: none; 
+    border-top: 2px solid white; 
+    margin: 15px 0; 
 }
 
 /* Alineación de los iconos y textos */
@@ -516,12 +633,21 @@ footer {
 /* Estilos para las cajas contenedoras */
 .Categorias{
     margin-top: 35px;
+    background-color: #ffffff;
 }
-section .category-box h6 .fas {
+.row .col-md-12 a{
+    text-align: center;
+    padding: 20px 10px;
+}
+.row .form-item .btn{
+    text-align: center;
+    justify-content: center;
+}
+section .category-box a .fas {
     color:red;
     transition: box-shadow 0.4s, font-size 0.4s;
 }
-section .category-box h6 .fas:hover{
+section .category-box a .fas:hover{
     box-shadow: 
     0 2px 4px rgba(187, 23, 17, 0.4),  /* sombra pequeña con mayor opacidad */
     0 4px 12px rgba(173, 7, 7, 0.8); /* sombra grande con menor opacidad */
@@ -580,18 +706,132 @@ section .category-box .contenerdor-links .fas:hover{
     color: inherit;
 }
 
+
+/* SECTION DE SUSCRIPCION A CLASES DE CERTIFICADO */
+.membership-plans {
+    padding-top: 100px;
+    background-image: url(/cliente/principal/imagenes/LogoMn.jpg);
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    filter: contrast(1);
+    fill-opacity: initial;
+}
+
+.membership-plans .Mensaje_Us {
+    text-align: center;
+    padding-bottom: 36px;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background-color: #fff;
+    opacity: 0.8;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 350px;
+    text-align: center;
+}
+.plan-card:hover{
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5); /* Sombra blanca */
+}
+.plan-card h2 {
+    color: #333;
+}
+
+.plan-card p {
+    margin: 8px 0;
+}
+
+.plan-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.plan-card ul li {
+    margin: 5px 0;
+}
+
+.plans-container .btnD {
+    display: inline-block;
+    background-color: var(--bg-text-black-92);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.plans-container .btnD:hover {
+    background-color: #0056b3;
+}
+
+/* Colores para íconos */
+.fa-clock {
+    color: blue; /* Color azul para el ícono de reloj */
+}
+
+.plan-card ul li:before {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.plan-card ul li:before {
+    content: "✓"; /* Para los checks */
+    color: blue; /* Color azul para los checks */
+}
+
+.plan-card ul li:after {
+    content: "✗"; 
+    color: black; 
+    display: none; 
+}
+
+.plan-card ul li:nth-child(1)::before {
+    content: "✓"; 
+    color: blue; 
+}
+
+.plan-card ul li:nth-child(n+2)::before {
+    content: "✗"; 
+    color: black;
+}
+
+/* Para el resto de los planes */
+.plan-card:nth-child(n+2) ul li::before {
+    content: "✓"; 
+    color: blue; 
+}
+
+
+
 /*Contactos*/
+.contact{
+    background: var(--bg-text-black-90);
+}
 .row .section-title{
     margin-top: 35px;
+    text-align: center;
+    padding: 20px 10px;
+    color: var(--bg-text-black-200);
 }
 .contact-title{
-    color: #504e70;
+    color: var(--bg-text-black-92);
     text-align: center;
     font-size: 25px;
     margin-bottom: 20px;
 }
 .contact-sub-title{
-    color: var(--bg-text-black-900);
+    color: var(--bg-text-black-200);
     text-align: center;
     font-size: 15px;
     margin-bottom: 60px;
@@ -606,20 +846,20 @@ section .category-box .contenerdor-links .fas:hover{
     display: inline-block;
 }
 .contact .contact-info-item .icon .fa{
-    color: #172554;
+    color: var(--bg-black-900);
     font-size: 25px;
 }
 .contact .contact-info-item h4{
     font-size: 18px;
     font-weight: 700;
-    color: #0008;
+    color: var(--bg-text-black-200);
     text-transform: capitalize;
     margin: 15px 0 5px;
 }
 .contact .contact-info-item p{
     font-size: 16px;
     line-height: 25px;
-    color: var(--bg-text-black-700);
+    color: var(--bg-black-50);
     font-weight: 400;
 }
 .contact .contact-form{
@@ -643,8 +883,8 @@ section .category-box .contenerdor-links .fas:hover{
     width: 100%;
     height: 50px;
     border-radius: 25px;
-    background: var(--bg-black-100);
-    border: 1px solid var(--bg-black-50);
+    background: var(--bg-text-black-400);
+    border: 1px solid var(--bg-text-black-92);
     padding: 10px 25px;
     font-size: 16px;
     color: var(--bg-text-black-700);
