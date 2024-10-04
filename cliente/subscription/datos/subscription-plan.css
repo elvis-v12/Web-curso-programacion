@@ -27,8 +27,8 @@ body {
 }
 
 .header__logo>img {
-        width: 130px;
-        padding: 0 40px;
+        width: 140px;
+        padding: 0 60px;
 }
 
 .header__name {
@@ -48,7 +48,7 @@ body {
 }
 
 .datos-form-container {
-        background-color: #76F9F8;
+        background-color: #a4ffff;
         box-shadow: 0 0 10px 0 #000a2bcc;
         padding: 10px 20px;
 }
@@ -73,12 +73,12 @@ body {
 
 .datos-form__inputs {
         display: grid;
-        gap: 20px;
+        gap: 30px;
 }
 
 .datos-form__input {
         font-size: 13px;
-        padding: 3px 10px;
+        padding: 6px 15px;
         height: 25px;
         border: none;
         outline: none;
