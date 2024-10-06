@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Registro</title>
+</head>
+<body>
+    <div class="container">
+        <section class="form-section">
+          <h2>Registro</h2>
+          <form id="signupForm">
+            <label>Nombres y Apellidos</label>
+            <input
+              type="text"
+              placeholder="Ingrese su nombre completo"
+              id="name"
+              required
+              autofocus
+            />
+            <form id="signupForm">
+              <label>Pais</label>
+              <input
+                type="text"
+                placeholder="Ingrese su residencia"
+                id="name"
+                required
+                autofocus
+              />
+            <label>E-Mail</label>
+            <input
+              type="email"
+              placeholder="Ingrese su correo electrónico"
+              id="email"
+              required
+            />
+            <label>Contraseña</label>
+            <input
+              type="password"
+              placeholder="Digite una contraseña para su cuenta"
+              id="password"
+              required
+            />
+            <input type="submit" value="Registro" />
+          </form>
+        </section>
+  
+        <!-- Caja de alternancia al costado, más clara -->
+        <section class="toggle-box">
+          <p>¿Ya tienes una cuenta?</p>
+          <a href="login.html">
+            <button id="loginBtn">INICIAR</button>
+          </a>
+        </section>
+      </div>
+  
+    <script src="/server/Loginjs/signup.js"></script>
+</body>
+
+</html>

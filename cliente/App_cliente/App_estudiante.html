@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout con Aside</title>
+    <link rel="stylesheet" href="CSS/Estilo_cliente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Menú aside izquierdo -->
+        <aside class="aside-left">
+            <div class="logo">
+                <a href="/cliente/App_cliente/App_estudiante.html" class="dOS"><img src="imagenes/Logo_Img.png" alt="Logo" class="logo-img"></a>
+            </div>
+            <div class="nav-toggler" onclick="toggleMenu()">
+                <span>&#10095;</span>
+            </div>
+            <ul class="nav">
+                <li><a href="/cliente/App_cliente/App_estudiante.html" class="active"><i class="fa fa-home"></i></a></li>
+                <li><a href="#about"><i class="fa fa-user"></i></a></li>
+                <li><a href="#services"><i class="fa fa-list"></i></a></li>
+                <li><a href="#portfolio"><i class="fa fa-briefcase"></i></a></li>
+                <li><a href="#contact"><i class="fa fa-comments"></i></a></li>
+            </ul>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <section class="header">
+                <h1>¡Hola, Elvis!</h1>
+            </section>
+
+            <!-- Sección de Carreras -->
+            <div class="contenidos_barra">
+                <div class="row">
+                    <img src="/cliente/principal/imagenes/LogoMarca.png" alt="" width="60px">
+                    <div class="text-container">
+                        <h2>Despega tu carrera</h2>
+                        <h5>Comienza o acelera tu carrera en tecnología, 
+                            Estudia Desarrollo Full Stack, Data Science o Data Analytics.</h5>
+                    </div>
+                </div>                
+                <section class="carreras">
+                    <div class="tres">
+                        <h2>Carreras</h2>
+                        <h5><i class="fas fa-check-circle"></i> AIC</h5>
+                        <h5><i class="fas fa-shield-alt"></i> Garantía de empleo</h5>
+                    </div>
+                    
+                    <div class="carreras-container">
+                        <a class="carrera">
+                            <img src="imagenes/full-stack.png" alt="Full Stack">
+                            <div class="carrera-content">
+                                <h3 class="Texto_da">Full Stack 2.0</h3>
+                                <p class="Texto_da">Aprende a desarrollar páginas y aplicaciones web y consigue un trabajo en el mundo de la tecnología.</p>
+                                <span class="duration">Duración: 3-6 meses</span>
+                            </div>
+                        </a>
+                        <a class="carrera">
+                            <img src="imagenes/css-code-css.jpg" alt="Data Analytics">
+                            <div class="carrera-content">
+                                <h3 class="Texto_da">Desarrollador Frontend</h3>
+                                <p class="Texto_da">Aprende a analizar grandes volúmenes de datos y transfórmalos en información valiosa para el negocio.</p>
+                                <span class="duration">Duración: 3-6 meses</span>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Sección de Cursos -->
+                <section class="courses">
+                    <h2>Cursos Introductorios <span class="status-gratuito">Gratuitos</span></h2>
+                    <div class="courses-container">
+                        <a class="course">
+                            <div class="course-icon">
+                                <img src="imagenes/js.png" alt="Javascript">
+                                <span>Javascript</span>
+                            </div>
+                            <div class="linea"></div>
+                            <div class="course-content">
+                                <span class="nombre Regla">Introducción a</span>
+                                <span class="nombre">Programación</span>
+                                <span class="modules-count">
+                                    <i class="fa fa-book"></i> 3 módulos
+                                </span>
+                                
+                            </div>
+                        </a>
+                        <a class="course">
+                            <div class="course-icon">
+                                <img src="imagenes/piton.png" alt="Python">
+                                <span>Python</span>
+                            </div>
+                            <div class="linea"></div>
+                            <div class="course-content">
+                                <span class="nombre Regla">Introducción a</span>
+                                <span class="nombre">Data Science</span>
+                                <span class="modules-count">
+                                    <i class="fa fa-book"></i> 3 módulos
+                                </span>
+                                
+                            </div>
+                        </a>
+                        <a class="course">
+                            <div class="course-icon">
+                                <img src="imagenes/servidor-sql.png" alt="SQL">
+                                <span>SQL</span>
+                            </div>
+                            <div class="linea"></div>
+                            <div class="course-content">
+                                <span class="nombre Regla">Introducción a</span>
+                                <span class="nombre">Data Analytics</span>
+                                <span class="modules-count">
+                                    <i class="fa fa-book"></i> 3 módulos
+                                </span>
+                                
+                            </div>
+                        </a>
+                        <a class="course">
+                            <div class="course-icon">
+                                <img src="imagenes/java.png" alt="Java">
+                                <span>JAVA</span>
+                            </div>
+                            <div class="linea"></div>
+                            <div class="course-content">
+                                <span class="nombre Regla">Introducción a</span>
+                                <span class="nombre">JAVA</span>
+                                <span class="modules-count">
+                                    <i class="fa fa-book"></i> 3 módulos
+                                </span>
+                                
+                            </div>
+                        </a>
+                    </div>
+                </section>
+                
+                
+            </div>
+        </main>
+
+        <!-- Aside derecho para el perfil del usuario -->
+        <!-- Aside derecho para el perfil del usuario -->
+<aside class="aside-right">
+    <div class="profile">
+        <button id="profile-toggle" onclick="toggleProfile()">
+            <div class="profile-avatar">EV</div>
+            <span>Elvis Vega</span>
+        </button>
+        <div id="profile-menu" class="profile-menu">
+            <div id="popover-arrow" class="popover-arrow"></div> <!-- Flecha fuera del botón pero dentro del menú -->
+            <h3>Menú</h3>
+            <a href="/cliente/App_cliente/App_estudiante.html"><i class="fa fa-user"></i> Mi perfil</a>
+            <a href="#"><i class="fa fa-sign-out"></i> Cerrar sesión</a>
+        </div>
+    </div>
+    
+
+   <!-- Carrousel de testimonios -->
+<div class="carousel">
+    <div class="testimonial active">
+        <img src="imagenes/img-portafolio.jpg" alt="">
+        <p><strong>Ignacio Fosco</strong></p>
+        <p>Desarrollador Web - Scale AI</p>
+    </div>
+    <div class="testimonial">
+        <img src="imagenes/img-portafolio.jpg" alt="">
+        <p><strong>Natalia Muñoz Castro</strong></p>
+        <p>Front-End Developer - TRU Web3</p>
+        <p>El mejor trabajo que me reta día a día.</p>
+    </div>
+    <div class="testimonial">
+        <img src="imagenes/img-portafolio.jpg" alt="">
+        <p><strong>Yuliana Castro Diaz</strong></p>
+        <p>Software Development Analyst - Mercado Libre</p>
+        <p>Un gran retorno a nivel profesional.</p>
+    </div>
+
+    <!-- Control de puntos -->
+    <div class="carousel-dots">
+        <span class="dot active" onclick="showSpecificTestimonial(0)"></span>
+        <span class="dot" onclick="showSpecificTestimonial(1)"></span>
+        <span class="dot" onclick="showSpecificTestimonial(2)"></span>
+    </div>
+</div>
+
+</aside>
+
+    </div>
+
+    <script src="/server/App_cliente/Cliente_Aside.js"></script>
+</body>
+</html>

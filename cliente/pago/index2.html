@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago en línea - GuímarBot</title>
+    <link rel="stylesheet" href="cssPago/styles2.css">
+   
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pago en línea</h1>
+        </header>
+        <div class="payment-selection">
+            <img src="/cliente/principal/imagenes/robot.png" alt="GuímarBot Logo" class="logo">
+            <div class="payment-info">
+                <br><label for="Letras">¡Hola! Selecciona tu manera de pago:</label>
+                <div class="payment-options">
+                    <label>
+                        <input type="radio" name="payment-method" id="card-option">
+                        <img src="/cliente/principal/imagenes/visa-mastercard.png" alt="Visa/MasterCard">
+                    </label>
+                    <label>
+                        <input type="radio" name="payment-method" id="qr-option">
+                        <img src="/cliente/principal/imagenes/yape.png" alt="Yape">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="cancel-button">Cancelar</button>
+            <button class="continue-button" onclick="handleContinue()">Continuar</button>
+        </div>
+    </div>
+
+    <script src="/server/Pagosjs/scripts.js"></script> <!-- Enlace al archivo JavaScript -->
+</body>
+</html>

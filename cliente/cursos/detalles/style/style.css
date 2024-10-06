@@ -1,0 +1,11 @@
+* {
+        margin: 0;
+}
+
+.hidden {
+        visibility: hidden;
+}
+
+.absolute{
+        position: absolute;
+}
