@@ -69,3 +69,6 @@ function showSpecificTestimonial(index) {
 
 // Cambia de testimonio automáticamente cada 3 segundos
 setInterval(showNextTestimonial, 3000);
+
+
+//ASIDE DE LOS COMPONENTES DEPLEGABLES UWU

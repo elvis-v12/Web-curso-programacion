@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout con Aside</title>
+    <title>App cliente DARK & CODE</title>
     <link rel="stylesheet" href="CSS/Estilo_cliente.css">
+    <link rel="stylesheet" href="CSS/Estilo_navOpciones.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="/cliente/principal/imagenes/LogoMarca.png">
 </head>
 <body>
     <div class="container">
@@ -19,7 +21,7 @@
             </div>
             <ul class="nav">
                 <li><a href="/cliente/App_cliente/App_estudiante.html" class="active"><i class="fa fa-home"></i></a></li>
-                <li><a href="#about"><i class="fa fa-user"></i></a></li>
+                <li><a href="#Descripcion"><i class="fa fa-user"></i></a></li>
                 <li><a href="#services"><i class="fa fa-list"></i></a></li>
                 <li><a href="#portfolio"><i class="fa fa-briefcase"></i></a></li>
                 <li><a href="#contact"><i class="fa fa-comments"></i></a></li>
@@ -85,7 +87,6 @@
                                 <span class="modules-count">
                                     <i class="fa fa-book"></i> 3 módulos
                                 </span>
-                                
                             </div>
                         </a>
                         <a class="course">
@@ -100,7 +101,6 @@
                                 <span class="modules-count">
                                     <i class="fa fa-book"></i> 3 módulos
                                 </span>
-                                
                             </div>
                         </a>
                         <a class="course">
@@ -115,7 +115,6 @@
                                 <span class="modules-count">
                                     <i class="fa fa-book"></i> 3 módulos
                                 </span>
-                                
                             </div>
                         </a>
                         <a class="course">
@@ -130,64 +129,338 @@
                                 <span class="modules-count">
                                     <i class="fa fa-book"></i> 3 módulos
                                 </span>
-                                
                             </div>
                         </a>
                     </div>
                 </section>
                 
-                
             </div>
         </main>
 
         <!-- Aside derecho para el perfil del usuario -->
-        <!-- Aside derecho para el perfil del usuario -->
-<aside class="aside-right">
-    <div class="profile">
-        <button id="profile-toggle" onclick="toggleProfile()">
-            <div class="profile-avatar">EV</div>
-            <span>Elvis Vega</span>
-        </button>
-        <div id="profile-menu" class="profile-menu">
-            <div id="popover-arrow" class="popover-arrow"></div> <!-- Flecha fuera del botón pero dentro del menú -->
-            <h3>Menú</h3>
-            <a href="/cliente/App_cliente/App_estudiante.html"><i class="fa fa-user"></i> Mi perfil</a>
-            <a href="#"><i class="fa fa-sign-out"></i> Cerrar sesión</a>
+        <aside class="aside-right">
+            <div class="profile">
+                <button id="profile-toggle" onclick="toggleProfile()">
+                    <div class="profile-avatar">EV</div>
+                    <span>Elvis Vega</span>
+                </button>
+                <div id="profile-menu" class="profile-menu">
+                    <div id="popover-arrow" class="popover-arrow"></div>
+                    <h3>Menú</h3>
+                    <a href="/cliente/App_cliente/App_estudiante.html"><i class="fa fa-user"></i> Mi perfil</a>
+                    <a href="#"><i class="fa fa-sign-out"></i> Cerrar sesión</a>
+                </div>
+            </div>
+            
+
+            <!-- Carrousel de testimonios -->
+            <div class="carousel">
+                <div class="testimonial active">
+                    <img src="imagenes/img-portafolio.jpg" alt="">
+                    <p><strong>Ignacio Fosco</strong></p>
+                    <p>Desarrollador Web - Scale AI</p>
+                </div>
+                <div class="testimonial">
+                    <img src="imagenes/img-portafolio.jpg" alt="">
+                    <p><strong>Natalia Muñoz Castro</strong></p>
+                    <p>Front-End Developer - TRU Web3</p>
+                    <p>El mejor trabajo que me reta día a día.</p>
+                </div>
+                <div class="testimonial">
+                    <img src="imagenes/img-portafolio.jpg" alt="">
+                    <p><strong>Yuliana Castro Diaz</strong></p>
+                    <p>Software Development Analyst - Mercado Libre</p>
+                    <p>Un gran retorno a nivel profesional.</p>
+                </div>
+
+                <!-- Control de puntos -->
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="showSpecificTestimonial(0)"></span>
+                    <span class="dot" onclick="showSpecificTestimonial(1)"></span>
+                    <span class="dot" onclick="showSpecificTestimonial(2)"></span>
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+
+<!-- Aside del curso principal-->
+
+    <main class="layout-desktop-module_main__OGBpc layout-desktop-module_containerBody__nl8w0" id="main-content-container">
+        <!-- Aside desplegable-->
+        <aside class="layout-desktop-module_sidebarSecondLeft__WDyMW">
+            <div class="career-sidebar_menu__mYehl">
+
+
+                <!--Navigator de desplazamiento-->
+                <div class="navigation-sidebar-module_navigationSidebar__KRL8f">
+                    <div class="navigation-sidebar-module_navigationSidebarContent__yu3ZZ">
+                        <div data-cy="CAREER_DESCRIPTION" class="navigation-sidebar-module_itemContainer__fhJhN">
+                            <a class="navigation-sidebar-module_item__1xgbX" href="/career-detail/13030091-79bb-41dd-9832-5ffbb887498b/description">
+                                <div class="navigation-sidebar-module_itemContent__mJesg">
+                                    <div>Descripción</div>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.045 21.178c.05.25.177.502.405.655a1.021 1.021 0 0 0 1.403-.28l5.984-8.99a1.028 1.028 0 0 0 0-1.125l-5.984-8.99a1.021 1.021 0 0 0-1.403-.282 1.026 1.026 0 0 0-.28 1.405l5.61 8.43-5.61 8.427c-.153.23-.175.5-.125.75Z" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div data-cy="CAREER_CONTENT" class="navigation-sidebar-module_itemContainer__fhJhN">
+                            <a class="navigation-sidebar-module_item__1xgbX" href="/career-detail/13030091-79bb-41dd-9832-5ffbb887498b/content">
+                                <div class="navigation-sidebar-module_itemContent__mJesg">
+                                    <div>Contenido</div>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.045 21.178c.05.25.177.502.405.655a1.021 1.021 0 0 0 1.403-.28l5.984-8.99a1.028 1.028 0 0 0 0-1.125l-5.984-8.99a1.021 1.021 0 0 0-1.403-.282 1.026 1.026 0 0 0-.28 1.405l5.61 8.43-5.61 8.427c-.153.23-.175.5-.125.75Z" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div data-cy="CAREER_SCHEDULE" class="navigation-sidebar-module_itemContainer__fhJhN">
+                            <a class="navigation-sidebar-module_item__1xgbX" href="/career-detail/13030091-79bb-41dd-9832-5ffbb887498b/schedule">
+                                <div class="navigation-sidebar-module_itemContent__mJesg">
+                                    <div>Cronograma</div>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.045 21.178c.05.25.177.502.405.655a1.021 1.021 0 0 0 1.403-.28l5.984-8.99a1.028 1.028 0 0 0 0-1.125l-5.984-8.99a1.021 1.021 0 0 0-1.403-.282 1.026 1.026 0 0 0-.28 1.405l5.61 8.43-5.61 8.427c-.153.23-.175.5-.125.75Z" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div data-cy="CAREER_ADMISSION_PROCESS" class="navigation-sidebar-module_itemContainer__fhJhN">
+                            <a class="navigation-sidebar-module_item__1xgbX" href="/career-detail/13030091-79bb-41dd-9832-5ffbb887498b/admissions/scoring">
+                                <div class="navigation-sidebar-module_activeIndicator__NI4XI"></div>
+                                <div class="navigation-sidebar-module_itemContent__mJesg">
+                                    <div>Proceso de admisión</div>
+                                    <div class="pill-module_container__XStQa text-colors-module_yellow-darker__24reR background-colors-module_yellow-lighter__h3Nd- borders-module_transparent__DHz5p fonts-module_label-large__guVOE"><span>En proceso</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div data-cy="CAREER_ONBOARDING_PROCESS" class="navigation-sidebar-module_itemContainer__fhJhN">
+                            <a class="navigation-sidebar-module_item__1xgbX" href="/career-detail/13030091-79bb-41dd-9832-5ffbb887498b/admissions/scoring">
+                                <div class="navigation-sidebar-module_itemContent__mJesg">
+                                    <div>Proceso de ingreso</div>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.045 21.178c.05.25.177.502.405.655a1.021 1.021 0 0 0 1.403-.28l5.984-8.99a1.028 1.028 0 0 0 0-1.125l-5.984-8.99a1.021 1.021 0 0 0-1.403-.282 1.026 1.026 0 0 0-.28 1.405l5.61 8.43-5.61 8.427c-.153.23-.175.5-.125.75Z" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mail-card_container__SfFGa">
+                        <div class="mail-card_image__ldHj5"><img alt="" srcset="/_next/image?url=%2Fimages%2Fmail.png&amp;w=128&amp;q=75 1x, /_next/image?url=%2Fimages%2Fmail.png&amp;w=256&amp;q=75 2x" src="/_next/image?url=%2Fimages%2Fmail.png&amp;w=256&amp;q=75" width="100" height="120"></div>
+                        <span class="fonts-module_title-small__ctZzA">¿Dudas o consultas?</span>
+                        <span class="fonts-module_headline-medium__XtzA8">Envía un mail</span>
+                        <div>
+                            <a class="fonts-module_body-small-bold__9mKaI" href="mailto:admisiones@soyhenry.com">a admisiones@soyhenry.com</a>
+                        </div>
+                    </div>
+                </div>
+                <!--final del desplazamiento-->
+
+
+            </div>
+        </aside>
+
+
+
+       <!--Clase de footer arriba-->
+        <div class="layout-desktop-module_columns__kFyqn">
+            <div class="layout-desktop-module_columnsHeader__-9mVx">
+                <div class="layout-desktop-module_headerInfo__RpFen">
+                    <div class="career-detail_container___MLdx">
+                        <div class="text-colors-module_primary-grey__TBYa9">
+                            <div class="section-title-module_prevNext__e9kl0">
+                                <a class="link-button-module_container__GiPU3 fonts-module_body-small__7YstF" href="/">
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.955 2.822c-.05-.25-.177-.502-.405-.655a1.021 1.021 0 0 0-1.403.28l-5.984 8.99a1.028 1.028 0 0 0 0 1.125l5.984 8.99c.305.46.946.588 1.403.282.457-.306.585-.946.28-1.405l-5.61-8.43 5.61-8.427c.153-.23.175-.5.125-.75Z" fill="currentColor"></path>
+                                    </svg>Volver
+                                </a>
+                            </div>
+                            <div class="fonts-module_headline-medium__XtzA8">Desarrollo Full Stack</div>
+                        </div>
+                        <div class="theme-switcher-module_themeSwitcher__bE8ib text-colors-module_primary-grey__TBYa9">
+                            <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.4" d="M12 2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0V3a1 1 0 0 0-1-1ZM5.625 4.625c-.256 0-.492.117-.687.313a.99.99 0 0 0 0 1.406l1.343 1.375c.391.39 1.048.391 1.438 0a1.029 1.029 0 0 0 0-1.438L6.344 4.938a1.044 1.044 0 0 0-.719-.313Zm12.719.031a.94.94 0 0 0-.688.282l-1.375 1.343a1.03 1.03 0 0 0 0 1.438 1.03 1.03 0 0 0 1.438 0l1.343-1.375a.99.99 0 0 0 0-1.406 1.007 1.007 0 0 0-.718-.282ZM3 11a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2H3Zm16 0a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2ZM7 16a1.01 1.01 0 0 0-.719.281l-1.375 1.375a.991.991 0 0 0 0 1.406c.39.392 1.046.39 1.438 0l1.375-1.343a1.03 1.03 0 0 0 0-1.438A1.017 1.017 0 0 0 7 16Zm10 0c-.256 0-.524.086-.719.281a1.029 1.029 0 0 0 0 1.438l1.407 1.375a.99.99 0 0 0 1.406 0 1.029 1.029 0 0 0 0-1.438l-1.375-1.375A1.014 1.014 0 0 0 17 16Zm-5 2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Z" fill="currentColor"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm0 2a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" fill="currentColor"></path>
+                            </svg>
+                            <div class="form-switch">
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <aside class="layout-desktop-module_sidebarSecondLeft__WDyMW">
+                    <div class="header_container__eETc0">
+                        <div class="profile-buttons-group_container__ZvScr">
+                            <div class="profile-buttons-group_buttonsGroup__bLCkY">
+
+
+                                <div class="profile">
+                                    <button id="profile-toggle" onclick="toggleProfile()">
+                                        <div class="profile-avatar">EV</div>
+                                        <span>Elvis Vega</span>
+                                    </button>
+                                    <div id="profile-menu" class="profile-menu">
+                                        <div id="popover-arrow" class="popover-arrow"></div>
+                                        <h3>Menú</h3>
+                                        <a href="/cliente/App_cliente/App_estudiante.html"><i class="fa fa-user"></i> Mi perfil</a>
+                                        <a href="#"><i class="fa fa-sign-out"></i> Cerrar sesión</a>
+                                    </div>
+                                </div>
+
+
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
         </div>
-    </div>
+
+
+
+        <div class="layout-desktop-module_columns__kFyqn layout-desktop-module_columnsInverter__rRQjv" style="padding-top: 1.25rem;">
+            
+
+            <div class="layout-desktop-module_mainContent__690ya">
+                <div class="styles_layout__aJTAq">
+                    <div class="layout_layout__Yr4r8">
+                        <div class="admissions_container__3Vtjb">
+                            <div class="card-module_card__ZPFTz">
+                                <a class="link-button-module_container__GiPU3" href="/career-detail/13030091-79bb-41dd-9832-5ffbb887498b/admissions">
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.955 2.822c-.05-.25-.177-.502-.405-.655a1.021 1.021 0 0 0-1.403.28l-5.984 8.99a1.028 1.028 0 0 0 0 1.125l5.984 8.99c.305.46.946.588 1.403.282.457-.306.585-.946.28-1.405l-5.61-8.43 5.61-8.427c.153-.23.175-.5.125-.75Z" fill="currentColor"></path>
+                                    </svg> Volver
+                                </a>
+                                <div style="display: flex; flex-direction: column;">
+                                    <span class="fonts-module_title-large__kRIB8">Completa los siguientes campos</span>
+                                    <span class="fonts-module_body-small__7YstF">Completar un breve formulario de admisión.</span>
+                                </div>
+                                <form>
+                                    <div class="admissions-content_formContainer__kNm00">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-12">
+                                                <div>
+                                                    <div class="HenryInputContainerV2">
+                                                        <div class="select-wrapper">
+                                                            <div class="form-outline">
+                                                                <input readonly="" class="form-control form-control-lg select-input" value="">
+                                                                <label class="form-label">¿Cómo nos conociste?</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-12">
+                                                <div>
+                                                    <div class="HenryInputContainerV2">
+                                                        <div class="form-outline">
+                                                            <input type="date" class="form-control active form-control-lg" value="">
+                                                            <label class="form-label">Fecha de Nacimiento</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6 col-12">
+                                                <div>
+                                                    <div class="HenryInputContainerV2">
+                                                        <div class="select-wrapper">
+                                                            <div class="form-outline">
+                                                                <input readonly="" class="form-control form-control-lg select-input" value="">
+                                                                <label class="form-label">Género</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-12">
+                                                <div>
+                                                    <div class="HenryInputContainerV2">
+                                                        <div class="select-wrapper">
+                                                            <div class="form-outline">
+                                                                <input readonly="" class="form-control form-control-lg select-input" value="">
+                                                                <label class="form-label">Nivel de estudios</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6 col-12">
+                                                <div>
+                                                    <div class="HenryInputContainerV2">
+                                                        <div class="select-wrapper">
+                                                            <div class="form-outline">
+                                                                <input readonly="" class="form-control form-control-lg select-input" value="">
+                                                                <label class="form-label">Nivel de inglés</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-12">
+                                                <div>
+                                                    <div class="HenryInputContainerV2">
+                                                        <div class="select-wrapper">
+                                                            <div class="form-outline">
+                                                                <input readonly="" class="form-control form-control-lg select-input" value="">
+                                                                <label class="form-label">¿Actualmente trabajas?</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6 col-12">
+                                                <div>
+                                                    <div class="HenryInputContainerV2">
+                                                        <div class="form-outline">
+                                                            <input type="text" class="form-control form-control-lg" value="">
+                                                            <label class="form-label">Link de perfil de linkedin</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3 class="fonts-module_overline-large__a8kYq">CONOCIMIENTO TÉCNICO</h3>
+                                        <div class="row">
+                                            <div class="col-sm-6 col-12">
+                                                <div>
+                                                    <div class="HenryInputContainerV2">
+                                                        <div class="select-wrapper">
+                                                            <div class="form-outline">
+                                                                <input readonly="" class="form-control form-control-lg select-input" value="">
+                                                                <label class="form-label">Conocimientos de programación</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="admissions-content_formButton__qJJ_V">
+                                            <button type="submit" class="button-module_common__1qAyj btn btn-primary" disabled="">
+                                                <div class="button-module_content__q0g4H">Continuar</div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height: 100px;"></div>
+                </div>
+            </div>
+
+
+        </div>
+        
+    </main>
     
-
-   <!-- Carrousel de testimonios -->
-<div class="carousel">
-    <div class="testimonial active">
-        <img src="imagenes/img-portafolio.jpg" alt="">
-        <p><strong>Ignacio Fosco</strong></p>
-        <p>Desarrollador Web - Scale AI</p>
-    </div>
-    <div class="testimonial">
-        <img src="imagenes/img-portafolio.jpg" alt="">
-        <p><strong>Natalia Muñoz Castro</strong></p>
-        <p>Front-End Developer - TRU Web3</p>
-        <p>El mejor trabajo que me reta día a día.</p>
-    </div>
-    <div class="testimonial">
-        <img src="imagenes/img-portafolio.jpg" alt="">
-        <p><strong>Yuliana Castro Diaz</strong></p>
-        <p>Software Development Analyst - Mercado Libre</p>
-        <p>Un gran retorno a nivel profesional.</p>
-    </div>
-
-    <!-- Control de puntos -->
-    <div class="carousel-dots">
-        <span class="dot active" onclick="showSpecificTestimonial(0)"></span>
-        <span class="dot" onclick="showSpecificTestimonial(1)"></span>
-        <span class="dot" onclick="showSpecificTestimonial(2)"></span>
-    </div>
-</div>
-
-</aside>
-
-    </div>
 
     <script src="/server/App_cliente/Cliente_Aside.js"></script>
 </body>

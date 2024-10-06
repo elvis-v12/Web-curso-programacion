@@ -1,0 +1,287 @@
+/*Clientes Dev de cursos*/
+/* General styles for main layout */
+.layout-desktop-module_main__OGBpc {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+.layout-desktop-module_columns__kFyqn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.layout-desktop-module_columnsHeader__-9mVx {
+    width: 70%;
+}
+
+.layout-desktop-module_sidebarSecondLeft__WDyMW {
+    width: 25%;
+    padding-left: 20px;
+}
+
+.layout-desktop-module_mainContent__690ya {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.career-detail_container___MLdx {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-title-module_prevNext__e9kl0 {
+    margin-right: 20px;
+}
+
+.section-title-module_prevNext__e9kl0 a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.fonts-module_headline-medium__XtzA8 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+
+
+.navigation-sidebar-module_itemContainer__fhJhN {
+    margin-bottom: 20px;
+}
+
+
+.navigation-sidebar-module_itemContent__mJesg {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-sidebar-module_itemContent__mJesg svg {
+    margin-left: 10px;
+    color: #ccc;
+}
+
+/* Formulario de admisión */
+.card-module_card__ZPFTz {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admissions-content_formContainer__kNm00 {
+    margin-top: 20px;
+}
+
+.HenryInputContainerV2 {
+    margin-bottom: 15px;
+}
+
+.form-control-lg {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.admissions-content_formButton__qJJ_V {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.button-module_common__1qAyj {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-module_common__1qAyj:hover {
+    background-color: #45a049;
+}
+
+/* Mail card */
+.mail-card_container__SfFGa {
+    margin-top: 20px;
+    background-color: #f0f4ff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.mail-card_image__ldHj5 img {
+    display: block;
+    margin: 0 auto;
+}
+
+.fonts-module_title-small__ctZzA {
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.fonts-module_headline-medium__XtzA8 {
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.fonts-module_body-small-bold__9mKaI {
+    display: block;
+    text-align: center;
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* General styles for main layout 
+.layout-desktop-module_main__OGBpc {
+    display: none; 
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+*/
+
+
+/*franja de proceso de admicion*/
+
+.layout-desktop-module_mainContent__690ya {
+    display: none;
+}
+/* Ajuste del Navigator de desplazamiento */
+.navigation-sidebar-module_navigationSidebar__KRL8f {
+    width: calc(100% - 80px); /* Ajusta el ancho para que no desborde */
+    background-color: #282c34;
+    border-radius: 8px;
+    padding: 20px;
+    margin-left: 80px; /* Espacio suficiente para que quede al lado del aside */
+    height: 100vh; /* Asegurar que ocupe toda la altura */
+    overflow-y: auto; /* Permitir el scroll si el contenido es más largo */
+    position: relative; /* Mantenerlo en el flujo del documento */
+}
+
+
+/* Ajuste para los botones de navegación: más grandes */
+.navigation-sidebar-module_item__1xgbX {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3em; /* Tamaño de fuente más grande */
+    padding: 15px 20px; /* Botones más grandes */
+    background-color: #3c404a;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation-sidebar-module_item__1xgbX:hover {
+    background-color: #50565e;
+}
+
+/* Aside derecho para el perfil del usuario */
+.aside-right {
+    width: 250px; /* Ajuste el ancho del aside derecho para alinear con el izquierdo */
+    background-color: transparent;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.profile-avatar {
+    width: 50px; /* Aumenta el tamaño del avatar */
+    height: 50px;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px; /* Aumenta el tamaño del texto del avatar */
+    font-weight: bold;
+}
+
+/* Ajustes para el botón "Volver" y el selector de color */
+.layout-desktop-module_headerInfo__RpFen {
+    background-color: #282c34;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.theme-switcher-module_themeSwitcher__bE8ib {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px; /* Ajusta el espaciado */
+    transform: scale(0.8); /* Reduce el tamaño del interruptor */
+}
+
+/* Ajustes generales */
+.form-switch input[type="checkbox"] {
+    appearance: none;
+    background-color: #ddd;
+    border-radius: 20px;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.form-switch input[type="checkbox"]:checked {
+    background-color: #4CAF50;
+}
+
+.form-switch input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.form-switch input[type="checkbox"]:checked::before {
+    transform: translateX(20px);
+}
+
+
+
+
+
+
+/*Contenido ocualto por ahora*/
+.container {
+    display: none;
+}
