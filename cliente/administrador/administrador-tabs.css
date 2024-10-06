@@ -1,0 +1,192 @@
+.tabs {
+    overflow: hidden;
+    letter-spacing: 1px;
+    font-size: .95rem;
+}
+
+.tabs__list {
+    background-color: #030918;
+    color: var(--nav-tab-color);
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.tabs__list-item {
+    text-align: center;
+    padding: 20px 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: background .1s .0s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabs__list-item:hover {
+    background-color: #3526b8;
+}
+
+@media (600px <=width < 950px) {
+    .tabs__list {
+        flex-direction: row;
+    }
+
+    .tabs__list-item {
+        height: 100%;
+    }
+
+}
+
+@media (0px <=width < 600px) {
+    .tabs__list {
+        flex-direction: column;
+    }
+
+    .tabs {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        transition: scale .3s ease-in-out, opacity .4s linear, display .3s ease allow-discrete;
+        display: none;
+        scale: 0;
+        opacity: 0; 
+    }
+
+    .tabs[open] {
+        scale: 1;
+        opacity: 1;
+        transition: scale .3s ease-in-out, opacity .4s linear;
+
+        @starting-style {
+            scale: 0;
+            opacity: 0;
+        }
+    }
+
+
+
+
+    .tabs__list {
+        width: 80%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0;
+        position: relative;
+    }
+
+    .tabs__list::before {
+        position: absolute;
+        content: "";
+        z-index: -1;
+        border-radius: 10px;
+        background-position: 800% 0;
+        width: 101%;
+        height: 101%;
+        left: -1px;
+        top: -1px;
+        filter: blur(3px);
+        box-shadow: 0 0 3px 2px #0000004d;
+        background: linear-gradient(45deg, #3526b8, #0084ff, #91ff00, #3526b8, #91ff00, #0084ff, #91ff00, #0084ff);
+        background-size: 800%;
+        animation: background_animation 20s linear infinite;
+    }
+
+    .tabs__list-item {
+        padding: 20px 0px;
+    }
+
+    .tabs__list-item:first-child {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .tabs__list-item:last-child {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .tabs-menu {
+        top: 10px;
+        left: 10px;
+        width: 46px;
+        height: 38px;
+        position: sticky;
+        margin-bottom: 20px;
+    }
+
+    .tabs-menu__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 7px;
+        padding: 5px;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: #ffffff;
+    }
+
+    .tabs-menu__content::before {
+        position: absolute;
+        content: "";
+        z-index: -1;
+        border-radius: 10px;
+        background-position: 800% 0;
+        width: 105%;
+        height: 105%;
+        left: -1px;
+        top: -1px;
+        filter: blur(3px);
+        box-shadow: 0 0 3px 2px #0000004d;
+        background: linear-gradient(45deg, #3526b8, #0084ff, #91ff00, #3526b8, #91ff00, #0084ff, #91ff00, #0084ff);
+        background-size: 800%;
+        animation: background_animation 20s linear infinite;
+    }
+
+    .tabs-menu__line {
+        overflow: hidden;
+        position: relative;
+        height: 8px;
+        border-radius: 50px;
+        transform-origin: left;
+        transition: .4s transform ease-in-out, opacity .25s ease-in-out;
+        background: linear-gradient(90deg, #030918, #030918);
+        left: 0px;
+        opacity: 1;
+    }
+
+    .tabs-menu__active>div>div:nth-child(1) {
+        transform: rotate(33deg) scaleX(1.2);
+    }
+
+    .tabs-menu__active>div>div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .tabs-menu__active>div>div:nth-child(3) {
+        transform: rotate(-33deg) scaleX(1.2);
+    }
+
+}
+
+
+@keyframes background_animation {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 800% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}

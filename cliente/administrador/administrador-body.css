@@ -1,0 +1,15 @@
+.content {
+        box-sizing: border-box;
+        grid-area: body;
+        padding: 0px 30px;
+        height: 100%;
+        overflow: auto;
+}
+
+@media (0px <=width < 600px) {
+        .content {
+                overflow: none;
+                margin-top: 40px;
+                height: auto;
+        }
+}
