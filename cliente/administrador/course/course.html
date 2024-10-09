@@ -1,8 +1,7 @@
-<link rel="stylesheet" href="course/course.css">
-<link rel="stylesheet" href="course/course-header.css">
 <div class="upload-course">
-    <header class="header-upload-course" style="display: none;">
-        <nav class="header__search-upload-course">
+    <div class="normal">
+        <header class="header-upload-course"">
+            <nav class=" header__search-upload-course">
             <form class="header__form">
                 <input type="text" name="" id="" placeholder="Buscar" class="header__input">
                 <button type="button" class="header__submit" id="btn-find-course">
@@ -15,21 +14,20 @@
                     </svg>
                 </button>
             </form>
-        </nav>
-    </header>
-    <div class="content-upload-course" style="display: none;"></div>
-    <link rel="stylesheet" href="course/course-select/course-select.css">
+            </nav>
+        </header>
+        <div class="content-upload-course"></div>
+    </div>
     <div class="course-select">
         <aside class="tabs-course-select">
             <ul class="tabs__list-course-select">
-                <li class="tabs__item-course-select">Descripción</li>
-                <li class="tabs__item-course-select">Contenido</li>
-                <li class="tabs__item-course-select">Datos</li>
+                <li class="tabs__item-course-select" id="description-course">Descripción</li>
+                <li class="tabs__item-course-select" id="content-course">Contenido</li>
+                <li class="tabs__item-course-select" id="data-course">Datos</li>
                 <li class="tabs__item-course-select">Estadisticas</li>
             </ul>
         </aside>
         <div class="body-course-select">
-            
         </div>
     </div>
 </div>

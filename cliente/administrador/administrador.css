@@ -30,6 +30,7 @@ body {
                         "body";
                 gap: 20px;
                 grid-template-columns: 1fr;
+                max-width: 100vw;
         }
 
         @media (860px <= width < 1080px) {

@@ -1,17 +1,31 @@
 import { CursosService } from "/server/script/service/CursosService.js";
+import { ContentViewAdmin } from "./course-select/content-course/content.js";
+import { DataViewAdmin } from "./course-select/data-course/data.js";
+import { DescriptionViewAdmin } from "./course-select/description-course/description.js";
 export class CursosView {
         constructor() {
                 this.views = {
+                        "description-course": DescriptionViewAdmin,
+                        "content-course": ContentViewAdmin,
+                        "data-course": DataViewAdmin
                 };
                 this.init();
+                this.clickBuscarCurso()
         }
 
         init() {
+                /* Elements */
                 this.btnFindCourse = document.querySelector("#btn-find-course");
-                this.content = document.querySelector(".content-upload-course")
+                this.content = document.querySelector(".content-upload-course");
+                this.courseSelectHTML = document.querySelector(".course-select");
+                this.bodyCourseSelectHTML = document.querySelector(".body-course-select");
+                this.normal = document.querySelector(".normal");
+                this.tabCourseSelect = document.querySelectorAll(".tabs__item-course-select");
+                /* Actions */
+                this.courseSelectHTML.style.display = 'none';
                 this.btnFindCourse.addEventListener("click", this.clickBuscarCurso);
-                // this.clickBuscarCurso()
-                // this.testData()
+
+
         }
         clickBuscarCurso = async () => {
                 try {
@@ -44,25 +58,42 @@ export class CursosView {
                                 </article>
                                 `
                         ).join("");
+                        document.querySelectorAll('.curso-upload-curso').forEach(cursoUploadCurso => {
+                                cursoUploadCurso.addEventListener('click', () => {
+                                        this.courseSelectHTML.style.display = "grid"
+                                        this.normal.style.display = 'none';
+                                        const curso = data.find(c => c.code === cursoUploadCurso.id)
+                                        console.log(cursoUploadCurso.id)
 
-                        const CURSO_SELECTOR = '.curso-upload-curso';
-                        document.querySelectorAll(CURSO_SELECTOR).forEach(curso => curso.addEventListener('click', () => this.clickCurso(data.find(c => c.code === curso.id))));
+                                        this.clickTabCourseSelect(document.querySelector("#description-course"), curso)
+
+                                        this.tabCourseSelect.forEach(tab => {
+                                                tab.addEventListener("click", () => this.clickTabCourseSelect(tab, curso));
+                                        });
+                                })
+                        });
+
                 } catch (error) {
                         console.error(error);
                 }
         }
 
-        clickCurso = curso => {
-
-        }
-        testData = async () => {
+        clickTabCourseSelect = async (targetElement, curso) => {
                 try {
-                        let curso = (await CursosService.findAll()).find(c => c.code === "CUR001");
-                        this.content.innerHTML = `
-                                ${curso.code}
-                        `
+                        if (!targetElement.id || !this.views.hasOwnProperty(targetElement.id)) {
+                                return
+                        }
+                        const response = await fetch(`course/course-select/${targetElement.id}/${targetElement.id}.html`);
+                        if (!response.ok) {
+                                throw new Error('Failed to fetch course-select.html');
+                        }
+
+                        let contentHTMLTXT = await response.text()
+
+                        this.bodyCourseSelectHTML.innerHTML = contentHTMLTXT;
+                        new this.views[targetElement.id](curso)
                 } catch (error) {
-                        console.error(error);
+                        console.log(error);
                 }
         }
 }

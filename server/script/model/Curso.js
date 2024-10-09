@@ -1,5 +1,9 @@
 export class Curso {
-        constructor(id, author, name, score, stars, votes, price, pricePrevous, matriculados, lastUpdate, language, description, shortDescription, requisitos, habilidades, detalles, ventajas, sesiones) {
+        constructor(
+                id, author, name, score, stars, votes, price, pricePrevous,
+                matriculados, lastUpdate, language, description, shortDescription,
+                requisitos, habilidades, detalles, ventajas, sesiones, contenidos
+        ) {
                 this.id = id;
                 this.author = author;
                 this.name = name;
@@ -18,5 +22,6 @@ export class Curso {
                 this.detalles = detalles;
                 this.ventajas = ventajas;
                 this.sesiones = sesiones;
+                this.contenidos = contenidos;
         }
 }
