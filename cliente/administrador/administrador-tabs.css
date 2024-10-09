@@ -16,7 +16,7 @@
     height: 100%;
 }
 
-.tabs__list-item {
+.tabs__list_item {
     text-align: center;
     padding: 20px 10px;
     width: 100%;
@@ -27,22 +27,22 @@
     justify-content: center;
 }
 
-.tabs__list-item:hover {
-    background-color: #3526b8;
+.tabs__list_item:hover {
+    background: #3526b8;
 }
 
-@media (600px <=width < 950px) {
+@media (600px <=width < 1080px) {
     .tabs__list {
         flex-direction: row;
     }
 
-    .tabs__list-item {
+    .tabs__list_item {
         height: 100%;
     }
 
 }
 
-@media (0px <=width < 600px) {
+@media (width < 600px) {
     .tabs__list {
         flex-direction: column;
     }
@@ -53,10 +53,15 @@
         justify-content: center;
         align-items: center;
         position: fixed;
-        transition: scale .3s ease-in-out, opacity .4s linear, display .3s ease allow-discrete;
         display: none;
         scale: 0;
-        opacity: 0; 
+        opacity: 0;
+        transition: scale .3s ease-in-out, opacity .4s linear, display .3s ease allow-discrete;
+
+        @starting-style {
+            scale: 0;
+            opacity: 0;
+        }
     }
 
     .tabs[open] {
@@ -98,19 +103,20 @@
         animation: background_animation 20s linear infinite;
     }
 
-    .tabs__list-item {
+    .tabs__list_item {
         padding: 20px 0px;
     }
 
-    .tabs__list-item:first-child {
+    .tabs__list_item:first-child {
         border-radius: 10px 10px 0 0;
     }
 
-    .tabs__list-item:last-child {
+    .tabs__list_item:last-child {
         border-radius: 0 0 10px 10px;
     }
 
     .tabs-menu {
+        margin: 10px 0 0 10px;
         top: 10px;
         left: 10px;
         width: 46px;

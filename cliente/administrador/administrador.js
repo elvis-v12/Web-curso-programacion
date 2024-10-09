@@ -1,22 +1,48 @@
+import { AdvertisingView } from "./advertising/advertising.js";
+import { CommentsView } from "./comments/comments.js";
+import { CursosView } from "./course/course.js";
+import { EventsView } from "./events/events.js";
+import { ScholarshipsView } from "./scholarships/scholarships.js";
+import { VideoView } from "./video/video.js";
 document.addEventListener('DOMContentLoaded', (e) => {
         new AdministradorView()
 });
 class AdministradorView {
         constructor() {
+                this.views = {
+                        course: CursosView,
+                        video: VideoView,
+                        comments: CommentsView,
+                        events: EventsView,
+                        scholarships: ScholarshipsView,
+                        advertising: AdvertisingView,
+                };
                 this.init();
+                this.clickTab(this.tabsListHTML[0])
         }
 
         init() {
-                // Elements
-                this.headerHTML = document.querySelector('.header');
+                //TABS
                 this.tabsHTML = document.querySelector('.tabs');
+                this.tabsListHTML = document.querySelectorAll('.tabs__list_item');
+                //BODY
+                this.bodyHTML = document.querySelector('.body')
                 this.tabsMenuHTML = document.querySelector('.tabs-menu');
-                this.tabsMenuLineHTML = document.querySelector(".tabs-menu__line");
-                this.contentHTML = document.querySelector('.content');
+                this.tabsMenuContentHTML = document.querySelector('.tabs-menu__content');
+                this.tabsMenuLineHTML = document.querySelectorAll(".tabs-menu__line");
+                this.contentHTML = document.querySelector('.body__content');
+                //FOOTER
                 this.footerHTML = document.querySelector('.footer');
+
                 // Actions
                 this.tabsMenuHTML.addEventListener('click', this.clickMenuTabs);
+                this.tabsListHTML.forEach(tabHTML => {
+                        tabHTML.addEventListener('click', (e) => {
+                                this.clickTab(tabHTML)
+                        });
+                });
         }
+
         clickMenuTabs = () => {
                 if (this.tabsMenuHTML.classList.contains('tabs-menu__active')) {
                         this.tabsMenuHTML.classList.remove('tabs-menu__active');
@@ -29,5 +55,25 @@ class AdministradorView {
                         this.tabsHTML.setAttribute('open', '')
                 }
         }
+
+
+
+        clickTab = async (targetElement) => {
+                try {
+                        const response = await fetch(`${targetElement.id}/${targetElement.id}.html`);
+                        if (!response.ok) {
+                                return;
+                        }
+                        this.contentHTML.innerHTML = await response.text();
+                        if (this.views.hasOwnProperty(targetElement.id)) {
+                                new this.views[targetElement.id]
+                        }
+
+
+                } catch (error) {
+                        console.error(error);
+                }
+        }
+
 
 }

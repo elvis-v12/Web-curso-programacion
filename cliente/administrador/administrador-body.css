@@ -1,15 +1,17 @@
-.content {
-        box-sizing: border-box;
-        grid-area: body;
-        padding: 0px 30px;
-        height: 100%;
-        overflow: auto;
+.body {
+        overflow: hidden;
 }
 
-@media (0px <=width < 600px) {
-        .content {
-                overflow: none;
-                margin-top: 40px;
+.body__content {
+        box-sizing: border-box;
+        grid-area: body;
+        height: 100%;
+}
+
+@media (width < 600px) {
+        .body__content {
+                overflow: inherit;
                 height: auto;
+                min-height: 67vh;
         }
 }

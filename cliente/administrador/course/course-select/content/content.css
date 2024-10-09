@@ -1,0 +1,127 @@
+.aside-course-select-content {
+        min-width: 110px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: auto;
+        text-align: center;
+        padding: 0 20px;
+        background-color: #fff;
+}
+
+/* Lista de contenidos */
+.aside__list-course-select-content {
+        padding: 18px 0;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 2px 5px 0px #a6a6a6cc;
+        border-radius: 10px;
+        overflow: hidden;
+}
+
+.aside__item-course-select-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 18px 0 18px 0;
+        cursor: pointer;
+        transition: background .1s .0s linear;
+}
+
+.aside__item-course-select-content:hover {
+        background-color: #e2e2e2;
+}
+
+/* Contenido seleccionado */
+.content__select-course-select-content {
+        flex: 5;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+}
+
+/* FROM DE DE CURSO SELECCIONADO PARA ACTUALIZAR */
+.content__form-course-select-content {
+        border-radius: 10px;
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0px 2px 5px 0px #a6a6a6cc;
+        flex: 1;
+        gap: 30px;
+}
+
+.content__form_data-course-select-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+}
+
+.content__form_group-course-select-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+}
+
+.content__form_group-course-select-content>label {}
+
+.content__form_group-course-select-content>input[type="text"] {
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: #f1f1f1;
+}
+
+.content__form_group-course-select-content>input[type="text"]:focus {
+        outline: 1px solid #c2c2c2;
+}
+
+.content__form_group-course-select-content>textarea {
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: #f1f1f1;
+        resize: vertical;
+        min-height: 100px;
+}
+
+.content__form_group-course-select-content>textarea:focus {
+        outline: 1px solid #c2c2c2;
+}
+
+.content__form_group-course-select-content>input[type="file"] {
+        padding: 10px 0;
+        cursor: pointer;
+}
+
+.content__form_group-course-select-content>input[type="file"]::file-selector-button {
+        border: none;
+        outline: none;
+        padding: 0px 13px;
+        background: #01002b;
+        font-size: 15px;
+        color: #ecfffe;
+        box-shadow: 0px 2px 5px 0px #a6a6a6cc;
+        border-radius: 10px;
+        line-height: 36px;
+        cursor: pointer;
+        font-family: "Inconsolata", monospace, sans-serif;
+
+}
+
+.content__form_option-course-select-content {}
+
+.content__form_option-course-select-content>input[type="button"] {
+        border: none;
+        outline: none;
+        padding: 5px 13px;
+        background: #01002b;
+        font-size: 15px;
+        color: #ecfffe;
+        box-shadow: 0px 2px 5px 0px #a6a6a6cc;
+        border-radius: 10px;
+        line-height: 36px;
+        cursor: pointer;
+}
