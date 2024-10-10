@@ -1,7 +1,5 @@
-import { CommentsView } from "./comments/comments.js";
-import { CursosView } from "./course/course.js";
-import { ScholarshipsView } from "./scholarships/scholarships.js";
-import { VideoView } from "./video/video.js";
+import { CursosView } from "./course.js";
+import { ScholarshipsView } from "./scholarships.js";
 document.addEventListener('DOMContentLoaded', (e) => {
         new AdministradorView()
 });
@@ -9,12 +7,10 @@ class AdministradorView {
         constructor() {
                 this.views = {
                         course: CursosView,
-                        video: VideoView,
-                        comments: CommentsView,
                         scholarships: ScholarshipsView
                 };
                 this.init();
-                this.clickTab(this.tabsListHTML[3])
+                this.clickTab(this.tabsListHTML[1])
         }
 
         init() {

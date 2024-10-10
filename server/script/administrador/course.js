@@ -1,7 +1,8 @@
 import { CursosService } from "/server/script/service/CursosService.js";
-import { ContentViewAdmin } from "./course-select/content-course/content.js";
-import { DataViewAdmin } from "./course-select/data-course/data.js";
-import { DescriptionViewAdmin } from "./course-select/description-course/description.js";
+import { ContentViewAdmin } from "./content.js";
+import { DataViewAdmin } from "./data.js";
+import { DescriptionViewAdmin } from "./description.js";
+
 export class CursosView {
         constructor() {
                 this.views = {
