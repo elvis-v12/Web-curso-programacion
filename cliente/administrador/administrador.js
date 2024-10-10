@@ -1,4 +1,3 @@
-import { AdvertisingView } from "./advertising/advertising.js";
 import { CommentsView } from "./comments/comments.js";
 import { CursosView } from "./course/course.js";
 import { EventsView } from "./events/events.js";
@@ -14,11 +13,10 @@ class AdministradorView {
                         video: VideoView,
                         comments: CommentsView,
                         events: EventsView,
-                        scholarships: ScholarshipsView,
-                        advertising: AdvertisingView,
+                        scholarships: ScholarshipsView
                 };
                 this.init();
-                this.clickTab(this.tabsListHTML[0])
+                this.clickTab(this.tabsListHTML[4])
         }
 
         init() {
