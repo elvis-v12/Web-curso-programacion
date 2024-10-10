@@ -65,7 +65,7 @@ export class CursosView {
                                         const curso = data.find(c => c.code === cursoUploadCurso.id)
                                         console.log(cursoUploadCurso.id)
 
-                                        this.clickTabCourseSelect(document.querySelector("#description-course"), curso)
+                                        this.clickTabCourseSelect(document.querySelector("#data-course"), curso)
 
                                         this.tabCourseSelect.forEach(tab => {
                                                 tab.addEventListener("click", () => this.clickTabCourseSelect(tab, curso));

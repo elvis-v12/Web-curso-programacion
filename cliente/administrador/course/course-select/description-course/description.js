@@ -35,8 +35,6 @@ export class DescriptionViewAdmin {
                 this.btnStyleSaveDescription.addEventListener('click', e => {
 
                 });
-                this.descriptionCourse.contentEditable = 'true';
-
         }
 
 }
