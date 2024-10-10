@@ -33,7 +33,7 @@ export class DescriptionViewAdmin {
                         this.list = !this.list;
                 });
                 this.btnStyleSaveDescription.addEventListener('click', e => {
-
+                        alert("Se guardo cambios")
                 });
         }
 

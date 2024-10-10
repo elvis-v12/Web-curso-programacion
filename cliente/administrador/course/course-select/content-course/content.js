@@ -28,6 +28,7 @@ export class ContentViewAdmin {
                         const name = this.nameFormHTML.value;
                         const descripcion = this.textAreaFormHTML.innerHTML;
                         const code = this.codeContentSelect;
+                        alert("Se guardo cambios")
                         this.limpiarForm()
                 });
                 this.buttonNewFormHTML.addEventListener('click', () => {

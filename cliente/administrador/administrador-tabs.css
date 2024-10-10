@@ -31,6 +31,8 @@
     background: #3526b8;
 }
 
+
+
 @media (600px <=width < 1080px) {
     .tabs__list {
         flex-direction: row;

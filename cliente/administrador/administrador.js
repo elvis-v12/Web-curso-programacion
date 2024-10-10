@@ -1,6 +1,5 @@
 import { CommentsView } from "./comments/comments.js";
 import { CursosView } from "./course/course.js";
-import { EventsView } from "./events/events.js";
 import { ScholarshipsView } from "./scholarships/scholarships.js";
 import { VideoView } from "./video/video.js";
 document.addEventListener('DOMContentLoaded', (e) => {
@@ -12,11 +11,10 @@ class AdministradorView {
                         course: CursosView,
                         video: VideoView,
                         comments: CommentsView,
-                        events: EventsView,
                         scholarships: ScholarshipsView
                 };
                 this.init();
-                this.clickTab(this.tabsListHTML[4])
+                this.clickTab(this.tabsListHTML[3])
         }
 
         init() {
@@ -54,8 +52,6 @@ class AdministradorView {
                 }
         }
 
-
-
         clickTab = async (targetElement) => {
                 try {
                         const response = await fetch(`${targetElement.id}/${targetElement.id}.html`);
@@ -66,12 +62,9 @@ class AdministradorView {
                         if (this.views.hasOwnProperty(targetElement.id)) {
                                 new this.views[targetElement.id]
                         }
-
-
                 } catch (error) {
                         console.error(error);
                 }
         }
-
 
 }

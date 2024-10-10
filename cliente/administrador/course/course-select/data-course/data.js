@@ -24,6 +24,7 @@ export class DataViewAdmin {
                 this.btnStyleListDescription = document.querySelector('#btnStyleListDescription');
                 this.btnStyleListOrdDescription = document.querySelector('#btnStyleListOrdDescription');
 
+                this.btnSaveDataCourse = document.querySelector(".data-course__save-button");
                 // Atributos
                 this.elementFocus = null; // Último elemento en foco (un div contenteditable)
                 this.list = false; // Para alternar entre lista y párrafo
@@ -79,6 +80,9 @@ export class DataViewAdmin {
                                 this.list = !this.list;
                         }
                 });
+                this.btnSaveDataCourse.addEventListener('click', () => {
+                        alert("Se guardo cambios")
+                })
         }
 
         addDataCursoInput() {
