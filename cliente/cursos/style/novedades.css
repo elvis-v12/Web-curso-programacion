@@ -1,5 +1,4 @@
 .novedades {
-        margin: auto;
         width: 80vw;
 }
 
@@ -62,7 +61,6 @@
         font-size: 1.0rem;
 }
 
-.novedades__item-footer {}
 
 .novedades__item-border {
         background-color: #c0c0c0;

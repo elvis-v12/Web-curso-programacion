@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pagina web Guimarcito</title>
+    <title>Pagina web DARK CODE</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,13 +26,19 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    
     <link rel="icon" type="image/png" sizes="16x16" href="/cliente/principal/imagenes/LogoMarca.png">
+    <link rel="stylesheet" href="style/novedades.css" />
   </head>
 
   <body>
     <!--NAVAR ENCABEZADO DE LA WEB-->
     <nav>
-      <div class="Icon"><b>Drop</b>Code</div>
+      <div class="Icon"><b>DARK</b>Code</div>
       <div class="search_box">
         <input type="search" placeholder="Busque tus cursos" />
         <span class="fa fa-search"></span>
@@ -91,98 +97,33 @@
       </ol>
     </nav>
 
-    <!--CARUCEL DE IMAGENES INFO DE ACADEMIA-->
-    <div
-      id="carouselExampleIndicators"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-inner">
-        <div class="carousel-item active d-item">
-          <img
-            src="imagenes/MC_Wide_Big_2_V4.jpg"
-            class="d-block w-100% d-img"
-            alt="slider 1"
-          />
-          <div class="carousel-caption top-0 mt-4">
-            <p class="mt-5 fs-3 text-uppercase">
-              Empieza a estudiar con nosotros
-            </p>
-            <h1 class="display-1 fw-bolder text-capitalize">
-              DropCOde Estudia
-            </h1>
-            <button class="btn btn-primary px-4 py-2 fs-5 mt-5">
-              Inscribirse
-            </button>
-          </div>
-        </div>
-        <div class="carousel-item d-item">
-          <img
-            src="imagenes/dos.jpg"
-            class="d-block w-100 d-img"
-            alt="slider 1"
-          />
-          <div class="carousel-caption top-0 mt-4">
-            <p class="mt-5 fs-3 text-uppercase">
-              Empieza a estudiar con nosotros
-            </p>
-            <h1 class="display-1 fw-bolder text-capitalize">
-              DropCOde Estudia
-            </h1>
-            <button class="btn btn-primary px-4 py-2 fs-5 mt-5">
-              Inscribirse
-            </button>
-          </div>
-        </div>
-        <div class="carousel-item d-item">
-          <img
-            src="imagenes/somosb.jpg"
-            class="d-block w-100 d-img"
-            alt="slider 1"
-          />
-          <div class="carousel-caption top-0 mt-4">
-            <p class="mt-5 fs-3 text-uppercase">
-              Empieza a estudiar con nosotros
-            </p>
-            <h1 class="display-1 fw-bolder text-capitalize">
-              DropCOde Estudia
-            </h1>
-            <button class="btn btn-primary px-4 py-2 fs-5 mt-5">
-              Inscribirse
-            </button>
-          </div>
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+<!-- CARUCEL DE IMAGENES INFO DE ACADEMIA -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+      <div class="carousel-item active d-item">
+        <img src="imagenes/Aprende.png" class="d-block w-100 d-img" alt="slider 1" style="object-fit: cover; width: 100%; height: 100%;">
 
-      <!-- Caja de contenido adicional 
-      <div class="content-box">
-        <h1 class="ud-heading-serif-xxl">
-          Un mundo de aprendizaje desde solo 49,90&nbsp;S/
-        </h1>
-        <p class="ud-text-md">
-          Amplía tus horizontes gracias a un aprendizaje internacional. Ahorra
-          ya hasta el 19 de septiembre.
-        </p>
+          <div class="novedades__content" id="novedad-1"></div>
       </div>
-    --></div>
+      <div class="carousel-item d-item">
+          <img src="imagenes/dos.jpg" class="d-block w-100 d-img" alt="slider 2" />
+          <div class="novedades__content" id="novedad-2"></div>
+      </div>
+      <div class="carousel-item d-item">
+          <img src="imagenes/somosb.jpg" class="d-block w-100 d-img" alt="slider 3" />
+          <div class="novedades__content" id="novedad-3"></div>
+      </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
 
     <!--PIE DE PAGINA DESPLEGABLES
     
@@ -289,56 +230,56 @@
               </div>
               <div class="col-md-3 p-2">
                 <div class="category-box">
-                  <a href="#" class="contenerdor-links"
+                  <a href="/cliente/cursos/index.html" class="contenerdor-links"
                     ><i class="fab fa-java"></i> Java</a
                   >
                 </div>
               </div>
               <div class="col-md-3 p-2">
                 <div class="category-box">
-                  <a href="#" class="contenerdor-links"
+                  <a href="/cliente/cursos/index.html" class="contenerdor-links"
                     ><i class="fab fa-python"></i> Python</a
                   >
                 </div>
               </div>
               <div class="col-md-3 p-2">
                 <div class="category-box">
-                  <a href="#" class="contenerdor-links"
+                  <a href="/cliente/cursos/index.html" class="contenerdor-links"
                     ><i class="fas fa-database"></i> SQL Server</a
                   >
                 </div>
               </div>
               <div class="col-md-3 p-2">
                 <div class="category-box">
-                  <a href="#" class="contenerdor-links"
+                  <a href="/cliente/cursos/index.html" class="contenerdor-links"
                     ><i class="fab fa-html5"></i> HTML</a
                   >
                 </div>
               </div>
               <div class="col-md-3 p-2">
                 <div class="category-box">
-                  <a href="#" class="contenerdor-links Javascrip"
+                  <a href="/cliente/cursos/index.html" class="contenerdor-links Javascrip"
                     ><i class="fab fa-js-square"></i> JavaScript</a
                   >
                 </div>
               </div>
               <div class="col-md-3 p-2">
                 <div class="category-box">
-                  <a href="#" class="contenerdor-links"
+                  <a href="/cliente/cursos/index.html" class="contenerdor-links"
                     ><i class="fab fa-linux"></i> Kali Linux</a
                   >
                 </div>
               </div>
               <div class="col-md-3 p-2">
                 <div class="category-box">
-                  <a href="#" class="contenerdor-links"
+                  <a href="/cliente/cursos/index.html" class="contenerdor-links"
                     ><i class="fab fa-css3-alt"></i> CSS</a
                   >
                 </div>
               </div>
               <div class="col-md-3 p-2">
                 <div class="category-box">
-                  <a href="#" class="contenerdor-links"
+                  <a href="/cliente/cursos/index.html" class="contenerdor-links"
                     ><i class="fas fa-database"></i> Mongo DB</a
                   >
                 </div>
@@ -352,84 +293,105 @@
 
     <!-- SECCIÓN DE SUSCRIPCIÓN -->
     <section class="membership-plans">
-      <h2 data-class="PlansTable__title" class="Mensaje_Us">
-        Elige el plan ideal para ti
-      </h2>
+      <h2 class="Mensaje_Us">¡Elige el plan ideal para tí!</h2>
       <div class="plans-container">
-        <div class="plan-card">
-          <h2>Basic</h2>
-          <p><strong>Tipo:</strong> Mensual</p>
-          <p><strong>Para:</strong> 1 estudiante</p>
-          <p><strong>Precio:</strong> S/119/mes</p>
-          <p><strong>Cobro:</strong> Mensual recurrente</p>
-          <p><strong>Beneficios:</strong></p>
-          <ul>
-            <li>Contenido profesional y actualizado</li>
-            <li>Certificados digitales</li>
-            <li>
-              English Academy, Escuela de Startups. Liderazgo y Management
-            </li>
-            <li>Eventos exclusivos como DropCode Conf</li>
-            <li>Descarga de contenido en la app móvil</li>
-            <li>Certificados físicos para rutas de perfil Junior</li>
-          </ul>
-          <p><strong>Ahorro:</strong> 6 meses</p>
-          <a href="/cliente/suscripcion/Regitro.html" class="btnD"
-            >Suscribirse</a
-          >
-        </div>
-        <div class="plan-card">
-          <h2>Expert</h2>
-          <p><strong>Tipo:</strong> Anual</p>
-          <p><strong>Para:</strong> 1 estudiante</p>
-          <p><strong>Precio:</strong> S/67/mes</p>
-          <p><strong>Cobro:</strong> Anual recurrente de S/799</p>
-          <p><strong>Beneficios:</strong></p>
-          <ul>
-            <li>Contenido profesional y actualizado</li>
-            <li>Certificados digitales</li>
-            <li>
-              English Academy, Escuela de Startups. Liderazgo y Management
-            </li>
-            <li>Eventos exclusivos como DropCode Conf</li>
-            <li>Descarga de contenido en la app móvil</li>
-            <li>Certificados físicos para rutas de perfil profesional</li>
-          </ul>
-          <p>
-            <strong>Pago:</strong> <i class="fa fa-clock"></i> Paga a 4 cuotas
-            sin intereses de S/200 con tarjeta débito o crédito.
+        <!-- para uno anual -->
+        <article class="plan-card">
+          <h2>Plan Anual</h2>
+          <div class="plan-details">
+            <p class="plan-type">
+              <i class='bx bx-calendar'></i> <strong>Anual</strong>
+            </p>
+            <p class="plan-for">
+              <i class='bx bx-user'></i> <strong>Para:</strong> 1 estudiante
+            </p>
+            <p class="plan-price">
+              <i class='bx bx-money'></i> <strong>Precio:</strong> S/119/mes
+            </p>
+          </div>
+          <div class="plan-benefits">
+            <p><strong>BENEFICIOS</strong></p>
+            <ul>
+              <li>Contenido profesional y actualizado</li>
+              <li>Certificados digitales</li>
+              <li>Contenido </li>
+              <li>Descarga de contenido en la app móvil</li>
+              <li>Certificados para tu perfil Junior</li>
+            </ul>
+          </div>
+          <p class="plan-saving">
+            <i class='bx bx-sun'></i> <strong>Ahorro:</strong> 6 meses
           </p>
-          <p><strong>Ahorro:</strong> 8 meses</p>
-          <a href="/cliente/suscripcion/Regitro.html" class="btnD"
-            >Suscribirse</a
-          >
-        </div>
+          <a href="/cliente/suscripcion/Registro.html" class="btnD">Suscribirse</a>
+        </article>
 
-        <div class="plan-card">
-          <h2>Expert Duo</h2>
-          <p><strong>Tipo:</strong> Anual</p>
-          <p><strong>Para:</strong> 2 estudiantes</p>
-          <p><strong>Precio:</strong> S/92/mes</p>
-          <p><strong>Cobro:</strong> Anual recurrente de S/1,099</p>
-          <p><strong>Beneficios:</strong></p>
-          <ul>
-            <li>Contenido profesional y actualizado</li>
-            <li>Certificados digitales</li>
-            <li>
-              English Academy, Escuela de Startups. Liderazgo y Management
-            </li>
-            <li>Eventos exclusivos como DropCode Conf</li>
-            <li>Descarga de contenido en la app móvil</li>
-            <li>Certificados físicos para rutas de perfil profesional</li>
-          </ul>
-          <p>
-            <strong>Pago:</strong> <i class="fa fa-clock"></i> Paga a 4 cuotas
-            sin intereses de S/275 con tarjeta débito o crédito.
+        <!---duo -->
+        <article class="plan-card">
+          <h2>Duo Anual</h2>
+          <div class="plan-details">
+            <p class="plan-type">
+              <i class='bx bx-calendar'></i> <strong>Anual</strong>
+            </p>
+            <p class="plan-for">
+              <i class='bx bx-user'></i> <strong>Para:</strong> 2 Estudiantes
+            </p>
+            <p class="plan-price">
+              <i class='bx bx-money'></i> <strong>Precio:</strong> S/200
+            </p>
+            <p class="plan-payment">
+              <i class='bx bx-recycle'></i> <strong>Cobro:</strong> Anual recurrente de S/799
+            </p>
+          </div>
+          <div class="plan-benefits">
+            <p><strong>BENEFICIOS</strong></p>
+            <ul>
+              <li>Contenido profesional y actualizado</li>
+              <li>Certificados digitales</li>
+              <li>Eventos exclusivos como DropCode Conf</li>
+              <li>Descarga de contenido en la app móvil</li>
+              <li>Certificados para tu Perfil Profesional</li>
+            </ul>
+          </div>
+          <p class="plan-payment-info">
+            <i class='bx bx-credit-card'></i> <strong>Pago:</strong> 4 cuotas sin intereses de S/200 con tarjeta débito o crédito.
           </p>
-          <a href="/cliente/suscripcion/Regitro.html" class="btnD"
-            >Suscribirse</a
-          >
-        </div>
+          <p class="plan-saving">
+            <i class='bx bx-sun'></i> <strong>Ahorro:</strong> 8 meses
+          </p>
+          <a href="/cliente/suscripcion/Registro.html" class="btnD">Suscribirse</a>
+        </article>
+
+        <!-- cuatro personas -->
+        <article class="plan-card">
+          <h2>Super Duo Anual</h2>
+          <div class="plan-details">
+            <p class="plan-type">
+              <i class='bx bx-calendar'></i> <strong>Anual</strong>
+            </p>
+            <p class="plan-for">
+              <i class='bx bx-user'></i> <strong>Para:</strong> 4 Estudiantes
+            </p>
+            <p class="plan-price">
+              <i class='bx bx-money'></i> <strong>Precio:</strong> S/350
+            </p>
+            <p class="plan-payment">
+              <i class='bx bx-recycle'></i> <strong>Cobro:</strong> Anual recurrente de S/1,099
+            </p>
+          </div>
+          <div class="plan-benefits">
+            <p><strong>Beneficios:</strong></p>
+            <ul>
+              <li>Contenido actualizado</li>
+              <li>Foros interactivos</li>
+              <li>Material descargable</li>
+              <li>Certificados para tu Perfil Profesional</li>
+            </ul>
+          </div>
+          <p class="special-discount">
+            <i class='bx bx-gift'></i> ¡DESCUENTO ESPECIAL POR TIEMPO LIMITADO!
+          </p>
+          <a href="/cliente/suscripcion/Registro.html" class="btnD">Suscribirse</a>
+        </article>
       </div>
     </section>
 
@@ -544,11 +506,34 @@
     <section class="final">
       <ol>
         <li class="font_base">
-          <img src="imagenes/academia-removebg-preview.png" alt="" />
+          <img src="/cliente/App_cliente/imagenes/Logo_Img.png" alt="" />
         </li>
-        <li class="font_base color">© 2023 Copyright <b>GUIMARBOT</b></li>
+        <li class="font_base color">© 2023 Copyright <b>DARK CODE</b></li>
       </ol>
     </section>
+
+
+<!-- Globos flotantes -->
+<div class="floating-globe-container">
+  <div class="globe globe1">HTML</div>
+  <div class="globe globe2">CSS</div>
+  <div class="globe globe3">JavaScript</div>
+  <div class="globe globe4">Python</div>
+  <div class="globe globe5">SQL</div>
+  <div class="globe globe6">React</div>
+</div>
+
+<!-- Globos flotantes de colores en el fondo -->
+<div class="floating-globe-container">
+  <div class="globe globe1"></div>
+  <div class="globe globe2"></div>
+  <div class="globe globe3"></div>
+  <div class="globe globe4"></div>
+  <div class="globe globe5"></div>
+  <div class="globe globe6"></div>
+</div>
+
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -558,5 +543,7 @@
 
     <script src="/server/Loginjs/scrip.js"></script>
     <script src="/server/beca/beca.js"></script>
+     <script src="/server/Pricipal_carrucel.js"></script>
+
   </body>
 </html>

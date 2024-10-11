@@ -62,10 +62,10 @@ nav ol li a{
 
 }
 nav ol li .boton-carrito{
-    color: var(--bg-black-900);
+    color: var(--bg-text-black-200);
 }
 nav ol li .boton-carrito:hover{
-    color: var(--bg-black-50);
+    color: var(--bg-text-black-92);
 }
 nav ol li a:hover{
     color:#ffffff;
@@ -828,9 +828,9 @@ footer {
     color:var(--bg-text-black-200);
     font-weight: bold;
 }
-.row .form-item .btn{
+ .btn{
     text-align: center;
-    justify-content: center;
+    align-items: center;
 }
 section .category-box a .fas {
     color:red;
@@ -903,19 +903,25 @@ section .category-box .contenerdor-links .fas:hover{
 
 
 /* SECTION DE SUSCRIPCION A CLASES DE CERTIFICADO */
+
 .membership-plans {
     padding-top: 100px;
-    background-image: url(/cliente/principal/imagenes/LogoMn.jpg);
-    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    filter: contrast(1);
-    fill-opacity: initial;
+    background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372,#172556);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 6px 16px rgba(0, 0, 0, 0.15);
+    z-index: 1010;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Quicksand', sans-serif;
+    border:none;
 }
 
 .membership-plans .Mensaje_Us {
     text-align: center;
     padding-bottom: 36px;
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .plans-container {
@@ -924,94 +930,144 @@ section .category-box .contenerdor-links .fas:hover{
     flex-wrap: wrap;
 }
 
+/* Card general */
 .plan-card {
-    background-color: #fff;
-    opacity: 0.8;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 10px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin: 20px;
     width: 350px;
     text-align: center;
+    color: #1a1f3d;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.plan-card:hover{
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5); /* Sombra blanca */
+
+/* Fondo ondulado en la parte superior */
+.plan-card::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -60px;
+    width: 200%;
+    height: 180px;
+    background-color: #0d3b5c;
+    border-radius: 50%;
+    z-index: 0;
 }
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Texto principal */
 .plan-card h2 {
-    color: #333;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f0f0f0;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 35px;
 }
 
-.plan-card p {
-    margin: 8px 0;
+.plan-card .price {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+    margin-top: 15px;
 }
 
+.plan-card .price span {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+/* Beneficios */
 .plan-card ul {
     list-style-type: none;
     padding: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .plan-card ul li {
-    margin: 5px 0;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: #1a1f3d;
 }
 
-.plans-container .btnD {
+.plan-card ul li::before {
+    content: "✓";
+    color: #61bdaf;
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+/* Botón */
+.plan-card .btnD {
     display: inline-block;
-    background-color: var(--bg-text-black-92);
-    color: white;
+    background-color: #338aca;
+    color: #ffffff;
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.plans-container .btnD:hover {
+.plan-card .btnD:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Colores para íconos */
-.fa-clock {
-    color: blue; /* Color azul para el ícono de reloj */
+/* Popular Plan Highlight */
+.plan-card.popular {
+    border: 3px solid #ffcd00;
+    box-shadow: 0 6px 20px rgba(255, 205, 0, 0.4);
 }
 
-.plan-card ul li:before {
-    font-weight: bold;
-    margin-right: 5px;
+.plan-card.popular::before {
+    background-color: #ffcd00;
 }
 
-.plan-card ul li:before {
-    content: "✓"; /* Para los checks */
-    color: blue; /* Color azul para los checks */
-}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .plans-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.plan-card ul li:after {
-    content: "✗"; 
-    color: black; 
-    display: none; 
-}
-
-.plan-card ul li:nth-child(1)::before {
-    content: "✓"; 
-    color: blue; 
-}
-
-.plan-card ul li:nth-child(n+2)::before {
-    content: "✗"; 
-    color: black;
-}
-
-/* Para el resto de los planes */
-.plan-card:nth-child(n+2) ul li::before {
-    content: "✓"; 
-    color: blue; 
+    .plan-card {
+        width: 100%;
+        max-width: 90%;
+        margin: 20px 0;
+    }
 }
 
 
 
 /*Contactos*/
 .contact{
-    background: var(--bg-text-black-90);
+    background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372,#172556);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 6px 16px rgba(0, 0, 0, 0.15);
+    z-index: 1010;
+    border:none;
+
 }
 .row .section-title{
     margin-top: 35px;
@@ -1020,7 +1076,7 @@ section .category-box .contenerdor-links .fas:hover{
     color: var(--bg-text-black-200);
 }
 .contact-title{
-    color: var(--bg-text-black-92);
+    color: var(--bg-black-100);
     text-align: center;
     font-size: 25px;
     margin-bottom: 20px;
@@ -1054,7 +1110,7 @@ section .category-box .contenerdor-links .fas:hover{
 .contact .contact-info-item p{
     font-size: 16px;
     line-height: 25px;
-    color: var(--bg-black-50);
+    color: var(--bg-text-black-90);
     font-weight: 400;
 }
 .contact .contact-form{
@@ -1078,7 +1134,6 @@ section .category-box .contenerdor-links .fas:hover{
     width: 100%;
     height: 50px;
     border-radius: 25px;
-    background: var(--bg-text-black-400);
     border: 1px solid var(--bg-text-black-92);
     padding: 10px 25px;
     font-size: 16px;
@@ -1096,6 +1151,9 @@ section .category-box .contenerdor-links .fas:hover{
     height: 50px;
     padding: 0 50px;
     background:yellow;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 } 
 .contact .contact-form .btn:hover{
     color: #000;
@@ -1136,4 +1194,230 @@ section .category-box .contenerdor-links .fas:hover{
 .final .font_base b {
     font-weight: bold;
     color:#172554;
+}
+
+/* Sección de renderizado de carrusel */
+.carousel-item {
+    position: relative; /* Para que los elementos hijos se posicionen en relación al carrusel */
+    padding: 20px;
+}
+
+/* Estilos para el contenedor de novedades */
+.novedades__content {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 80%; /* Ajustar el tamaño de la tarjeta */
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    bottom: 20px; /* Asegura que la tarjeta se coloque sobre la imagen */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+
+.novedades__info {
+    padding: 15px;
+}
+
+
+
+.novedades__description {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.novedades__date {
+    font-size: 0.875rem;
+    color: #777;
+}
+
+/* Asegurar que el carrusel permite posicionar los elementos */
+.carousel-item {
+    position: relative; /* Hacer que los elementos hijos con position: absolute se posicionen respecto al carrusel */
+    height: 570.25px; /* Fijar la altura del carrusel */
+    display: flex;
+    justify-content: center; /* Centramos el contenido horizontalmente */
+    align-items: center;     /* Centramos el contenido verticalmente */
+}
+
+/* Estilos para el contenedor de novedades */
+.novedades__content {
+    position: absolute; /* Hacer que el contenido se posicione sobre la imagen */
+    bottom: 20px; /* Ajustar la posición desde el fondo */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Ajuste para centrar correctamente */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px; /* Reducir padding */
+    width: 30%; /* Ajustar el ancho de la tarjeta */
+    overflow: hidden;
+    z-index: 10;
+    text-align: center;
+    height: 500px;
+}
+
+/* Ajustar la imagen dentro de la tarjeta */
+.novedades__image {
+    width: 100%; /* Ocupar todo el ancho */
+    height: 200px; /* Altura ajustada */
+    object-fit: contain; /* Ajustar la imagen dentro del contenedor sin recortar */
+    border-radius: 8px;
+    background-color: #f8f8f8; /* Fondo gris claro en caso de que la imagen no ocupe toda el área */
+    margin-top: 0px;
+}
+
+
+/* Ajuste de información de la tarjeta */
+.novedades__info {
+    padding: 10px; /* Reducir padding */
+}
+
+.novedades__title {
+    font-size: 1.4rem; /* Reducir el tamaño del título */
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #007bff;
+}
+
+.novedades__description {
+    font-size: 0.9rem; /* Reducir tamaño de la descripción */
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.3; /* Ajustar la legibilidad del texto */
+}
+
+.novedades__date {
+    font-size: 0.75rem; /* Reducir tamaño de la fecha */
+    color: #777;
+}
+
+.carousel-item {
+    height: 100vh; /* El carrusel ocupará el 100% de la altura de la ventana */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la imagen cubra todo el área del carrusel */
+}
+
+/* Contenedor de los globos */
+.floating-globe-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999; /* Asegura que la animación esté encima de todo */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para cada globo */
+.globe {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 50%;
+    animation: float 10s infinite ease-in-out;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+    white-space: nowrap;
+    font-weight: bold;
+
+}
+
+
+/* Contenedor de los globos en el fondo */
+.floating-globe-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1; /* Para asegurarnos que los globos estén en el fondo */
+    overflow: hidden;
+}
+
+/* Estilos para cada globo */
+.globe {
+    position: absolute;
+    border-radius: 50%;
+    animation: float 10s infinite ease-in-out;
+    opacity: 0.8;
+    width: 80px; /* Tamaño de los globos */
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.1); /* Color de fondo base para cada globo */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación para los globos */
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-200px) translateX(200px);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(0) translateX(400px);
+        opacity: 1;
+    }
+}
+
+/* Globos de distintos colores */
+.globe1 {
+    top: 10%;
+    left: 20%;
+    background-color: rgba(255, 99, 132, 0.7); /* Rojo */
+    animation-duration: 8s;
+}
+
+.globe2 {
+    top: 30%;
+    left: 70%;
+    background-color: rgba(54, 162, 235, 0.7); /* Azul */
+    animation-duration: 10s;
+}
+
+.globe3 {
+    top: 70%;
+    left: 30%;
+    background-color: rgba(75, 192, 192, 0.7); /* Verde claro */
+    animation-duration: 12s;
+}
+
+.globe4 {
+    top: 80%;
+    left: 80%;
+    background-color: rgba(255, 206, 86, 0.7); /* Amarillo */
+    animation-duration: 9s;
+}
+
+.globe5 {
+    top: 50%;
+    left: 10%;
+    background-color: rgba(153, 102, 255, 0.7); /* Púrpura */
+    animation-duration: 11s;
+}
+
+.globe6 {
+    top: 40%;
+    left: 50%;
+    background-color: rgba(255, 159, 64, 0.7); /* Naranja */
+    animation-duration: 7s;
 }
