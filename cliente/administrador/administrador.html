@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="administrador.css">
+    <link rel="stylesheet" href="administrador-header.css">
+    <link rel="stylesheet" href="administrador-tabs.css">
+    <link rel="stylesheet" href="administrador-body.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet" />
+    <!-- courses -->
+    <link rel="stylesheet" href="course/course.css">
+    <link rel="stylesheet" href="course/course-header.css">
+    <link rel=" stylesheet" href="course/course-select/course-select.css">
+    <link rel="stylesheet" href="course/course-select/description-course/description-course.css">
+    <link rel="stylesheet" href="course/course-select/content-course/content-course.css">
+    <link rel="stylesheet" href="course/course-select/data-course/data-course.css">
+    <!-- scholarships -->
+    <link rel="stylesheet" href="scholarships/scholarships.css">
+    <link rel="stylesheet" href="scholarships/scholarships-header.css">
+    <link rel="stylesheet" href="scholarships/scholarships-aside.css">
+    <link rel="stylesheet" href="scholarships/scholarships-data.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">
+            <a href="/cliente/principal/Inicio.html">
+                <img src="/cliente/principal/pictures/guimarbot.png" alt="">
+            </a>
+        </h1>
+    </header>
+
+    <nav class="tabs">
+        <ul class="tabs__list">
+            <li class="tabs__list_item" id="course">cursos</li>
+            <li class="tabs__list_item" id="scholarships">Becas</li>
+        </ul>
+    </nav>
+
+    <div class="body">
+        <div class="tabs-menu">
+            <div class="tabs-menu__content">
+                <div class="tabs-menu__line"></div>
+                <div class="tabs-menu__line"></div>
+                <div class="tabs-menu__line"></div>
+            </div>
+        </div>
+        <div class="body__content"></div>
+    </div>
+    <script type="module" src="/server/script/administrador/administrador.js"></script>
+    <script src="" id="scriptTab"></script>
+</body>
+
+</html>

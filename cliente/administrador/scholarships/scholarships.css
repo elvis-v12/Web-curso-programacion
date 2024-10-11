@@ -1,0 +1,23 @@
+.upload-scholarship {
+        height: 100%;
+        overflow: auto;
+        display: grid;
+        grid-template-areas:
+                "scholarship__header scholarship__header"
+                "scholarships__aside scholarships__content";
+        grid-template-rows: .1fr 1fr;
+        grid-template-columns: 3fr 2fr;
+        gap: 20px;
+}
+
+.scholarship__header {
+        grid-area: scholarship__header;
+}
+
+.scholarships__aside {
+        grid-area: scholarships__aside;
+}
+
+.scholarships__content {
+        grid-area: scholarships__content;
+}

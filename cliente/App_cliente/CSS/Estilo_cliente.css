@@ -436,7 +436,8 @@ body {
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    width: 280px;
+    margin-top: 10px;
+    width: 260px;
     z-index: 100;
 }
 .profile-menu .fa{
@@ -578,3 +579,9 @@ body {
     transform: scale(1.02); /* Efecto de zoom en hover */
     transition: transform 0.3s ease;
 }
+
+/* Cohort Container */
+.cohort-container {
+    display: none; /* Oculto por defecto */
+}
+

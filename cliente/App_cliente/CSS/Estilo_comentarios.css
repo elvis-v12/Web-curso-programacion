@@ -1,0 +1,394 @@
+/* Contenedor principal para la sesión de video */
+.video-sesion {
+    padding: 20px;
+    margin-left: 100px;
+    margin-right: 330px; /* Ajuste para el aside derecho */
+    flex-grow: 1;
+    height: 150vh; /* Ocupar toda la altura del viewport */
+    overflow-y: hidden; /* Evitar desbordamiento en el contenido principal */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Redondear bordes */
+    display: flex;
+}
+
+/* Contenedor para los botones de despliegue */
+.caja_deBotones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Distribuye los botones a lo largo del contenedor */
+    height: 100%; /* Ocupar toda la altura del contenedor padre */
+    max-height: 100%; /* Mantener el tamaño máximo del contenedor */
+    width: 70px;
+    overflow-y: auto; /* Habilitar la barra de desplazamiento si se excede la altura */
+    padding-right: 10px; /* Para evitar que el contenido quede detrás del scrollbar */
+    scrollbar-width: thin; /* Estilo del scrollbar en navegadores compatibles */
+    scrollbar-color: #7ED321 #e0e0e0; /* Color del scroll en Firefox */
+}
+
+/* Estilo de la barra de desplazamiento para navegadores WebKit (Chrome, Safari, Edge) */
+.caja_deBotones::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+.caja_deBotones::-webkit-scrollbar-track {
+    background: #e0e0e0; /* Color de fondo del track del scrollbar */
+}
+
+.caja_deBotones::-webkit-scrollbar-thumb {
+    background-color: #7ED321; /* Color de la barra de desplazamiento */
+    border-radius: 20px; /* Bordes redondeados del scrollbar */
+    border: 2px solid #e0e0e0; /* Borde del scroll */
+}
+
+/* Botones circulares */
+.caja_deBotones a {
+    display: inline-block;
+    width: 30px; /* Tamaño reducido */
+    height: 30px; /* Tamaño reducido */
+    background-color: transparent; /* Fondo transparente */
+    border: 2px solid #7ED321; /* Borde verde */
+    border-radius: 50%;
+    color: #7ED321;
+    text-decoration: none;
+    text-align: center;
+    line-height: 26px; /* Centrar el número dentro del círculo */
+    font-size: 14px;
+    position: relative;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+    margin: 10px 0; /* Separación entre botones */
+}
+
+/* Líneas conectadas entre los botones */
+.caja_deBotones a::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 2px;
+    height: 20px; /* Tamaño de la línea */
+    background-color: #7ED321;
+    transform: translateX(-50%);
+}
+
+.caja_deBotones a:last-child::after {
+    display: none; /* No mostrar la línea en el último botón */
+}
+
+/* Cambio de color cuando el botón está activo o se pasa el cursor */
+.caja_deBotones a:hover {
+    background-color: #7ED321;
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+
+/* Contenedor con desplazamiento para videos */
+.videos-contenedor {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    height: 100%;
+}
+
+/* Para la lista de comentarios con desplazamiento */
+.comentarios-lista {
+    margin-top: 15px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 140px; /* Limitar la altura */
+    overflow-y: auto; /* Agregar desplazamiento vertical */
+    scrollbar-width: thin; /* Estilo de la barra de desplazamiento en Firefox */
+    scrollbar-color: #3498db #e0e0e0; /* Color de la barra de desplazamiento en Firefox */
+}
+
+/* Personalizar la barra de desplazamiento para navegadores WebKit (Chrome, Safari, Edge) */
+.comentarios-lista::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+.comentarios-lista::-webkit-scrollbar-track {
+    background: #e0e0e0; /* Color de fondo de la barra */
+}
+
+.comentarios-lista::-webkit-scrollbar-thumb {
+    background-color: #3498db; /* Color del "pulgar" (la parte móvil de la barra) */
+    border-radius: 20px; /* Bordes redondeados del scrollbar */
+    border: 2px solid #e0e0e0; /* Borde alrededor del pulgar */
+}
+
+
+
+/* Mantener el estilo de los botones y las interacciones de comentarios */
+.acciones-comentario {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.me-gusta-btn, .responder-btn {
+    background-color: transparent;
+    border: none;
+    color: #3498db;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.me-gusta-btn:hover, .responder-btn:hover {
+    text-decoration: underline;
+}
+
+.contenedor-sesion {
+   width: 100%;
+    margin: 0px;
+
+}
+
+
+/* Mantener el estilo de los botones y las interacciones de comentarios */
+.acciones-comentario {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.me-gusta-btn, .responder-btn {
+    background-color: transparent;
+    border: none;
+    color: #3498db;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.me-gusta-btn:hover, .responder-btn:hover {
+    text-decoration: underline;
+}
+
+.contenedor-sesion {
+    max-width: 100%;
+    margin: 0px;
+}
+
+.video-sesion--titulo h2 {
+    font-size: 32px;
+    color: #2c3e50;
+    margin: 40px 0px 0px 30px;
+    
+}
+.SesionTItulo{
+    color: #3498db;
+    font-weight: bold;
+}
+
+.video-item {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+     margin: 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+/* Estilo para mantener el video-item--contenido estático en la página */
+.video-item--contenido {
+    position: sticky;
+    top: 10px; /* Mantenerlo a 10px desde la parte superior cuando hagas scroll */
+    width: 88%; /* Asegura que el video ocupe todo el ancho disponible */
+    padding: 20px;
+    z-index: 100; /* Asegurarse de que quede por encima de otros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto visual */
+    padding: 20px;
+    margin-bottom: 20px 0px 0px 0px;
+
+}
+
+/* Estilo cuando la pantalla se minimiza o cambia el tamaño */
+@media (max-width: 768px) {
+    .video-item--contenido {
+        width: 100%; /* Asegurarse de que se ajuste al ancho completo de la pantalla */
+        position: fixed; /* Fijarlo en la parte superior cuando la pantalla sea más pequeña */
+        top: 0; /* Mantenerlo en la parte superior al minimizar */
+        left: 0;
+        right: 0;
+        z-index: 1000; /* Mantenerlo visible por encima del resto del contenido */
+    }
+}
+
+.video-item--contenido h3 {
+    font-size: 24px;
+    margin-top: 15px;
+    color: #34495e;
+
+}
+
+
+/* Descripción del video centrado */
+.video-item--contenido p {
+    font-size: 16px;
+    color: #7f8c8d;
+    text-align: center;
+    overflow: hidden; /* Si el texto es demasiado largo, evitará que se desborde */
+    white-space: normal; /* Asegura que el texto haga saltos de línea normales */
+    word-wrap: break-word; /* Si hay palabras largas, las cortará en líneas nuevas */
+}
+
+/* Texto limitado a 3 líneas inicialmente */
+/* Limitar a 3 líneas, si es compatible */
+.descripcion {
+    display: -webkit-box;
+line-clamp: 3; /* Limitar a 3 líneas para navegadores WebKit */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+
+
+/* Botón de ver más */
+.ver-mas-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.ver-mas-btn:hover {
+    background-color: #2980b9;
+}
+
+
+.comentarios-preguntas {
+    margin-top: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.comentarios-preguntas h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+.formulario-comentarios{
+    display: flex;
+}
+.formulario-comentarios textarea {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    resize: none;
+    height: 35px;
+
+}
+
+.formulario-comentarios button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    height: 30px;
+    margin: 10px;
+}
+
+.formulario-comentarios button:hover {
+    background-color: #2980b9;
+}
+
+
+.comentario {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.comentario:last-child {
+    border-bottom: none;
+}
+
+.comentario p {
+    margin: 0;
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+.comentario strong {
+    color: #3498db;
+}
+
+/* Estilos para acciones de comentarios */
+
+
+.me-gusta-btn, .responder-btn {
+    background-color: transparent;
+    border: none;
+    color: #3498db;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.me-gusta-btn:hover, .responder-btn:hover {
+    text-decoration: underline;
+}
+
+/* Contador de likes */
+.contador-likes {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* Formulario de respuesta */
+.respuesta {
+    margin-top: 10px;
+    display: none; /* Oculto por defecto, se mostrará al hacer clic en "Responder" */
+}
+
+.formulario-respuesta textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.formulario-respuesta button {
+    padding: 8px 16px;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario-respuesta button:hover {
+    background-color: #27ae60;
+}
+
+.video-sesion, .main-content {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    display: none;
+}
+
+.container {
+    padding-top: 20px;
+    width: 100%;
+}
