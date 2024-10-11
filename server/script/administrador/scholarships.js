@@ -1,7 +1,8 @@
-import { UserService } from "/server/script/service/UserService.js";
+import { UserService } from "../service/UserService.js";
+
 export class ScholarshipsView {
         constructor() {
-                this.scholarships = new UserService();
+                this.userService = new UserService();
                 this.postulanteSeleccionado = "";
                 this.init();
         }
@@ -27,7 +28,7 @@ export class ScholarshipsView {
         }
         async mostrarPostulantes() {
                 try {
-                        const postulantes = await this.scholarships.findPostulantesBeca();
+                        const postulantes = await this.userService.findPostulantesBeca();
                         this.scholarships__aside_users.innerHTML = postulantes.map(becado => {
                                 return `
                                         <ul class="scholarships__user" id="${becado.code}">

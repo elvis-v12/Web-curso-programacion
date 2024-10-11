@@ -1,5 +1,6 @@
 import { CursosView } from "./course.js";
 import { ScholarshipsView } from "./scholarships.js";
+import { PagoView } from "./pagos.js";
 document.addEventListener('DOMContentLoaded', (e) => {
         new AdministradorView()
 });
@@ -7,10 +8,12 @@ class AdministradorView {
         constructor() {
                 this.views = {
                         course: CursosView,
-                        scholarships: ScholarshipsView
+                        scholarships: ScholarshipsView,
+                        pagos: PagoView
                 };
                 this.init();
-                this.clickTab(this.tabsListHTML[1])
+                this.clickTab(this.tabsListHTML[2])
+                
         }
 
         init() {
@@ -52,6 +55,7 @@ class AdministradorView {
                 try {
                         const response = await fetch(`${targetElement.id}/${targetElement.id}.html`);
                         if (!response.ok) {
+                                
                                 return;
                         }
                         this.contentHTML.innerHTML = await response.text();

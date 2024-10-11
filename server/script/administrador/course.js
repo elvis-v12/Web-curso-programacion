@@ -1,4 +1,4 @@
-import { CursosService } from "/server/script/service/CursosService.js";
+import { CursosService } from "../service/CursosService.js";
 import { ContentViewAdmin } from "./content.js";
 import { DataViewAdmin } from "./data.js";
 import { DescriptionViewAdmin } from "./description.js";
