@@ -88,7 +88,7 @@ body {
 .main-content {
     padding: 20px;
     margin-left: 100px;
-    margin-right: 330px; /* Ajuste para el aside derecho */
+
     flex-grow: 1;
     height: 100vh; /* Ocupar toda la altura del viewport */
     overflow-y: hidden; /* Evitar desbordamiento en el contenido principal */
@@ -143,27 +143,20 @@ body {
     height: 100vh;
     overflow-y: auto;
 }
+.header{
+    display: flex;
+}
+.header h1{
+    margin-bottom: 6px;
 
+}
 /* Barra de desplazamiento para contenidos_barra */
 .contenidos_barra {
-    max-height: calc(100vh - 150px);
-    overflow-y: auto;
-    padding-right: 10px;
-    box-sizing: border-box;
-}
-
-/* Carousel */
-.carousel {
-    margin-top: 20px;
-}
-
-.testimonial {
-    display: none;
-    text-align: center;
-}
-
-.testimonial.active {
-    display: block;
+    overflow-y: auto; /* Habilita el scroll vertical */
+    padding-right: 10px; /* Ajusta el padding para mejor presentación */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
+    width: 80%; /* Ancho del contenedor */
+    height: 500px; /* Establece una altura fija para que el contenido que exceda haga scroll */
 }
 
 /* Sección de Cursos */
@@ -392,13 +385,14 @@ body {
 .profile {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    padding: 10px;
+    justify-content: flex-end;
+    margin-left: auto;
+    width: 21%;
+    padding: 5px 10px; /* Ajusta el padding para que ocupe menos espacio */
     background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    position: relative;
+    border-radius: 8px; /* Ajuste de bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra para darle mejor visualización */
+    margin-bottom: 40px;
 }
 
 .profile-avatar {
@@ -436,7 +430,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 30px;
     width: 260px;
     z-index: 100;
 }
@@ -464,9 +458,6 @@ body {
 .profile-menu.active, .popover-arrow.active {
     display: block; /* Se mostrará cuando el menú esté activo */
 }
-
-
-
 
 
 .profile-menu::before {
@@ -517,8 +508,84 @@ body {
 }
 
 /* Ajuste para el carrusel */
+
+/* Carousel */
+/* Estructura principal */
+.main-content {
+   
+    justify-content: space-between; /* Separa el contenido principal y el aside */
+}
+.barrasDesplegables{
+    display: flex;
+}
+/* Aside de usuario */
+.aside-right {
+    width: 280px; /* Reducido un poco para que no ocupe demasiado espacio */
+    margin-left: 20px; /* Separación del contenido principal */
+    position: sticky;
+    top: 0; /* Mantener el aside visible cuando se hace scroll */
+}
+
+/* Ajustes para el perfil */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 15px; /* Aumentado para más espacio interno */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.profile-avatar {
+    width: 50px; /* Tamaño del avatar aumentado */
+    height: 50px;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profile-info {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.profile-info span {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Menú desplegable más pequeño */
+.profile-menu {
+    display: none;
+    position: absolute;
+    top: 70px; /* Ajuste para que quede debajo del botón */
+    right: 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-top: 20px;
+    width: 260px; /* Ancho ajustado */
+    z-index: 100;
+}
+
+.profile-menu.active {
+    display: block; /* Mostrar el menú cuando esté activo */
+}
+
+/* Ajuste para el carrusel */
 .carousel {
-    margin-top: 80px;
+    margin-top: 20px;
     background-color: #ffffff;
     padding: 15px;
     border-radius: 10px;
@@ -526,13 +593,22 @@ body {
     position: relative;
 }
 
+.testimonial {
+    display: none;
+    text-align: center;
+}
+
+.testimonial.active {
+    display: block;
+}
+
 .carousel .testimonial {
     background: #f2f2f2;
     padding: 20px;
     border-radius: 8px;
-    display: none; /* Oculto por defecto */
     text-align: center;
     cursor: pointer;
+    display: none; /* Oculto por defecto */
 }
 
 .carousel .testimonial.active {
@@ -550,8 +626,8 @@ body {
 }
 
 .carousel .testimonial img {
-    height: 50px; /* Ajustado para que la imagen tenga un tamaño adecuado */
-    border-radius: 50%; /* Redondear las imágenes */
+    height: 50px; /* Tamaño de la imagen en los testimonios */
+    border-radius: 50%; /* Imagen redonda */
     margin-bottom: 10px;
 }
 
@@ -576,9 +652,10 @@ body {
 }
 
 .carousel .testimonial:hover {
-    transform: scale(1.02); /* Efecto de zoom en hover */
+    transform: scale(1.02); /* Efecto de zoom al hacer hover */
     transition: transform 0.3s ease;
 }
+
 
 /* Cohort Container */
 .cohort-container {

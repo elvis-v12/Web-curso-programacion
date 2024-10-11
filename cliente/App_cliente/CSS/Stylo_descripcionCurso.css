@@ -136,3 +136,9 @@
 .accordion-item.active .accordion-body {
     display: block;
 }
+
+.career-sidebar_menu__mYehl{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
