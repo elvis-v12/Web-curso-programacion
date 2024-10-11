@@ -16,6 +16,7 @@
     width: 100%;
 
 }
+
 .header__input {
     border: none;
     padding: 10px;
@@ -49,4 +50,43 @@
 
 .header__form:focus-within {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btnCrearNuevoCurso {
+    background: black;
+    color: #a6ff00;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 30px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .1s .0s linear;
+}
+
+.btnCrearNuevoCurso:hover {
+    background: #3526b8;
+    box-shadow: 0 2px 6px #555555b6;
+}
+.btnCrearCurso {
+    background: black;
+    color: #a6ff00;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 30px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .1s .0s linear;
+}
+
+.btnCrearCurso:hover {
+    background: #3526b8;
+    box-shadow: 0 2px 6px #555555b6;
 }

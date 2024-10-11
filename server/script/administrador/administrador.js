@@ -12,7 +12,7 @@ class AdministradorView {
                         pagos: PagoView
                 };
                 this.init();
-                this.clickTab(this.tabsListHTML[2])
+                this.clickTab(this.tabsListHTML[0])
                 
         }
 

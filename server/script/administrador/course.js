@@ -10,6 +10,9 @@ export class CursosView {
                         "content-course": ContentViewAdmin,
                         "data-course": DataViewAdmin
                 };
+                this.descriptionViewAdmin = null;
+                this.contentViewAdmin = null;
+                this.dataViewAdmin = null;
                 this.init();
                 this.clickBuscarCurso()
         }
@@ -24,8 +27,24 @@ export class CursosView {
                 this.tabCourseSelect = document.querySelectorAll(".tabs__item-course-select");
                 /* Actions */
                 this.courseSelectHTML.style.display = 'none';
+                this.btnCrearNuevoCurso = document.querySelector("#btnCrearNuevoCurso");
                 this.btnFindCourse.addEventListener("click", this.clickBuscarCurso);
 
+                this.btnCrearNuevoCurso.addEventListener('click', () => {
+                        this.courseSelectHTML.style.display = "grid"
+                        this.normal.style.display = 'none';
+
+                        this.clickTabNewCurso(document.querySelector("#description-course"))
+
+                        this.tabCourseSelect.forEach(tab => {
+                                tab.addEventListener("click", () => this.clickTabNewCurso(tab));
+                        });
+                        document.querySelector("#btnCrearCurso").style.display = 'block'
+                        document.querySelector("#btnCrearCurso").style.position = 'sticky'
+                        document.querySelector("#btnCrearCurso").addEventListener('click', () => {
+                                alert("se cre curso")
+                        })
+                })
 
         }
         clickBuscarCurso = async () => {
@@ -76,6 +95,25 @@ export class CursosView {
 
                 } catch (error) {
                         console.error(error);
+                }
+        }
+
+        clickTabNewCurso = async targetElement => {
+                try {
+                        if (!targetElement.id || !this.views.hasOwnProperty(targetElement.id)) {
+                                return
+                        }
+                        const response = await fetch(`course/course-select/${targetElement.id}/${targetElement.id}.html`);
+                        if (!response.ok) {
+                                throw new Error('Failed to fetch course-select.html');
+                        }
+
+                        let contentHTMLTXT = await response.text()
+
+                        this.bodyCourseSelectHTML.innerHTML = contentHTMLTXT;
+                        new this.views[targetElement.id](curso)
+                } catch (error) {
+                        console.log(error);
                 }
         }
 
