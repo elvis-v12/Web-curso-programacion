@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App cliente DARK & CODE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="/cliente/principal/imagenes/LogoMarca.png">
+
+    <link rel="stylesheet" href="CSS/Estilo_cliente.css">
+    <link rel="stylesheet" href="CSS/Estilo_navOpciones.css">
+    <link rel="stylesheet" href="CSS/Stylo_descripcionCurso.css">
+    <link rel="stylesheet" href="CSS/Estilo_Horario.css">
+    <link rel="stylesheet" href="CSS/Estilo_comentarios.css">
+    <link rel="stylesheet" href="CSS/Estilo_Modulo.css">
+    <link rel="stylesheet" href="CSS/Estilo_certificado.css">
+    <link rel="stylesheet" href="CSS/Mi_progreso.css">
+    <link rel="stylesheet" href="CSS/Estilo_Miscursos.css">
+</head>
+<body>
+
+    <!--Contenido principal-->
+
+
+    <div class="container">
+        <!-- Menú aside izquierdo -->
+        <aside class="aside-left">
+            <div class="logo">
+                <a href="/cliente/App_cliente/App_estudiante.html" class="dOS"><img src="imagenes/Logo_Img.png" alt="Logo" class="logo-img"></a>
+            </div>
+            <div class="nav-toggler" onclick="toggleMenu()">
+                <span>&#10095;</span>
+            </div>
+            <ul class="nav">
+                <li><a href="#" id="toggle-main" class="active"><i class="fa fa-home"></i></a></li>
+                <li><a href="#" id="toggle-user"><i class="fa fa-user"></i></a></li>
+                <li><a href="#" id="toggle-stats"><i class="fa fa-list"></i></a></li>
+                <li><a href="#Video_Seccioin" id="toggle-video"><i class="fa fa-briefcase"></i></a></li>
+                <li><a href="#contact" id="toggle-contact"><i class="fa fa-comments"></i></a></li>
+            </ul>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <section class="header">
+                <div class="Texto_aaa"><h1>¡Hola, Elvis!</h1></div>
+                <div class="profile">
+                    <button id="profile-toggle" onclick="toggleProfile()">
+                        <div class="profile-avatar">EV</div>
+                        <span>Elvis Vega</span>
+                    </button>
+                    <div id="profile-menu" class="profile-menu">
+                        <div id="popover-arrow" class="popover-arrow"></div>
+                        <h3>Menú</h3>
+                        <a href="/cliente/App_cliente/App_estudiante.html"><i class="fa fa-user"></i> Mi perfil</a>
+                        <a href="#"><i class="fa fa-sign-out"></i> Cerrar sesión</a>
+                    </div>
+                </div>
+            </section>
+      <div class="barrasDesplegables">
+            <!-- Sección de Carreras -->
+            <div class="contenidos_barra">
+                <div class="row">
+                    <img src="/cliente/principal/imagenes/LogoMarca.png" alt="" width="60px">
+                    <div class="text-container">
+                        <h2>Despega tu carrera</h2>
+                        <h5>Comienza o acelera tu carrera en tecnología, 
+                            Estudia Desarrollo Full Stack, Data Science o Data Analytics.</h5>
+                    </div>
+                </div>                
+                <section class="carreras">
+                    <div class="tres">
+                        <h2>Carreras</h2>
+                        <h5><i class="fas fa-check-circle"></i> AIC</h5>
+                        <h5><i class="fas fa-shield-alt"></i> Garantía de empleo</h5>
+                    </div>
+                    
+                    <div class="carreras-container">
+                        <a class="carrera">
+                            <img src="imagenes/full-stack.png" alt="Full Stack">
+                            <div class="carrera-content">
+                                <h3 class="Texto_da">Full Stack 2.0</h3>
+                                <p class="Texto_da">Aprende a desarrollar páginas y aplicaciones web y consigue un trabajo en el mundo de la tecnología.</p>
+                                <span class="duration">Duración: 3-6 meses</span>
+                            </div>
+                        </a>
+                        <a class="carrera">
+                            <img src="imagenes/css-code-css.jpg" alt="Data Analytics">
+                            <div class="carrera-content">
+                                <h3 class="Texto_da">Desarrollador Frontend</h3>
+                                <p class="Texto_da">Aprende a analizar grandes volúmenes de datos y transfórmalos en información valiosa para el negocio.</p>
+                                <span class="duration">Duración: 3-6 meses</span>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Sección de Cursos -->
+                <section class="courses">
+                    <h2>Cursos Introductorios <span class="status-gratuito">Gratuitos</span></h2>
+                    <div class="courses-container">
+                        <a class="course">
+                            <div class="course-icon">
+                                <img src="imagenes/js.png" alt="Javascript">
+                                <span>Javascript</span>
+                            </div>
+                            <div class="linea"></div>
+                            <div class="course-content">
+                                <span class="nombre Regla">Introducción a</span>
+                                <span class="nombre">Programación</span>
+                                <span class="modules-count">
+                                    <i class="fa fa-book"></i> 3 módulos
+                                </span>
+                            </div>
+                        </a>
+                        <a class="course">
+                            <div class="course-icon">
+                                <img src="imagenes/piton.png" alt="Python">
+                                <span>Python</span>
+                            </div>
+                            <div class="linea"></div>
+                            <div class="course-content">
+                                <span class="nombre Regla">Introducción a</span>
+                                <span class="nombre">Data Science</span>
+                                <span class="modules-count">
+                                    <i class="fa fa-book"></i> 3 módulos
+                                </span>
+                            </div>
+                        </a>
+                        <a class="course">
+                            <div class="course-icon">
+                                <img src="imagenes/servidor-sql.png" alt="SQL">
+                                <span>SQL</span>
+                            </div>
+                            <div class="linea"></div>
+                            <div class="course-content">
+                                <span class="nombre Regla">Introducción a</span>
+                                <span class="nombre">Data Analytics</span>
+                                <span class="modules-count">
+                                    <i class="fa fa-book"></i> 3 módulos
+                                </span>
+                            </div>
+                        </a>
+                        <a class="course">
+                            <div class="course-icon">
+                                <img src="imagenes/java.png" alt="Java">
+                                <span>JAVA</span>
+                            </div>
+                            <div class="linea"></div>
+                            <div class="course-content">
+                                <span class="nombre Regla">Introducción a</span>
+                                <span class="nombre">JAVA</span>
+                                <span class="modules-count">
+                                    <i class="fa fa-book"></i> 3 módulos
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+                
+            </div>
+
+                    <!-- Aside derecho para el perfil del usuario -->
+        <aside class="aside-right">
+          
+
+            <!-- Carrousel de testimonios -->
+            <div class="carousel">
+                <div class="testimonial active">
+                    <img src="imagenes/img-portafolio.jpg" alt="">
+                    <p><strong>Ignacio Fosco</strong></p>
+                    <p>Desarrollador Web - Scale AI</p>
+                </div>
+                <div class="testimonial">
+                    <img src="imagenes/img-portafolio.jpg" alt="">
+                    <p><strong>Natalia Muñoz Castro</strong></p>
+                    <p>Front-End Developer - TRU Web3</p>
+                    <p>El mejor trabajo que me reta día a día.</p>
+                </div>
+                <div class="testimonial">
+                    <img src="imagenes/img-portafolio.jpg" alt="">
+                    <p><strong>Yuliana Castro Diaz</strong></p>
+                    <p>Software Development Analyst - Mercado Libre</p>
+                    <p>Un gran retorno a nivel profesional.</p>
+                </div>
+
+                <!-- Control de puntos -->
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="showSpecificTestimonial(0)"></span>
+                    <span class="dot" onclick="showSpecificTestimonial(1)"></span>
+                    <span class="dot" onclick="showSpecificTestimonial(2)"></span>
+                </div>
+            </div>
+
+        </aside>
+        </main>
+
+
+
+
+
+    <!--Mis cursos-->
+    <div class="MisEstadisticas">
+        <main class="MisEstadisticas-contenedor">
+            <article class="EncabezadoEstadisticas">
+                <a href="/home" class="EncabezadoEstadisticas-regresar">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path>
+                    </svg>
+                    <span>Regresar</span>
+                </a>
+                <div class="EncabezadoEstadisticas-items">
+                    <h1 class="EncabezadoEstadisticas-titulo">Mi progreso</h1>
+                </div>
+            </article>
+    
+            <article class="EstadisticasVitales">
+                <article class="EstadisticaGeneral">
+                    <div class="EstadisticaGeneral-icono EstadisticaGeneral-icono--tiempo">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="clock" class="svg-inline--fa fa-clock " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"></path>
+                        </svg>
+                    </div>
+                    <div class="EstadisticaGeneral-texto">
+                        <h3>0h 2m</h3>
+                        <p>Aprendiendo</p>
+                    </div>
+                </article>
+    
+                <article class="EstadisticaGeneral">
+                    <div class="EstadisticaGeneral-icono EstadisticaGeneral-icono--clases">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play" class="svg-inline--fa fa-play " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path fill="currentColor" d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path>
+                        </svg>
+                    </div>
+                    <div class="EstadisticaGeneral-texto">
+                        <h3>1 clase</h3>
+                        <p>Vistas</p>
+                    </div>
+                </article>
+    
+                <article class="EstadisticaGeneral">
+                    <div class="EstadisticaGeneral-icono EstadisticaGeneral-icono--cursos">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="graduation-cap" class="svg-inline--fa fa-graduation-cap " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                            <path fill="currentColor" d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"></path>
+                        </svg>
+                    </div>
+                    <div class="EstadisticaGeneral-texto">
+                        <h3>0 cursos</h3>
+                        <p>Aprobados</p>
+                    </div>
+                </article>
+    
+                <article class="EstadisticaGeneral">
+                    <div class="EstadisticaGeneral-icono EstadisticaGeneral-icono--ranking">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy" class="svg-inline--fa fa-trophy " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path fill="currentColor" d="M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H357.9C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z"></path>
+                        </svg>
+                    </div>
+                    <div class="EstadisticaGeneral-texto">
+                        <h3>1 punto</h3>
+                        <p>Dark Code Rank</p>
+                    </div>
+                </article>
+            </article>
+
+            <article class="ProgresoMeta1">
+            <article class="ProgresoMeta">
+                <div class="EncabezadoProgreso">
+                    <div class="EncabezadoProgreso-textos">
+                        <h3 class="EncabezadoProgreso-titulo">Avance de tu meta</h3>
+                        <p class="EncabezadoProgreso-subtitulo">Del 7 - 13 de octubre</p>
+                    </div>
+                    <!-- Contenido que será reemplazado -->
+                    <div class="AgregarMeta" id="agregarMeta">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bolt" class="svg-inline--fa fa-bolt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288H175.5L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7H272.5L349.4 44.6z"></path>
+                        </svg>
+                        <p>No has definido una meta aún.</p>
+                        <button id="agregarMetaBtn">Agregar meta</button>
+                    </div>
+                    <!-- Nuevo contenido donde se mostrará la meta guardada -->
+                    <div class="AddGoal" id="metaGuardada" style="display: none;">
+                        <!-- Contenido dinámico generado por JavaScript -->
+                    </div>
+                </div>
+                <canvas role="img" height="324" width="649" style="display: block; box-sizing: border-box; height: 361.8px; width: 724.717px;"></canvas>
+            
+                <!-- Modal -->
+                <div class="Modal-background" id="modalBackground" style="display: none;"></div> <!-- Fondo oscuro -->
+                <div class="Modal-wrapper" id="metaDiaria" style="display: none;">
+                    <div class="SetGoalForm">
+                        <div class="SetGoalForm-title">
+                            <div class="SetGoalForm-rocket">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rocket" class="svg-inline--fa fa-rocket" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path fill="currentColor" d="..."></path>
+                                </svg>
+                            </div>
+                            <h2>Establece una meta diaria</h2>
+                        </div>
+                        <div class="SetGoalForm-form">
+                            <p class="SetGoalForm-form-title">¿Cómo quieres medir tu progreso?</p>
+                            <div class="SetGoalForm-dropdown" id="dropdownButton">
+                                <p class="SetGoalForm-dropdown-placeholder" id="selectedOption">Selecciona tu medida</p>
+                                <button class="SetGoalForm-dropdown-icon">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="angle-down" class="svg-inline--fa fa-angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="..."></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <!-- Opciones desplegables -->
+                            <div class="SetGoalForm-dropdown-options" id="dropdownOptions" style="display: none;">
+                                <button class="SetGoalForm-dropdown-item" data-option="Por clases">Por clases</button>
+                                <button class="SetGoalForm-dropdown-item" data-option="Por minutos">Por minutos</button>
+                                <button class="SetGoalForm-dropdown-item" data-option="Por horas">Por horas</button>
+                            </div>
+            
+                            <!-- Contenido dinámico según selección -->
+                            <div id="optionContent" style="display: none;">
+                                <!-- Este contenido cambiará según la opción seleccionada -->
+                            </div>
+            
+                            <!-- Input para "Otro valor" (inicialmente oculto) -->
+                            <div id="customInputContainer" style="display: none; margin-top: 10px;">
+                                <label for="customInput">Indica tu meta</label>
+                                <input type="text" id="customInput" placeholder="Ej: 1" style="width: 100%; padding: 10px; border-radius: 5px; background-color: #1e2a3a; border: 1px solid #34495e; color: white;">
+                            </div>
+                        </div>
+                        <div class="SetGoalForm-actions-buttons">
+                            <button type="submit" class="SetGoalForm-actions-buttons-primary" id="guardarMetaBtn" disabled>Guardar</button>
+                            <button class="SetGoalForm-actions-buttons-secondary" id="cancelarMetaBtn">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+                <article class="GraficoAreasConocimiento">
+                    <h3 class="GraficoAreasConocimiento-titulo">Áreas de aprendizaje</h3>
+                    <div class="GraficoAreasConocimiento-graficoContainer GraficoAreasConocimiento-graficoContainer--columna">
+                        <div class="GraficoAreasConocimiento-graficoDonut">
+                            <canvas role="img" height="197" width="197" style="display: block; box-sizing: border-box; height: 219.983px; width: 219.983px;"></canvas>
+                        </div>
+                        <div class="GraficoAreasConocimiento-categorias">
+                            <p class="GraficoAreasConocimiento-categorias-item">
+                                <div style="background-color: rgb(131, 217, 136);"></div>Desarrollo e Ingeniería
+                                <span>100%</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </article>
+        </article>
+        </main>
+    </div>
+
+
+
+ <!--Seccion de cursos comprados y cursoso por completar-->
+ <div class="col-md-8" id="Descripcion">
+    <div class="seccionCursos">
+        <div class="cabeceraCursos">
+            <div class="tituloCabecera">
+                <img src="/cliente/principal/imagenes/LogoMarca.png" alt="iconoCabecera" class="Logo_inicio">
+                <h2 class="titulo">Mis Cursos</h2>
+            </div>
+        </div>
+        
+        <!-- Contenedor de filtros y búsqueda -->
+        <div class="contenedorFiltros">
+            <div class="texto-tamaño-16 texto-negrita">Cursos en Progreso y Comprados</div>
+            
+            <div class="filtrosBusqueda flex-entre flex-envolver">
+                <!-- Buscador de cursos con autocompletar -->
+                <div class="busquedaCurso sin-margen-abajo form-group margen-base-abajo entrada--icono">
+                    <div class="form-group__texto">
+                        <label id="buscarCursos-label" for="buscarCursos"></label>
+                        <input id="buscarCursos" name="buscarCursos" type="search" autocomplete="off" placeholder="Busca tu curso">
+                        <button type="button" class="link" id="buscarBtn">
+                            <span class="icono-buscar">🔍</span>
+                        </button>
+                        <div id="autocomplete-list" class="autocomplete-items"></div> <!-- Aquí aparecerán las sugerencias -->
+                    </div>
+                </div>
+                
+                <!-- Filtro de categoría -->
+                <div class="filtroCategoria flex-envolver">
+                    <div class="seleccionCategoria sin-margen-abajo">
+                        <div class="etiquetaFiltro">Categoría</div>
+                        <div class="css-contenedor">
+                            <select id="filtroCategoria">
+                                <option value="Todos">Todos</option>
+                                <option value="Programación">Programación</option>
+                                <option value="Diseño">Diseño</option>
+                                <option value="Marketing">Marketing</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filtro de tipo de curso -->
+                <div class="seleccionTipo sin-margen-abajo">
+                    <div class="etiquetaFiltro">Estado</div>
+                    <div class="css-contenedor">
+                        <select id="filtroEstado">
+                            <option value="Todos">Todos</option>
+                            <option value="En Progreso">En Progreso</option>
+                            <option value="Completado">Completado</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+        <div class="scrollable" >
+            <div class="fila" id="listaCursos">
+                <div class="col-sm-6 col-md-6 col-lg-4 curso-tarjeta" data-nombre="Full Stack Development">
+                    <div class="margenTarjeta">
+                        <div class="tarjeta">
+                            <div class="envolturaImgTarjeta">
+                                <div class="envolturaImgInterna">
+                                    <img src="imagenes/full-stack.png" class="imgTarjeta" alt="Full Stack">
+                                    <div class="superposiciónImg"></div>
+                                    <div class="envolturaNivel">
+                                        <div class="nivel">Intermedio</div>
+                                    </div>
+                                    <button type="button" class="imgReproducir">
+                                        <img src="/sfa-assets/images/svg/Play_Button.svg" class="iconoReproducir" alt="Reproducir">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="cuerpoTarjeta">
+                                <div class="bloqueLogoSocio">
+                                    <img src="/sfa-assets/images/svg/netacad_logo_black.svg" class="logoSocio" alt="Full Stack">
+                                </div>
+                                <div class="parteSuperiorCuerpoTarjeta">
+                                    <div class="flex">
+                                        <img src="/sfa-assets/images/svg/gray_book_icon.svg" alt="Icono de Libro" class="iconoLibro">
+                                        <div class="tipoCurso">Curso</div>
+                                    </div>
+                                    <div class="contenedorAcciones">
+                                        <button type="button" class="botonDesplegable btn--fantasma sin-padding btn btn-primary">
+                                            <img src="/sfa-assets/images/svg/more-green.svg" class="iconoMas" alt="Más Acción">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="cabeceraTarjeta">Full Stack Development</div>
+                                <div class="flex flex-medio">
+                                    <div class="descTarjeta">
+                                        Aprenderas a desarrollar en diferentes lenguajes de programación.
+                                    </div>
+                                </div>
+                                <div class="parteInferiorTarjeta">
+                                    <button class="btn">Empezar Curso</button>
+                                    <div class="duracionCurso">Duración: 8 horas</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Añadir más tarjetas aquí -->
+                <div class="col-sm-6 col-md-6 col-lg-4 curso-tarjeta " data-nombre="Introducción a la Programación">
+                    <div class="margenTarjeta">
+                        <div class="tarjeta">
+                            <div class="envolturaImgTarjeta">
+                                <div class="envolturaImgInterna">
+                                    <img src="imagenes/full-stack.png" class="imgTarjeta" alt="Full Stack">
+                                    <div class="superposiciónImg"></div>
+                                    <div class="envolturaNivel">
+                                        <div class="nivel">Intermedio</div>
+                                    </div>
+                                    <button type="button" class="imgReproducir">
+                                        <img src="/sfa-assets/images/svg/Play_Button.svg" class="iconoReproducir" alt="Reproducir">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="cuerpoTarjeta">
+                                <div class="bloqueLogoSocio">
+                                    <img src="/sfa-assets/images/svg/netacad_logo_black.svg" class="logoSocio" alt="Full Stack">
+                                </div>
+                                <div class="parteSuperiorCuerpoTarjeta">
+                                    <div class="flex">
+                                        <img src="/sfa-assets/images/svg/gray_book_icon.svg" alt="Icono de Libro" class="iconoLibro">
+                                        <div class="tipoCurso">Curso</div>
+                                    </div>
+                                    <div class="contenedorAcciones">
+                                        <button type="button" class="botonDesplegable btn--fantasma sin-padding btn btn-primary">
+                                            <img src="/sfa-assets/images/svg/more-green.svg" class="iconoMas" alt="Más Acción">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="cabeceraTarjeta">Introducción a la Programación</div>
+                                <div class="flex flex-medio">
+                                    <div class="descTarjeta">
+                                        Aprenderas a desarrollar en diferentes lenguajes de programación.
+                                    </div>
+                                </div>
+                                <div class="parteInferiorTarjeta">
+                                    <button class="btn">Empezar Curso</button>
+                                    <div class="duracionCurso">Duración: 8 horas</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--OTRO 3-->
+                <div class="col-sm-6 col-md-6 col-lg-4 curso-tarjeta" data-nombre="JavaScript Avanzado">
+                    <div class="margenTarjeta">
+                        <div class="tarjeta">
+                            <div class="envolturaImgTarjeta">
+                                <div class="envolturaImgInterna">
+                                    <img src="imagenes/full-stack.png" class="imgTarjeta" alt="Full Stack">
+                                    <div class="superposiciónImg"></div>
+                                    <div class="envolturaNivel">
+                                        <div class="nivel">Intermedio</div>
+                                    </div>
+                                    <button type="button" class="imgReproducir">
+                                        <img src="/sfa-assets/images/svg/Play_Button.svg" class="iconoReproducir" alt="Reproducir">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="cuerpoTarjeta">
+                                <div class="bloqueLogoSocio">
+                                    <img src="/sfa-assets/images/svg/netacad_logo_black.svg" class="logoSocio" alt="Full Stack">
+                                </div>
+                                <div class="parteSuperiorCuerpoTarjeta">
+                                    <div class="flex">
+                                        <img src="/sfa-assets/images/svg/gray_book_icon.svg" alt="Icono de Libro" class="iconoLibro">
+                                        <div class="tipoCurso">Curso</div>
+                                    </div>
+                                    <div class="contenedorAcciones">
+                                        <button type="button" class="botonDesplegable btn--fantasma sin-padding btn btn-primary">
+                                            <img src="/sfa-assets/images/svg/more-green.svg" class="iconoMas" alt="Más Acción">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="cabeceraTarjeta">JavaScript Avanzado</div>
+                                <div class="flex flex-medio">
+                                    <div class="descTarjeta">
+                                        Aprenderas a desarrollar en diferentes lenguajes de programación.
+                                    </div>
+                                </div>
+                                <div class="parteInferiorTarjeta">
+                                    <button class="btn">Empezar Curso</button>
+                                    <div class="duracionCurso">Duración: 8 horas</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--CUrso 4 -->
+                <div class="col-sm-6 col-md-6 col-lg-4 curso-tarjeta" data-nombre="Python avanzado">
+                    <div class="margenTarjeta">
+                        <div class="tarjeta">
+                            <div class="envolturaImgTarjeta">
+                                <div class="envolturaImgInterna">
+                                    <img src="imagenes/full-stack.png" class="imgTarjeta" alt="Full Stack">
+                                    <div class="superposiciónImg"></div>
+                                    <div class="envolturaNivel">
+                                        <div class="nivel">Intermedio</div>
+                                    </div>
+                                    <button type="button" class="imgReproducir">
+                                        <img src="/sfa-assets/images/svg/Play_Button.svg" class="iconoReproducir" alt="Reproducir">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="cuerpoTarjeta">
+                                <div class="bloqueLogoSocio">
+                                    <img src="/sfa-assets/images/svg/netacad_logo_black.svg" class="logoSocio" alt="Full Stack">
+                                </div>
+                                <div class="parteSuperiorCuerpoTarjeta">
+                                    <div class="flex">
+                                        <img src="/sfa-assets/images/svg/gray_book_icon.svg" alt="Icono de Libro" class="iconoLibro">
+                                        <div class="tipoCurso">Curso</div>
+                                    </div>
+                                    <div class="contenedorAcciones">
+                                        <button type="button" class="botonDesplegable btn--fantasma sin-padding btn btn-primary">
+                                            <img src="/sfa-assets/images/svg/more-green.svg" class="iconoMas" alt="Más Acción">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="cabeceraTarjeta">Python avanzado</div>
+                                <div class="flex flex-medio">
+                                    <div class="descTarjeta">
+                                        Aprenderas a desarrollar en diferentes lenguajes de programación.
+                                    </div>
+                                </div>
+                                <div class="parteInferiorTarjeta">
+                                    <button class="btn">Empezar Curso</button>
+                                    <div class="duracionCurso">Duración: 8 horas</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!--Contenido Videos preguntas y comentarios-->
+    <!-- Contenido Videos preguntas y comentarios -->
+    <div class="cajas" id="Video_Seccioin">
+        <div class="video-sesion" id="Video_Seccioin">
+            <div class="caja_deBotones">
+                <a href="#" onclick="mostrarVideo('V1b')">1</a>
+                <a href="#" onclick="mostrarVideo('VD2_Comentarios')">2</a>
+                <a href="#" onclick="mostrarVideo('VD3_Comentarios')">3</a>
+                <a href="#" onclick="mostrarVideo('VD4_Comentarios')">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+                <a href="#">11</a>
+                <a href="#">12</a>
+                <a href="#">13</a>
+                <a href="#">14</a>
+                <a href="#">15</a>
+                <a href="#">16</a>
+                <a href="#">17</a>
+                <a href="#">18</a>
+                <a href="#">19</a>
+            </div>
+        
+            <div class="contenedor-sesion">
+                <div class="video-sesion--titulo">
+                    <h2><span class="SesionTItulo">Sesión en Video:</span>Desarrollo Web Avanzado</h2>
+                </div>
+        
+                <div class="videos-contenedor">
+                    <!-- Video 1 -->
+                    <div class="video-item" id="V1b">
+                        <div class="video-item--contenido">
+                            <video width="100%"  controls poster="https://www.example.com/thumbnail.jpg">
+                                <source src="https://www.example.com/video.mp4" type="video/mp4">
+                                Tu navegador no soporta videos.
+                            </video>
+                            <h3>Introducción a CSS Avanzado</h3>
+                            <p class="descripcion" id="descripcion">
+                                Aprende a manejar el posicionamiento y animaciones en CSS. Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptas quos possimus dolore aliquid veniam, numquam vitae est facilis commodi placeat unde dolores vel ex ullam incidunt, tempore tempora voluptatum!
+                            </p>
+                            <button class="ver-mas-btn" onclick="toggleTexto()">Ver más</button>
+                        </div>
+                                  
+                        <div class="comentarios-preguntas">
+                            <h4>Comentarios y Preguntas</h4>
+                            <form class="formulario-comentarios">
+                                <textarea placeholder="Haz una pregunta o comenta aquí..." rows="4"></textarea>
+                                <button type="submit">Enviar</button>
+                            </form>
+                            <div class="comentarios-lista">
+                                <div class="comentario">
+                                    <p><strong>Juan Pérez:</strong> ¿Cómo puedo mejorar la compatibilidad con navegadores antiguos?</p>
+                                    <div class="acciones-comentario">
+                                        <button class="me-gusta-btn">👍 Me gusta <span class="contador-likes">3</span></button>
+                                        <button class="responder-btn">Responder</button>
+                                    </div>
+                                    <!-- Respuesta -->
+                                    <div class="respuesta">
+                                        <form class="formulario-respuesta">
+                                            <textarea placeholder="Responde aquí..." rows="2"></textarea>
+                                            <button type="submit">Responder</button>
+                                        </form>
+                                        <!-- Contenedor de respuestas -->
+                                        <div class="respuestas-lista"></div>
+                                    </div>
+                                </div>
+                        
+                                <div class="comentario">
+                                    <p><strong>Ana García:</strong> Excelente video, ¿puedes profundizar más en animaciones?</p>
+                                    <div class="acciones-comentario">
+                                        <button class="me-gusta-btn">👍 Me gusta <span class="contador-likes">5</span></button>
+                                        <button class="responder-btn">Responder</button>
+                                    </div>
+                                    <!-- Respuesta -->
+                                    <div class="respuesta">
+                                        <form class="formulario-respuesta">
+                                            <textarea placeholder="Responde aquí..." rows="2"></textarea>
+                                            <button type="submit">Responder</button>
+                                        </form>
+                                        <!-- Contenedor de respuestas -->
+                                        <div class="respuestas-lista"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    <!-- Video 2 -->
+                    <div class="video-item" id="VD2_Comentarios" style="display: none;">
+                        <div class="video-item--contenido">
+                            <video  controls poster="https://www.example.com/thumbnail.jpg">
+                                <source src="https://www.example.com/video.mp4" type="video/mp4">
+                                Tu navegador no soporta videos.
+                            </video>
+                            <h3>Introducción a CSS Avanzado</h3>
+                            <p class="descripcion">Aprende a manejar el posicionamiento y animaciones en CSS. Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptas quos possimus dolore aliquid veniam, numquam vitae est facilis commodi placeat unde dolores vel ex ullam incidunt, tempore tempora voluptatum!</p>
+                            <button class="ver-mas-btn" onclick="toggleTexto()">Ver más</button>
+                        </div>
+                        
+                        <div class="comentarios-preguntas">
+                            <h4>Comentarios y Preguntas</h4>
+                            <form class="formulario-comentarios">
+                                <textarea placeholder="Haz una pregunta o comenta aquí..." rows="4"></textarea>
+                                <button type="submit">Enviar</button>
+                            </form>
+                            <div class="comentarios-lista">
+                                <div class="comentario">
+                                    <p><strong>Juan Pérez:</strong> ¿Cómo puedo mejorar la compatibilidad con navegadores antiguos?</p>
+                                    <div class="acciones-comentario">
+                                        <button class="me-gusta-btn">👍 Me gusta <span class="contador-likes">3</span></button>
+                                        <button class="responder-btn">Responder</button>
+                                    </div>
+                                    <!-- Respuesta -->
+                                    <div class="respuesta">
+                                        <form class="formulario-respuesta">
+                                            <textarea placeholder="Responde aquí..." rows="2"></textarea>
+                                            <button type="submit">Responder</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="comentario">
+                                    <p><strong>Ana García:</strong> Excelente video, ¿puedes profundizar más en animaciones?</p>
+                                    <div class="acciones-comentario">
+                                        <button class="me-gusta-btn">👍 Me gusta <span class="contador-likes">5</span></button>
+                                        <button class="responder-btn">Responder</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Video 3 -->
+                    <div class="video-item" id="VD3_Comentarios" style="display: none;">
+                        <div class="video-item--contenido">
+                            <video controls poster="https://www.example.com/thumbnail.jpg">
+                                <source src="https://www.example.com/video.mp4" type="video/mp4">
+                                Tu navegador no soporta videos.
+                            </video>
+                            <h3>Introducción a CSS Avanzado</h3>
+                            <p class="descripcion">Aprende a manejar el posicionamiento y animaciones en CSS. Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptas quos possimus dolore aliquid veniam, numquam vitae est facilis commodi placeat unde dolores vel ex ullam incidunt, tempore tempora voluptatum!</p>
+                            <button class="ver-mas-btn" onclick="toggleTexto()">Ver más</button>
+                        </div>
+                        
+                        <div class="comentarios-preguntas">
+                            <h4>Comentarios y Preguntas</h4>
+                            <form class="formulario-comentarios">
+                                <textarea placeholder="Haz una pregunta o comenta aquí..." rows="4"></textarea>
+                                <button type="submit">Enviar</button>
+                            </form>
+                            <div class="comentarios-lista">
+                                <div class="comentario">
+                                    <p><strong>Juan Pérez:</strong> ¿Cómo puedo mejorar la compatibilidad con navegadores antiguos?</p>
+                                    <div class="acciones-comentario">
+                                        <button class="me-gusta-btn">👍 Me gusta <span class="contador-likes">3</span></button>
+                                        <button class="responder-btn">Responder</button>
+                                    </div>
+                                    <!-- Respuesta -->
+                                    <div class="respuesta">
+                                        <form class="formulario-respuesta">
+                                            <textarea placeholder="Responde aquí..." rows="2"></textarea>
+                                            <button type="submit">Responder</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="comentario">
+                                    <p><strong>Ana García:</strong> Excelente video, ¿puedes profundizar más en animaciones?</p>
+                                    <div class="acciones-comentario">
+                                        <button class="me-gusta-btn">👍 Me gusta <span class="contador-likes">5</span></button>
+                                        <button class="responder-btn">Responder</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Video 4 -->
+                    <div class="video-item" id="VD4_Comentarios" style="display: none;">
+                        <div class="video-item--contenido">
+                            <video controls poster="https://www.example.com/thumbnail.jpg">
+                                <source src="https://www.example.com/video.mp4" type="video/mp4">
+                                Tu navegador no soporta videos.
+                            </video>
+                            <h3>Introducción a CSS Avanzado</h3>
+                            <p class="descripcion">Aprende a manejar el posicionamiento y animaciones en CSS. Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptas quos possimus dolore aliquid veniam, numquam vitae est facilis commodi placeat unde dolores vel ex ullam incidunt, tempore tempora voluptatum!</p>
+                            <button class="ver-mas-btn" onclick="toggleTexto()">Ver más</button>
+                        </div>
+                        
+                        <div class="comentarios-preguntas">
+                            <h4>Comentarios y Preguntas</h4>
+                            <form class="formulario-comentarios">
+                                <textarea placeholder="Haz una pregunta o comenta aquí..." rows="4"></textarea>
+                                <button type="submit">Enviar</button>
+                            </form>
+                            <div class="comentarios-lista">
+                                <div class="comentario">
+                                    <p><strong>Juan Pérez:</strong> ¿Cómo puedo mejorar la compatibilidad con navegadores antiguos?</p>
+                                    <div class="acciones-comentario">
+                                        <button class="me-gusta-btn">👍 Me gusta <span class="contador-likes">3</span></button>
+                                        <button class="responder-btn">Responder</button>
+                                    </div>
+                                    <!-- Respuesta -->
+                                    <div class="respuesta">
+                                        <form class="formulario-respuesta">
+                                            <textarea placeholder="Responde aquí..." rows="2"></textarea>
+                                            <button type="submit">Responder</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="comentario">
+                                    <p><strong>Ana García:</strong> Excelente video, ¿puedes profundizar más en animaciones?</p>
+                                    <div class="acciones-comentario">
+                                        <button class="me-gusta-btn">👍 Me gusta <span class="contador-likes">5</span></button>
+                                        <button class="responder-btn">Responder</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+                <!--Se agregan automáticamente-->
+            </div>
+        </div>
+        </div>
+        </div>
+
+
+
+
+    <!--Aside de los componentes de visualizacion de los cursos -->
+    <main class="layout-desktop-module_main__OGBpc layout-desktop-module_containerBody__nl8w0" id="contact" id="main-content-container" id="Video_Seccioin" >
+        <!-- Aside desplegable -->
+<aside class="layout-desktop-module_sidebarSecondLeft__WDyMW">
+    <div class="career-sidebar_menu__mYehl">
+        <!-- Navigator de desplazamiento -->
+        <div class="navigation-sidebar-module_navigationSidebar__KRL8f">
+            <div class="navigation-sidebar-module_navigationSidebarContent__yu3ZZ">
+                <div data-cy="CAREER_DESCRIPTION" class="navigation-sidebar-module_itemContainer__fhJhN">
+                    <a class="navigation-sidebar-module_item__1xgbX" href="#">
+                        <div class="navigation-sidebar-module_itemContent__mJesg">
+                            <div>Descripción</div>
+                            <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.045 21.178c.05.25.177.502.405.655a1.021 1.021 0 0 0 1.403-.28l5.984-8.99a1.028 1.028 0 0 0 0-1.125l-5.984-8.99a1.021 1.021 0 0 0-1.403-.282 1.026 1.026 0 0 0-.28 1.405l5.61 8.43-5.61 8.427c-.153.23-.175.5-.125.75Z" fill="currentColor"></path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Repetir las opciones de menú en el aside -->
+                <div class="navigation-sidebar-module_navigationSidebar__KRL8f">
+                    <div class="navigation-sidebar-module_navigationSidebarContent__yu3ZZ">
+                        <!-- Opción Horario en el menú lateral -->
+<div data-cy="CAREER_HORARIO" class="navigation-sidebar-module_itemContainer__fhJhN">
+    <a class="navigation-sidebar-module_item__1xgbX" href="#">
+        <div class="navigation-sidebar-module_itemContent__mJesg">
+            <div>Horario</div>
+            <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.045 21.178c.05.25.177.502.405.655a1.021 1.021 0 0 0 1.403-.28l5.984-8.99a1.028 1.028 0 0 0 0-1.125l-5.984-8.99a1.021 1.021 0 0 0-1.403-.282 1.026 1.026 0 0 0-.28 1.405l5.61 8.43-5.61 8.427c-.153.23-.175.5-.125.75Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </a>
+</div>
+
+
+                        <div data-cy="CAREER_CONTENT" class="navigation-sidebar-module_itemContainer__fhJhN">
+                            <a class="navigation-sidebar-module_item__1xgbX" href="#">
+                                <div class="navigation-sidebar-module_itemContent__mJesg">
+                                    <div>Certificado</div>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.045 21.178c.05.25.177.502.405.655a1.021 1.021 0 0 0 1.403-.28l5.984-8.99a1.028 1.028 0 0 0 0-1.125l-5.984-8.99a1.021 1.021 0 0 0-1.403-.282 1.026 1.026 0 0 0-.28 1.405l5.61 8.43-5.61 8.427c-.153.23-.175.5-.125.75Z" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div data-cy="CAREER_SCHEDULE" class="navigation-sidebar-module_itemContainer__fhJhN">
+                            <a class="navigation-sidebar-module_item__1xgbX" href="#">
+                                <div class="navigation-sidebar-module_itemContent__mJesg">
+                                    <div>Modulos</div>
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.045 21.178c.05.25.177.502.405.655a1.021 1.021 0 0 0 1.403-.28l5.984-8.99a1.028 1.028 0 0 0 0-1.125l-5.984-8.99a1.021 1.021 0 0 0-1.403-.282 1.026 1.026 0 0 0-.28 1.405l5.61 8.43-5.61 8.427c-.153.23-.175.5-.125.75Z" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div data-cy="CAREER_ADMISSION_PROCESS" class="navigation-sidebar-module_itemContainer__fhJhN">
+                            <a class="navigation-sidebar-module_item__1xgbX" href="#">
+                                <div class="navigation-sidebar-module_activeIndicator__NI4XI"></div>
+                                <div class="navigation-sidebar-module_itemContent__mJesg">
+                                    <div>Proceso de admisión</div>
+                                    <div class="pill-module_container__XStQa text-colors-module_yellow-darker__24reR background-colors-module_yellow-lighter__h3Nd- borders-module_transparent__DHz5p fonts-module_label-large__guVOE"><span>En proceso</span></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mail-card_container__SfFGa">
+                    <div class="mail-card_image__ldHj5"><img alt="" src="/cliente/App_cliente/imagenes/LogoEMAGIL.png" width="200" height="120"></div>
+                    <span class="fonts-module_title-small__ctZzA">¿Dudas o consultas?</span>
+                    <span class="fonts-module_headline-medium__XtzA8">Envía un mail</span>
+                    <div>
+                        <a class="fonts-module_body-small-bold__9mKaI" href="mailto:admisiones@darkcode.com">a admisiones@darkcode.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Secion de certifica de vista en la beca-->
+        <div class="certificate-container" id="certificate-section" style="display:none;">
+            <div class="certificate-header">
+                <img src="imagenes/Logo_Img.png" alt="Logo Institución" class="logo">
+                <h1>Certificado de Finalización</h1>
+            </div>
+
+            <div class="certificate-body">
+                <p class="congratulations-text">¡Felicitaciones!</p>
+                <p class="student-name">[Nombre del Estudiante]</p>
+                <p class="description">
+                    Ha completado con éxito el curso <strong>"[Nombre del Curso]"</strong> como parte del programa de becas. Este certificado confirma que el estudiante ha demostrado habilidades y conocimientos en el área de estudio con un excelente rendimiento académico.
+                </p>
+            </div>
+
+            <div class="certificate-footer">
+                <div class="footer-left">
+                    <p>Fecha de Emisión:</p>
+                    <p>16/10/2024</p>
+                </div>
+                <div class="footer-right">
+                    <div class="signature-container">
+                        <img src="imagenes/fIMA.jpg" alt="Firma" class="signature-image">
+                        <p class="signature">Elvis Vega Miranda</p>
+                        <p>Instructor del Curso</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <p>DARK WEB - Todos los derechos reservados © 2024</p>
+            </div>
+        </div>
+
+        <!--Seccion de modulo de cursos-->
+        <div class="accordion-container" id="modules-section" style="display:none;">
+            <h2>Módulos</h2>
+
+            <!-- Módulo 1 -->
+            <div class="accordion-item">
+                <button class="accordion-button">Módulo 1</button>
+                <div class="accordion-content">
+                    <p>Contenido del Módulo 1: Introducción a JavaScript.</p>
+                </div>
+            </div>
+
+            <!-- Módulo 2 -->
+            <div class="accordion-item">
+                <button class="accordion-button">Módulo 2</button>
+                <div class="accordion-content">
+                    <p>Contenido del Módulo 2: Variables y Tipos de Datos.</p>
+                </div>
+            </div>
+
+            <!-- Módulo 3 -->
+            <div class="accordion-item">
+                <button class="accordion-button">Módulo 3</button>
+                <div class="accordion-content">
+                    <p>Contenido del Módulo 3: Condicionales y Bucles.</p>
+                </div>
+            </div>
+
+            <!-- Módulo 4 -->
+            <div class="accordion-item">
+                <button class="accordion-button">Módulo 4</button>
+                <div class="accordion-content">
+                    <p>Contenido del Módulo 4: Funciones en JavaScript.</p>
+                </div>
+            </div>
+
+            <!-- Módulo 5 -->
+            <div class="accordion-item">
+                <button class="accordion-button">Módulo 5</button>
+                <div class="accordion-content">
+                    <p>Contenido del Módulo 5: Objetos en JavaScript.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de detalle de curso -->
+        <div class="description-container" id="description-section" style="display:none;">
+            <div class="card">
+                <div class="description-text">
+                    <span class="title-large">Próximas fechas</span>
+                    <span class="body-small">Todos los meses comienzan nuevos grupos de estudio para la carrera.</span>
+                </div>
+                <div class="tab-list">
+                    <div class="tab-item">
+                        <a class="tab-link active" data-tab="full-time">Full Time</a>
+                    </div>
+                    <div class="tab-item">
+                        <a class="tab-link" data-tab="part-time">Part Time</a>
+                    </div>
+                </div>
+
+                <!-- Contenido de Full Time -->
+                <div class="cohort-container active" id="full-time">
+                    <div class="card">
+                        <div class="cohort-row">
+                            <span class="title-medium">Lunes 14 de Octubre - Lunes 03 de Febrero</span>
+                            <div class="pill">
+                                <span>Cierre de inscripción: 07 de Octubre</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenido de Part Time (Oculto por defecto) -->
+                <div class="cohort-container" id="part-time">
+                    <div class="card">
+                        <div class="cohort-row">
+                            <span class="title-medium">Miércoles 16 de Octubre - Miércoles 05 de Marzo</span>
+                            <div class="pill">
+                                <span>Cierre de inscripción: 10 de Octubre</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="cohort-row">
+                            <span class="title-medium">Viernes 18 de Octubre - Viernes 06 de Marzo</span>
+                            <div class="pill">
+                                <span>Cierre de inscripción: 12 de Octubre</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="cohort-row">
+                            <span class="title-medium">Lunes 21 de Octubre - Lunes 09 de Marzo</span>
+                            <div class="pill">
+                                <span>Cierre de inscripción: 14 de Octubre</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="title-large">Preguntas frecuentes</span><br>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-button">¿Por qué estudiar Full Stack?</button>
+                        <div class="accordion-body">
+                            Al estudiar Full Stack puedes convertirte en uno de los profesionales en tecnología más demandados por las compañías.
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button">¿Cuánto tiempo dura la Carrera de Desarrollador Web Full Stack?</button>
+                        <div class="accordion-body">
+                            La Carrera de Desarrollador Web Full Stack tiene una duración de 4 meses en la modalidad full time (40hs semanales) y 8 meses en la modalidad part time (20hs semanales).
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button">¿Cuánto tiempo dura la Carrera de Desarrollador Java?</button>
+                        <div class="accordion-body">
+                            La Carrera de Desarrollador Web Full Stack tiene una duración de 4 meses en la modalidad full time (40hs semanales) y 8 meses en la modalidad part time (20hs semanales).
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button">¿Cuánto tiempo dura la Carrera de Desarrollador JavaScript?</button>
+                        <div class="accordion-body">
+                            La Carrera de Desarrollador Web Full Stack tiene una duración de 4 meses en la modalidad full time (40hs semanales) y 8 meses en la modalidad part time (20hs semanales).
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button">¿Cuánto tiempo dura la Carrera de Desarrollador Python?</button>
+                        <div class="accordion-body">
+                            La Carrera de Desarrollador Web Full Stack tiene una duración de 4 meses en la modalidad full time (40hs semanales) y 8 meses en la modalidad part time (20hs semanales).
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button">¿Cuánto tiempo dura la Carrera de Desarrollador SQL?</button>
+                        <div class="accordion-body">
+                            La Carrera de Desarrollador Web Full Stack tiene una duración de 4 meses en la modalidad full time (40hs semanales) y 8 meses en la modalidad part time (20hs semanales).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="schedule-card"  id="schedule-section" style="display:none;">
+            <h3>Semana típica</h3>
+            <div class="tabs-container">
+                <div class="tab-item">
+                    <a class="tab-link active" data-tab="fulltime">Full Time</a>
+                </div>
+                <div class="tab-item">
+                    <a class="tab-link" data-tab="parttime">Part Time</a>
+                </div>
+            </div>
+
+            <!-- Opciones para Full Time y Part Time -->
+            <div class="option-container">
+                <div class="option-item">
+                    <input type="radio" id="option-a" name="schedule-option" class="option-radio" value="A" checked>
+                    <label for="option-a">Opción A</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" id="option-b" name="schedule-option" class="option-radio" value="B">
+                    <label for="option-b">Opción B</label>
+                </div>
+            </div>
+
+            <!-- Contenedor Full Time -->
+            <div class="schedule-container active" id="fulltime">
+                <!-- Opción A -->
+                <div class="schedule-grid" id="fulltime-option-a">
+                    <div class="schedule-header">Hora</div>
+                    <div class="schedule-header">Lunes</div>
+                    <div class="schedule-header">Martes</div>
+                    <div class="schedule-header">Miércoles</div>
+                    <div class="schedule-header">Jueves</div>
+                    <div class="schedule-header">Viernes</div>
+
+                    <!-- Horarios desde las 9:00 hasta las 17:00 para Full Time Opción A -->
+                    <div class="schedule-time">9 a 10</div>
+                    <div class="schedule-item code-review">Code Review</div>
+                    <div class="schedule-item lecture">Lecture</div>
+                    <div class="schedule-item break">Break</div>
+                    <div class="schedule-item practice">Practice</div>
+                    <div class="schedule-item pair-programming">Pair Programming</div>
+
+                    <div class="schedule-time">10 a 11</div>
+                    <div class="schedule-item code-review">Code Review</div>
+                    <div class="schedule-item lecture">Lecture</div>
+                    <div class="schedule-item break">Break</div>
+                    <div class="schedule-item practice">Practice</div>
+                    <div class="schedule-item pair-programming">Pair Programming</div>
+
+                    <div class="schedule-time">11 a 12</div>
+                    <div class="schedule-item code-review">Code Review</div>
+                    <div class="schedule-item lecture">Lecture</div>
+                    <div class="schedule-item break">Break</div>
+                    <div class="schedule-item practice">Practice</div>
+                    <div class="schedule-item pair-programming">Pair Programming</div>
+
+                    <div class="schedule-time">12 a 13</div>
+                    <div class="schedule-item code-review">Code Review</div>
+                    <div class="schedule-item lecture">Lecture</div>
+                    <div class="schedule-item break">Break</div>
+                    <div class="schedule-item practice">Practice</div>
+                    <div class="schedule-item pair-programming">Pair Programming</div>
+
+                    <div class="schedule-time">13 a 14</div>
+                    <div class="schedule-item code-review">Code Review</div>
+                    <div class="schedule-item lecture">Lecture</div>
+                    <div class="schedule-item break">Break</div>
+                    <div class="schedule-item practice">Practice</div>
+                    <div class="schedule-item pair-programming">Pair Programming</div>
+                </div>
+
+                <!-- Opción B (Full Time) -->
+                <div class="schedule-grid" id="fulltime-option-b" style="display: none;">
+                    <div class="schedule-header">Hora</div>
+                    <div class="schedule-header">Lunes</div>
+                    <div class="schedule-header">Martes</div>
+                    <div class="schedule-header">Miércoles</div>
+                    <div class="schedule-header">Jueves</div>
+                    <div class="schedule-header">Viernes</div>
+
+                    <div class="schedule-time">10 a 11</div>
+                    <div class="schedule-item code-review">Code Review</div>
+                    <div class="schedule-item lecture">Lecture</div>
+                    <div class="schedule-item break">Break</div>
+                    <div class="schedule-item practice">Practice</div>
+                    <div class="schedule-item pair-programming">Pair Programming</div>
+
+                    <div class="schedule-time">11 a 12</div>
+                    <div class="schedule-item code-review">Code Review</div>
+                    <div class="schedule-item lecture">Lecture</div>
+                    <div class="schedule-item break">Break</div>
+                    <div class="schedule-item practice">Practice</div>
+                    <div class="schedule-item pair-programming">Pair Programming</div>
+
+                    <div class="schedule-time">12 a 13</div>
+                    <div class="schedule-item code-review">Code Review</div>
+                    <div class="schedule-item lecture">Lecture</div>
+                    <div class="schedule-item break">Break</div>
+                    <div class="schedule-item practice">Practice</div>
+                    <div class="schedule-item pair-programming">Pair Programming</div>
+
+                    <div class="schedule-time">13 a 14</div>
+                    <div class="schedule-item code-review">Code Review</div>
+                    <div class="schedule-item lecture">Lecture</div>
+                    <div class="schedule-item break">Break</div>
+                    <div class="schedule-item practice">Practice</div>
+                    <div class="schedule-item pair-programming">Pair Programming</div>
+
+                    <div class="schedule-time">14 a 15</div>
+                    <div class="schedule-item code-review">Code Review</div>
+                    <div class="schedule-item lecture">Lecture</div>
+                    <div class="schedule-item break">Break</div>
+                    <div class="schedule-item practice">Practice</div>
+                    <div class="schedule-item pair-programming">Pair Programming</div>
+                </div>
+            </div>
+
+            <!-- Contenedor Part Time -->
+            <div class="schedule-container" id="parttime">
+                <!-- Opción A (Part Time) -->
+                <div class="schedule-grid" id="parttime-option-a">
+                    <div class="schedule-header">Hora</div>
+                    <div class="schedule-header">Lunes</div>
+                    <div class="schedule-header">Martes</div>
+                    <div class="schedule-header">Miércoles</div>
+                    <div class="schedule-header">Jueves</div>
+                    <div class="schedule-header">Viernes</div>
+
+                    <!-- Horarios desde las 17:00 hasta las 21:00 para Part Time Opción A -->
+                    <div class="schedule-time">17 a 18</div>
+                    <div class="schedule-item code-review">Code Review</div>
+                    <div class="schedule-item lecture">Lecture</div>
+                    <div class="schedule-item break">Break</div>
+                    <div class="schedule-item practice">Practice</div>
+                    <div class="schedule-item pair-programming">Pair Programming</div>
+
+                    <div class="schedule-time">18 a 19</div>
+                    <div class="schedule-item code-review">Code Review</div>
+                    <div class="schedule-item lecture">Lecture</div>
+                    <div class="schedule-item break">Break</div>
+                    <div class="schedule-item practice">Practice</div>
+                    <div class="schedule-item pair-programming">Pair Programming</div>
+
+                    <div class="schedule-time">19 a 20</div>
+                    <div class="schedule-item code-review">Code Review</div>
+                    <div class="schedule-item lecture">Lecture</div>
+                    <div class="schedule-item break">Break</div>
+                    <div class="schedule-item practice">Practice</div>
+                    <div class="schedule-item pair-programming">Pair Programming</div>
+
+                    <div class="schedule-time">20 a 21</div>
+                    <div class="schedule-item code-review">Code Review</div>
+                    <div class="schedule-item lecture">Lecture</div>
+                    <div class="schedule-item break">Break</div>
+                    <div class="schedule-item practice">Practice</div>
+                    <div class="schedule-item pair-programming">Pair Programming</div>
+                </div>
+
+                <!-- Opción B (Part Time) -->
+                <div class="schedule-grid" id="parttime-option-b" style="display: none;">
+                    <div class="schedule-header">Hora</div>
+                    <div class="schedule-header">Lunes</div>
+                    <div class="schedule-header">Martes</div>
+                    <div class="schedule-header">Miércoles</div>
+                    <div class="schedule-header">Jueves</div>
+                    <div class="schedule-header">Viernes</div>
+
+                    <div class="schedule-time">18 a 19</div>
+                    <div class="schedule-item code-review">Code Review</div>
+                    <div class="schedule-item lecture">Lecture</div>
+                    <div class="schedule-item break">Break</div>
+                    <div class="schedule-item practice">Practice</div>
+                    <div class="schedule-item pair-programming">Pair Programming</div>
+
+                    <div class="schedule-time">19 a 20</div>
+                    <div class="schedule-item code-review">Code Review</div>
+                    <div class="schedule-item lecture">Lecture</div>
+                    <div class="schedule-item break">Break</div>
+                    <div class="schedule-item practice">Practice</div>
+                    <div class="schedule-item pair-programming">Pair Programming</div>
+
+                    <div class="schedule-time">20 a 21</div>
+                    <div class="schedule-item code-review">Code Review</div>
+                    <div class="schedule-item lecture">Lecture</div>
+                    <div class="schedule-item break">Break</div>
+                    <div class="schedule-item practice">Practice</div>
+                    <div class="schedule-item pair-programming">Pair Programming</div>
+
+                    <div class="schedule-time">21 a 22</div>
+                    <div class="schedule-item code-review">Code Review</div>
+                    <div class="schedule-item lecture">Lecture</div>
+                    <div class="schedule-item break">Break</div>
+                    <div class="schedule-item practice">Practice</div>
+                    <div class="schedule-item pair-programming">Pair Programming</div>
+                </div>
+            </div>
+
+            <div class="schedule-footer">
+                <div><span class="live-required"></span> En vivo obligatorio</div>
+                <div><span class="asynchronous"></span> Asincrónico</div>
+                <div><span class="live-optional"></span> En vivo opcional</div>
+            </div>
+        </div>
+
+        <div class="layout-desktop-module_mainContent__690ya" id="admission-section" style="display:none;">
+            <div class="styles_layout__aJTAq">
+                <div class="layout_layout__Yr4r8">
+                    <div class="admissions_container__3Vtjb">
+                        <div class="card-module_card__ZPFTz">
+                            <a class="link-button-module_container__GiPU3 dosss" href="#">
+                                <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.955 2.822c-.05-.25-.177-.502-.405-.655a1.021 1.021 0 0 0-1.403.28l-5.984 8.99a1.028 1.028 0 0 0 0 1.125l5.984 8.99c.305.46.946.588 1.403.282.457-.306.585-.946.28-1.405l-5.61-8.43 5.61-8.427c.153-.23.175-.5.125-.75Z" fill="currentColor"></path>
+                                </svg> Volver
+                            </a>
+                            <h1 class="clase_h1">Completa los siguientes</h1>
+                            <p class=descripcion_breve>camposCompletar un breve formulario de admisión. <span>Una vez completado, estarás listo para enfrentar el emocionante desafío que tenemos preparado para ti.</span></p>
+                            <form>
+                                <!-- Aquí el contenido del formulario -->
+                                <div class="form-container">
+                                    <div class="form-row">
+                                        <div class="form-col">
+                                            <div class="input-container">
+                                                <div class="select-wrapper">
+                                                    <div class="form-outline">
+                                                        <input readonly class="form-control form-control-lg" value="">
+                                                        <label class="form-label">¿Cómo nos conociste?</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-col">
+                                            <div class="input-container">
+                                                <div class="form-outline">
+                                                    <input type="date" class="form-control active form-control-lg" value="">
+                                                    <label class="form-label">Fecha de Nacimiento</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-col">
+                                            <div class="input-container">
+                                                <div class="select-wrapper">
+                                                    <div class="form-outline">
+                                                        <input readonly class="form-control form-control-lg" value="">
+                                                        <label class="form-label">Género</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-col">
+                                            <div class="input-container">
+                                                <div class="select-wrapper">
+                                                    <div class="form-outline">
+                                                        <input readonly class="form-control form-control-lg" value="">
+                                                        <label class="form-label">Nivel de estudios</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-col">
+                                            <div class="input-container">
+                                                <div class="select-wrapper">
+                                                    <div class="form-outline">
+                                                        <input readonly class="form-control form-control-lg" value="">
+                                                        <label class="form-label">Nivel de inglés</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-col">
+                                            <div class="input-container">
+                                                <div class="select-wrapper">
+                                                    <div class="form-outline">
+                                                        <input readonly class="form-control form-control-lg" value="">
+                                                        <label class="form-label">¿Actualmente trabajas?</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-col">
+                                            <div class="input-container">
+                                                <div class="form-outline">
+                                                    <input type="text" class="form-control form-control-lg" value="">
+                                                    <label class="form-label">Link de perfil de Linkedin</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <h3 class="section-title">CONOCIMIENTO TÉCNICO</h3>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-col">
+                                            <div class="input-container">
+                                                <div class="select-wrapper">
+                                                    <div class="form-outline">
+                                                        <input readonly class="form-control form-control-lg" value="">
+                                                        <label class="form-label">Conocimientos de programación</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="form-button">
+                                        <button type="submit" class="btn-submit btn btn-primary" disabled="">
+                                            <div class="button-content">Continuar</div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+
+
+    </div>
+
+
+    </div>
+
+
+
+
+    
+
+    
+   
+
+    
+    
+    <!--Contenido agregar amigos a mi suscripcion-->
+
+
+
+    <!--Examenes-->
+
+
+
+
+
+
+    <script src="/server/App_cliente/Cliente_Aside.js"></script>
+    <script src="/server/App_cliente/DescripcionCurso.js"></script>
+    <script src="/server/App_cliente/Horario.js"></script>
+    <script src="/server/App_cliente/ModulosCursos.js"></script>
+    <script src="/server/App_cliente/meta.js"></script>
+     <script src="/server/App_cliente/ComentarioYrespuestas.js"></script>
+     <script src="/server/App_cliente/Filtro_cursos.js"></script>
+     <script src="/server/App_cliente/DesplegarPaginas.js"></script>
+     <script src="/server/App_cliente/SeciondeBecacontroler.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* Clases generales */
+
+.course-select {
+        display: grid;
+        grid-template-rows: .5fr 10fr;
+        height: 100%;
+}
+
+/* Tabs */
+.tabs-course-select {
+        position: relative;
+        border-bottom: 1px solid #858585cc;
+}
+
+.tabs__list-course-select {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        text-align: center;
+}
+
+.tabs__item-course-select {
+        flex: 1;
+        padding: 15px 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background .1s .0s linear;
+}
+
+.tabs__item-course-select:hover {
+        background-color: #73D4F6;
+}
+
+/* Tab seleccionado Curso */
+.body-course-select {
+        display: flex;
+}
+

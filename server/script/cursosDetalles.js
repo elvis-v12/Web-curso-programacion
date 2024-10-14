@@ -1,6 +1,6 @@
-import { Curso } from "/server/script/model/Curso.js";
-import { Contenido } from "/server/script/model/SilaboCurso.js";
-import { Temas } from "/server/script/model/SilaboCurso.js";
+import { Curso } from "../script/model/Curso.js";
+import { Contenido } from "../script/model/SilaboCurso.js";
+import { Temas } from "../script/model/SilaboCurso.js";
 
 document.addEventListener('DOMContentLoaded', () => {
         const urlParams = new URLSearchParams(window.location.search);
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
 
                 .catch(() => {
-                       window.location.href = "/cliente/cursos/index.html"
+                //    window.location.href = "/cliente/cursos/index.html"
                 });
 });
 

@@ -1,0 +1,17 @@
+.body {
+        overflow: hidden;
+}
+
+.body__content {
+        box-sizing: border-box;
+        grid-area: body;
+        height: 100%;
+}
+
+@media (width < 600px) {
+        .body__content {
+                overflow: inherit;
+                height: auto;
+                min-height: 67vh;
+        }
+}

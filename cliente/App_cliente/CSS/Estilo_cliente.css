@@ -1,0 +1,664 @@
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Mantener todo el contenido dentro de la altura visible */
+    overflow: hidden; /* Evitar que se desborde el contenido */
+}
+
+/* Aside izquierdo */
+.aside-left {
+    width: 100px;
+    background: #fff;
+    height: 100vh;
+    transition: width 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.aside-left.expanded {
+    width: 200px;
+}
+
+.aside-left .logo {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: transparent;
+}
+
+.logo-img {
+    width: 100%;
+    height: auto;
+    max-width: 95px;
+    object-fit: contain;
+}
+
+.aside-left .nav-toggler {
+    padding: 10px;
+    cursor: pointer;
+    text-align: right;
+}
+
+.aside-left .nav-toggler span {
+    font-size: 20px;
+    color: #000;
+}
+
+.aside-left .nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.aside-left .nav li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.aside-left .nav li a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: padding-left 0.3s ease;
+}
+
+.aside-left .nav li a:hover {
+    padding-left: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Contenido principal */
+.main-content {
+    padding: 20px;
+    margin-left: 100px;
+
+    flex-grow: 1;
+    height: 100vh; /* Ocupar toda la altura del viewport */
+    overflow-y: hidden; /* Evitar desbordamiento en el contenido principal */
+}
+
+
+/* Anuncios */
+.row {
+    display: flex;
+    align-items: flex-start; /* Alinea la imagen y el texto al inicio */
+    background: #f0edfb;
+    border-radius: 10px;
+}
+
+.row img {
+    height: 125px;
+    width: 300px;
+    margin-right: 20px; /* Añade un espacio entre la imagen y el texto */
+    border-radius: 10px 0px 00px 10px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container h2 {
+    margin: 0;
+    font-size: 1.8em; /* Ajusta el tamaño del título */
+    color:#007bff;
+}
+
+.text-container h5 {
+    margin-top: 6px; /* Ajusta el margen superior para separar el texto del título */
+    color: #858489; 
+    font-size: .875rem;
+    line-height: 1.25rem;
+    letter-spacing: -.02em;
+    padding-right: 200px;
+    font-weight: lighter;
+}
+
+
+/* Aside derecho */
+.aside-right {
+    width: 300px;
+    background-color: transparent;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+.header{
+    display: flex;
+}
+.header h1{
+    margin-bottom: 6px;
+
+}
+/* Barra de desplazamiento para contenidos_barra */
+.contenidos_barra {
+    overflow-y: auto; /* Habilita el scroll vertical */
+    padding-right: 10px; /* Ajusta el padding para mejor presentación */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
+    width: 80%; /* Ancho del contenedor */
+    height: 500px; /* Establece una altura fija para que el contenido que exceda haga scroll */
+}
+
+/* Sección de Cursos */
+.courses {
+    padding: 20px;
+    margin-top: 50px;
+
+}
+
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    height: 100%;
+}
+
+.course {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    height: 70%;
+}
+.course .linea{
+   background: #ebebeb;
+   height: 6px;
+   border-radius: 5px;
+}
+.course:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-icon {
+    display: flex;
+    align-items: center; /* Alinear la imagen y el texto en la misma línea */
+    gap: 10px; /* Espacio entre la imagen y el texto */
+    margin-bottom: 10px; /* Añadir un espacio debajo del ícono */
+}
+
+.course-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain; /* Asegurar que la imagen no se deforme */
+}
+
+.course-content {
+    text-align: left;
+    width: 100%;
+    margin-bottom:80px;
+}
+.cu
+.course-content p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+.course-content .nombre {
+    display: block; 
+    margin-bottom: 5px; 
+    text-align: left;
+    margin: 0px 0px 15px 0px;
+    font-weight: 800;
+    font-family: sans-serif,sans-serif;
+    align-items: flex-start; 
+}
+
+.course-content .Regla{
+    color:red;
+    margin-top: 30px;
+    font-weight: 100;
+}
+.course-content .fa{
+    color: #7ED321;
+}
+.course-content .fa:hover{
+    color: #76a899;
+}
+.modules-count {
+    font-weight: bold;
+    color: #333;
+    font-weight: 100;
+    align-items: flex-start; 
+    padding: 5px 10px;
+    background: transparent;
+    border: 2px solid #e6e6e6;
+    border-radius: 15px;
+
+
+}
+.modules-count:hover{
+    background: #76a899;
+    color:#000;
+}
+
+.status-gratuito {
+    font-size: 16px;
+    color: green;
+}
+
+/* Sección de Carreras */
+.carreras {
+    margin-top: 30px;
+}
+.carreras .tres {
+    display: flex;
+    align-items: flex-end; /* Alinea las bases de los textos */
+}
+
+.carreras .tres h2 {
+    margin: 13px;
+}
+
+.carreras .tres h5 {
+    margin: 13px;
+    display: flex;
+    align-items: center; /* Alinea el ícono con el texto */
+}
+
+.carreras .tres h5 i {
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+    color:#7ED321;
+}
+
+.carreras-container {
+    display: flex;
+    gap: 20px; /* Espacio entre las cajas */
+    padding-left: 10px;
+    
+}
+
+.carrera {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    width: 267.667px; /* Ancho total de la caja */
+    padding: 0; /* Eliminar padding para asegurar que la imagen ocupe todo el espacio */
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 334.9px; /* Altura total de la caja */
+    cursor: pointer;
+}
+
+.carrera:hover {
+    transform: scale(1.05); /* Efecto hover para que la caja crezca */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.carrera img {
+    width: 100%; /* Asegurar que la imagen cubra todo el ancho de la tarjeta */
+    height: 136.5px; /* Altura fija de la imagen */
+    object-fit: cover; /* La imagen cubre el contenedor sin deformarse */
+    border-radius: 10px 10px 0 0; /* Bordes redondeados solo en la parte superior */
+    margin-bottom: 15px; /* Separación entre la imagen y el contenido */
+}
+
+.carrera-content {
+    padding: 15px; /* Agregar espacio dentro del contenido para que no esté pegado */
+    text-align: center;
+}
+
+.btn-admision {
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.duration {
+    font-size: 14px;
+    color: #666;
+}
+
+
+.carrera-content {
+    padding-top: 10px;
+    text-align: center;
+}
+.carrera-content .Texto_da{
+    margin: 8px;
+    font-weight: 500;
+}
+
+.carrera h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.carrera p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.btn-admision {
+    margin-top: 10px;
+    font-size: 14px;
+    background-color: #f4c542;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-admision:hover {
+    background-color: #e5b633;
+}
+
+.duration {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/*Aside de usuario*/
+/* Estilos para el perfil */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    width: 21%;
+    padding: 5px 10px; /* Ajusta el padding para que ocupe menos espacio */
+    background-color: #ffffff;
+    border-radius: 8px; /* Ajuste de bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra para darle mejor visualización */
+    margin-bottom: 40px;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profile-info {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.profile-info span {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilos del menú desplegable más pequeño */
+.profile-menu {
+    display: none;
+    position: absolute;
+    top: 70px; /* Ajuste para que quede debajo del botón */
+    right: 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-top: 30px;
+    width: 260px;
+    z-index: 100;
+}
+.profile-menu .fa{
+    color:#7ED321;
+}
+.profile-menu .fa:hover{
+    color:#007bff;
+}
+.popover-arrow {
+    display: none; /* Oculto inicialmente */
+    position: absolute;
+    top: -10px; /* Posiciona la flecha fuera del menú */
+    left: 50%; /* Centrar la flecha */
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #333; /* Color azul brillante para la flecha */
+    z-index: 101;
+
+}
+
+.profile-menu.active, .popover-arrow.active {
+    display: block; /* Se mostrará cuando el menú esté activo */
+}
+
+
+.profile-menu::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent rgba(255, 255, 255, 0.8) transparent;
+}
+
+.profile-menu a {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px; /* Menú más compacto */
+    background-color: rgba(255, 255, 255, 0.8); /* Transparente */
+    border-radius: 8px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #f2f2f2;
+    padding: 12px;
+}
+
+.profile-menu a i {
+    margin-right: 10px;
+}
+
+.profile-menu a:hover {
+    background-color: #ebebeb;
+    border: 1px solid #f2f2f2;
+}
+
+.profile button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.profile button::after {
+    content: "\25BC"; /* Flecha hacia abajo */
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Ajuste para el carrusel */
+
+/* Carousel */
+/* Estructura principal */
+.main-content {
+   
+    justify-content: space-between; /* Separa el contenido principal y el aside */
+}
+.barrasDesplegables{
+    display: flex;
+}
+/* Aside de usuario */
+.aside-right {
+    width: 280px; /* Reducido un poco para que no ocupe demasiado espacio */
+    margin-left: 20px; /* Separación del contenido principal */
+    position: sticky;
+    top: 0; /* Mantener el aside visible cuando se hace scroll */
+}
+
+/* Ajustes para el perfil */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 15px; /* Aumentado para más espacio interno */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.profile-avatar {
+    width: 50px; /* Tamaño del avatar aumentado */
+    height: 50px;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profile-info {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.profile-info span {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Menú desplegable más pequeño */
+.profile-menu {
+    display: none;
+    position: absolute;
+    top: 70px; /* Ajuste para que quede debajo del botón */
+    right: 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-top: 20px;
+    width: 260px; /* Ancho ajustado */
+    z-index: 100;
+}
+
+.profile-menu.active {
+    display: block; /* Mostrar el menú cuando esté activo */
+}
+
+/* Ajuste para el carrusel */
+.carousel {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    height: auto;
+    position: relative;
+}
+
+.testimonial {
+    display: none;
+    text-align: center;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.carousel .testimonial {
+    background: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    display: none; /* Oculto por defecto */
+}
+
+.carousel .testimonial.active {
+    display: block; /* Solo mostrar el testimonio activo */
+}
+
+.carousel .testimonial strong {
+    font-weight: 800;
+    color: #000;
+}
+
+.carousel .testimonial p {
+    color: #333;
+    font-weight: lighter;
+}
+
+.carousel .testimonial img {
+    height: 50px; /* Tamaño de la imagen en los testimonios */
+    border-radius: 50%; /* Imagen redonda */
+    margin-bottom: 10px;
+}
+
+.carousel-dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.carousel-dots .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+    background-color: #007bff;
+}
+
+.carousel .testimonial:hover {
+    transform: scale(1.02); /* Efecto de zoom al hacer hover */
+    transition: transform 0.3s ease;
+}
+
+
+/* Cohort Container */
+.cohort-container {
+    display: none; /* Oculto por defecto */
+}
+

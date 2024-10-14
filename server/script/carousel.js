@@ -1,4 +1,4 @@
-import { PortalService } from "/server/script/service/PortalService.js";
+import { PortalService } from "../script/service/PortalService.js";
 
 document.addEventListener("DOMContentLoaded", () => {
         // Acciones de modales

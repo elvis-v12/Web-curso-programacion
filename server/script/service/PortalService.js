@@ -1,4 +1,4 @@
-import { Popular } from "/server/script/model/Popular.js";
+import { Popular } from "../model/Popular.js";
 
 export class PortalService {
         static findAllPopular = async () => {

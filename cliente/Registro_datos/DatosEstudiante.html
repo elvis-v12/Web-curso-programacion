@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de información para la beca</title>
+    <link rel="stylesheet" href="CSS/DiseñoFormulario.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Crea tu cuenta para ingresar a la plataforma</h2>
+        <form onsubmit="return false;"> <!-- Evita que el formulario se envíe por defecto -->
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="text" id="apellido" placeholder="Apellido" required>
+            <input type="text" class="form-control form-control-lg select-input" id="pais" placeholder="País de residencia" readonly value="">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="contraseña" placeholder="Contraseña" required>
+            <button type="button" onclick="createAccount()">Crear cuenta</button> <!-- Cambia a type="button" para evitar el envío del formulario -->
+        </form>
+        <div class="footer">
+            <p>¿Ya tienes una cuenta? <a href="../autentificacion/login.html">Iniciar sesión</a></p>
+        </div>
+    </div>
+    <script src="/server/beca/Registro.js"></script>
+</body>
+</html>

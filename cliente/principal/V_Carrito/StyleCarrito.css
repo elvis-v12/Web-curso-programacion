@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --clr-main: #050c55;
+    --clr-main: #f2f2f2;
     --clr-main-light: #785ce9;
     --clr-white: #ececec;
     --clr-gray: #e2e2e2;
     --clr-red: #961818;
+    --crl-black:#000;
 }
 
 * {
@@ -58,9 +59,9 @@ aside {
 }
 
 .boton-menu {
-    background-color: transparent;
+    background-color: #e2e2e2;
     border: 0;
-    color: var(--clr-white);
+    color: #000;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -69,39 +70,23 @@ aside {
     padding: 1rem;
     font-size: .85rem;
     width: 100%;
+    margin-right: 30px;
 }
-
+.boton-menu:hover{
+    color: #7ED321;
+    background: #000;
+}
 .boton-menu.active {
-    background-color: var(--clr-white);
-    color: var(--clr-main);
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+   background: #e2e2e2;
+    color: #000;
+    border-radius: 0.4rem;
     position: relative;
 }
-
-.boton-menu.active::before {
-    content: '';
-    position: absolute;
-    width: 1rem;
-    height: 2rem;
-    bottom: 100%;
-    right: 0;
-    background-color: transparent;
-    border-bottom-right-radius: .5rem;
-    box-shadow: 0 1rem 0 var(--clr-white);
+.boton-menu.active:hover{
+    color: #7ED321;
+    background: #000;
 }
 
-.boton-menu.active::after {
-    content: '';
-    position: absolute;
-    width: 1rem;
-    height: 2rem;
-    top: 100%;
-    right: 0;
-    background-color: transparent;
-    border-top-right-radius: .5rem;
-    box-shadow: 0 -1rem 0 var(--clr-white);
-}
 
 .boton-menu > i.bi-hand-index-thumb-fill,
 .boton-menu > i.bi-hand-index-thumb {
@@ -125,20 +110,22 @@ aside {
 }
 
 .texto-footer {
-    color: white;
+    color: #000;
     font-size: .85rem;
+    text-align: center;
+    font-weight: bold;
 }
 
 main {
-    background-color: var(--clr-white);
-    margin: 1rem;
-    margin-left: 0;
-    border-radius: 2rem;
+    background-color: transparent;
+    margin-left: 1rem;
+    border-radius: 2rem 0px 0px 2rem ;
     padding: 3rem;
+    border: 2px solid #ccc;
 }
 
 .titulo-principal {
-    color: var(--clr-main);
+    color: var(--crl-black);
     margin-bottom: 2rem;
 }
 
@@ -186,6 +173,136 @@ main {
     color: var(--clr-white);
 }
 
+/* Estilos para el fondo de globos */
+/* Estilos para el fondo de globos con hijos */
+body {
+    position: relative;
+    overflow: hidden;
+    background-color: #ccc; /* Un fondo claro que combina con los globos */
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: move 20s infinite ease-in-out;
+}
+
+.bubble .child {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: move 15s infinite ease-in-out;
+}
+
+.bubble:nth-child(1) {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 99, 132, 0.6); /* rojo claro */
+    bottom: -100px;
+    left: 10%;
+    animation-duration: 10s;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(1) .child {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 159, 64, 0.6); /* naranja */
+    bottom: -60px;
+    left: -20px;
+}
+
+.bubble:nth-child(2) {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(54, 162, 235, 0.6); /* azul claro */
+    bottom: -150px;
+    left: 25%;
+    animation-duration: 12s;
+    animation-delay: 4s;
+}
+
+.bubble:nth-child(2) .child {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 206, 86, 0.6); /* amarillo */
+    bottom: -80px;
+    left: -30px;
+}
+
+.bubble:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(75, 192, 192, 0.6); /* verde agua */
+    bottom: -200px;
+    left: 35%;
+    animation-duration: 14s;
+    animation-delay: 6s;
+}
+
+.bubble:nth-child(3) .child {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(153, 102, 255, 0.6); /* púrpura */
+    bottom: -100px;
+    left: -40px;
+}
+
+.bubble:nth-child(4) {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(255, 182, 193, 0.6); /* rosado */
+    bottom: -250px;
+    left: 50%;
+    animation-duration: 16s;
+    animation-delay: 8s;
+}
+
+.bubble:nth-child(4) .child {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 255, 127, 0.6); /* verde neón */
+    bottom: -120px;
+    left: -50px;
+}
+
+.bubble:nth-child(5) {
+    width: 90px;
+    height: 90px;
+    background-color: rgba(255, 99, 132, 0.6); /* rojo claro */
+    bottom: -300px;
+    left: 70%;
+    animation-duration: 18s;
+    animation-delay: 10s;
+}
+
+.bubble:nth-child(5) .child {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(54, 162, 235, 0.6); /* azul claro */
+    bottom: -150px;
+    left: -35px;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-400px) scale(1.1);
+    }
+    100% {
+        transform: translateY(-800px) scale(0.9);
+    }
+}
+
+/* Asegúrate de que los globos no cubran el contenido principal */
+main {
+    position: relative;
+    z-index: 10;
+}
+
 
 /** CARRITO **/
 
@@ -197,7 +314,7 @@ main {
 
 .carrito-vacio,
 .carrito-comprado {
-    color: var(--clr-main);
+    color: var(--crl-black);
 }
 
 .carrito-productos {
@@ -284,6 +401,12 @@ main {
 
 .disabled {
     display: none;
+}
+.LogoCarrito{
+    height: 200px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 /*** MEDIA QUERIES ***/
