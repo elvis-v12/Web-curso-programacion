@@ -1,7 +1,7 @@
 .MisEstadisticas-contenedor {
     padding: 20px;
     margin-left: 100px;
-    margin-right: 330px; /* Ajuste para el aside derecho */
+    width: 100%;
     flex-grow: 1;
     height: 100vh; /* Ocupar toda la altura del viewport */
     overflow-y: hidden; /* Evitar desbordamiento en el contenido principal */
@@ -103,8 +103,6 @@
 /*Metas*/
 .ProgresoMeta1{
     display: flex;
-    max-height: 400px; /* Limita la altura máxima del contenedor */
-    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido excede la altura */
     padding-right: 10px; /* Espacio para evitar que la barra de desplazamiento cubra el contenido */
 }
 

@@ -15,11 +15,12 @@
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     padding: 15px; /* Espaciado interno */
-    width: 100%; /* Ancho reducido */
+    width: 90%; /* Ancho reducido */
     margin-left: 90px; /* Posición ajustada al costado de la barra izquierda */
     position: relative;
     top: 0;
     z-index: 9;
+    height: 80%;
 }
 
 /* Estilo para cada ítem del menú de navegación */

@@ -1,7 +1,6 @@
 .col-md-8 {
     padding: 20px;
     margin-left: 100px;
-    margin-right: 330px; /* Ajuste para el aside derecho */
     flex-grow: 1;
     height: 100vh; /* Ocupar toda la altura del viewport */
     overflow-y: hidden; /* Evitar desbordamiento en el contenido principal */
