@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="/cliente/principal/imagenes/LogoMarca.png">
+    <title>DarkCode-Cursos</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/cliente/principal/Inicio.html" class="header__home">
+            <img src="/cliente/principal/pictures/logo/Logo_Img.png" alt="">
+        </a>
+    </header>
+
+    <nav class="search">
+        <form class="search__form">
+            <input type="text" name="" id="" placeholder="Buscar curso" class="search__input_txt">
+            <button type="button" class="search__input_btn" id="btnSearchCourse">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#a6ff00" stroke-width="2" height="24"
+                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true">
+                    <path clip-rule="evenodd"
+                        d="M16.296 16.996a8 8 0 11.707-.708l3.909 3.91-.707.707-3.909-3.909zM18 11a7 7 0 00-14 0 7 7 0 1014 0z"
+                        fill-rule="evenodd"></path>
+                </svg>
+            </button>
+        </form>
+    </nav>
+
+    <main class="main">
+        <section class="main__section courses">
+            <h2 class="main__section_title courses__title">Cursos Destacados</h2>
+            <div class="courses__list"></div>
+        </section>
+    </main>
+    <script type="module" src="/server/script/cursos.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+$header-background-color: #5a8582b4;
+$link-color: #FFFFFF;
+$link-hover-color: #FFA500;
+$header-shadow-color: rgba(0, 0, 0, 0.2);
+$color-aside: #c8ff00;
+$radios-component: 10px;
+$bk-color-component: #ffffff0e;
+
+* {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    position: relative;
+    background-image: url('/cliente/principal/pictures/fondos/certificado.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 170vw;
+    margin: 0;
+    z-index: 1;
+
+    &::before {
+        z-index: 10;
+        content: "";
+        top: 0;
+        position: absolute;
+        background-image: url('/cliente/principal/pictures/fondos/dark_theme_background.png');
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: 100vw;
+        filter: blur(300px);
+    }
+
+    @media (width < 1080px) {
+        background-size: 200vw;
+    }
+
+    @media (width < 900px) {
+        background-size: 400vw;
+    }
+
+}
+
+.header,
+.search,
+.main {
+    position: relative;
+    z-index: 100;
+}
+
+.header {
+
+    grid-area: header;
+    background-color: $header-background-color;
+    padding: 10px 20px;
+    box-shadow: 0 2px 6px $header-shadow-color;
+
+    .header__home {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 16px;
+
+        &:hover {
+            color: #f5e050;
+        }
+
+        img {
+            height: 60px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+
+    &__form {
+        margin-top: 40px;
+        border-radius: 7px;
+        background-color: #ffffff36;
+        box-shadow: 0 4px 6px #0000001a;
+        border: 1px solid white;
+        display: flex;
+        padding: 7px;
+
+        &:focus-within {
+            box-shadow: 0 0px 10px rgb(94, 94, 94);
+        }
+    }
+
+    &__input_txt {
+        width: 20vw;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 30px;
+        outline: none;
+        flex-grow: 1;
+        margin-right: 10px;
+        background: transparent;
+        color: #ECECEC;
+
+        &::placeholder {
+            color: #AAAAAA;
+        }
+    }
+
+    &__input_btn {
+        background: #020024;
+        border: none;
+        border-radius: 50% 0% 50% 0%;
+        padding: 10px;
+        cursor: pointer;
+        transition: background .1s .0s linear;
+
+        &:hover {
+            background: #3526b8;
+        }
+    }
+}
+
+.main {
+
+    .courses {
+        margin: auto;
+        margin-top: 5vh;
+        width: 90vw;
+        border-radius: 7px;
+        box-sizing: border-box;
+        background-color: #1f232cdc;
+        box-shadow: 0 0px 10px rgb(94, 94, 94);
+        border: 1px solid white;
+        overflow: auto;
+
+        &__title {
+            color: #FFFFFF;
+            font-size: 2em;
+            margin: 20px;
+            text-align: left;
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 30px;
+            padding: 30px;
+        }
+
+
+        a {
+            text-decoration: none;
+            padding: 15px 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            border-color: rgba(255, 255, 255, 0);
+            transition: transform 0.3s ease, border .3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+            &:hover {
+                transform: scale(1.02);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+                border: 1px solid white;
+            }
+        }
+
+        &__item {
+            width: 320px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                box-shadow: 0 4px 8px #00000033;
+            }
+
+            &_title {
+                color: #f5e050;
+                font-size: 1.5em;
+                margin: 10px 0;
+                text-transform: uppercase; // Hace que el título de cada curso esté en mayúsculas
+                letter-spacing: 1px;
+                text-align: center;
+                height: 25%;
+            }
+
+            &_data {
+                display: flex;
+                text-align: left;
+                flex-direction: column;
+                height: 100%;
+                margin-top: 10%;
+                flex: 1;
+
+                p {
+                    color: #ECECEC;
+                    font-size: 1em;
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin-top: auto;
+                    }
+                }
+            }
+
+        }
+
+    }
+}

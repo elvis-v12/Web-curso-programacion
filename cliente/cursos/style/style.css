@@ -1,11 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 * {
-        margin: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
-.hidden {
-        visibility: hidden;
+body {
+  position: relative;
+  background-image: url("/cliente/principal/pictures/fondos/certificado.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 170vw;
+  margin: 0;
+  z-index: 1;
+}
+body::before {
+  z-index: 10;
+  content: "";
+  top: 0;
+  position: absolute;
+  background-image: url("/cliente/principal/pictures/fondos/dark_theme_background.png");
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100vw;
+  filter: blur(300px);
+}
+@media (width < 1080px) {
+  body {
+    background-size: 200vw;
+  }
+}
+@media (width < 900px) {
+  body {
+    background-size: 400vw;
+  }
 }
 
-.absolute{
-        position: absolute;
+.header,
+.search,
+.main {
+  position: relative;
+  z-index: 100;
 }
+
+.header {
+  grid-area: header;
+  background-color: rgba(90, 133, 130, 0.7058823529);
+  padding: 10px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.header .header__home {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+.header .header__home:hover {
+  color: #f5e050;
+}
+.header .header__home img {
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+.header .header__home img:hover {
+  transform: scale(1.1);
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+}
+.search__form {
+  margin-top: 40px;
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.2117647059);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1019607843);
+  border: 1px solid white;
+  display: flex;
+  padding: 7px;
+}
+.search__form:focus-within {
+  box-shadow: 0 0px 10px rgb(94, 94, 94);
+}
+.search__input_txt {
+  width: 20vw;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 30px;
+  outline: none;
+  flex-grow: 1;
+  margin-right: 10px;
+  background: transparent;
+  color: #ECECEC;
+}
+.search__input_txt::placeholder {
+  color: #AAAAAA;
+}
+.search__input_btn {
+  background: #020024;
+  border: none;
+  border-radius: 50% 0% 50% 0%;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.1s 0s linear;
+}
+.search__input_btn:hover {
+  background: #3526b8;
+}
+
+.main .courses {
+  margin: auto;
+  margin-top: 5vh;
+  width: 90vw;
+  border-radius: 7px;
+  box-sizing: border-box;
+  background-color: rgba(31, 35, 44, 0.862745098);
+  box-shadow: 0 0px 10px rgb(94, 94, 94);
+  border: 1px solid white;
+  overflow: auto;
+}
+.main .courses__title {
+  color: #FFFFFF;
+  font-size: 2em;
+  margin: 20px;
+  text-align: left;
+}
+.main .courses__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+}
+.main .courses a {
+  text-decoration: none;
+  padding: 15px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border-color: rgba(255, 255, 255, 0);
+  transition: transform 0.3s ease, border 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.main .courses a:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid white;
+}
+.main .courses__item {
+  width: 320px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.main .courses__item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.main .courses__item_title {
+  color: #f5e050;
+  font-size: 1.5em;
+  margin: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  height: 25%;
+}
+.main .courses__item_data {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 10%;
+  flex: 1;
+}
+.main .courses__item_data p {
+  color: #ECECEC;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+.main .courses__item_data p:last-child {
+  margin-top: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
