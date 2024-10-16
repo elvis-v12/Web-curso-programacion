@@ -44,25 +44,3 @@
         const selectedOption = document.querySelector('input[name="schedule-option"]:checked').value;
         document.getElementById(`fulltime-option-${selectedOption.toLowerCase()}`).style.display = 'grid';
     });
-
-
-
-
-// Seleccionamos el toggle del tema
-const themeToggle = document.getElementById('theme-toggle');
-
-// Evento que escucha el cambio en el estado del interruptor
-themeToggle.addEventListener('change', () => {
-    const mainContent = document.getElementById('main-content-container');
-
-    // Si el toggle está activado, cambiamos el fondo a un color claro
-    if (themeToggle.checked) {
-        mainContent.style.backgroundColor = '#f2f2f2';  // Fondo claro
-        mainContent.style.border = 'none';  // Aseguramos que no haya bordes
-    } else {
-        // Si el toggle está desactivado, cambiamos el fondo a gris oscuro
-        mainContent.style.backgroundColor = '#808080';  // Fondo oscuro
-        mainContent.style.border = 'none';  // Aseguramos que no haya bordes
-    }
-});
-

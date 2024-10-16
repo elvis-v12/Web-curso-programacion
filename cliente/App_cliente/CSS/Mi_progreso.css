@@ -1,9 +1,13 @@
+.MisEstadisticas{
+width: 100%;
+height: 100%;
+}
 .MisEstadisticas-contenedor {
     padding: 20px;
     margin-left: 100px;
-    width: 100%;
+    width: 93%;
     flex-grow: 1;
-    height: 100vh; /* Ocupar toda la altura del viewport */
+    height: 100%; /* Ocupar toda la altura del viewport */
     overflow-y: hidden; /* Evitar desbordamiento en el contenido principal */
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

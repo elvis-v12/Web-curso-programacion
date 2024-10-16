@@ -43,7 +43,7 @@
     color: #333;
 }
 
-.title-medium {
+.title-medium{
     font-size: 1.2em;
     font-weight: bold;
     color: #555;
@@ -141,4 +141,110 @@
     display: flex;
     height: 100%;
     width: 100%;
+}
+
+/*caja de metas estabalecidad */
+.LearningPathsContainer {
+    padding: 15px;
+    list-style: none;
+    margin: 0;
+    background: transparent; /* Cambia el color de fondo */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre cada ruta */
+}
+
+.LearningPathsListItem {
+    background-color: #2d323a; /* Fondo similar al de la imagen */
+    padding: 15px;
+    border-radius: 8px; /* Bordes redondeados */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.LearningPathsListItem:hover {
+    background-color: #3a3f47; /* Cambio de color al hacer hover */
+}
+
+.LearningPathsListItem-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.LearningPathsListItem-badge {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.LearningPathsListItem-badge-image img {
+    border-radius: 50%;
+    background-color: #40444b; /* Fondo del icono */
+    padding: 5px;
+}
+
+.LearningPathsListItem-content {
+    flex: 1;
+}
+
+.LearningPathsListItem-content-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+}
+
+.LearningPathsListItem-content-info {
+    font-size: 14px;
+    color: #b3b3b3;
+    margin: 5px 0 0 0;
+}
+
+.LearningPathsListItem-progress {
+    display: flex;
+    align-items: center;
+    color: #b3b3b3;
+}
+
+.Progress-label {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.LearningPathsListItem-actions {
+    display: flex;
+    align-items: center;
+}
+
+.ButtonLayout-module_ButtonLayout__eaqR3 {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #b3b3b3;
+    transition: color 0.3s ease;
+}
+
+.ButtonLayout-module_ButtonLayout__eaqR3:hover {
+    color: #ffffff; /* Cambio de color al hacer hover */
+}
+
+.Progress-bar {
+    background-color: #40444b;
+    border-radius: 4px;
+    height: 5px;
+    width: 100px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.Progress-value {
+    background-color: #2e7d32; /* Color de progreso */
+    height: 100%;
+    transition: width 0.3s ease;
 }
