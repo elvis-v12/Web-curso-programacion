@@ -32,7 +32,7 @@ class Curso {
                         if (Array.isArray(cursosNovedades)) {
 
                                 this.coursesListHTML.innerHTML = cursosNovedades.map(curso => `
-                                <a href="${curso.url}">
+                                <a href="${curso.url}?code=${curso.id}">
                                         <article class="courses__item">
                                                 <img src="${curso.portada}" alt="${curso.name}">
                                                 <h3 class="courses__item_title">${curso.name}</h3>
