@@ -1,0 +1,456 @@
+
+html, body {
+    overflow: hidden; /* Esto quitará el scroll de la página completa */
+}
+.main-content {
+    overflow: auto; /* Habilita el desplazamiento */
+    scrollbar-width: thin; /* Define el grosor de la barra de desplazamiento en Firefox */
+    -ms-overflow-style: auto;  /* Deja la barra visible en Internet Explorer y Edge */
+}
+
+/* Personaliza la barra de desplazamiento en navegadores Webkit (Chrome, Safari, Edge) */
+.main-content::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra vertical */
+    height: 8px; /* Ancho de la barra horizontal */
+}
+
+
+
+.main-content::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color de la parte deslizante */
+    border-radius: 10px; /* Redondear la barra de desplazamiento */
+    border: 2px solid transparent; /* Espacio alrededor del thumb */
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color de la barra al pasar el cursor */
+}
+
+/* Personalización en Firefox */
+.main-content {
+    scrollbar-width: auto; /* Grosor de la barra en Firefox */
+    scrollbar-color: #888 #f1f1f1; /* Color del thumb y el track en Firefox */
+}
+/*Seccion de diseños de fotter de anuncios*/
+
+.Section {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos (SVG, texto, botón) */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 10px 20px;
+    background-color: #1e1e1e; /* Fondo oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.1); /* Sombra ligera */
+    width: 1029;
+    height: 70;
+}
+
+.SkillMatcherBanner_SkillMatcherBanner__D2QUu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.Glow_Glow__X0pi3 {
+    display: flex;
+    align-items: center; /* Asegura que ícono y texto estén alineados verticalmente */
+    gap: 10px; /* Espacio entre ícono y texto */
+    flex-grow: 1; /* El texto y el ícono pueden ocupar más espacio */
+}
+
+.SkillMatcherBanner_SkillMatcherBanner__Icon__Su_L5 {
+    display: inline-flex; /* Asegura que el ícono esté alineado en línea */
+    align-items: center;
+    font-size: 24px;
+    color: #ccc; /* Color del ícono */
+}
+
+.SkillMatcherBanner_SkillMatcherBanner__Text__EQDRP {
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+    display: inline; /* Asegura que el texto esté en línea con el ícono */
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+}
+
+.ButtonLayout-module_ButtonLayout__eaqR32 {
+    background-color: #00ff7f;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-flex; /* Asegura que el botón y el ícono del botón estén en línea */
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Asegura que el botón no se rompa en varias líneas */
+}
+
+.ButtonLayout-module_ButtonLayout__eaqR32:hover {
+    background-color: #0af780;
+    color: #0009;
+}
+
+.ButtonLayout-module_ButtonLayout__Icon__AaDMh {
+    display: inline-block;
+}
+.SkillMatcherBanner_SkillMatcherBanner__Info__jufNx{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  /*Seccion de anuncios de suscripcion*/
+  .SimpleBanner_SimpleBanner__dbnVG {
+    margin-top: 40px;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 20px; /* Espacio entre elementos */
+    justify-content: space-between; /* Distribuye los elementos (SVG, texto, botón) */
+    padding: 10px 20px;
+    background-color: #ffffff; /* Fondo oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.1); /* Sombra ligera */
+    width: 1029;
+    height: 70;
+
+}
+
+.SimpleBanner_SimpleBanner__icon__hc__V {
+    display: flex;
+    align-items: center; /* Alinea el ícono verticalmente */
+    font-size: 24px;
+    color: #42ba87;
+}
+
+.SimpleBanner_SimpleBanner__info__T1_Gv {
+    color: #000;
+    margin: 0;
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+    flex-grow: 1; /* Permite que el texto ocupe el espacio disponible */
+    font-weight: 400;
+    font-size: .875rem;
+    letter-spacing: .019rem;
+
+}
+
+.Button--tertiary1 {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap; /* Evita que el texto del botón se rompa */
+    cursor: pointer;
+    width: 100px;
+    flex:0;
+    background-color: #2d323a;
+  color: #fff;
+  border-color: #404650;
+}
+
+.Button--tertiary1:hover {
+    border-width: var(--button-border-width,1px 1px 1px 1px);
+  margin-bottom: var(--button-margin-bottom,1px);
+}
+/*Seccion de empresas filtros de busqueda*/
+/* Estilos generales del contenedor */
+.Section--right-overflowed {
+    display: block;
+}
+
+.Section__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    padding-right: 1rem;
+}
+
+.Section__head__title {
+    font-weight: 500;
+    font-size: 1.125rem;
+    letter-spacing: -0.008rem;
+    color: #ffffff;
+}
+
+/* Carrusel de items */
+.CarouselScroll_CarouselScroll__container__ILxwV {
+    overflow-x: scroll;
+    display: flex;
+    gap: 1rem;
+    scroll-behavior: smooth;
+    padding-top: 0;
+    padding-bottom: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    cursor: pointer;
+}
+
+.SchoolFilter_SchoolFilter__3feaa {
+    display: flex;
+    width: 5rem;
+    max-width: 5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    font-family: 'Arial', sans-serif;
+    background: transparent;
+}
+
+.FilterUI_Filter__Item__lj_Li {
+    background: transparent;
+    border: none;
+    cursor: pointer; /* Aquí se asegura el cursor pointer en el botón */
+
+}
+
+/* Solo el contenedor de la imagen en forma circular */
+.Section--right-overflowed{
+    border-radius: 10px; /* Bordes redondeados */
+    width: 1029;
+    height: 70;
+    background: none;
+    border: none;
+    box-shadow: none;
+    margin-top: 20px;
+}
+.SchoolCard_SchoolCard__Image__Container__IMggw {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+
+/* Imágenes dentro del contenedor */
+.SchoolCard_SchoolCard__Image__Container__IMggw img,
+.SchoolCard_SchoolCard__Image__Container__IMggw svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Texto debajo de los íconos */
+.SchoolCard_SchoolCard__Text__Container__p8h0e {
+    display: flex;
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    height: 100%; /* Asegura que el contenedor del texto ocupe todo el espacio disponible */
+    color: #a6aab0; /* Aplica este color específico al texto */
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+    word-wrap: break-word;
+    max-width: 75px;
+    overflow: hidden;
+}
+
+/* Texto que se ajusta debajo del ícono */
+.SchoolCard_SchoolCard__Text__lKQxj {
+    color: var(--color-text, #c4c8ce);
+    text-align: center;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    font-weight: 400;
+    font-size: 0.75rem;
+    text-transform: none;
+    line-height: 1.125rem;
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 2; /* Permite que el texto se ajuste en dos líneas como máximo */
+    -webkit-box-orient: vertical;
+}
+
+.CarouselScroll_CarouselScroll__Item__2e_zd {
+    display: flex;
+    width: 5rem;
+    max-width: 5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    font-family: var(--main-font);
+    cursor: pointer;
+}
+.SchoolCard_SchoolCard__Text__Container__p8h0e {
+    display: flex;
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    height: 100%; /* Asegura que el contenedor del texto ocupe todo el espacio disponible */
+}
+.TextoCicular{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Secion de cursos recomendados*/
+.Button-module_Button__Y5dbR {
+    align-items: center;
+    background-color: transparent;
+    border: solid #fff;
+    border-radius: .5rem;
+    border-width: 1px 1px 2px;
+    box-sizing: border-box;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    font: inherit;
+    font-size: .875rem;
+    font-weight: 500;
+    gap: .5rem;
+    justify-content: center;
+    letter-spacing: .019rem;
+    padding: .5rem .75rem;
+    text-decoration: none;
+    text-transform: none;
+    transition: all .1s ease;
+}
+
+.Button-module_Button__Y5dbR:active,
+.Button-module_Button__Y5dbR:hover {
+    border-width: 1px;
+    margin-bottom: 1px;
+}
+
+.Button-module_Button__Y5dbR:disabled {
+    border-width: 1px 1px 2px;
+    cursor: not-allowed;
+}
+
+.Button-module_Button-label__hlOeK:has(svg) svg {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.Button-module_Button-icon__uzyV2 svg {
+    height: 1rem;
+    vertical-align: middle;
+    width: 1rem;
+}
+
+.Button-module_Button--primary__SbvXN {
+    background-color: #fff;
+    border-color: #555c68;
+    color: #13161c;
+}
+
+.Button-module_Button--primary__SbvXN:active,
+.Button-module_Button--primary__SbvXN:hover {
+    background-color: #f0f1f2;
+    border-color: #dee1e4;
+}
+
+.Button-module_Button--primary__SbvXN:disabled {
+    background-color: #fff;
+    border-color: #dee1e4;
+    color: #a5acb6;
+}
+
+.Button-module_Button--secondary__v4MCN {
+    background-color: #2d323a;
+    border-color: #555c68;
+    color: #fff;
+}
+
+.Button-module_Button--secondary__v4MCN:active {
+    background-color: #555c68;
+}
+
+.Button-module_Button--secondary__v4MCN:disabled {
+    color: #6c7583;
+}
+
+.Button-module_Button--tertiary__KCOfT {
+    background-color: #13161c;
+    border-color: #404650;
+    color: #fff;
+}
+
+.Button-module_Button--tertiary__KCOfT:active {
+    border-color: #555c68;
+}
+
+.Button-module_Button--tertiary__KCOfT:disabled {
+    border-color: #404650;
+    color: #6c7583;
+}
+
+.Button-module_Button--ghost__VTPzx {
+    appearance: none;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+}
+
+.Button-module_Button--danger__0AQ5O {
+    background-color: #d8392f;
+    border-color: #b72b23;
+    color: #fff;
+}
+
+.Button-module_Button--danger__0AQ5O:active {
+    background: #b72b23;
+    border-color: #94231c;
+}
+
+.Button-module_Button--danger__0AQ5O:disabled {
+    background-color: #b72b23;
+    border-color: #94231c;
+    color: #e26a63;
+}
+
+.Button-module_Button--fullWidth__0RIt- {
+    width: 100%;
+}
+
+.CountDown-module_CountDown__5lqxy {
+    display: flex;
+    justify-content: center;
+}
+
+.CountDown-module_CountDown__time__BJ5hK {
+    align-items: center;
+    display: flex;
+    gap: .125rem;
+    justify-content: center;
+}
+
+.CountDown-module_CountDown__separator__k-BN- {
+    margin: 0 .125rem;
+}
+.Card_Card__Media__yCwF8 {
+    --card-media-height: 9.4375rem;
+    width: 100%;
+    max-width: 100%;
+    height: var(--card-media-height);
+    max-height: var(--card-media-height);
+  }
+.SchoolCourses_SchoolCourses__Header__ooKE4{
+    background-color: var(--main-bg-color,#13161c);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  padding-right: 1rem;
+  padding-top: .75rem;
+}
+.SchoolTitle_SchoolTitle__CKIcx{
+    font-weight: 500;
+  font-size: 1.125rem;
+  letter-spacing: -0.008rem;
+  color: #ffffff;
+
+}
+
+
+
