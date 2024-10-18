@@ -16,6 +16,9 @@ body {
   padding: 10px 20px;
   background-color: hsla(222, 17%, 15%, 0.6);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 .header__home img {
   height: 60px;
@@ -69,10 +72,184 @@ body {
   margin-left: 5px;
 }
 
+.menu {
+  width: 46px;
+  height: 38px;
+  display: none;
+  position: fixed;
+  top: 0;
+}
+.menu__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 5px;
+  margin: 5px 0px 0px 5px;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.menu__content::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  border-radius: 10px;
+  background-position: 800% 0;
+  width: 105%;
+  height: 105%;
+  left: -1px;
+  top: -1px;
+  filter: blur(3px);
+  box-shadow: 3px2px rgba(0, 0, 0, 0.3019607843);
+  background: linear-gradient(45deg, #628cff, #00f08c, #00f08c, rgba(64, 50, 255, 0.5764705882), #628cff, #00f08c, #00f08c, rgba(64, 50, 255, 0.5764705882));
+  background-size: 800%;
+  animation: background_animation 20s linear infinite;
+}
+.menu__line {
+  overflow: hidden;
+  position: relative;
+  height: 7px;
+  border-radius: 50px;
+  transform-origin: left;
+  transition: 0.8s transform ease-in-out, opacity 0.5s ease-in-out;
+  background: linear-gradient(90deg, #628cff, #00f08c);
+  left: 0px;
+  opacity: 1;
+}
+.menu__line::after {
+  top: 0;
+  left: -55px;
+  border-radius: 50px;
+  position: absolute;
+  content: "";
+  background: linear-gradient(90deg, #628cff, #00f08c);
+  width: 120%;
+  height: 100%;
+  filter: blur(3px);
+  animation: menu 1s linear infinite;
+}
+.menu__active > div > div:nth-child(1) {
+  transform: rotate(30deg) scaleX(1.17);
+}
+.menu__active > div > div:nth-child(2) {
+  opacity: 0;
+}
+.menu__active > div > div:nth-child(3) {
+  transform: rotate(-30deg) scaleX(1.17);
+}
+
+@media (width <= 560px) {
+  .menu {
+    display: block;
+  }
+  .header {
+    display: none;
+  }
+}
+.carousel {
+  position: relative;
+  width: 65vw;
+  height: 60vh;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 70px auto 150px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.carousel__container {
+  display: flex;
+  transition: transform 0.5s ease;
+  justify-content: center;
+  position: relative;
+}
+.carousel__item {
+  width: 100%;
+  height: 60vh;
+  position: absolute;
+  transition: opacity 1s ease;
+}
+.carousel__item img {
+  position: absolute;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: -1;
+}
+.carousel__item.active {
+  opacity: 1;
+}
+.carousel__item:not(.active) {
+  opacity: 0;
+  pointer-events: none;
+}
+.carousel .novedad {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3098039216);
+}
+.carousel .novedad__content {
+  background-color: rgba(31, 35, 44, 0.862745098);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 80%;
+  width: 600px;
+  transition: transform 0.3s ease;
+}
+.carousel .novedad__content:hover {
+  transform: scale(1.05);
+}
+.carousel .novedad__title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #8dabff;
+  margin-bottom: 15px;
+}
+.carousel .novedad__description {
+  font-size: 1.2rem;
+  color: #929292;
+  margin-bottom: 20px;
+}
+.carousel .novedad__date {
+  font-size: 1rem;
+  color: #999999;
+  margin-bottom: 10px;
+}
+.carousel__control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: rgba(0, 0, 0, 0.5019607843);
+  border: none;
+  font-size: 40px;
+  padding: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.carousel__control:hover {
+  color: #ffffff;
+}
+.carousel .prev {
+  left: 10px;
+}
+.carousel .next {
+  right: 10px;
+}
+
 .categorias__title {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 2em;
-  margin: 40px;
+  margin: 40px 0 70px 0;
+  text-shadow: 0 2px 6px #222222;
+  text-align: center;
 }
 .categorias__content {
   margin: auto;
@@ -114,7 +291,7 @@ body {
   color: white;
 }
 .categorias__item i {
-  color: rgb(141, 171, 255);
+  color: #8dabff;
   font-size: 30px;
 }
 .categorias__item:hover {
@@ -125,51 +302,65 @@ body {
 }
 
 .planes {
-  padding: 50px 20px;
-  background-color: #f5f5f5;
-  text-align: center;
+  box-sizing: content-box;
+  margin: 150px 0px 300px 0;
 }
 .planes__title {
+  text-align: center;
   font-size: 2.5rem;
-  color: #1F232C;
-  margin-bottom: 20px;
+  color: #ffffff;
+  margin-bottom: 60px;
+  text-shadow: 0 2px 6px #222222;
 }
 .planes__description {
+  text-align: center;
   font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
+  color: #ffffff;
+  margin-bottom: 70px 0;
 }
 .planes__list {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (width <= 1222px) {
+  .planes__list {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .planes .plan__item {
-  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.9725490196);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1019607843);
   padding: 30px;
+  margin: 2%;
   width: 300px;
-  margin: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+@media (width <= 1222px) {
+  .planes .plan__item {
+    height: 280px;
+  }
 }
 .planes .plan__item:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .planes .plan__item__title {
+  text-align: center;
   font-size: 1.5rem;
-  color: #1F232C;
+  color: #002238;
   margin-bottom: 10px;
-}
-.planes .plan__item__price {
-  font-size: 1.8rem;
-  color: #f5e050;
-  margin-bottom: 20px;
+  padding: 20px 0;
+  background-color: #00f08c;
+  border-radius: 0 0 0 10px;
 }
 .planes .plan__item__features {
-  list-style: none;
-  padding: 0;
+  padding: 20px;
+  text-align: left;
   margin-bottom: 20px;
   color: #555;
 }
@@ -177,17 +368,112 @@ body {
   margin-bottom: 10px;
 }
 .planes .plan__item__button {
+  align-self: center;
+  margin-top: auto;
   display: inline-block;
   padding: 10px 20px;
-  background-color: #1F232C;
-  color: #fff;
+  background-color: #00293a;
+  color: #ffffff;
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 .planes .plan__item__button:hover {
-  background-color: #f5e050;
+  background-color: #3888aa;
+}
+
+.contact {
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+.contact__title {
+  font-size: 2.5rem;
   color: #1F232C;
+  margin-bottom: 20px;
+}
+.contact__description {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+.contact__form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.contact__form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.contact__label {
+  font-size: 1rem;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+.contact__input, .contact__textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+.contact__input:focus, .contact__textarea:focus {
+  border-color: #007e7e;
+  outline: none;
+}
+.contact__textarea {
+  resize: vertical;
+}
+.contact__button {
+  background-color: #007e7e;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contact__button:hover {
+  background-color: #005f5f;
+}
+
+.footer {
+  height: 300px;
+  background-color: rgba(31, 35, 44, 0.862745098);
+}
+
+@media (max-width: 768px) {
+  .plan__item {
+    width: 90%;
+    margin: 10px 0;
+  }
+}
+@keyframes menu {
+  from {
+    left: -55px;
+  }
+  to {
+    left: 47px;
+  }
+}
+@keyframes background_animation {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 800% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

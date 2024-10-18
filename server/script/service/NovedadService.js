@@ -1,7 +1,7 @@
 import { Novedad } from "../model/Novedad.js";
 
 export class NovedadService {
-        static findAll = async () => {
+        findAll = async () => {
                 try {
                         const response = await fetch("/server/data/dataNovedades.json");
                         const data = await response.json();
