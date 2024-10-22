@@ -41,7 +41,7 @@
 
 
 /* Botón de crear una ruta */
-.Button {
+.openModalButton {
     background-color: #2d323a; /* Color de fondo gris oscuro */
     color: white;
     border: none;
@@ -51,7 +51,7 @@
     transition: background-color 0.3s ease, padding 0.3s ease; /* Transición suave para el color y el padding */
 }
 
-.Button:hover {
+.openModalButton:hover {
     background-color: #3a3f47; /* Efecto hover con un gris más claro */
     padding-bottom: 8px; /* Mantener el tamaño del botón uniforme */
 }

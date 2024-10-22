@@ -268,16 +268,6 @@ html, body {
     -webkit-box-orient: vertical;
 }
 
-.CarouselScroll_CarouselScroll__Item__2e_zd {
-    display: flex;
-    width: 5rem;
-    max-width: 5rem;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.25rem;
-    font-family: var(--main-font);
-    cursor: pointer;
-}
 .SchoolCard_SchoolCard__Text__Container__p8h0e {
     display: flex;
     justify-content: center; /* Centra el texto horizontalmente */
@@ -290,167 +280,210 @@ html, body {
     align-items: center;
 }
 
-/*Secion de cursos recomendados*/
-.Button-module_Button__Y5dbR {
+
+/*Secion de cursos recomendados*//* Estilos para cada tarjeta de curso ajustada a 287x167 */
+/* Contenedor de botones debajo de la descripción */
+.Card_Card__Buttons__Container {
+    display: flex;
+    justify-content: space-around; /* Espacio balanceado entre los botones */
     align-items: center;
-    background-color: transparent;
-    border: solid #fff;
-    border-radius: .5rem;
-    border-width: 1px 1px 2px;
-    box-sizing: border-box;
-    color: inherit;
+    margin-top: 10px; /* Separación con la descripción */
+    padding: 5px;
+    width: 100%;
+}
+
+
+/* Estilos para el botón 'Ir al curso' */
+.Button--primary {
+    background-color: #ffffff;
+    color: #13161C;
+    border: 1px solid #13161C;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    font-weight: bold;
     cursor: pointer;
-    display: flex;
-    font: inherit;
-    font-size: .875rem;
-    font-weight: 500;
-    gap: .5rem;
-    justify-content: center;
-    letter-spacing: .019rem;
-    padding: .5rem .75rem;
-    text-decoration: none;
-    text-transform: none;
-    transition: all .1s ease;
-}
-
-.Button-module_Button__Y5dbR:active,
-.Button-module_Button__Y5dbR:hover {
-    border-width: 1px;
-    margin-bottom: 1px;
-}
-
-.Button-module_Button__Y5dbR:disabled {
-    border-width: 1px 1px 2px;
-    cursor: not-allowed;
-}
-
-.Button-module_Button-label__hlOeK:has(svg) svg {
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-.Button-module_Button-icon__uzyV2 svg {
-    height: 1rem;
-    vertical-align: middle;
-    width: 1rem;
-}
-
-.Button-module_Button--primary__SbvXN {
-    background-color: #fff;
-    border-color: #555c68;
-    color: #13161c;
-}
-
-.Button-module_Button--primary__SbvXN:active,
-.Button-module_Button--primary__SbvXN:hover {
-    background-color: #f0f1f2;
-    border-color: #dee1e4;
-}
-
-.Button-module_Button--primary__SbvXN:disabled {
-    background-color: #fff;
-    border-color: #dee1e4;
-    color: #a5acb6;
-}
-
-.Button-module_Button--secondary__v4MCN {
-    background-color: #2d323a;
-    border-color: #555c68;
-    color: #fff;
-}
-
-.Button-module_Button--secondary__v4MCN:active {
-    background-color: #555c68;
-}
-
-.Button-module_Button--secondary__v4MCN:disabled {
-    color: #6c7583;
-}
-
-.Button-module_Button--tertiary__KCOfT {
-    background-color: #13161c;
-    border-color: #404650;
-    color: #fff;
-}
-
-.Button-module_Button--tertiary__KCOfT:active {
-    border-color: #555c68;
-}
-
-.Button-module_Button--tertiary__KCOfT:disabled {
-    border-color: #404650;
-    color: #6c7583;
-}
-
-.Button-module_Button--ghost__VTPzx {
-    appearance: none;
-    border: 0;
-    box-sizing: border-box;
-    font-size: 1rem;
-    padding: 0;
-    text-align: left;
-    text-decoration: none;
-}
-
-.Button-module_Button--danger__0AQ5O {
-    background-color: #d8392f;
-    border-color: #b72b23;
-    color: #fff;
-}
-
-.Button-module_Button--danger__0AQ5O:active {
-    background: #b72b23;
-    border-color: #94231c;
-}
-
-.Button-module_Button--danger__0AQ5O:disabled {
-    background-color: #b72b23;
-    border-color: #94231c;
-    color: #e26a63;
-}
-
-.Button-module_Button--fullWidth__0RIt- {
-    width: 100%;
-}
-
-.CountDown-module_CountDown__5lqxy {
+    transition: background-color 0.3s ease, color 0.3s ease;
     display: flex;
     justify-content: center;
-}
-
-.CountDown-module_CountDown__time__BJ5hK {
     align-items: center;
+    gap: 8px; /* Añadir un pequeño espacio entre el texto y el SVG */
+}
+
+.Button--primary svg {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.Button--primary:hover {
+    background-color: #2a2e36;
+    color: #ffffff;
+}
+
+/* Estilos para el botón 'Agregar' */
+.Button--unstyle {
+    background-color: #404650;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
     display: flex;
-    gap: .125rem;
     justify-content: center;
+    align-items: center;
+    gap: 8px; /* Añadir espacio entre el texto y el SVG */
+    margin-left: 5px;
 }
 
-.CountDown-module_CountDown__separator__k-BN- {
-    margin: 0 .125rem;
+.Button--unstyle:hover {
+    background-color: #2a2e36;
 }
-.Card_Card__Media__yCwF8 {
-    --card-media-height: 9.4375rem;
+/* Ajusta el color del ícono del botón primario */
+.Button--primary svg path {
+    fill: #13161C;  /* Cambia el color según tu necesidad */
+}
+
+/* Ajusta el color del ícono del botón 'Agregar' */
+.Button--unstyle svg path {
+    fill: #ffffff;  /* Cambia el color a blanco */
+}
+
+
+.Button--unstyle:hover {
+    background-color: #2a2e36;
+}
+
+/* Ajustes adicionales para el tamaño y disposición de los botones */
+.Button--md {
+    width: 45%; /* Ambos botones tendrán el mismo tamaño */
+    text-align: center;
+}
+
+/* Ajustes generales de la tarjeta */
+
+/* Ajuste de las imágenes dentro de la tarjeta */
+.CardImage_CourseImage__avHfJ img {
+    border-radius: .5rem;
     width: 100%;
-    max-width: 100%;
-    height: var(--card-media-height);
-    max-height: var(--card-media-height);
+    height: auto;
+}
+/*Ajustamndo la informacion de los cursos*/
+.Card_Card__Info__Q2g_1{
+    display: flex;
+    width: 100%;
+    margin: none;
+    padding: none;
+}
+.CourseCard_CourseCard__Shield__s54_C {
+    max-width: 2rem;
+    padding-top: .25rem;
   }
-.SchoolCourses_SchoolCourses__Header__ooKE4{
-    background-color: var(--main-bg-color,#13161c);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: .75rem;
-  padding-right: 1rem;
-  padding-top: .75rem;
-}
-.SchoolTitle_SchoolTitle__CKIcx{
+  .CourseCard_CourseCard__Detail__elSrc {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    height: 100%;
+    padding-right: .25rem;
+  }
+
+  /*Secion de los titulos de los cursos */
+  .CourseCard_CourseCard__Title__LXNxo {
     font-weight: 500;
-  font-size: 1.125rem;
-  letter-spacing: -0.008rem;
-  color: #ffffff;
+    font-size: .875rem;
+    letter-spacing: -.008rem;
+    text-transform: none;
+    text-decoration: none;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #c4c8ce;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: .16px;
+  }
+  .CourseCard_CourseCard__Teachers__mNpqd {
+    font-weight: 400;
+    font-size: .75rem;
+    letter-spacing: .019rem;
+    text-transform: none;
+    text-decoration: none;
+    display: -webkit-box;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #87909d;
+    line-height: 1.125rem;
+    letter-spacing: .16px;
+  }
 
+/* Ajuste de los textos de título y descripción */
+
+.Card_Card__02zp3 {
+    position: relative; /* Esto permitirá que el ranking con absolute se posicione dentro de este contenedor */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 287px;
+    height: 350px; /* Ajusta el alto si es necesario */
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    max-width: 260px; /* Ajusta el ancho máximo de las tarjetas */
+}
+
+/* Ajuste para el ranking, posición a la derecha */
+.Ranking_Ranking__tg2fc {
+    background-color: #1d2029; /* Fondo blanco */
+    border-radius: .5rem 0 .4rem 0; /* Bordes redondeados */
+    display: inline-flex;
+    justify-content: flex-end; /* Alinear a la derecha */
+    align-items: center;
+    padding: 5px 10px; /* Añadir relleno interno */
+    position: absolute; /* Posición absoluta para controlarlo dentro de la tarjeta */
+    top: 113px; /* Espaciado desde el borde superior */
+    right: 10px; /* Espaciado desde el borde derecho */
+    z-index: 1; /* Asegurarse de que esté por encima de otros elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añadir sombra para resaltarlo */
+}
+
+/* Estilo de las estrellas del ranking */
+.Ranking_Ranking__Stars__DFN2x {
+    color: #fff;
+    font-weight: 500;
+    font-size: .875rem;
+    letter-spacing: .019rem;
+    text-transform: none;
+    text-decoration: none;
+    font-size: .75rem;
+    text-align: right;
+    line-height: 16px;
+    letter-spacing: .16px;
+    margin-left: 6px;
+}
+
+/* Contenedor general para mantener las tarjetas más juntas */
+.CarouselScroll_CarouselScroll__container__ILxwV {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
 
+
+/*Seccion de cursos titulis de cada curso por secion recomendados, mejores y lanzados*/
+.SchoolTitle_SchoolTitle__CKIcx{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: -.008rem;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: .16px;
+}
