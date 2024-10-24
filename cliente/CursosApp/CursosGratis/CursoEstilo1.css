@@ -144,125 +144,329 @@ body{
     background-color: #f8f8f8;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 20px; /* Añadir espacio entre los elementos principales */
+
+    margin: 0 auto;
 }
 
+/* Contenedor de la introducción */
 .introduction-container {
-    width: 45%; /* Aumenté un poco el tamaño para equilibrar con el contenido */
+    width: 45%; /* Ajustar ancho para la mitad del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
 }
-
-.ud-container {
-    width: 100%;
-    max-width: 1200px; /* Ajusté el máximo para pantallas grandes */
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 20px;
-    padding-left: 20px;
-}
-
 .intro-asset--wrapper--yDCdR {
     position: relative;
+    width: 100%;
+    height: 364px; /* Asegurarse de que la altura sea consistente con la imagen */
+    
 }
 
 .intro-asset--asset--uXC50 {
     background-color: #000;
+    position: relative; /* Asegurarse que los elementos internos se posicionen en relación con este contenedor */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 364px;
 }
-
+.ud-btn-large{
+    border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
 .intro-asset--img-aspect--3gluH img {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para el video */
+    height: 100%; /* Asegurarse de que la imagen ocupe todo el contenedor */
+    object-fit: cover; /* Asegurar que la imagen se ajuste bien */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
+.intro-asset--text--tUkoV {
+    position: absolute;
+    bottom: 0; /* Fija el texto en la parte inferior */
+    left: 0;
+    right: 0;
+    text-align: center; /* Centra el texto horizontalmente */
+    padding-bottom: 1rem; /* Ajusta el espacio en la parte inferior si es necesario */
+    color: #fff; /* Asegura que el texto sea visible */
+    z-index: 1; /* Coloca el texto por encima de otros elementos */
+}
+.intro-asset--asset--uXC50 {
+    position: relative;
+    height: 100%; /* O la altura que desees */
+}
+
+.intro-asset--asset--uXC50 .intro-asset--text--tUkoV {
+    position: absolute; /* Cambia a posición absoluta para que esté en relación con el contenedor */
+    bottom: 0; /* Fija el texto en la parte inferior del contenedor */
+    left: 0;
+    right: 0;
+    text-align: center; /* Centra el texto horizontalmente */
+    padding-bottom: 1.6rem; /* Ajusta el espacio si es necesario */
+  }
+
+
+  .ud-icon-xxlarge {
+    width: 6.4rem;
+    height: 6.4rem;
+  }
+  .intro-asset--asset--uXC50 .intro-asset--placeholder--5HTOK {
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    width: 100%; 
+  }
+  .intro-asset--asset--uXC50 .intro-asset--placeholder--5HTOK > :not(:first-child) {
+    margin-left: 0;
+  }
+
+  .intro-asset--asset--uXC50 .intro-asset--img-aspect--3gluH img, .intro-asset--asset--uXC50 .intro-asset--overlay--kOavR {
+    display: block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute; /* Esto ya está bien para la imagen de fondo */
+    
+  }
+  .ud-btn > :not(:first-child) {
+    margin-left: .4rem;
+  }
+  .ud-heading-md {
+    align-items: flex-start; /* Mueve el texto a la parte inferior */
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-size: 1.6rem;
+  }
 
 .ud-play-overlay {
     position: absolute;
-    top: 45%;
-    left: 45%;
-    color: white;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.lead-container {
-    width: 50%;
+    color: black; /* Color del ícono de reproducción */
+    background-color: white; /* Fondo blanco circular */
+    border-radius: 50%; /* Hace que el fondo sea circular */
+    width: 60px; /* Ajusta el tamaño del círculo */
+    height: 60px; /* Ajusta el tamaño del círculo */
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añadir sombra para darle un toque de relieve */
 }
 
-/* Estilos del título y descripción */
+.ud-play-overlay i {
+    font-size: 24px; /* Ajusta el tamaño del ícono de reproducción */
+}
+
+/*Seccion de la informaciom de los cursos */
+/* Contenedor principal */
+.ud-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    height: auto;
+}
+
+/* Título principal */
 .ud-heading-xxl {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
-    margin-bottom: 10px;
-    color: #333; /* Mejor contraste */
+    margin-bottom: 15px;
+    color: #333;
 }
-
+.ud-heading-xxl, .ud-text-lg, .clp-lead__badge-ratings-enrollment {
+    margin-bottom: 15px; /* Aumentar el espacio entre cada bloque */
+}
+/* Subtítulo */
 .ud-text-lg {
     font-size: 18px;
-    color: #555; /* Texto más oscuro para mejor legibilidad */
+    color: #555;
     margin-bottom: 15px;
 }
 
-.course-info {
+/* Badges y ratings */
+.clp-lead__badge-ratings-enrollment {
     display: flex;
-    gap: 20px;
+    flex-direction: row;
     align-items: center;
+    gap: 20px;
     margin-bottom: 20px;
 }
 
-/* Estilos para la insignia del curso */
-.badge {
-    background-color: #e63946; /* Color rojo más brillante */
+/* Badge de tutorial gratuito */
+.ribbon-module--ribbon--vVul- {
+    background-color: #ff4757; /* Cambiar el color del badge a un tono más suave */
     padding: 5px 12px;
     color: white;
     border-radius: 5px;
     font-size: 12px;
+    font-weight: bold;
 }
 
-/* Información del curso */
-.rating, .students, .duration {
+/* Calificaciones y detalles de los estudiantes */
+.styles--rating-wrapper--YkK4n {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.star-rating-module--star-wrapper--i1cJH {
+    color: #f39c12;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 10px; /* Añadir espacio entre las estrellas y el texto */
+}
+
+.enrollment {
     font-size: 14px;
-    color: #555; /* Color más sutil */
+    color: #555;
 }
 
-.course-instructor {
+/* Duración del video */
+.course-content-length--course-content-length--J-A-b {
+    display: flex;
+    align-items: center;
     font-size: 14px;
-    margin-bottom: 20px;
+    color: #555;
+    gap: 5px;
 }
 
-.course-instructor a {
+/* Estilos del ícono de video */
+.course-content-length--video-icon--gY7CC {
+    color: #0073b1;
+    font-size: 16px;
+}
+
+/* Información del creador del curso */
+.instructor-links--instructor-links--8GNDS {
+    margin-bottom: 10px;
+}
+
+.instructor-links--names--fJWai {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.instructor-links--names--fJWai a {
     color: #0073b1;
     text-decoration: none;
 }
 
-.course-instructor a:hover {
-    text-decoration: underline; /* Subrayado al pasar por encima */
+.instructor-links--names--fJWai a:hover {
+    text-decoration: underline;
 }
 
-/* Sección de compra */
-.buy-section {
+/* Estilo para los íconos */
+.ud-icon {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #555;
+}
+
+/* Estilos de idioma y subtítulos */
+.clp-lead__element-meta {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+.clp-lead__element-item {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+/* Botones de inscripción y compartir */
+.purchase-section-container--purchase-section-container--mgZp7 {
     margin-top: 20px;
 }
 
-.price-info .price {
-    font-size: 28px;
+.ud-btn {
+    padding: 12px 20px;
+    font-size: 16px;
     font-weight: bold;
-    color: #0073b1; /* Azul para destacar el precio */
-}
-
-.enroll-btn {
-    padding: 10px 20px;
-    background-color: #0073b1;
-    color: white;
-    border: none;
     border-radius: 5px;
+    border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
 }
 
-.enroll-btn:hover {
-    background-color: #005f8d; /* Oscurecer botón al pasar el ratón */
+.ud-btn-primary {
+        background-color: #0073b1;
+        color: white;
+        width: 100%; /* Asegura que el botón ocupe todo el ancho */
+}
+
+.ud-btn-primary:hover {
+    background-color: #005f8d;
+}
+
+.ud-btn-secondary {
+    background-color: #f8f8f8;
+    color: #333;
+    width: 100%; /* Asegura que el botón ocupe todo el ancho */
+    margin-top: 10px;
+}
+
+.ud-btn-secondary:hover {
+    background-color: #ddd;
+}
+
+/* Contenedor con altura máxima */
+.ud-container {
+    max-height: 364px;
+    overflow: hidden;
+}
+
+
+
+
+/* Hacer responsive para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .heading {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    }
+
+    .introduction-container, .lead-container {
+        width: 100%; /* Hacer que ambos contenedores ocupen todo el ancho */
+    }
+
+    .ud-heading-xxl {
+        font-size: 24px;
+    }
+
+    .ud-text-lg {
+        font-size: 16px;
+    }
+
+    .intro-asset--img-aspect--3gluH img {
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .enroll-btn {
+        width: 100%; /* Hacer que el botón ocupe todo el ancho en móviles */
+    }
 }
