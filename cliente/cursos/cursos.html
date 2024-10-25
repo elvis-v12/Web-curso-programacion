@@ -7,36 +7,114 @@
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/header.css">
     <link rel="icon" type="image/png" sizes="16x16" href="/cliente/principal/imagenes/LogoMarca.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous" />
     <title>DarkCode-Cursos</title>
 </head>
 
 <body>
     <header class="header">
-        <a href="/cliente/principal/Inicio.html" class="header__home">
-            <img src="/cliente/principal/pictures/logo/Logo_Img.png" alt="">
-        </a>
+        <div class="header__home">
+            <a href="/cliente/principal/Inicio.html">
+                <img src="/cliente/principal/pictures/logo/logo_sinFondo.png" alt="Logo del sitio">
+            </a>
+        </div>
+
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#">Beca</a></li>
+                <li class="nav__item"><a href="#">Categorías</a></li>
+                <li class="nav__item"><a href="#">Planes</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__actions">
+            <ul class="header__actions_list">
+                <li class="actions__item">
+                    <a href="V_Carrito/V_Carrito.html">
+                        <i class="bi bi-cart-fill"></i>
+                        <span id="productosSeleccionados">0</span>
+                    </a>
+                </li>
+                <li class="actions__item"><a href="/cliente/autentificacion/login.html">Ingresar</a>
+                </li>
+                <li class="actions__item"><a href="/cliente/autentificacion/signup.html">Registrarse</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <nav class="search">
         <form class="search__form">
-            <input type="text" name="" id="" placeholder="Buscar curso" class="search__input_txt">
-            <button type="button" class="search__input_btn" id="btnSearchCourse">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#a6ff00" stroke-width="2" height="24"
-                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true">
-                    <path clip-rule="evenodd"
-                        d="M16.296 16.996a8 8 0 11.707-.708l3.909 3.91-.707.707-3.909-3.909zM18 11a7 7 0 00-14 0 7 7 0 1014 0z"
-                        fill-rule="evenodd"></path>
-                </svg>
-            </button>
+            <div class="search__text">
+                <input type="text" name="" id="" placeholder="Buscar curso" class="search__input_txt">
+                <button type="button" class="search__input_btn" id="btnSearchCourse">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#a6ff00" stroke-width="2" height="24"
+                        viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true">
+                        <path clip-rule="evenodd"
+                            d="M16.296 16.996a8 8 0 11.707-.708l3.909 3.91-.707.707-3.909-3.909zM18 11a7 7 0 00-14 0 7 7 0 1014 0z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="search__filters">
+                <div class="search__filters-wrapper" action="search">
+                    <label for="categories" class="categorias__label">Categorías</label>
+                    <div class="categorias__content">
+                        <ul class="categorias__list">
+                            <li class="categorias__item" data-value="Development">
+                                <i class="fas fa-laptop-code"></i> Development
+                            </li>
+                            <li class="categorias__item" data-value="Tecnología">
+                                <i class="fas fa-microchip"></i> Tecnología
+                            </li>
+                            <li class="categorias__item" data-value="Software">
+                                <i class="fas fa-code"></i> Software
+                            </li>
+                            <li class="categorias__item" data-value="Diseño">
+                                <i class="fas fa-paint-brush"></i> Diseño
+                            </li>
+                            <li class="categorias__item" data-value="Java">
+                                <i class="fab fa-java"></i> Java
+                            </li>
+                            <li class="categorias__item" data-value="Python">
+                                <i class="fab fa-python"></i> Python
+                            </li>
+                            <li class="categorias__item" data-value="SQL Server">
+                                <i class="fas fa-database"></i> SQL Server
+                            </li>
+                            <li class="categorias__item" data-value="JavaScript">
+                                <i class="fab fa-html5"></i> HTML
+                            </li>
+                            <li class="categorias__item" data-value="HTML">
+                                <i class="fab fa-js-square"></i> JavaScript
+                            </li>
+                            <li class="categorias__item" data-value="Kali Linux">
+                                <i class="fab fa-linux"></i> Kali Linux
+                            </li>
+                            <li class="categorias__item" data-value="CSS">
+                                <i class="fab fa-css3-alt"></i> CSS
+                            </li>
+                            <li class="categorias__item" data-value="Mongo DB">
+                                <i class="fas fa-database"></i> Mongo DB
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="filter__btn" id="filterPopular">Más Populares</button>
+                <button type="button" class="filter__btn" id="filterRecent">Más Recientes</button>
+            </div>
         </form>
     </nav>
 
     <main class="main">
+        </section>
         <section class="main__section courses">
             <h2 class="main__section_title courses__title">Cursos Destacados</h2>
             <div class="courses__list"></div>
         </section>
     </main>
+
     <script type="module" src="/server/script/cursos.js"></script>
 </body>
 

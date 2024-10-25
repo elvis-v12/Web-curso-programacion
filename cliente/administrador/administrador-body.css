@@ -10,7 +10,7 @@
 
 @media (width < 600px) {
         .body__content {
-                overflow: inherit;
+                overflow: inhPerit;
                 height: auto;
                 min-height: 67vh;
         }
