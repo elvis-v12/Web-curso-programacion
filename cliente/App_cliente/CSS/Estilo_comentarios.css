@@ -1,384 +1,539 @@
 /* Contenedor principal para la sesión de video */
-.video-sesion {
+.cajas {
     padding: 20px;
     margin-left: 100px;
     width: 100%;
     flex-grow: 1;
     height: 100%; /* Ocupar toda la altura del viewport */
-    overflow-y: hidden; /* Evitar desbordamiento en el contenido principal */
-    background-color: white;
+    overflow-y: auto; /* Permitir desplazamiento si el contenido es largo */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; /* Redondear bordes */
     display: flex;
+    flex-direction: column; /* Alinear los elementos en columna */
+    justify-content: center; /* Alineación central vertical */
+    align-items: center; /* Centrar horizontalmente */
+}
+.MyRoutes_MyRoutes__MzB6R{
+    margin: 0px 60px 0px 60px;
+}
+/* Título de las rutas */
+.MyRoutes_MyRoutes__list-panel__PUY_f {
+    display: flex; /* Configuración de flexbox */
+    justify-content: space-between; /* Distribuye los elementos a los extremos */
+    align-items: center; /* Alinea verticalmente al centro */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px 0; /* Añade algo de padding arriba y abajo */
 }
 
-/* Contenedor para los botones de despliegue */
-.caja_deBotones {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between; /* Distribuye los botones a lo largo del contenedor */
-    height: 100%; /* Ocupar toda la altura del contenedor padre */
-    max-height: 100%; /* Mantener el tamaño máximo del contenedor */
-    width: 70px;
-    overflow-y: auto; /* Habilitar la barra de desplazamiento si se excede la altura */
-    padding-right: 10px; /* Para evitar que el contenido quede detrás del scrollbar */
-    scrollbar-width: thin; /* Estilo del scrollbar en navegadores compatibles */
-    scrollbar-color: #7ED321 #e0e0e0; /* Color del scroll en Firefox */
-}
-
-/* Estilo de la barra de desplazamiento para navegadores WebKit (Chrome, Safari, Edge) */
-.caja_deBotones::-webkit-scrollbar {
-    width: 8px; /* Ancho de la barra de desplazamiento */
-}
-
-.caja_deBotones::-webkit-scrollbar-track {
-    background: #e0e0e0; /* Color de fondo del track del scrollbar */
-}
-
-.caja_deBotones::-webkit-scrollbar-thumb {
-    background-color: #7ED321; /* Color de la barra de desplazamiento */
-    border-radius: 20px; /* Bordes redondeados del scrollbar */
-    border: 2px solid #e0e0e0; /* Borde del scroll */
-}
-
-/* Botones circulares */
-.caja_deBotones a {
-    display: inline-block;
-    width: 30px; /* Tamaño reducido */
-    height: 30px; /* Tamaño reducido */
-    background-color: transparent; /* Fondo transparente */
-    border: 2px solid #7ED321; /* Borde verde */
-    border-radius: 50%;
-    color: #7ED321;
-    text-decoration: none;
-    text-align: center;
-    line-height: 26px; /* Centrar el número dentro del círculo */
-    font-size: 14px;
-    position: relative;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s; /* Transición suave */
-    margin: 10px 0; /* Separación entre botones */
-}
-
-/* Líneas conectadas entre los botones */
-.caja_deBotones a::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    width: 2px;
-    height: 20px; /* Tamaño de la línea */
-    background-color: #7ED321;
-    transform: translateX(-50%);
-}
-
-.caja_deBotones a:last-child::after {
-    display: none; /* No mostrar la línea en el último botón */
-}
-
-/* Cambio de color cuando el botón está activo o se pasa el cursor */
-.caja_deBotones a:hover {
-    background-color: #7ED321;
-    color: white; /* Cambia el color del texto a blanco */
-}
-
-
-/* Contenedor con desplazamiento para videos */
-.videos-contenedor {
-    flex-grow: 1; /* Permitir que el contenedor de videos crezca */
-    width: 100%; /* Ocupar todo el ancho */
-}
-
-/* Para la lista de comentarios con desplazamiento */
-.comentarios-lista {
-    margin-top: 15px;
-    background-color: #f1f1f1;
-    padding: 10px;
-    border-radius: 5px;
-    max-height: 300px; /* Limitar el alto máximo */
-    overflow-y: auto; /* Desplazamiento si hay muchos comentarios */
-}
-
-/* Personalizar la barra de desplazamiento para navegadores WebKit (Chrome, Safari, Edge) */
-.comentarios-lista::-webkit-scrollbar {
-    width: 8px; /* Ancho de la barra de desplazamiento */
-}
-
-.comentarios-lista::-webkit-scrollbar-track {
-    background: #e0e0e0; /* Color de fondo de la barra */
-}
-
-.comentarios-lista::-webkit-scrollbar-thumb {
-    background-color: #3498db; /* Color del "pulgar" (la parte móvil de la barra) */
-    border-radius: 20px; /* Bordes redondeados del scrollbar */
-    border: 2px solid #e0e0e0; /* Borde alrededor del pulgar */
-}
-
-
-
-/* Mantener el estilo de los botones y las interacciones de comentarios */
-.acciones-comentario {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.me-gusta-btn, .responder-btn {
-    background-color: transparent;
-    border: none;
-    color: #3498db;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.me-gusta-btn:hover, .responder-btn:hover {
-    text-decoration: underline;
-}
-
-.contenedor-sesion {
-   width: 100%;
-    margin: 0px;
-
-}
-
-
-/* Mantener el estilo de los botones y las interacciones de comentarios */
-.acciones-comentario {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.me-gusta-btn, .responder-btn {
-    background-color: transparent;
-    border: none;
-    color: #3498db;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.me-gusta-btn:hover, .responder-btn:hover {
-    text-decoration: underline;
-}
-
-.contenedor-sesion {
-    max-width: 100%;
-    margin: 0px;
-}
-
-.video-sesion--titulo h2 {
-    font-size: 32px;
-    color: #2c3e50;
-    margin: 40px 0px 0px 30px;
-    
-}
-.SesionTItulo{
-    color: #3498db;
-    font-weight: bold;
-}
-
-.video-item {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%; /* Ocupar toda la altura */
-    overflow-y: auto; /* Añadir barra de desplazamiento solo en el eje vertical */
-    max-height: 620px; /* Limitar la altura máxima si es necesario */
-}
-
-/* Estilo para mantener el video-item--contenido estático en la página */
-.video-item--contenido {
-    margin-bottom: 20px; /* Añadir espacio entre el video y el área de comentarios */
-}
-
-/* Estilo cuando la pantalla se minimiza o cambia el tamaño */
-@media (max-width: 768px) {
-    .video-item--contenido {
-        width: 100%; /* Asegurarse de que se ajuste al ancho completo de la pantalla */
-        position: fixed; /* Fijarlo en la parte superior cuando la pantalla sea más pequeña */
-        top: 0; /* Mantenerlo en la parte superior al minimizar */
-        left: 0;
-        right: 0;
-        z-index: 1000; /* Mantenerlo visible por encima del resto del contenido */
-    }
-}
-
-.video-item--contenido h3 {
+/* Asegurar que el título esté alineado a la izquierda */
+.MyRoutes_MyRoutes__title__N3ELK {
+    color: #ffffff; /* Cambiar a blanco para mejor contraste */
     font-size: 24px;
-    margin-top: 15px;
-    color: #34495e;
+    font-weight: bold;
+    margin: 0; /* Elimina el margen para asegurar una alineación perfecta */
+    flex-grow: 1; /* Permite que el título ocupe el espacio disponible */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
 
+/* Ajustar el contenedor del botón para que esté a la derecha */
+.MyRoutes_MyRoutes__list-panel__actions___UJE0 {
+    flex-shrink: 0; /* Evita que el contenedor del botón se reduzca */
 }
 
 
-/* Descripción del video centrado */
-.video-item--contenido p {
-    font-size: 16px;
-    color: #7f8c8d;
-    text-align: center;
-    overflow: hidden; /* Si el texto es demasiado largo, evitará que se desborde */
-    white-space: normal; /* Asegura que el texto haga saltos de línea normales */
-    word-wrap: break-word; /* Si hay palabras largas, las cortará en líneas nuevas */
-}
-
-/* Texto limitado a 3 líneas inicialmente */
-/* Limitar a 3 líneas, si es compatible */
-.descripcion {
-    display: -webkit-box;
-line-clamp: 3; /* Limitar a 3 líneas para navegadores WebKit */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal;
-    word-wrap: break-word;
-    text-align: center;
-}
-
-
-
-/* Botón de ver más */
-.ver-mas-btn {
-    background-color: #3498db;
+/* Botón de crear una ruta */
+.openModalButton {
+    background-color: #2d323a; /* Color de fondo gris oscuro */
     color: white;
     border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
+    padding: 10px 20px; /* Padding inicial */
     border-radius: 5px;
-    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, padding 0.3s ease; /* Transición suave para el color y el padding */
 }
 
-.ver-mas-btn:hover {
-    background-color: #2980b9;
+.openModalButton:hover {
+    background-color: #3a3f47; /* Efecto hover con un gris más claro */
+    padding-bottom: 8px; /* Mantener el tamaño del botón uniforme */
 }
 
 
-.comentarios-preguntas {
+/* Divider (hr) */
+.Divider_Divider__W2a5G {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 1px;
+    background-color: #2d323a;
     width: 100%;
-    height: auto; /* Se ajusta a la altura del contenido */
+}
+.EmptyLearningPaths{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 2rem;
+  padding: 0 1.5rem;
+  margin-top: 80px;
+  text-align: center;
 }
 
-.comentarios-preguntas h4 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #2c3e50;
+/* Texto de los cursos vacíos */
+.EmptyLearningPaths-title {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
-.formulario-comentarios {
+
+/* Ajuste adicional para el botón dentro del mensaje vacío */
+.EmptyLearningPaths .Button {
+    margin-top: 15px; /* Espaciado extra encima del botón */
+}
+
+/* Ajuste del contenedor principal para evitar desbordamientos */
+.cajas #Video_Seccioin {
     display: flex;
     flex-direction: column;
-}
-.formulario-comentarios textarea {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-    margin-bottom: 10px;
-    resize: none;
-    height: 100%; /* Ajusta la altura al 100% del contenedor */
-    overflow-y: auto; /* Añade la barra de desplazamiento */
-}
-
-.formulario-comentarios button {
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    height: 30px;
-    margin: 10px;
-}
-
-.formulario-comentarios button:hover {
-    background-color: #2980b9;
-}
-
-
-.comentario {
-    padding: 10px;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.comentario:last-child {
-    border-bottom: none;
-}
-
-.comentario p {
-    margin: 0;
-    font-size: 14px;
-    color: #2c3e50;
-}
-
-.comentario strong {
-    color: #3498db;
-}
-
-/* Estilos para acciones de comentarios */
-
-
-.me-gusta-btn, .responder-btn {
-    background-color: transparent;
-    border: none;
-    color: #3498db;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.me-gusta-btn:hover, .responder-btn:hover {
-    text-decoration: underline;
-}
-
-/* Contador de likes */
-.contador-likes {
-    font-weight: bold;
-    margin-left: 5px;
-}
-
-/* Formulario de respuesta */
-.respuesta {
-    margin-top: 10px;
-    display: none; /* Oculto por defecto, se mostrará al hacer clic en "Responder" */
-}
-
-.formulario-respuesta textarea {
+    align-items: center;
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 8px;
-    font-size: 14px;
 }
 
-.formulario-respuesta button {
-    padding: 8px 16px;
-    background-color: #2ecc71;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/*Crear las rutas*/
+/* Estilo del modal */
+.Modal_Modal-wrapper__vpMoS {
+    background-color: #1c1e22;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 300;
+    display: none; /* Ocultar por defecto */
+}
+.Input_Input__content__27Lcf{
+    width: 80%;
+}
+.Input_Input__container__CfvcQ{
+    display: flex;
+  border: 1px solid #555c68;
+  border-radius: .5rem;
+  align-items: center;
+ margin: 20px 0px 20px 0px;
+}
+.Input_Input__counter__nV_OG{
+    margin-right: 1rem;
+  font-weight: 400;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  color: #87909d;
+}
+.ModalHeader_ModalHeader__jAGAU{
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: hsla(0,0%,100%,.95);
+  text-align: center;
+  padding: 0 1.25rem;
+  margin: 0 auto;
+  width: 100%;
+
+}
+.ModalHeader_ModalHeader__jAGAU h2{
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: -.008rem;
+    text-transform: none;
+    text-decoration: none;
+    margin: 0 auto;
+}
+.Input_Input__container__CfvcQ:hover{
+    border: 1px solid #05a460;
+}
+.Input_Input__field__3S_Uj {
+    height: 45px;
+    width: 100%;
+    background-color: transparent; /* Hacer el fondo transparente */
+    border: none; /* Quitar el borde */
+    outline: none; /* Eliminar el borde de enfoque */
+    color: inherit; /* Asegurar que el color del texto coincida con el entorno */
+    margin-left: 20px;
+    color: #f2f2f2;
 }
 
-.formulario-respuesta button:hover {
-    background-color: #27ae60;
-}
-
-.video-sesion, .main-content {
-    transition: opacity 0.3s ease-in-out;
+.Modal_Modal-wrapper__vpMoS.active {
+    display: block; /* Mostrar cuando se active */
 }
 
 .hidden {
-    opacity: 0;
     display: none;
 }
 
-.container {
-    padding-top: 20px;
+/* Fondo oscuro tras el modal */
+.ModalBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    display: none;
+}
+
+.ModalBackground.active {
+    display: block;
+}
+
+/* Ajustes para botones del modal */
+/* Estilos para los botones en el ModalFooter */
+.ModalFooter {
+    display: flex;
+    justify-content: space-between; /* Alineación a los extremos */
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Botón Cancelar */
+.Button--tertiary {
+    background-color: #2d323a; /* Fondo gris oscuro */
+    color: #ffffff; /* Texto blanco */
+    border: 1px solid #3a3f47; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1; /* Asegura que ambos botones tengan el mismo ancho */
+    margin-right: 10px; /* Espaciado entre los botones */
+}
+
+/* Hover para Cancelar */
+.Button--tertiary:hover {
+    background-color: #3a3f47; /* Fondo más claro al pasar el mouse */
+}
+
+/* Botón Crear */
+.Button--primary {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+    border: 1px solid #3a3f47; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1; /* Asegura que ambos botones tengan el mismo ancho */
+}
+
+/* Hover para Crear */
+.Button--primary:hover {
+    background-color: #f0f0f0; /* Fondo más claro al pasar el mouse */
+}
+
+
+.hidden {
+    display: none;
+}
+
+.LearningPathsListItem-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto; /* Empuja el botón al final del contenedor */
+    padding-right: 10px; /* Espacio a la derecha */
+}
+
+
+.ButtonLayout-module_ButtonLayout__eaqR3 {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.ButtonLayout-module_ButtonLayout__eaqR3:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Color al pasar el cursor */
+}
+
+.ButtonLayout-module_ButtonLayout--icon--sm__n7Jmp svg {
+    fill: #C4C8CE;
+    width: 16px;
+    height: 16px;
+}
+
+.ButtonLayout-module_ButtonLayout--sm__hFh7H {
+    font-size: 0.875em; /* Ajuste de tamaño para el icono pequeño */
+}
+
+/*Modificando el Stylo de las rutas */
+.LearningPathsListItem-container{
+    display: flex;
+}
+.LearningPathsListItem-badge-image{
+    display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: var(--bgColor,#2d323a);
+}
+.LearningPathsListItem-badge-image img{
+
+width: 24px;
+  height: 24px;
+  border-radius: 100%;
+}
+.LearningPathsListItem-content{
+    display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  flex: 1 1;
+}
+.LearningPathsListItem-content-title{
+    font-weight: 500;
+    font-size: .875rem;
+    letter-spacing: .019rem;
+    text-transform: none;
+    text-decoration: none;
+    text-align: none;
+    text-align: left;
+}
+.LearningPathsListItem-content-info{
+    font-weight: 500;
+  font-size: .75rem;
+  letter-spacing: .019rem;
+  text-transform: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: #87909d;
+}
+.LearningPathsListItem-progress{
+    display: flex;
+}
+.LearningPathsListItem-progress {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinear la barra de progreso a la derecha */
+    gap: 10px; /* Espaciado entre el porcentaje y la barra */
+}
+
+.Progress {
+    display: flex;
+    align-items: center;
+}
+
+.Progress-label {
+    color: #87909d; /* Color del texto para el porcentaje */
+    font-size: 0.875rem; /* Tamaño de la fuente */
+    margin-right: 8px; /* Espacio entre el texto y la barra de progreso */
+}
+
+.Progress-bar {
+    background-color: #ccc4; /* Fondo de la barra de progreso */
+    border-radius: 5px;
+    width: 150px; /* Ancho de la barra */
+    height: 4px; /* Altura de la barra */
+    position: relative;
+    overflow: hidden; /* Para asegurarse de que los bordes redondeados se mantengan */
+}
+
+.Progress-value {
+    background-color: #05a460; /* Color de la barra de progreso completada */
+    height: 100%;
+    border-radius: 5px;
+    width: 0%; /* Ancho inicial de la barra, ajustable dinámicamente */
+    transition: width 0.3s ease; /* Transición suave para el cambio de progreso */
+}
+
+.LearningPathsListItem-actions {
+    margin-left: 10px; /* Espaciado entre la barra y el botón de eliminar */
+}
+
+.ButtonLayout-module_ButtonLayout__eaqR3 {
+    background-color: transparent; /* Fondo transparente para el botón */
+    border: none;
+    cursor: pointer;
+}
+
+.ButtonLayout-module_ButtonLayout__eaqR3:hover svg path {
+    fill: #ff4d4f; /* Cambiar el color del ícono al pasar el mouse */
+}
+
+/*Secion de elimnar */
+/* Estilo general del modal de eliminación */
+.DeletePathButton_DeletePathButton__Modal__tHr_7 {
+    background-color: #1c1e22; /* Fondo oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 300;
+    display: none; /* Oculto por defecto */
+    height: 265px;
+}
+
+/* Activa la visibilidad del modal */
+.DeletePathButton_DeletePathButton__Modal__tHr_7.active {
+    display: block;
+}
+
+/* Fondo oscuro tras el modal */
+.ModalBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    display: none;
+}
+
+.ModalBackground.active {
+    display: block;
+}
+/* Encabezado del modal */
+.DeletePathButton_DeletePathButton__Header__FAu7t{
+    display: flex;
+    flex-direction: column; /* Disposición en columna para colocar SVG encima del texto */
+    align-items: center;
+    justify-content: center;
+    color: hsla(0, 0%, 100%, 0.95); /* Color del texto blanco */
+    text-align: center;
+    padding-bottom: 20px; /* Ajuste para dar más espacio */
+    margin-bottom: 20px;
+}
+
+/* SVG Ajuste de estilo adicional para centrado */
+.DeletePathButton_DeletePathButton__Header__FAu7t svg {
+    margin-bottom: 10px;
+  width: 2em;
+  height: 2em;
+}
+
+/* Estilo del texto del título */
+.DeletePathButton_DeletePathButton__Header__FAu7t h2 {
+    font-weight: 500;
+    font-size: 1rem; /* Ajuste de tamaño para mayor legibilidad */
+    letter-spacing: -0.008rem;
+    text-transform: none;
+    text-decoration: none;
+    margin: 0;
+}
+
+/* Cuerpo del modal */
+.DeletePathButton_DeletePathButton__Body__yk_o0 p {
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: .013rem;
+    text-transform: none;
+    text-decoration: none;
+    color: #c4c8ce;
+  }
+  .ModalBody_ModalBody__dMElc {
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: .013rem;
+    text-transform: none;
+    text-decoration: none;
+    color: #c4c8ce;
+    padding: 0 1.25rem;
+  }
+  .DeletePathButton_DeletePathButton__Body__yk_o0 p b {
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: .013rem;
+    text-transform: none;
+    text-decoration: none;
+    color: #fff;
+  }
+/* Ajuste para botones del modal */
+.DeletePathButton_DeletePathButton__Footer__QQy48 {
+    display: flex;
+    justify-content: space-between; /* Mantenerlos separados */
+    gap: 10px; /* Espacio entre los botones */
+    padding: 15px 0;
+}
+
+/* Botón Cancelar */
+.Button-module_Button--outline__EzobK {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #555c68; /* Borde claro para destacar */
+    padding: 12px 30px; /* Aumentar tamaño del botón */
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Botón Eliminar */
+.Button-module_Button--destroy__B8gsD {
+    background-color: #E74C3C; /* Color rojo para botón de eliminación */
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px; /* Aumentar tamaño del botón */
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Button-module_Button--destroy__B8gsD:hover {
+    background-color: #c0392b; /* Color más oscuro en hover */
+}
+
+.Button-module_Button--outline__EzobK:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Efecto hover para Cancelar */
+}
+
+.Button-module_Button--outline__EzobK:hover {
+    border-color: var(--button-border-color-hover);
+  }
+  .Button-module_Button--outline__EzobK:hover {
+    --button-bg-color: var(--button-bg-color-hover);
+  }
+  .Button-module_Button--outline__EzobK:hover {
+    border-color: var(--button-border-color-hover);
+  }
+  .Button-module_Button--outline__EzobK:hover {
+    --button-bg-color: var(--button-bg-color-hover);
+  }
+  .DeletePathButton_DeletePathButton__Cta__HjTOz {
+    width: 100%;
+  }
+
+/* Ajustes generales */
+.hidden {
+    display: none;
+}
+
+.Modal_Modal-wrapper__vpMoS {
+    background-color: #1c1e22;
+    border-radius: 10px;
+    padding: 20px;
+    width: 450px; /* Ajustar ancho para dar más espacio a los botones */
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 300;
 }

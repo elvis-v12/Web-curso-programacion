@@ -4,7 +4,7 @@
     --clr-main: #f2f2f2;
     --clr-main-light: #785ce9;
     --clr-white: #ececec;
-    --clr-gray: #e2e2e2;
+    --clr-gray: #003750;
     --clr-red: #961818;
     --crl-black:#000;
 }
@@ -182,7 +182,7 @@ body {
 }
 
 .bubble {
-    position: absolute;
+    position: fixed;
     border-radius: 50%;
     opacity: 0.7;
     animation: move 20s infinite ease-in-out;

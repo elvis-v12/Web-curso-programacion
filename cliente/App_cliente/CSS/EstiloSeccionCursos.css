@@ -1,0 +1,489 @@
+
+html, body {
+    overflow: hidden; /* Esto quitará el scroll de la página completa */
+}
+.main-content {
+    overflow: auto; /* Habilita el desplazamiento */
+    scrollbar-width: thin; /* Define el grosor de la barra de desplazamiento en Firefox */
+    -ms-overflow-style: auto;  /* Deja la barra visible en Internet Explorer y Edge */
+}
+
+/* Personaliza la barra de desplazamiento en navegadores Webkit (Chrome, Safari, Edge) */
+.main-content::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra vertical */
+    height: 8px; /* Ancho de la barra horizontal */
+}
+
+
+
+.main-content::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color de la parte deslizante */
+    border-radius: 10px; /* Redondear la barra de desplazamiento */
+    border: 2px solid transparent; /* Espacio alrededor del thumb */
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color de la barra al pasar el cursor */
+}
+
+/* Personalización en Firefox */
+.main-content {
+    scrollbar-width: auto; /* Grosor de la barra en Firefox */
+    scrollbar-color: #888 #f1f1f1; /* Color del thumb y el track en Firefox */
+}
+/*Seccion de diseños de fotter de anuncios*/
+
+.Section {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos (SVG, texto, botón) */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 10px 20px;
+    background-color: #1e1e1e; /* Fondo oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.1); /* Sombra ligera */
+    width: 1029;
+    height: 70;
+}
+
+.SkillMatcherBanner_SkillMatcherBanner__D2QUu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.Glow_Glow__X0pi3 {
+    display: flex;
+    align-items: center; /* Asegura que ícono y texto estén alineados verticalmente */
+    gap: 10px; /* Espacio entre ícono y texto */
+    flex-grow: 1; /* El texto y el ícono pueden ocupar más espacio */
+}
+
+.SkillMatcherBanner_SkillMatcherBanner__Icon__Su_L5 {
+    display: inline-flex; /* Asegura que el ícono esté alineado en línea */
+    align-items: center;
+    font-size: 24px;
+    color: #ccc; /* Color del ícono */
+}
+
+.SkillMatcherBanner_SkillMatcherBanner__Text__EQDRP {
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+    display: inline; /* Asegura que el texto esté en línea con el ícono */
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+}
+
+.ButtonLayout-module_ButtonLayout__eaqR32 {
+    background-color: #00ff7f;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-flex; /* Asegura que el botón y el ícono del botón estén en línea */
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Asegura que el botón no se rompa en varias líneas */
+}
+
+.ButtonLayout-module_ButtonLayout__eaqR32:hover {
+    background-color: #0af780;
+    color: #0009;
+}
+
+.ButtonLayout-module_ButtonLayout__Icon__AaDMh {
+    display: inline-block;
+}
+.SkillMatcherBanner_SkillMatcherBanner__Info__jufNx{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  /*Seccion de anuncios de suscripcion*/
+  .SimpleBanner_SimpleBanner__dbnVG {
+    margin-top: 40px;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 20px; /* Espacio entre elementos */
+    justify-content: space-between; /* Distribuye los elementos (SVG, texto, botón) */
+    padding: 10px 20px;
+    background-color: #ffffff; /* Fondo oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.1); /* Sombra ligera */
+    width: 1029;
+    height: 70;
+
+}
+
+.SimpleBanner_SimpleBanner__icon__hc__V {
+    display: flex;
+    align-items: center; /* Alinea el ícono verticalmente */
+    font-size: 24px;
+    color: #42ba87;
+}
+
+.SimpleBanner_SimpleBanner__info__T1_Gv {
+    color: #000;
+    margin: 0;
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+    flex-grow: 1; /* Permite que el texto ocupe el espacio disponible */
+    font-weight: 400;
+    font-size: .875rem;
+    letter-spacing: .019rem;
+
+}
+
+.Button--tertiary1 {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap; /* Evita que el texto del botón se rompa */
+    cursor: pointer;
+    width: 100px;
+    flex:0;
+    background-color: #2d323a;
+  color: #fff;
+  border-color: #404650;
+}
+
+.Button--tertiary1:hover {
+    border-width: var(--button-border-width,1px 1px 1px 1px);
+  margin-bottom: var(--button-margin-bottom,1px);
+}
+/*Seccion de empresas filtros de busqueda*/
+/* Estilos generales del contenedor */
+.Section--right-overflowed {
+    display: block;
+}
+
+.Section__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    padding-right: 1rem;
+}
+
+.Section__head__title {
+    font-weight: 500;
+    font-size: 1.125rem;
+    letter-spacing: -0.008rem;
+    color: #ffffff;
+}
+
+/* Carrusel de items */
+.CarouselScroll_CarouselScroll__container__ILxwV {
+    overflow-x: scroll;
+    display: flex;
+    gap: 1rem;
+    scroll-behavior: smooth;
+    padding-top: 0;
+    padding-bottom: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    cursor: pointer;
+}
+
+.SchoolFilter_SchoolFilter__3feaa {
+    display: flex;
+    width: 5rem;
+    max-width: 5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    font-family: 'Arial', sans-serif;
+    background: transparent;
+}
+
+.FilterUI_Filter__Item__lj_Li {
+    background: transparent;
+    border: none;
+    cursor: pointer; /* Aquí se asegura el cursor pointer en el botón */
+
+}
+
+/* Solo el contenedor de la imagen en forma circular */
+.Section--right-overflowed{
+    border-radius: 10px; /* Bordes redondeados */
+    width: 1029;
+    height: 70;
+    background: none;
+    border: none;
+    box-shadow: none;
+    margin-top: 20px;
+}
+.SchoolCard_SchoolCard__Image__Container__IMggw {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+
+/* Imágenes dentro del contenedor */
+.SchoolCard_SchoolCard__Image__Container__IMggw img,
+.SchoolCard_SchoolCard__Image__Container__IMggw svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Texto debajo de los íconos */
+.SchoolCard_SchoolCard__Text__Container__p8h0e {
+    display: flex;
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    height: 100%; /* Asegura que el contenedor del texto ocupe todo el espacio disponible */
+    color: #a6aab0; /* Aplica este color específico al texto */
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+    word-wrap: break-word;
+    max-width: 75px;
+    overflow: hidden;
+}
+
+/* Texto que se ajusta debajo del ícono */
+.SchoolCard_SchoolCard__Text__lKQxj {
+    color: var(--color-text, #c4c8ce);
+    text-align: center;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    font-weight: 400;
+    font-size: 0.75rem;
+    text-transform: none;
+    line-height: 1.125rem;
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 2; /* Permite que el texto se ajuste en dos líneas como máximo */
+    -webkit-box-orient: vertical;
+}
+
+.SchoolCard_SchoolCard__Text__Container__p8h0e {
+    display: flex;
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    height: 100%; /* Asegura que el contenedor del texto ocupe todo el espacio disponible */
+}
+.TextoCicular{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Secion de cursos recomendados*//* Estilos para cada tarjeta de curso ajustada a 287x167 */
+/* Contenedor de botones debajo de la descripción */
+.Card_Card__Buttons__Container {
+    display: flex;
+    justify-content: space-around; /* Espacio balanceado entre los botones */
+    align-items: center;
+    margin-top: 10px; /* Separación con la descripción */
+    padding: 5px;
+    width: 100%;
+}
+
+
+/* Estilos para el botón 'Ir al curso' */
+.Button--primary {
+    background-color: #ffffff;
+    color: #13161C;
+    border: 1px solid #13161C;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Añadir un pequeño espacio entre el texto y el SVG */
+}
+
+.Button--primary svg {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.Button--primary:hover {
+    background-color: #2a2e36;
+    color: #ffffff;
+}
+
+/* Estilos para el botón 'Agregar' */
+.Button--unstyle {
+    background-color: #404650;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Añadir espacio entre el texto y el SVG */
+    margin-left: 5px;
+}
+
+.Button--unstyle:hover {
+    background-color: #2a2e36;
+}
+/* Ajusta el color del ícono del botón primario */
+.Button--primary svg path {
+    fill: #13161C;  /* Cambia el color según tu necesidad */
+}
+
+/* Ajusta el color del ícono del botón 'Agregar' */
+.Button--unstyle svg path {
+    fill: #ffffff;  /* Cambia el color a blanco */
+}
+
+
+.Button--unstyle:hover {
+    background-color: #2a2e36;
+}
+
+/* Ajustes adicionales para el tamaño y disposición de los botones */
+.Button--md {
+    width: 45%; /* Ambos botones tendrán el mismo tamaño */
+    text-align: center;
+}
+
+/* Ajustes generales de la tarjeta */
+
+/* Ajuste de las imágenes dentro de la tarjeta */
+.CardImage_CourseImage__avHfJ img {
+    border-radius: .5rem;
+    width: 100%;
+    height: auto;
+}
+/*Ajustamndo la informacion de los cursos*/
+.Card_Card__Info__Q2g_1{
+    display: flex;
+    width: 100%;
+    margin: none;
+    padding: none;
+}
+.CourseCard_CourseCard__Shield__s54_C {
+    max-width: 2rem;
+    padding-top: .25rem;
+  }
+  .CourseCard_CourseCard__Detail__elSrc {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    height: 100%;
+    padding-right: .25rem;
+  }
+
+  /*Secion de los titulos de los cursos */
+  .CourseCard_CourseCard__Title__LXNxo {
+    font-weight: 500;
+    font-size: .875rem;
+    letter-spacing: -.008rem;
+    text-transform: none;
+    text-decoration: none;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #c4c8ce;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: .16px;
+  }
+  .CourseCard_CourseCard__Teachers__mNpqd {
+    font-weight: 400;
+    font-size: .75rem;
+    letter-spacing: .019rem;
+    text-transform: none;
+    text-decoration: none;
+    display: -webkit-box;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #87909d;
+    line-height: 1.125rem;
+    letter-spacing: .16px;
+  }
+
+/* Ajuste de los textos de título y descripción */
+
+.Card_Card__02zp3 {
+    position: relative; /* Esto permitirá que el ranking con absolute se posicione dentro de este contenedor */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 287px;
+    height: 350px; /* Ajusta el alto si es necesario */
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    max-width: 260px; /* Ajusta el ancho máximo de las tarjetas */
+}
+
+/* Ajuste para el ranking, posición a la derecha */
+.Ranking_Ranking__tg2fc {
+    background-color: #1d2029; /* Fondo blanco */
+    border-radius: .5rem 0 .4rem 0; /* Bordes redondeados */
+    display: inline-flex;
+    justify-content: flex-end; /* Alinear a la derecha */
+    align-items: center;
+    padding: 5px 10px; /* Añadir relleno interno */
+    position: absolute; /* Posición absoluta para controlarlo dentro de la tarjeta */
+    top: 113px; /* Espaciado desde el borde superior */
+    right: 10px; /* Espaciado desde el borde derecho */
+    z-index: 1; /* Asegurarse de que esté por encima de otros elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añadir sombra para resaltarlo */
+}
+
+/* Estilo de las estrellas del ranking */
+.Ranking_Ranking__Stars__DFN2x {
+    color: #fff;
+    font-weight: 500;
+    font-size: .875rem;
+    letter-spacing: .019rem;
+    text-transform: none;
+    text-decoration: none;
+    font-size: .75rem;
+    text-align: right;
+    line-height: 16px;
+    letter-spacing: .16px;
+    margin-left: 6px;
+}
+
+/* Contenedor general para mantener las tarjetas más juntas */
+.CarouselScroll_CarouselScroll__container__ILxwV {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+/*Seccion de cursos titulis de cada curso por secion recomendados, mejores y lanzados*/
+.SchoolTitle_SchoolTitle__CKIcx{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: -.008rem;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: .16px;
+}

@@ -2,7 +2,7 @@
     {
         "id": 1,
         "code": "CUR001",
-        "url": "/cliente/cursos/cursosDetalles.html",
+        "url": "./cliente/cursos/cursosDetalles.html",
         "author": "Alvaro Chirou",
         "name": "Python Practicando. Desde 0 hasta Desarrollador en Python",
         "score": "4,6",

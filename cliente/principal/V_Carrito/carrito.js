@@ -1,5 +1,4 @@
 let productosEnCarrito = JSON.parse(localStorage.getItem("cart")) || [];
-console.log(productosEnCarrito);
 const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
 const contenedorCarritoProductos = document.querySelector("#carrito-productos");
 const contenedorCarritoAcciones = document.querySelector("#carrito-acciones");
@@ -22,8 +21,10 @@ function cargarProductosCarrito() {
         productosEnCarrito.forEach(producto => {
             const div = document.createElement("div");
             div.classList.add("carrito-producto");
+            let isPlan = (producto.code[0] + producto.code[1]) === "PL"
+
             div.innerHTML = `
-                <img class="carrito-producto-imagen" src="${producto.portada}" alt="${producto.name}">
+               ${isPlan ? '' : ` <img class="carrito-producto-imagen" src="${producto.portada}" alt="${producto.name}">`}
                 <div class="carrito-producto-titulo">
                     <small>Título</small>
                     <h3>${producto.name}</h3>
@@ -144,3 +145,4 @@ function comprarCarrito() {
     contenedorCarritoAcciones.classList.add("disabled");
     contenedorCarritoComprado.classList.remove("disabled");
 }
+
