@@ -16,20 +16,22 @@ body {
     background-size: cover;
 }
 */
-
+:root{
+    --azuloscuro: #141E30;
+    --linea-grad: linear-gradient(to right, #141E30, #243B55);
+    --azulClaro: #243B55;
+    
+}
 body {
-    background-color: #ffffff;
+    background: linear-gradient(to top right, #000000 20%, #004d40 80%);
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Imagen correctamente referenciada */
     background-position: center;
     background-size: cover;
-    /* La imagen cubrirá todo el fondo */
     background-repeat: no-repeat;
-    /* Para evitar que la imagen se repita */
 }
 section {
     height: 50vh;
@@ -66,26 +68,27 @@ form label {
 
 form input[type="email"],
 form input[type="password"],
-form input[type="text"] {
+form input[type="text"],
+form input[type="date"] {
     width:100%;
     height: 30px;
     background-color: transparent;
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 2px solid #CBCBCB;
+    border-bottom: 2px solid #f8f7f7;
     outline: none;
     margin-bottom: 2rem;
-    color: #000;
+    color: #ffffff;
     padding-left: 0.5rem;
 }
-
+ 
 form input[type="submit"] {
     width: 100%;
     height: 45px;
     border-radius: 55px;
-    background: rgba(255, 255, 255, 0.137);
-    color: #000;
+    background: rgba(95, 233, 49, 0.137);
+    color: #ffffff;
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
@@ -93,21 +96,22 @@ form input[type="submit"] {
     cursor: pointer;
     transition: all 0.4s ease-in-out;
     margin-bottom: 1rem;
+    box-shadow: 0px 0px 8px #ffffffa4;
 }
 
 form input[type="submit"]:hover {
-    box-shadow: 0px 0px 8px #ffffffa4;
+    box-shadow: 0px 0px 8px #f7f5f5a4;
 }
 
 p {
     margin-top: 1rem;
-    font-size: 16px;
-    color: #000;
+    font-size: 20px;
+    color: greenyellow;
     font-weight: bold;
 }
 
 p a {
-    color: #000;
+    color: #fffefe;
     text-decoration: none;
     opacity: 0.6;
     font-weight: 600;
@@ -123,23 +127,24 @@ p a:hover {
     align-items: center;
     width: 60%;
     height: 70%;
+
 }
 
 .form-section {
-    width: 80%;
-    height: 100%;
+    width: 75%;
+    height: 84vh;
     transition: all 0.5s ease;
 
 }
 
 .toggle-box {
     width: 30%;
-    height: 98.05%;
+    height: 82.8vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 253, 253, 0.2);
     /* Caja más clara */
     padding: 20px;
     border-radius: 0px 10px 10px 0px;
@@ -156,8 +161,8 @@ p a:hover {
 #registerBtn {
     margin-top: 1rem;
     padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.3);
-    color: #000;
+    background-color: rgba(252, 252, 252, 0.295);
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -167,7 +172,7 @@ p a:hover {
 
 #loginBtn:hover,
 #registerBtn:hover {
-    background-color: rgba(183, 187, 233, 0.6);
+    background-color: rgba(37, 202, 22, 0.6);
 }
 
 /* Animación de la caja lateral */
@@ -186,9 +191,6 @@ p a:hover {
         transform: translateX(0);
     }
 }
-
-
-/*segun gpt*/
 
 /* Para controlar la alternancia entre formularios */
 .container.active .login-section {

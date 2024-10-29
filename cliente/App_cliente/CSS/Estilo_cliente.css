@@ -121,6 +121,9 @@ body{
     padding-left: 20px; /* Añade desplazamiento al hacer hover */
     background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente en hover */
 }
+.Usuario_1{
+    color:white;
+}
 
 /* Contenido principal */
 .main-content {

@@ -11,12 +11,13 @@
     <div class="container">
         <section class="form-section">
           <h2>Inicio Sesión</h2>
-          <form id="loginForm">
+          <form id="loginForm" method="post" >
             <label>E-Mail:</label>
             <input
               type="email"
               placeholder="Ingrese su correo"
               id="email"
+              name="email"   
               required
               autofocus
             />
@@ -25,10 +26,13 @@
               type="password"
               placeholder="Ingrese su contraseña"
               id="password"
+              name="password" 
               required
             />
             <input type="submit" value="Ingresar" />
-          </form>
+        </form>
+        
+        
         </section>
   
         <!-- Caja de alternancia al costado, más clara -->
@@ -39,6 +43,8 @@
           </a>
         </section>
       </div>
-    <script src="/server/Loginjs/login.js" defer></script>
+
+    <!-- Cambié la ruta a la correcta, según tu estructura -->
+    <script src="/server/ServerLogin/login.js"></script> 
 </body>
 </html>
