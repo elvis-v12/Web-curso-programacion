@@ -2864,5 +2864,22 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+    <!-- Script para mostrar el nombre de usuario -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obtener el nombre de usuario desde localStorage
+            const userName = localStorage.getItem('userName');
+            const userNameElement = document.getElementById('userName');
+
+            if (userName && userNameElement) {
+                userNameElement.textContent = userName;  // Asignar el nombre de usuario al span
+            } else {
+                console.error('No se encontró el nombre de usuario o el elemento con id "userName".');
+            }
+        });
+    </script>
 </body>
 </html>

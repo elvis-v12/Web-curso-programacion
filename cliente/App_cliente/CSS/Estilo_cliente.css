@@ -353,7 +353,8 @@ nav .profile .profile-link a {
      text-decoration: none;
 }
 nav .profile .profile-link a:hover {
-	background: var(--grey);
+	background: var(--light);
+    color:var(--dark);
 }
 /* NAVBAR */
 

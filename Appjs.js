@@ -36,8 +36,9 @@ app.use('/App_cliente', express.static(path.join(__dirname, 'cliente/App_cliente
 app.use('/server/App_cliente', express.static(path.join(__dirname, 'server/App_cliente')));
 app.use(express.static(path.join(__dirname, '/cliente')));
 app.use(express.static(path.join(__dirname, 'cliente')));
-app.use(express.static(path.join(__dirname, 'imagenes'))); // Sirviendo imágenes
+app.use(express.static(path.join(__dirname, '/cliente/App_cliente/imagenes'))); // Sirviendo imágenes
 app.use(express.static(path.join(__dirname, 'sfa-assets/images/svg'))); // Sirviendo SVGs
+app.use(express.static(path.join(__dirname, 'cliente')));  // Sirve la carpeta "cliente"
 
 // Rutas para servir dinámicas '.html'
 app.get('/Login', (req, res) => {
@@ -59,6 +60,7 @@ app.get('/Principal', (req, res) => {
 app.get('/AppCliente', (req, res) => {
     res.sendFile(path.join(__dirname, '/cliente/App_cliente/App_estudiante.html'));
 });
+
 
 
 
@@ -113,7 +115,8 @@ app.post('/registro', async (req, res) => {
     }
 });
 
-//Login de usuario
+
+// login de usuario
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
 
@@ -145,15 +148,15 @@ app.post('/login', (req, res) => {
                 if (req.session) {
                     req.session.userId = user.id;
                     req.session.userName = user.nombres;
-
-                    // En lugar de enviar el JSON, redirige directamente desde el servidor
-                    res.redirect('/AppCliente');
+            
+                    // Enviar el nombre de usuario en la respuesta JSON
+                    return res.status(200).json({ success: true, userName: user.nombres });
                 } else {
                     return res.status(500).send({ success: false, message: 'Sesión no disponible.' });
                 }
             } else {
                 return res.status(400).send({ success: false, message: 'Contraseña incorrecta.' });
-            }
+            }        
         });
     });
 });

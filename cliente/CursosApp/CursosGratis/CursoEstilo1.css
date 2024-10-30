@@ -440,7 +440,258 @@ body{
     overflow: hidden;
 }
 
+ .profile img {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	object-fit: cover;
+	cursor: pointer;
+}
+/*Seccion del certificado de informacion de curso*/
+.Diploma-content {
+    display: flex;
+    background-color: #0e1c36;
+    padding: 20px;
+    color: white;
+    justify-content: center; /* Mantener los elementos centrados */
+    align-items: center; /* Alinear verticalmente */
+    gap: 40px; /* Espacio controlado entre la imagen y el texto */
+}
 
+.Diploma-figure img {
+    width: 300px; /* Ajustar el tamaño de la imagen del diploma */
+    border-radius: 10px;
+    border: 3px solid white; /* Borde alrededor del diploma */
+}
+
+.Diploma-description {
+    max-width: 400px;
+    text-align: left; /* Opcional, puedes dejarlo en 'center' si prefieres el texto centrado */
+}
+
+.Heading-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.Heading-subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.Heading-subtitle strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.Link {
+    background-color: #1a73e8;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.Link:hover {
+    background-color: #135ab0;
+}
+
+/*Seccion de modulos del curso*/
+/* General layout for the content and its wrapper */
+.Content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #0e1c36; /* Fondo oscuro */
+    color: #ffffff; /* Texto en blanco */
+}
+
+.u-wrapper {
+    margin: 0 auto;
+}
+
+.Heading--center {
+    text-align: center;
+}
+
+.Heading-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff; /* Texto en blanco */
+}
+
+/* Content layout and organization */
+.Content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; /* Elementos alineados horizontalmente */
+    margin-right: 2%; /* Margen entre los divs */
+}
+
+.Content-resources, .Content-feed {
+    width: 48%; /* Ambos bloques ocupan el 48% del espacio */
+    margin-right: 20px; /* Margen derecho */
+}
+
+.Content-resources {
+ 
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.Content-feed {
+
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.Content-subtitle {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ffffff; /* Texto en blanco */
+}
+
+/* Resources styles */
+.ResourcesSchedule {
+    list-style: none;
+    padding: 0;
+}
+
+.ResourcesSchedule li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ResourcesSchedule-icon {
+    margin-right: 10px;
+}
+
+.ResourcesSchedule-text {
+    font-size: 18px;
+    color: #ffffff; /* Texto en blanco */
+}
+
+.Resources-rule {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.ResourcesRequire-title, .ResourcesSoftware-title, .ResourcesLongDescription-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff; /* Texto en blanco */
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #ffffff; /* Texto en blanco */
+}
+
+/* Class content and lists */
+.ContentBlock-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ContentBlock-list {
+    list-style: none;
+    padding: 0;
+}
+
+.ContentBlock-list-item {
+    margin-bottom: 10px;
+}
+
+.ContentClass {
+    display: block;
+    background-color: #1e3a63; /* Fondo azul oscuro para las clases */
+    color: #ffffff; /* Texto en blanco */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.ContentClass:hover {
+    background-color: #1b2e4a; /* Color de fondo al pasar el ratón */
+}
+
+.ContentClass-content {
+    display: flex;
+    align-items: center;
+    color: #ffffff; /* Texto en blanco */
+    padding: 10px;
+}
+
+.ContentClass-content-title {
+    margin-left: 10px;
+    color: #ffffff; /* Texto en blanco */
+}
+
+/* Adjustments for SVG icons */
+.svg-inline--fa {
+    width: 24px;
+    height: 24px;
+    fill: #ffffff; /* Íconos en blanco */
+}
+
+/* ContentPaywall */
+.ContentPaywall {
+    text-align: center;
+    padding: 20px;
+}
+
+.ContentPaywall-cta {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.ContentBlock-rule {
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.ContentBlock-head-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff; /* Texto en blanco */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .Content-wrapper {
+        flex-direction: column; /* En pantallas pequeñas, cambia a disposición vertical */
+    }
+
+    .Content-resources, .Content-feed {
+        width: 100%; /* Ambos divs ocupan el 100% en pantallas pequeñas */
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .Content {
+        width: 100%;
+        margin-right: 0;
+    }
+    .Content-wrapper {
+        flex-direction: column;
+    }
+}
 
 
 /* Hacer responsive para pantallas más pequeñas */

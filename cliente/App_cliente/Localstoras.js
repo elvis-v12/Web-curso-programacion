@@ -1,9 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const userName = localStorage.getItem('userName');
-    console.log('Valor de userName desde localStorage:', userName);
-
     const userNameElement = document.getElementById('userName');
-    console.log('Elemento con id "userName":', userNameElement);
 
     if (userName && userNameElement) {
         userNameElement.textContent = userName;

@@ -1,14 +1,14 @@
 document.getElementById('loginForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Evitar que el formulario se envíe de la manera tradicional
+    event.preventDefault(); // Evita el envío del formulario tradicional
 
     // Capturar los valores de los inputs
     const email = document.getElementById('email').value;
-    const contraseña = document.getElementById('password').value;  // Cambiar a 'contraseña'
+    const password = document.getElementById('password').value;
 
     // Crear un objeto con los datos
     const data = {
         email: email,
-        contraseña: contraseña  // Cambiar a 'contraseña'
+        password: password
     };
 
     // Enviar los datos al servidor
@@ -25,10 +25,8 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
             // Guardar el nombre de usuario en localStorage
             localStorage.setItem('userName', result.userName);
 
-            // Redireccionar a la página principal
-            console.log('Redireccionando a la página principal');
-            window.location.href = '/cliente/App_cliente/App_estudiante.html';
-            
+            // Redirigir a la página principal (AppCliente)
+            window.location.href = '/AppCliente';
         } else {
             alert('Error en el login: ' + result.message);
         }
