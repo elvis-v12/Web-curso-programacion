@@ -23,7 +23,7 @@ body{
 	--red: #FC3B56;
     --black1:#13161c;
     --greenbajo:#7ed321;
-
+    --color_dasboard:#020617;
 }
 
 .container {
@@ -35,7 +35,7 @@ body{
 /* Aside izquierdo */
 .aside-left {
     width: 100px; /* Ancho inicial del aside */
-    background: #2c3e50;
+    background: var(--color_dasboard);
     height: 100vh;
     transition: width 0.3s ease; /* Suaviza la transición del ancho */
     position: fixed;
@@ -65,18 +65,20 @@ body{
 }
 
 /* Imagen del logo */
-.logo-img {
-    width: 80%; /* El logo ocupa el 80% del contenedor */
-    height: auto;
-    max-width: 80px; /* Limita el tamaño máximo del logo */
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
-    object-fit: contain; /* Mantiene la proporción de la imagen */
-}
-
 .aside-left.expanded .logo-img {
     max-width: 120px; /* Aumenta el tamaño del logo cuando el aside está expandido */
 }
+.logo-img {
+    height: 80px;
+    width: 80px;
+    background-color: #002e26;
+    filter: drop-shadow(0px 4px 4px #005246);
+    transition: filter 0.3s ease;
+}
 
+.logo-img:hover {
+    filter: drop-shadow(0px 6px 6px #00a17b);
+}
 /* Estilo del nav-toggler */
 .aside-left .nav-toggler {
     position: absolute; /* Mantiene el botón en una posición fija */
@@ -129,7 +131,7 @@ body{
 .main-content {
     padding: 20px;
     margin-left: 100px;
-
+    background: var(--color_dasboard);
     flex-grow: 1;
     height: 100vh; /* Ocupar toda la altura del viewport */
     overflow-y: hidden; /* Evitar desbordamiento en el contenido principal */
@@ -188,11 +190,12 @@ body{
 .inicio {
     margin-left: 100px;
     margin-top: 0px;
+
 }
 
 /* Ajuste del nav */
 nav {
-    background: var(--black1);
+    background: var(--color_dasboard);
     height: 64px;
     padding: 0 20px;
     display: flex;
