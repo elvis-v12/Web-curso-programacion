@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+
+
+
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/curso.css">
+  <title>Admin</title>
+</head>
+
+<body>
+  <!-- SIDEBAR -->
+  <section id="sidebar">
+    <!--  <a href="#" class="brand">
+        <i class="bx bxs-dashboard"></i>
+        <span class="text"></span>
+      </a>-->
+    <ul class="side-menu top">
+      <li class="active" data-section="dashboard">
+        <a href="#">
+          <i class="bx bxs-bar-chart-alt-2"></i>
+          <span class="text">Dashboard</span>
+        </a>
+      </li>
+      <li data-section="admin-management">
+        <a href="#">
+          <i class="bx bxs-user-detail"></i>
+          <span class="text">Gestión de Administradores</span>
+        </a>
+      </li>
+      <li data-section="student-management">
+        <a href="#">
+          <i class="bx bxs-group"></i>
+          <span class="text">Gestión de Estudiantes</span>
+        </a>
+      </li>
+      <li data-section="teacher-management">
+        <a href="#">
+          <i class="bx bxs-group"></i>
+          <span class="text">Gestión de Profesores</span>
+        </a>
+      </li>
+      <li data-section="courses">
+        <a href="#">
+          <i class="bx bxs-book"></i>
+          <span class="text">Cursos</span>
+        </a>
+      </li>
+      <li data-section="learning-paths">
+        <a href="#">
+          <i class="bx bxs-bookmark-alt"></i>
+          <span class="text">Rutas de Aprendizaje</span>
+        </a>
+      </li>
+      <li data-section="certificates">
+        <a href="#">
+          <i class="bx bxs-graduation"></i>
+          <span class="text">Certificados</span>
+        </a>
+      </li>
+      <li data-section="scholarship-requests">
+        <a href="#">
+          <i class="bx bxs-graduation"></i>
+          <span class="text">Solicitudes de Becas</span>
+        </a>
+      </li>
+      <li data-section="messaging">
+        <a href="#">
+          <i class="bx bxs-message-dots"></i>
+          <span class="text">Mensajería</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="side-menu">
+      <li>
+        <a href="#" class="logout">
+          <i class="bx bxs-log-out-circle"></i>
+          <span class="text">Cerrar Sesión</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <!-- SIDEBAR -->
+
+  <!-- CONTENT -->
+  <section id="content">
+    <!-- NAVBAR -->
+    <nav>
+      <i class="bx bx-menu"></i>
+      <form action="#">
+        <div class="form-input">
+          <input type="search" placeholder="Search..." />
+          <button type="submit" class="search-btn">
+            <i class="bx bx-search"></i>
+          </button>
+        </div>
+      </form>
+      <input type="checkbox" id="switch-mode" hidden />
+      <label for="switch-mode" class="switch-mode"></label>
+      <a href="#" class="notification">
+        <i class="bx bxs-bell"></i>
+        <span class="num">8</span>
+      </a>
+      <a href="#" class="mensajeria">
+        <i class="bx bxs-message-dots"></i>
+        <span class="mejs">8</span>
+      </a>
+      <a href="#" class="profile">
+        <img src="img/people.jpg" />
+      </a>
+    </nav>
+    <!-- NAVBAR -->
+
+    <!-- MAIN CONTENT AREAS -->
+    <main>
+      <div id="dashboard" class="section active">
+        <h1>Dashboard</h1>
+        <ul class="box-info">
+          <li>
+            <i class="bx bxs-calendar-check"></i>
+            <span class="text">
+              <h3>$100</h3>
+              <p>Suscripciones Diarias</p>
+            </span>
+          </li>
+          <li>
+            <i class="bx bxs-group"></i>
+            <span class="text">
+              <h3>$283</h3>
+              <p>Visitas</p>
+            </span>
+          </li>
+          <li>
+            <i class="bx bxs-dollar-circle"></i>
+            <span class="text">
+              <h3>$250</h3>
+              <p>Nuevas suscripciones</p>
+            </span>
+          </li>
+          <div class="info-data">
+            <div class="card">
+              <div class="head">
+                <div>
+                  <h2>$1500</h2>
+                  <p>Suscripción Semanal</p>
+                </div>
+                <i class='bx bx-trending-up icon'></i>
+              </div>
+              <span class="progress" data-value="40%"></span>
+              <span class="label">40%</span>
+            </div>
+            <div class="card">
+              <div class="head">
+                <div>
+                  <h2>$234</h2>
+                  <p>Suscripción Mensual</p>
+                </div>
+                <i class='bx bx-trending-down icon down'></i>
+              </div>
+              <span class="progress" data-value="60%"></span>
+              <span class="label">60%</span>
+            </div>
+
+          </div>
+        </ul>
+
+        <div class="graficos">
+
+          <div class="chart-box">
+            <h3>Cuentas Totales Creadas</h3>
+            <canvas id="barChart"></canvas>
+          </div>
+
+          <div class="chart-box">
+            <h3>Cursos Más Comprados</h3>
+            <canvas id="doughnutChart"></canvas>
+          </div>
+
+        </div>
+      </div>
+      <!-- Aquí iría el contenido del Dashboard -->
+      </div>
+      <!-- Contenido para la gestión de administradores -->
+      <div id="admin-management" class="section ">
+        <h1>Gestión de Administradores</h1>
+
+        <div class="filter-container">
+          <select>
+            <option value="all">Todos los roles</option>
+            <option value="super-admin">Super Administrador</option>
+            <option value="admin">Administrador</option>
+          </select>
+          <select>
+            <option value="all">Todos los estados</option>
+            <option value="active">Activo</option>
+            <option value="inactive">Inactivo</option>
+          </select>
+          <button class="btn-add">Agregar</button>
+        </div>
+
+
+        <div class="table-data">
+          <div class="order">
+            <div class="head">
+              <h3>Administradores Registrados</h3>
+              <div class="form-input">
+                <input type="search" placeholder="buscar..." />
+                <button type="submit" class="search-btn">
+                  <i class="bx bx-search"></i>
+                </button>
+              </div>
+              <i class="bx bx-filter"></i>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Correo Electrónico</th>
+                  <th>Rol</th>
+                  <th>Estado</th>
+                  <th>Fecha de Registro</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Juan Pérez</td>
+                  <td>juan.perez@example.com</td>
+                  <td>Administrador</td>
+                  <td><span class="status active">Activo</span></td>
+                  <td>01-10-2023</td>
+                  <td>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-toggle-status">Desactivar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Juan Vicente</td>
+                  <td>juan@example.com</td>
+                  <td>Administrador</td>
+                  <td><span class="status active">Activo</span></td>
+                  <td>01-10-2023</td>
+                  <td>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-toggle-status">Desactivar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Juan Pérez</td>
+                  <td>Elvis@gmail.comm</td>
+                  <td>Administrador</td>
+                  <td><span class="status active">Activo</span></td>
+                  <td>01-10-2023</td>
+                  <td>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-toggle-status">Desactivar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Jakeline Garamendi</td>
+                  <td>JakelineGaramendi@example.com</td>
+                  <td>Administrador</td>
+                  <td><span class="status active">Activo</span></td>
+                  <td>01-10-2023</td>
+                  <td>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-toggle-status">Desactivar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Nore Herrera</td>
+                  <td>Noe@gmail.com</td>
+                  <td>Administrador</td>
+                  <td><span class="status active">Activo</span></td>
+                  <td>01-10-2023</td>
+                  <td>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-toggle-status">Desactivar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenido para la gestión de estudiantes -->
+      <div id="student-management" class="section">
+        <h1>Gestión de Estudiantes</h1>
+
+        <div class="filter-container">
+          <select>
+            <option value="all">Todos los estados</option>
+            <option value="active">Activo</option>
+            <option value="inactive">Inactivo</option>
+          </select>
+          <select>
+            <option value="all">Todos los cursos</option>
+            <option value="curso1">Curso Python</option>
+            <option value="curso2">Curso 2</option>
+          </select>
+          <select>
+            <option value="all">Todos</option>
+            <option value="yes">Con Beca</option>
+            <option value="no">Sin Beca</option>
+          </select>
+          <button class="btn-add">Agregar</button>
+        </div>
+        <div class="table-data">
+          <div class="order">
+            <div class="head">
+              <h3>Estudiantes Registrados</h3>
+              <div class="form-input">
+                <input type="search" placeholder="buscar..." />
+                <button type="submit" class="search-btn">
+                  <i class="bx bx-search"></i>
+                </button>
+              </div>
+              <i class="bx bx-filter"></i>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Correo Electrónico</th>
+                  <th>Curso Actual</th>
+                  <th>Beca</th>
+                  <th>Estado de Cuenta</th>
+                  <th>Fecha de Registro</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Albert</td>
+                  <td>Albert@example.com</td>
+                  <td>Curso de Python</td>
+                  <td>Sí</td>
+                  <td><span class="status active">Activo</span></td>
+                  <td>05-09-2023</td>
+                  <td>
+                    <button class="btn-view">Ver Perfil</button>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-toggle-status">Desactivar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>María Herrera</td>
+                  <td>mariaz@example.com</td>
+                  <td>Curso de Python</td>
+                  <td>Sí</td>
+                  <td><span class="status active">Activo</span></td>
+                  <td>05-09-2023</td>
+                  <td>
+                    <button class="btn-view">Ver Perfil</button>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-toggle-status">Desactivar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Juanita</td>
+                  <td>Juanitaz@example.com</td>
+                  <td>Curso de Python</td>
+                  <td>Sí</td>
+                  <td><span class="status active">Activo</span></td>
+                  <td>05-09-2023</td>
+                  <td>
+                    <button class="btn-view">Ver Perfil</button>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-toggle-status">Desactivar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>María López</td>
+                  <td>maria.lopez@example.com</td>
+                  <td>Curso de Python</td>
+                  <td>Sí</td>
+                  <td><span class="status active">Activo</span></td>
+                  <td>05-09-2023</td>
+                  <td>
+                    <button class="btn-view">Ver Perfil</button>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-toggle-status">Desactivar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Nohelia</td>
+                  <td>Nohelia@example.com</td>
+                  <td>Curso de Python</td>
+                  <td>Sí</td>
+                  <td><span class="status active">Activo</span></td>
+                  <td>05-09-2023</td>
+                  <td>
+                    <button class="btn-view">Ver Perfil</button>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-toggle-status">Desactivar</button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenido para la gestión de profesores -->
+      <div id="teacher-management" class="section">
+        <h1>Gestión de Profesores</h1>
+        <div class="filter-container">
+          <select>
+            <option value="all">Todos los estados</option>
+            <option value="active">Activo</option>
+            <option value="inactive">Inactivo</option>
+          </select>
+          <select>
+            <option value="all">Todos los cursos</option>
+            <option value="curso1">JavaScript</option>
+            <option value="curso2">Curso 2</option>
+          </select>
+          <button class="btn-add">Agregar</button>
+        </div>
+        <div class="table-data">
+          <div class="order">
+            <div class="head">
+              <h3>Profesores Registrados</h3>
+              <div class="form-input">
+                <input type="search" placeholder="buscar..." />
+                <button type="submit" class="search-btn">
+                  <i class="bx bx-search"></i>
+                </button>
+              </div>
+              <i class="bx bx-filter"></i>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Correo Electrónico</th>
+                  <th>Cursos Asignados</th>
+                  <th>Estado de Cuenta</th>
+                  <th>Fecha de Registro</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Pedro Sánchez</td>
+                  <td>pedro.sanchez@example.com</td>
+                  <td>Curso de JavaScript</td>
+                  <td><span class="status active">Activo</span></td>
+                  <td>15-08-2023</td>
+                  <td>
+                    <button class="btn-view">Ver Perfil</button>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-toggle-status">Desactivar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenido para cursos -->
+      <section id="courses" class="section">
+        <header class="courses__header"></header>
+        <div class="courses__content">
+        </div>
+      </section>
+
+      <section id="coursesEdit" class="section">
+        <header class="coursesEdit_tabs">
+          <div class="coursesEdit_tabs__item coursesEdit-1">Datos</div>
+          <div class="coursesEdit_tabs__item coursesEdit-2 active">Contenido</div>
+        </header>
+        <!-- Parte de cmodificar datos de un curso -->
+        <div class="coursesEdit__content coursesEdit__content-datos coursesEdit-1"
+          style="visibility:hidden; display:none">
+          <form class="form-course-content">
+            <!-- Div para los campos de datos -->
+            <div class="course-data">
+              <div class="course-data__field">
+                <label for="course-name">Nombre</label>
+                <input type="text" id="course-name" name="name" placeholder="Nombre del curso" required>
+              </div>
+
+              <div class="course-data__field">
+                <label for="course-price">Precio</label>
+                <input type="number" id="course-price" name="price" placeholder="Precio del curso" required>
+              </div>
+
+              <div class="course-data__field">
+                <label for="course-language">Lenguaje</label>
+                <input type="text" id="course-language" name="language" placeholder="Lenguaje del curso" required>
+              </div>
+
+              <!-- Div editable para Descripción -->
+              <div class="course-data__field">
+                <label for="course-description">Descripción</label>
+                <div id="course-description" class="editable-field" contenteditable="true"
+                  placeholder="Descripción del curso"></div>
+                <div class="editor-options">
+                  <button type="button" class="btn-bold">Negrita</button>
+                  <button type="button" class="btn-list">Lista</button>
+                  <button type="button" class="btn-list-ordered">Lista Enumerada</button>
+                </div>
+              </div>
+
+              <!-- Div editable para Resumen -->
+              <div class="course-data__field">
+                <label for="course-summary">Resumen</label>
+                <div id="course-summary" class="editable-field" contenteditable="true" placeholder="Resumen del curso">
+                </div>
+                <div class="editor-options">
+                  <button type="button" class="btn-bold">Negrita</button>
+                  <button type="button" class="btn-list">Lista</button>
+                  <button type="button" class="btn-list-ordered">Lista Enumerada</button>
+                </div>
+              </div>
+
+              <!-- Div editable para Detalles -->
+              <div class="course-data__field">
+                <label for="course-details">Detalles</label>
+                <div id="course-details" class="editable-field" contenteditable="true" placeholder="Detalles del curso">
+                </div>
+                <div class="editor-options">
+                  <button type="button" class="btn-bold">Negrita</button>
+                  <button type="button" class="btn-list">Lista</button>
+                  <button type="button" class="btn-list-ordered">Lista Enumerada</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Div para el botón de envío -->
+            <div class="form-options-content-menu">
+              <button type="submit">Guardar cambios</button>
+            </div>
+          </form>
+        </div>
+        <!-- Parte de cmodificar contenido de un curso -->
+        <div class="coursesEdit__content coursesEdit__content-contenido coursesEdit-2">
+          <div class="module-list">
+            <h3>Módulos del Curso</h3>
+            <ul class="module-items">
+              <li class="add-module-item">
+                <button class="btn-add-module">Agregar Nuevo Módulo</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="module-edit-form">
+            <h3>Editar o Agregar Módulo</h3>
+            <form class="form-module-content">
+              <div class="module-data">
+                <div class="module-data__field">
+                  <label for="module-name">Nombre del Módulo</label>
+                  <input type="text" id="module-name" placeholder="Nombre del módulo" required>
+                </div>
+                <div class="module-data__field">
+                  <label for="module-description">Descripción</label>
+                  <div id="module-description" class="editable-field" contenteditable="true"></div>
+                  <div class="editor-options">
+                    <button type="button" class="btn-bold">Negrita</button>
+                    <button type="button" class="btn-list">Lista</button>
+                    <button type="button" class="btn-list-ordered">Lista Enumerada</button>
+                  </div>
+                </div>
+              </div>
+              <div class="form-options-content-menu">
+                <button type="submit">Guardar Módulo</button>
+              </div>
+            </form>
+
+            <!-- Formulario para sesiones dentro de cada módulo -->
+            <div class="session-edit-form">
+              <h3>Editar o Agregar Sesión</h3>
+              <form class="form-session-content">
+                <div class="session-data">
+                  <div class="session-data__field">
+                    <label for="session-name">Nombre de la Sesión</label>
+                    <input type="text" id="session-name" placeholder="Nombre de la sesión" required>
+                  </div>
+                  <div class="session-data__field">
+                    <label for="session-description">Descripción</label>
+                    <div id="session-description" class="editable-field" contenteditable="true"></div>
+                    <div class="editor-options">
+                      <button type="button" class="btn-bold">Negrita</button>
+                      <button type="button" class="btn-list">Lista</button>
+                      <button type="button" class="btn-list-ordered">Lista Enumerada</button>
+                    </div>
+                  </div>
+                  <div class="session-data__field">
+                    <label for="session-content">Contenido (Video URL)</label>
+                    <input type="url" id="session-content" placeholder="URL del video" required>
+                  </div>
+                  <div class="session-edit-resources">
+                    <label>Recursos de la Sesión</label>
+                  </div>
+                  <div class="session-data__field">
+                    <label for="session-cover">Portada de la Sesión</label>
+                    <input type="file" id="session-cover">
+                  </div>
+                </div>
+                <div class="form-options-content-menu">
+                  <button type="submit">Guardar Sesión</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <div id="learning-paths" class="section">
+        <h1>Rutas de Aprendizaje</h1>
+        <!-- Contenido para rutas de aprendizaje -->
+      </div>
+
+      <div id="certificates" class="section">
+        <h1>Certificados</h1>
+        <!-- Contenido para certificados -->
+      </div>
+
+      <!-- Contenido para solicitudes de becas -->
+      <div id="scholarship-requests" class="section">
+        <h1>Solicitudes de Becas</h1>
+        <div class="filter-container">
+          <select>
+            <option value="all">Todos los estados</option>
+            <option value="pending">En Proceso de Evaluación</option>
+            <option value="accepted">Aceptada</option>
+            <option value="rejected">Rechazada</option>
+            <option value="granted">Otorgada</option>
+          </select>
+          <select>
+            <option value="all">Todos los cursos</option>
+            <option value="curso1">Curso 1</option>
+            <option value="curso2">Curso 2</option>
+          </select>
+          <button class="btn-add">Ver Estadísticas</button>
+        </div>
+        <div class="table-data">
+          <div class="order">
+            <div class="head">
+              <h3>Solicitudes de Becas</h3>
+              <div class="form-input">
+                <input type="search" placeholder="Buscar..." />
+                <button type="submit" class="search-btn">
+                  <i class="bx bx-search"></i>
+                </button>
+              </div>
+              <i class="bx bx-filter"></i>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Nombre del Estudiante</th>
+                  <th>Correo Electrónico</th>
+                  <th>Curso Solicitado</th>
+                  <th>Estado</th>
+                  <th>Fecha de Solicitud</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Ejemplo de Fila -->
+                <tr>
+                  <td>María López</td>
+                  <td>maria.lopez@example.com</td>
+                  <td>Curso de Python</td>
+                  <td>
+                    <span class="status pending">En Proceso de Evaluación</span>
+                  </td>
+                  <td>01-10-2023</td>
+                  <td>
+                    <button class="btn-view">Ver Detalles</button>
+                    <button class="btn-accept">Aceptar</button>
+                    <button class="btn-reject">Rechazar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="messaging" class="section">
+        <h1>Mensajería</h1>
+        <div class="data">
+          <!--seccion de mensaje-->
+          <div class="content-data">
+            <div class="head">
+              <h3>ChatNow</h3>
+              <div class="menu">
+                <i class='bx bx-dots-horizontal-rounded icon'></i>
+                <ul class="menu-link">
+                  <li><a href="#">Editar</a></li>
+                  <li><a href="#">Save</a></li>
+                  <li><a href="#">Remove</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="chat-box">
+              <p class="day"><span>Today</span></p>
+              <div class="msg">
+                <img
+                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  alt="">
+                <div class="chat">
+                  <div class="profile">
+                    <span class="username">Meylan</span>
+                    <span class="time">18:30</span>
+                  </div>
+                  <p>Holi</p>
+                </div>
+              </div>
+              <div class="msg me">
+                <div class="chat">
+                  <div class="profile">
+                    <span class="time">18:30</span>
+                  </div>
+                  <p>Holiiii. ¿Ya hiciste el reporte?</p>
+                </div>
+              </div>
+              <div class="msg me">
+                <div class="chat">
+                  <div class="profile">
+                    <span class="time">18:30</span>
+                  </div>
+                  <p>Perfecto!</p>
+                </div>
+              </div>
+              <div class="msg me">
+                <div class="chat">
+                  <div class="profile">
+                    <span class="time">18:30</span>
+                  </div>
+                  <p>Profe, ya apruebenos.</p>
+                </div>
+              </div>
+            </div>
+            <form action="#">
+              <div class="form-group">
+                <input type="text" placeholder="...">
+                <button type="submit" class="btn-send"><i class='bx bxs-send'></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="JS/script.js"></script>
+  <script type="module" src="JS/curso.js"></script>
+
+</body>
+
+</html>

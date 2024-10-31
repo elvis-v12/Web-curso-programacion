@@ -1,0 +1,976 @@
+:root{
+    --bg-black-900:#F8E71C;
+    --bg-black-100:#7ED321;
+    --bg-black-50:#F8E71C;
+    --bg-text-black-900:#F5A623;
+    --bg-text-black-700:#FF6F61;
+    --bg-text-black-600:#9013FE;
+    --bg-text-black-500:#4A90E2;
+    --bg-text-black-400:#9B9B9B;
+    --bg-text-black-300:#4A4A4A;
+    --bg-text-black-200:#f2f2f2;
+    --bg-text-black-90:#030918;
+    --bg-text-black-91:#7933ff;
+    --bg-text-black-92:#007bff;
+}
+body.dark{
+        --bg-black-900:#151515;
+        --bg-black-100:#222222;
+        --bg-black-50:#393939;
+        --bg-text-black-900:#ffffff;
+        --bg-text-black-700:#e9e9e9;
+}
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+body{
+    background: linear-gradient(to top right, #000000 20%, #004d40 80%);
+    /* #000000 es el negro en la parte inferior izquierda,
+       #004d40 es el verde en la parte superior derecha */
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.Inicoo_principal {
+    object-fit: cover;
+    width: 100%; /* Asegura que la imagen ocupe el ancho completo de su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 15px; /* Bordes redondeados para un diseño más moderno */
+    background-color: rgba(0, 0, 0, 0); /* Hace el fondo de la imagen completamente transparente */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves para efectos interactivos */
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.5)); /* Aplica una sombra externa que destaca la imagen transparente */
+}
+
+.Inicoo_principal:hover {
+    transform: scale(1.05); /* Efecto de agrandar la imagen al pasar el cursor */
+    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.7)); /* Aumenta la sombra en el hover */
+}
+
+
+nav {
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+nav .logo {
+    font-size: 33px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    color: white; /* Asegura que el texto coincida con el fondo */
+}
+
+nav .links a {
+    margin-right: 20px;
+    color: #f1f1f1; /* Cambia el color a un tono más claro */
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+nav .links a:hover {
+    color: #0f2182; /* Cambia de color cuando se pasa el cursor */
+    text-decoration: underline; /* Subraya los enlaces al hacer hover */
+}
+
+nav .boton-menu {
+    color: #f1f1f1; /* Ajuste de color */
+    font-size: 1.3rem;
+    font-style: normal;
+    cursor: pointer;
+}
+
+nav .login button {
+    padding: 8px 14px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: #f1f1f1;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+nav .login button.signup {
+    background-color: #0f2182;
+    color: #fff;
+    border-radius: 4px;
+    margin-right: 14px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.3s;
+}
+
+nav .login button.signup:hover {
+    background-color: #009688; /* Cambia el color al pasar el cursor */
+    transform: scale(1.05); /* Efecto de agrandar ligeramente */
+}
+
+nav .cart-icon {
+    font-size: 1.5rem;
+    color: #f1f1f1;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+nav .cart-icon:hover {
+    color: #0f2182; /* Cambia el color del ícono al hacer hover */
+    transform: scale(1.2); /* Agrandar ícono del carrito */
+}
+.iconoprincipal_nav {
+    height: 80px;
+    width: 80px;
+    background-color: #002e26;
+    filter: drop-shadow(0px 4px 4px #005246);
+    transition: filter 0.3s ease;
+}
+
+.iconoprincipal_nav:hover {
+    filter: drop-shadow(0px 6px 6px #00a17b);
+}
+
+
+header{
+    padding: 0 80px;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .left{
+    width: 700px;
+    display: block;
+}
+
+header .left h1{
+    font-size: 80px;
+    color: #fff;
+    text-wrap: balance;
+}
+
+header .left h1 span{
+    color: #0ae98a;
+}
+
+header .left p{
+    color: #c4c8ce;
+  font-weight: 400;
+  font-size: 1.125rem;
+  letter-spacing: .013rem;
+  text-transform: none;
+  text-decoration: none;
+  line-height: 1.625rem;
+  text-wrap: balance;
+}
+
+header .left a{
+    display: flex;
+    align-items: center;
+    background: #000;
+    width: 200px;
+    padding: 8px;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+header .left a i{
+    background-color: #fff;
+    font-size: 24px;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+header .left a span{
+    color: #0ae98a;
+    margin-left: 10px;
+}
+
+header img{
+    width: 600px;
+}
+/*Seccion de buscador*/
+/* Estilos generales del contenedor */
+.CoursesSearch_CoursesSearch__vXhJ8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Estilos para el label */
+  .CoursesSearch_CoursesSearch__vXhJ8 label {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  
+  /* Contenedor del input y botón */
+  .input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #00ffcc; /* Borde verde */
+    border-radius: 8px;
+    padding: 5px 10px;
+    background-color: #2d2d2d;
+  }
+  
+  /* Estilo del input */
+  .input-container input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1rem;
+    width: 100%;
+    padding: 10px;
+    margin-right: 10px;
+  }
+  
+  /* Placeholder del input */
+  .input-container input::placeholder {
+    color: #aaa;
+  }
+  
+  /* Estilo del botón con el icono */
+  .input-container button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Estilo del SVG (icono de lupa) */
+  .input-container svg {
+    stroke: #00ffcc; /* Color verde del icono */
+    width: 22px;
+    height: 22px;
+  }
+  
+
+
+/*Seccion de escuelas*/
+header.SchoolsList_SchoolsList__V9ovD {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    height: 490px;
+}
+
+
+header.SchoolsList_SchoolsList__V9ovD ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 20px;
+    padding: 0;
+    margin: 0 auto; /* Centramos el UL */
+    width: 100%;
+    max-width: 1200px; /* Para limitar el ancho máximo */
+    justify-content: center; /* Centra los elementos del grid */
+    
+}
+
+li.SchoolCard_SchoolCard__wPK0G {
+    background-color: #1F2937; /* Fondo oscuro para las tarjetas */
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center; /* Alinea verticalmente todos los elementos en el centro */
+    justify-content: space-between; /* Deja espacio entre el contenido y el icono de la derecha */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra inicial */
+    text-align: left;
+   
+}
+
+li.SchoolCard_SchoolCard__wPK0G a {
+    display: flex;
+    flex-direction: row; /* Pone todos los elementos en una fila */
+    align-items: center;
+    gap: 1rem; /* Espacio entre imagen, texto y icono */
+    width: 100%;
+}
+
+li.SchoolCard_SchoolCard__wPK0G:hover {
+    transform: scale(1.05); /* Efecto hover para agrandar */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); /* Sombra más fuerte en hover */
+    background-color: var(--color); /* Cambio de fondo al color de la tarjeta */
+}
+
+li.SchoolCard_SchoolCard__wPK0G figure {
+    margin: 0;
+    flex-shrink: 0; /* Evita que la imagen se reduzca */
+}
+
+.SchoolCard_SchoolCard__wPK0G img {
+    height: 56px;
+    width: 56px;
+    border-radius: 50%; /* Imagen redonda */
+}
+
+li.SchoolCard_SchoolCard__wPK0G p {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #D1D5DB; /* Color de texto inicial */
+}
+
+li.SchoolCard_SchoolCard__wPK0G:hover p {
+    color: #ffffff; /* Asegurar que el texto sea visible sobre el color de fondo en hover */
+}
+
+li.SchoolCard_SchoolCard__wPK0G svg {
+    margin-left: auto; /* Empuja el icono hacia la derecha */
+    fill: #D1D5DB; /* Color de iconos inicial */
+    height: 24px;
+    width: 24px;
+}
+
+li.SchoolCard_SchoolCard__wPK0G:hover svg {
+    fill: #ffffff; /* Color blanco para el icono en hover */
+}
+
+li.SchoolCard_SchoolCard__wPK0G span:first-child {
+    font-size: 0.9rem;
+    color: #9CA3AF; /* Color más claro para el primer span */
+}
+
+li.SchoolCard_SchoolCard__wPK0G:hover span:first-child {
+    color: #ffffff; /* Cambia el color de la categoría en hover */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Boton de ver mas */
+.hidden {
+    display: none;
+}
+
+.toggle-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #0ae98a;
+
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    background: 0 0;
+    width: unset;
+    border: 1px solid #0e523a;
+}
+
+.toggle-btn:hover {
+    border: 1px solid #0e523a; /* Cambia el borde al color verde oscuro al hacer hover */
+    filter: grayscale(0%);
+}
+
+/*Seccion de Nosotros*//* Estilos generales para la sección */
+.about-us {
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 100px;
+    padding: 50px 20px;
+    border-radius: 12px;
+}
+
+.about-us h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #00ffbf;
+}
+
+.about-us .intro {
+    font-size: 1.4rem;
+    color: #ccc;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    line-height: 1.7;
+}
+
+/* Estilos para los elementos internos */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.about-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    
+}
+
+.about-item:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.about-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #00ffbf;
+    text-transform: uppercase;
+}
+
+.about-item p, .about-item ul {
+    font-size: 1.1rem;
+    color: #eee;
+    line-height: 1.8;
+}
+
+
+.about-item ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    list-style-type: none;
+}
+
+.about-item ul li:before {
+    content: "✔️";
+    color: #00ffbf;
+    margin-right: 10px;
+}
+
+/* Efectos de hover en los ítems */
+.about-item:hover h3 {
+    color: #fff;
+}
+
+.about-item:hover p, .about-item:hover ul li {
+    color: #fff;
+}
+
+/*Seccion de los profesores*/
+/*Cards*/
+.container-card{
+	width: 100%;
+	display: flex;
+	max-width: 1100px;
+	margin: auto;
+}
+.title-cards{
+	width: 100%;
+	max-width: 1080px;
+	margin: auto;
+	padding: 20px;
+	margin-top: 20px;
+	text-align: center;
+	color: var(--bg-text-black-200);
+}
+.title-cards h2{
+    color: #fff;
+  font-size: 1.375rem;
+  font-weight: 500;
+  letter-spacing: -.008rem;
+  line-height: 1.75rem;
+  margin: 0 auto 1rem;
+  text-align: start;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+}
+.card{
+	width: 100%;
+	margin: 20px;
+	border-radius: 6px;
+	overflow: hidden;
+	background:#fff;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+}
+.card:hover{
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+.card img{
+	width: 100%;
+	height: 210px;
+}
+.card .contenido-card{
+	padding: 15px;
+	text-align: center;
+}
+.card .contenido-card h3{
+	margin-bottom: 15px;
+	color: #7a7a7a;
+}
+.card .contenido-card p{
+	line-height: 1.8;
+	color: #6a6a6a;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.card .contenido-card a{
+	display: inline-block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #2fb4cc;
+	border: 1px solid #2fb4cc;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+}
+.card .contenido-card a:hover{
+	background: #2fb4cc;
+	color: #fff;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+	.container-card{
+		flex-wrap: wrap;
+	}
+	.card{
+		margin: 15px;
+	}
+}
+
+/*Suscripcionnes */
+
+.Messages-module_Messages__title__SV-SP {
+    color: #fff;
+    font-size: 1.375rem;
+    font-weight: 500;
+    letter-spacing: -.008rem;
+    line-height: 1.75rem;
+    margin: 0 auto 1rem;
+      margin-bottom: 5rem;
+    text-align: start;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    margin-top: 5rem;
+  }
+:root {
+    --accent-color: #641BFF;
+    --heading-font-family: 'Poppins', sans-serif;
+    --body-font-family: 'Lato', sans-serif;
+  }
+  
+  
+  
+  .price-comparison {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    margin: 1rem auto;
+    max-width: 1200px; /* Aumenta el ancho total de la sección */
+    flex-wrap: wrap; /* Para que se adapten en pantallas pequeñas */
+  }
+  
+  .price-column {
+    background-color: white;
+    box-shadow: 0 7px 30px rgba(52, 31, 97, 0.1);
+    padding: 2rem;
+    flex-grow: 1;
+    flex-basis: calc(33.333% - 2rem); /* Mantiene el espacio entre las tarjetas */
+    max-width: 350px; /* Aumenta el ancho máximo de las tarjetas */
+    border-radius: 8px;
+    margin: 1rem;
+  }
+  
+  .price-column.popular {
+    position: relative;
+    background-color: var(--accent-color);
+    box-shadow: 0 7px 30px rgba(52, 13, 135, 0.3);
+    color: white;
+    margin-top: -1rem; /* Reduce el margen superior */
+    padding-top: 2.5rem; /* Ajusta el padding superior */
+    padding-bottom: 2.5rem; /* Ajusta el padding inferior */
+
+  }
+  
+  .price-column:first-child {
+    border-top-right-radius: 0; 
+    border-bottom-right-radius: 0; 
+  }
+  
+  .price-column:last-child {
+    border-top-left-radius: 0; 
+    border-bottom-left-radius: 0; 
+  }
+  
+  .price-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--heading-font-family);
+    font-weight: bold;
+  }
+  
+  .price {
+    font-size: 3.5rem;
+    display: flex;
+  }
+  
+  .dollar-sign {
+    font-size: 1.5rem;
+    margin-top: .5rem;
+    margin-right: .25rem;
+  }
+  
+  .per-month {
+    font-size: .75rem;
+    align-self: flex-end;
+    margin-bottom: 1.1rem;
+    text-transform: uppercase;
+  }
+  
+  .plan-name {
+    text-transform: uppercase;
+    font-size: .9rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+  
+  .divider {
+    height: 1px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .price-column.popular .divider {
+    background-color: rgba(255, 255, 255, .2);
+  }
+  
+  .feature {
+    display: flex;
+    align-items: center;
+    margin: .5rem;
+  }
+  
+  .feature img {
+    height: 1.1em;
+    width: 1.1em;
+    margin-right: .5rem;
+  }
+  
+  .feature.inactive {
+    color: #999;
+    text-decoration-line: line-through;
+  }
+  
+  .most-popular {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    right: .5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: var(--heading-font-family);
+  }
+  
+  .cta {
+    border: none;
+    background-color: var(--accent-color);
+    color: white;
+    width: 100%;
+    padding: .75rem 1rem;
+    cursor: pointer;
+    font-family: var(--heading-font-family);
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 3rem;
+    transition: 100ms;
+    transform: scale(1);
+  }
+  
+  .price-column.popular .cta {
+    background-color: white;
+    color: var(--accent-color);
+  }
+  
+  .cta:hover, .cta:focus {
+    transform: scale(1.1);
+  }
+  
+  /* Let's write the media query */
+  @media (max-width: 576px) {
+    body {
+      padding: 10px;
+    }
+  
+    .card {
+      width: 100%;
+      margin: 10px;
+    }
+  
+    .card .features {
+      padding: 30px 50px 40px;
+    }
+  }
+  /* Responsividad */
+@media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-item {
+      max-width: 90%;
+    }
+}
+  
+@media (max-width: 1024px) {
+    header.SchoolsList_SchoolsList__V9ovD ul {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+}
+
+
+@media (max-width: 768px) {
+    header.SchoolsList_SchoolsList__V9ovD ul {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+}
+
+
+@media screen and (max-width: 1400px) {
+    
+    nav,
+    header,
+    h2.separator,
+    .sell-nft,
+    .nft-shop,
+    .sellers{
+        padding: 0 40px;
+    }
+
+    header .left h1{
+        font-size: 60px;
+    }
+
+    header img{
+        width: 540px;
+    }
+
+    .nft-shop .nft-list .item img{
+        width: 220px;
+        height: 220px;
+    }
+
+    footer{
+        padding: 100px 40px;
+    }
+
+    footer h3{
+        font-size: 38px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    
+    header .left h1{
+        font-size: 48px;
+    }
+
+    header img{
+        width: 480px;
+    }
+
+    h2.separator{
+        font-size: 34px;
+    }
+
+    .sell-nft .item .header i{
+        font-size: 36px;
+    }
+
+    .sell-nft .item .header h5{
+        font-size: 15px;
+    }
+
+    .sell-nft .item p{
+        font-size: 13px;
+    }
+
+    .nft-shop .nft-list{
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    .nft-shop .nft-list .item{
+        width: 48%;
+    }
+
+    .nft-shop .nft-list .item img{
+        width: 100%;
+        height: auto;
+    }
+
+    .sellers{
+        flex-wrap: wrap;
+    }
+
+    .sellers .item{
+        width: 48%;
+    }
+
+    footer .links a{
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    
+    nav a.logo{
+        font-size: 28px;
+    }
+
+    nav .links a{
+        font-size: 14px;
+    }
+
+    header{
+        flex-direction: column-reverse;
+        height: auto;
+        margin-bottom: 60px;
+    }
+
+    header .left{
+        width: 100%;
+    }
+
+    header img{
+        width: 100%;
+    }
+
+    .sell-nft{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .sell-nft .item{
+        width: 48%;
+    }
+
+    .sellers{
+        gap: 20px;
+    }
+
+    footer{
+        flex-direction: column;
+        padding: 60px 40px;
+    }
+
+    footer h3{
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+
+    footer .right{
+        width: 100%;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    nav,
+    header,
+    h2.separator,
+    .sell-nft,
+    .nft-shop,
+    .sellers{
+        padding: 0 20px;
+    }
+
+    nav a.logo{
+        display: none;
+    }
+
+    nav .links a{
+        font-size: 12px;
+    }
+
+    nav .login button{
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    header .left h1{
+        font-size: 36px;
+    }
+
+    header .left p{
+        font-size: 14px;
+    }
+
+    header .left a{
+        padding: 6px;
+        width: 160px;
+        font-size: 14px;
+    }
+
+    header .left a i{
+        padding: 6px;
+    }
+
+    h2.separator{
+        font-size: 30px;
+    }
+
+    footer{
+        padding: 40px 20px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    
+    header .left h1{
+        font-size: 30px;
+    }
+
+    .sell-nft .item{
+        width: 100%;
+    }
+
+    .nft-shop .nft-list .item,
+    .sellers .item{
+        width: 47%;
+    }
+
+    .nft-shop .category a{
+        font-size: 13px;
+    }
+
+}
