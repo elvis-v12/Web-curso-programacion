@@ -1,0 +1,40 @@
+.modulos_curso {
+        padding: 20px;
+        background-color: #f5f5f5;
+}
+
+.module-section {
+        margin-bottom: 20px;
+}
+
+.module-section h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+}
+
+.module-list {
+        list-style: none;
+        padding: 0;
+}
+
+.module-item {
+        margin-bottom: 8px;
+}
+
+.module-link {
+        display: block;
+        background-color: #fff;
+        color: #0047ec;
+        padding: 10px;
+        border: 1px solid;
+        text-align: left;
+        width: 100%;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+}
+
+.module-link:hover {
+        background-color: #c9f7ff;
+}

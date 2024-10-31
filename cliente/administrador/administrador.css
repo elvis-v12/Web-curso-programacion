@@ -1,0 +1,400 @@
+* {
+        margin: 0;
+        font-family: "Inconsolata", monospace, sans-serif;
+}
+
+:root {
+        /* --nav-tab-color: #9ae700; */
+        --nav-tab-color: #c8ff00;
+        --color: #3498db;
+}
+
+body.dark {
+        --nav-tab-color: #9ae700;
+}
+
+body {
+        padding: 1vh 1vw;
+        display: grid;
+        grid-template-areas:
+                "header header"
+                "tabs body";
+        gap: 15px;
+        grid-template-columns: 220px 1fr;
+        grid-template-rows: 85px 87.1vh;
+
+        @media (width < 1080px) {
+                grid-template-areas:
+                        "header"
+                        "tabs "
+                        "body";
+                gap: 20px;
+                grid-template-columns: 1fr;
+                max-width: 100vw;
+        }
+
+        @media (860px <= width < 1080px) {
+                grid-template-rows: 85px 1fr 76vh;
+        }
+
+        @media (600px <= width < 860px) {
+                grid-template-rows: 85px 1fr 74.3vh;
+        }
+
+        @media (width < 600px) {
+                grid-template-rows: 85px 0px 1fr;
+        }
+}
+
+.header,
+.tabs,
+.body {
+        box-shadow: 0px 2px 5px 0px #a6a6a6cc;
+        border-radius: 10px;
+}
+
+.header {
+        grid-area: header;
+}
+
+.body {
+        grid-area: body;
+}
+
+.tabs {
+        grid-area: tabs;
+}
+
+/* FONTS GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+    --blanco: #E0E0E0;
+    --azul-opacidad: #184463;
+    --bg-menu: #03121d;
+    --transicion: 0.3s ease;
+    --gris-claro: #F3F4F6;
+    --gris-oscuro: #6B7280;
+    --verde: #4CAF50;
+    --rojo: #F44336;
+    --gris-inactivo: #9E9E9E;
+    --azul: #2196F3;
+    --gris-tabla: #E5E7EB;
+    --borde: #D1D5DB;
+    --transicion: 0.3s ease;
+    --sombra: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --azul-claro: rgb(50, 65, 105);
+    --azul-claro: rgb(31, 49, 99);
+    --azul-morado: rgb(48, 48, 146);
+}
+
+.container_usuario{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: white;
+        margin-top: 70px;
+        position: fixed;
+        left: 70px;
+        right: 0;
+        width: calc(100% - 70px);
+        /* Ajuste cuando el sidebar está colapsado */
+        transition: left var(--transicion), width var(--transicion);
+    
+        min-height: calc(100vh -250px);
+        /* Para que la sección ocupe el espacio vertical completo */
+        overflow-y: auto;
+        /* Permitir scroll si el contenido excede */
+}
+
+
+.menu-dashboard.open+.main-usuarios {
+    left: 250px;
+    /* Ajuste cuando el sidebar está expandido */
+    width: calc(100% - 250px);
+    /* Ajuste del ancho */
+}
+
+/* SECCIÓN DE FILTROS */
+.filters-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    background-color: var(--gris-claro);
+    border-radius: 0.625rem;
+    box-shadow: var(--sombra);
+    margin-bottom: 1.25rem;
+    gap: 1rem;
+}
+
+/* Ajustamos las cajas de búsqueda */
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.3125rem;
+    background-color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--borde);
+    box-shadow: var(--sombra);
+    width: 100%;
+}
+
+.input-wrapper i {
+    color: var(--gris-oscuro);
+}
+
+.input-search {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: var(--gris-oscuro);
+    background-color: transparent;
+    width: 100%;
+}
+
+/* Filtros */
+.filters {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    flex: 2;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 150px;
+}
+
+.filter-dropdown,
+.date-filter {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--borde);
+    background-color: white;
+    box-shadow: var(--sombra);
+    font-size: 1rem;
+    color: var(--gris-oscuro);
+    width: 100%;
+}
+
+/* Botón Añadir Nuevo */
+.add-new-user {
+    background-color: var(--azul);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: background-color var(--transicion);
+    align-self: flex-end;
+}
+
+.add-new-user:hover {
+    background-color: #1E88E5;
+}
+
+/* Tabla de Listado de Usuarios */
+.table-section {
+    background-color: white;
+    border-radius: 0.625rem;
+    box-shadow: var(--sombra);
+    overflow-x: auto;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--blanco);
+}
+
+.user-table th,
+.user-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--gris-tabla);
+}
+
+.user-table th {
+    background-color: var(--gris-claro);
+    color: var(--gris-oscuro);
+    text-align: left;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.user-table td {
+    font-size: 0.875rem;
+    color: var(--gris-oscuro);
+}
+
+.user-table thead {
+    position: sticky;
+    top: 0;
+    background-color: var(--gris-claro);
+    z-index: 1;
+}
+
+/* Estado de cuenta */
+.status {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.status.active {
+    background-color: var(--verde);
+}
+
+.status.inactive {
+    background-color: var(--gris-inactivo);
+}
+
+.status.suspended {
+    background-color: var(--rojo);
+}
+
+/* Acciones */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.625rem;
+}
+
+.actions button {
+    background-color: transparent;
+    border: none;
+    padding: 0.3125rem;
+    cursor: pointer;
+}
+
+.actions button i {
+    font-size: 1.25rem;
+    color: var(--gris-oscuro);
+    transition: color var(--transicion);
+}
+
+.actions button:hover i {
+    color: var(--azul);
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.25rem;
+    padding: 0.625rem;
+    background-color: var(--gris-claro);
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra);
+}
+
+.pagination button {
+    background-color: var(--azul);
+    color: white;
+    border: none;
+    padding: 0.625rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color var(--transicion);
+}
+
+.pagination button:hover {
+    background-color: #1E88E5;
+}
+
+.pagination select {
+    padding: 0.625rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--borde);
+    background-color: white;
+    box-shadow: var(--sombra);
+    font-size: 0.875rem;
+    color: var(--gris-oscuro);
+}
+
+/* Modal General */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    color: var(--gris-oscuro);
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 90vw;
+    max-width: 600px;
+    box-shadow: var(--sombra);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Contenedor de perfil: imagen + detalles */
+.profile-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.profile-image {
+    flex: 0 0 80px;
+    max-width: 80px;
+}
+
+#profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Información del usuario */
+.user-info {
+    flex: 2;
+    font-size: 1rem;
+}
+
+.user-info p {
+    margin: 0.5rem 0;
+}
+
+.modal-content h3 {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    color: var(--azul);
+}
+
+.modal-content h2 {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    color: var(--azul);
+}

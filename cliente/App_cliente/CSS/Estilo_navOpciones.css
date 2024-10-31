@@ -1,0 +1,606 @@
+/* Contenedor general */
+.layout-desktop-module_main__OGBpc {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+
+/* Estilo para el aside izquierdo del menú de navegación */
+.layout-desktop-module_sidebarSecondLeft__WDyMW {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 15px; /* Espaciado interno */
+    width: 90%; /* Ancho reducido */
+    margin-left: 90px; /* Posición ajustada al costado de la barra izquierda */
+    position: relative;
+    top: 0;
+    z-index: 9;
+    height: 80%;
+}
+
+/* Estilo para cada ítem del menú de navegación */
+.navigation-sidebar-module_item__1xgbX {
+    background-color: #f9f9f9; /* Fondo gris claro para los ítems */
+    border: 1px solid #e6e6e6; /* Borde ligero */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 10px; /* Separación entre los ítems */
+    border-radius: 8px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    display: flex;
+    justify-content: space-between; /* Espaciado entre texto y SVG */
+    align-items: center;
+    color: #333; /* Color del texto */
+    font-size: 12px; /* Tamaño del texto */
+    transition: background-color 0.3s ease; /* Transición suave en hover */
+}
+
+/* Cambiar el orden para que el SVG esté al final */
+.navigation-sidebar-module_itemContent__mJesg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinear correctamente el SVG */
+    width: 100%;
+}
+
+.navigation-sidebar-module_itemContent__mJesg div {
+    flex-grow: 1; /* Para que el texto ocupe todo el espacio */
+}
+
+.navigation-sidebar-module_itemContent__mJesg svg {
+    color: #999; /* Color del ícono */
+    width: 18px; /* Tamaño del ícono */
+    height: 18px;
+    margin-left: 10px; /* Espaciado entre el texto y el SVG */
+}
+
+/* Hover para los ítems del menú de navegación */
+.navigation-sidebar-module_item__1xgbX:hover {
+    background-color: #f0f0f0; /* Cambio de color de fondo en hover */
+    cursor: pointer; /* Manito en hover */
+}
+
+/* Estilo para el estado del proceso de admisión */
+.pill-module_container__XStQa {
+    background-color: #fffae6; /* Fondo amarillo claro */
+    color: #f5a623; /* Texto amarillo oscuro */
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Estilo para el contenedor de consultas (mail card) */
+.mail-card_container__SfFGa {
+    background-color: #547258; /* Fondo sutil */
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center; /* Centramos el contenido */
+    margin-top: 20px; /* Espaciado superior */
+}
+.mail-card_container__SfFGa img{
+    border-radius: 15px;
+}
+.mail-card_container__SfFGa a {
+    color: #fff; /* Color del enlace */
+    font-weight: bold;
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Contenedor principal */
+.layout-desktop-module_columns__kFyqn {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding: 0 20px;
+}
+
+
+
+
+/* Cabecera del contenido principal */
+.layout-desktop-module_columnsHeader__-9mVx {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.layout-desktop-module_headerInfo__RpFen{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    
+}
+/* Diseño general para la cabecera */
+.layout-desktop-module_columnsHeader__-9mVx {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Contenedor general para el theme-switcher y el perfil */
+.right-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px; /* Ajustar la distancia entre los elementos */
+    width: 100%;
+    margin-right: 30px;
+    border: #f2f2f2;
+}
+
+/* Quita el padding-left que estaba desplazando el switch */
+.theme-switcher-module_themeSwitcher__bE8ib {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; /* Ajustar el margen entre el switch y el perfil */
+    padding-left: 0; /* Asegurar que no se desplace hacia la izquierda */
+}
+
+
+/* Personalización del switch */
+.form-switch input[type="checkbox"] {
+    appearance: none;
+    background-color: #ddd;
+    border-radius: 20px;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.form-switch input[type="checkbox"]:checked {
+    background-color: #4CAF50;
+}
+
+.form-switch input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.form-switch input[type="checkbox"]:checked::before {
+    transform: translateX(20px);
+}
+
+
+.mail-card_image__ldHj5 img {
+    margin-bottom: 15px; /* Espaciado inferior de la imagen */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+    width: 150px;
+    height: auto;
+}
+
+.fonts-module_title-small__ctZzA {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333; /* Color de texto oscuro */
+    margin-bottom: 8px;
+}
+
+.fonts-module_headline-medium__XtzA8 {
+    font-size: 1.1em;
+    color: #555; /* Color de texto gris */
+    margin-bottom: 10px;
+}
+
+.fonts-module_body-small-bold__9mKaI {
+    display: inline-block;
+    color: #007bff; /* Color del enlace */
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent; /* Borde transparente */
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Transición suave */
+}
+
+.fonts-module_body-small-bold__9mKaI:hover {
+    color: #0056b3; /* Cambio de color del enlace al pasar el ratón */
+    border-bottom: 2px solid #0056b3; /* Borde azul al pasar el ratón */
+}
+
+
+
+/* Perfil de usuario */
+.proffile_bajo {
+    display: flex;
+    align-items: center;
+}
+
+.profile-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+
+/* Perfil de usuario */
+.proffile_bajo {
+    display: flex;
+    align-items: center;
+}
+
+.profile-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+/* Posición y diseño del menú desplegable del perfil */
+
+
+
+
+
+
+/* Estilo de los botones */
+.theme-switcher-module_themeSwitcher__bE8ib {
+    display: flex;
+    align-items: center;
+}
+
+/* Perfil de usuario */
+
+
+.profile-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+/* Contenido principal */
+
+
+/* Formulario de admisión */
+.card-module_card__ZPFTz {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.admissions-content_formContainer__kNm00 {
+    margin-top: 20px;
+    background: #f2f2f2;
+    border-radius: 10px;
+    overflow-y: auto; 
+}
+
+/* General alignment */
+.link-button-module_container__GiPU3 svg {
+    margin-right: 10px;
+}
+
+.link-button-module_container__GiPU3 {
+    display: flex;
+    align-items: center;
+    background-color: #4CAF50;
+    padding: 10px;
+    color: white;
+    border-radius: 18px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+
+}
+.dosss{
+    background: transparent;
+}
+
+.link-button-module_container__GiPU3:hover {
+    background-color: #45a049;
+}
+
+
+.card-module_card__ZPFTz .descripcion_breve {
+    color: #333;
+}
+/*CAJA DE REGITRO DE DATOS*/
+/* Contenedor principal del formulario con barra de desplazamiento */
+.layout-desktop-module_mainContent__690ya {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-height: 400px; /* Altura máxima para activar el scroll */
+    overflow-y: auto; /* Barra de desplazamiento vertical */
+    margin-right: 20px;
+}
+
+/* Contenedor del formulario de admisión */
+
+/* Estilo de los inputs */
+.form-outline{
+    margin: 15px 0px 0px 20px;
+
+}
+.form-control-lg {
+     width: 80%;
+    padding: 8px;
+    font-size: 0.85em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.form-control-lg:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+    outline: none;
+}
+
+/* Estilo de los labels */
+.form-label {
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Botón de continuar */
+.button-module_common__1qAyj {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100px; /* Botón más pequeño */
+}
+
+.button-module_common__1qAyj:hover {
+    background-color: #45a049;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustar las columnas */
+.col-sm-6 {
+    width: 100%;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   
+    background: transparent;
+}
+
+/* Ajuste para las etiquetas grandes como "CONOCIMIENTO TÉCNICO" */
+.fonts-module_overline-large__a8kYq {
+    font-size: 1em;
+    margin-top: 20px;
+    font-weight: bold;
+    display: block;
+    grid-column: span 2; /* Abarca ambas columnas */
+    margin: 15px 0px 0px 20px;
+}
+.admissions-content_formButton__qJJ_V{
+    margin: 15px 0px 20px 20px;
+}
+/* Estilo para las barras de desplazamiento */
+.layout-desktop-module_mainContent__690ya::-webkit-scrollbar {
+    width: 8px;
+}
+
+.layout-desktop-module_mainContent__690ya::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.layout-desktop-module_mainContent__690ya::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+}
+.col-12{
+    background: none;
+    background-color: none;
+}
+
+/*Cursoss de datos usuario*/
+/* Contenedor del formulario */
+.form-container {
+    margin-top: 20px;
+    background: #f2f2f2;
+    border-radius: 10px;
+    padding: 20px; /* Reducido el padding */
+    max-width: 800px; /* Ancho máximo reducido */
+    margin: 0 auto; /* Centrar el formulario */
+    overflow-y: auto;
+}
+
+/* Fila del formulario */
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-gap: 20px; /* Reducido el espacio entre columnas */
+    margin-bottom: 15px; /* Margen inferior reducido */
+}
+
+/* Columna de cada campo */
+.form-col {
+    width: 100%; /* Ocupa el 100% del contenedor */
+}
+
+/* Contenedor de cada input */
+.input-container {
+    margin-bottom: 15px; /* Espacio debajo de cada input reducido */
+}
+
+/* Estilo de los inputs */
+.form-control-lg {
+    width: 100%; /* Ocupa el 100% del contenedor */
+    padding: 10px; /* Padding reducido */
+    font-size: 1em; /* Tamaño del texto reducido */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Bordes redondeados más pequeños */
+    margin-bottom: 8px; /* Margen inferior reducido */
+}
+
+/* Estilo cuando el input está enfocado */
+.form-control-lg:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+    outline: none;
+}
+
+/* Estilo de las etiquetas */
+.form-label {
+    font-size: 0.9em; /* Tamaño de la etiqueta reducido */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px; /* Espacio debajo de la etiqueta reducido */
+    display: block;
+}
+
+/* Título de sección como "CONOCIMIENTO TÉCNICO" */
+.section-title {
+    font-size: 1.2em; /* Texto más pequeño */
+    margin-top: 20px; /* Menos espacio superior */
+    font-weight: bold;
+    display: block;
+    grid-column: span 2; /* Abarca ambas columnas */
+}
+
+/* Estilo del botón */
+.btn-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px; /* Tamaño del botón reducido */
+    border-radius: 8px;
+    font-size: 1em; /* Fuente más pequeña */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 150px; /* Tamaño del botón reducido */
+}
+
+/* Hover para el botón */
+.btn-submit:hover {
+    background-color: #45a049;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividad: ajustar a pantallas más pequeñas */
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr; /* Cambiar a una sola columna */
+    }
+
+    .form-control-lg {
+        width: 100%; /* Asegurarse de que los inputs ocupen el 100% */
+    }
+
+    .btn-submit {
+        width: 100%; /* Botón ocupará todo el ancho disponible */
+    }
+
+    .section-title {
+        grid-column: 1; /* Abarcar solo una columna en pantallas pequeñas */
+    }
+}
+
+/* Barra de desplazamiento personalizada */
+.form-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.form-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 6px;
+}
+
+.form-container::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+}
+
+
+/*Contendio de formulario recojo de datos*/
+.layout-desktop-module_mainContent__690ya{
+    display: none;
+}
+
+/*Horarios de estudio*/
+.description-container{
+    display:none;
+}
+
+/*Modulos*/
+.accordion-container{
+    display:none;
+}
+
+
+/*Horarios*/
+.schedule-card {
+    display: none;
+}
+/*certificado*/
+.certificate-container{
+    display:none;
+}
+
+/*principal contenido de todos esos */
+
+
+
+.layout-desktop-module_main__OGBpc{
+    display: none;
+}
+
+/*Contenido de barras contenidos_barra*/
+.main-content{
+    display: no;
+}
+
+/*ESTABLECER META*/
+
+
+/*Mis respuestas y comentarios xd */
+.cajas{
+    display: none;
+}
+
+/*Seccion de mis cursos*/
+.col-md-8{
+    display:none;
+}
+/*Seccion de videos*/

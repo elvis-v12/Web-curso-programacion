@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Administrativo</title>
+    <link rel="stylesheet" href="administrador.css">
+    <link rel="stylesheet" href="administrador-header.css">
+    <link rel="stylesheet" href="administrador-tabs.css">
+    <link rel="stylesheet" href="administrador-body.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet" />
+    <!-- courses -->
+    <link rel="stylesheet" href="course/course.css">
+    <link rel="stylesheet" href="course/course-header.css">
+    <link rel=" stylesheet" href="course/course-select/course-select.css">
+    <link rel="stylesheet" href="course/course-select/description-course/description-course.css">
+    <link rel="stylesheet" href="course/course-select/content-course/content-course.css">
+    <link rel="stylesheet" href="course/course-select/data-course/data-course.css">
+    <!-- scholarships -->
+    <link rel="stylesheet" href="scholarships/scholarships.css">
+    <link rel="stylesheet" href="scholarships/scholarships-header.css">
+    <link rel="stylesheet" href="scholarships/scholarships-aside.css">
+    <link rel="stylesheet" href="scholarships/scholarships-data.css">
+    <!-- Pagos -->
+    <link rel="stylesheet" href="pagos/pagos.css">
+    <link rel="stylesheet" href="pagos/pagos-body.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">
+            <a href="/cliente/principal/Inicio.html">
+                <img src="/cliente/App_cliente/imagenes/Logo_Img.png" alt="">
+            </a>
+        </h1>
+    </header>
+
+    <nav class="tabs">
+        <ul class="tabs__list">
+            <li class="tabs__list_item" id="course">cursos</li>
+            <li class="tabs__list_item" id="scholarships">Becas</li>
+            <li class="tabs__list_item" id="pagos">Pagos</li>
+            <li class="tabs__list_item" id="Usuarios">Usuarios</li>
+        </ul>
+    </nav>
+
+    <div class="body">
+        <div class="tabs-menu">
+            <div class="tabs-menu__content">
+                <div class="tabs-menu__line"></div>
+                <div class="tabs-menu__line"></div>
+                <div class="tabs-menu__line"></div>
+            </div>
+        </div>
+
+        <!--USUARIOS CAMPO-->
+        <div class="container_usuario" style="display: none;">
+            <div class="main-usuarios">
+                <div class="content-box">
+                    <div class="seccion-usuarios" id="seccion-usuarios">
+                        <section class="filters-section">
+                            <div class="search-containerUsuario">
+                                <div class="input-wrapper">
+                                    <i class='bx bx-search'></i>
+                                    <input type="text" id="search-input" class="input-search"
+                                        placeholder="Buscar por nombre o correo...">
+                                </div>
+                            </div>
+
+                            <div class="filters">
+                                <div class="filter-item">
+                                    <select id="filter-status" class="filter-dropdown">
+                                        <option value="">Estado</option>
+                                        <option value="activo">Activo</option>
+                                        <option value="inactivo">Inactivo</option>
+                                        <option value="suspendido">Suspendido</option>
+                                    </select>
+                                </div>
+
+                                <div class="filter-item">
+                                    <select id="filter-role" class="filter-dropdown">
+                                        <option value="">Rol</option>
+                                        <option value="estudiante">Estudiante</option>
+                                        <option value="instructor">Instructor</option>
+                                        <option value="administrador">Administrador</option>
+                                    </select>
+                                </div>
+
+                                <div class="filter-item">
+                                    <input type="date" id="date-filter" class="date-filter">
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn add-new-user">Añadir</button>
+                            </div>
+                        </section>
+
+                        <!-- Tabla de Listado de Usuarios, no irira, solo prueba -->
+                        <section class="table-section">
+                            <table class="user-table">
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" aria-label="Seleccionar todos los usuarios"></th>
+                                        <th>Nombre</th>
+                                        <th>Correo Electrónico</th>
+                                        <th>Estado</th>
+                                        <th>Cursos Inscritos</th>
+                                        <th>Tipo de Suscripción</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" aria-label="Seleccionar usuario"></td>
+                                        <td><a href="#">Juan Pérez</a></td>
+                                        <td>juan.perez@mail.com</td>
+                                        <td><span class="status active">Activo</span></td>
+                                        <td>4</td>
+                                        <td>DUO - ANUAL</td>
+                                        <td class="actions">
+                                            <button aria-label="Ver usuario"><i class='bx bx-show'></i></button>
+                                            <button aria-label="Editar usuario"><i class='bx bx-pencil'></i></button>
+                                            <button aria-label="Eliminar usuario"><i class='bx bx-trash'></i></button>
+                                            <button aria-label="Enviar correo"><i class='bx bx-envelope'></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <!-- Paginación -->
+                        <div class="pagination">
+                            <button class="prev-page" aria-label="Página anterior">Anterior</button>
+                            <button class="next-page" aria-label="Página siguiente">Siguiente</button>
+                            <select class="page-size" aria-label="Usuarios por página">
+                                <option value="10">10 usuarios por página</option>
+                                <option value="20">20 usuarios por página</option>
+                                <option value="50">50 usuarios por página</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Perfil de Usuario -->
+                <div id="user-profile-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Perfil de Usuario</h2>
+
+                        <div class="profile-container">
+                            <div class="profile-image">
+                                <img id="profile-pic" src="./img/PERFIL.jpg" alt="Foto de perfil de usuario">
+                            </div>
+
+                            <!-- Información del usuario -->
+                            <div class="user-info">
+                                <p><strong>Nombre:</strong> <span id="profile-name">Juan Pérez</span></p>
+                                <p><strong>Correo Electrónico:</strong> <span
+                                        id="profile-email">juan.perez@mail.com</span></p>
+                                <p><strong>Cursos Inscritos:</strong> <span id="profile-courses">4</span></p>
+                                <p><strong>Tipo de Suscripción:</strong> <span id="profile-subscription">DUO -
+                                        ANUAL</span></p>
+                                <p><strong>Estado:</strong> <span id="profile-status"
+                                        class="status active">Activo</span></p>
+
+                                <h3>Datos Personales</h3>
+                                <p><strong>Teléfono:</strong> <span id="profile-phone">+123 456 789</span></p>
+                                <p><strong>Dirección:</strong> <span id="profile-address">Calle Falsa 123</span></p>
+                                <p><strong>Fecha de Nacimiento:</strong> <span id="profile-birthdate">01/01/1980</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body__content"></div>
+
+    </div>
+    <script type="module" src="/server/script/administrador/administrador.js"></script>
+    <script src="" id="scriptTab"></script>
+</body>
+
+</html>

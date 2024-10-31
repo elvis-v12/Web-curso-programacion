@@ -1,0 +1,194 @@
+[
+        {
+                "id": 1,
+                "code": "CUR001",
+                "url": "/cliente/cursos/cursosDetalles.html",
+                "author": "Alvaro Chirou",
+                "name": "Python Practicando. Desde 0 hasta Desarrollador en Python",
+                "score": "4,6",
+                "stars": "9",
+                "votes": "21.363",
+                "price": 49.90,
+                "pricePrevious": "199,90 S/",
+                "portada": "/cliente/principal/pictures/carousel/image.png",
+                "detalles": "<span>25,5 horas de vídeo bajo demanda</span><span>21 artículos</span><span>147 recursos descargables</span><span>Acceso en dispositivos móviles y TV</span><span>Certificado de finalización</span>",
+                "lastUpdate": "9/2024",
+                "language": "Español",
+                "habilidades": "",
+                "requisitos": "",
+                "shortDescription": "Aprende Python, donde iniciamos desde 0, sin conocimientos previos hasta desarrollar aplicaciones con mucha practica!",
+                "description": "<b>Python</b> es Hoy uno de los lenguajes <b>más utilizados por Excelencia</b>.<br>Esto se debe por su <b>simpleza</b> al momento de <b>Desarrollar aplicaciones</b>.<br>Por su capacidad de <b>procesamiento a altas velocidades</b> con grandes volúmenes de información.<br>Es un <b>increíble lenguaje</b> con el cual si no sabes programar, <b>podrás aprender</b>.<br>Y si ya sabes desarrollarlo, te aseguro que en el <b>mercado cada vez se solicitan más desarrolladores en Python</b>.<br><b>Aspirar al trabajo que desean, o mejorar sus ingresos con un aumento de salario</b>.<br>Python se utiliza para muchísimas cosas como:<br><ul><li><b>Machine Learning</b></li><li><b>Data Science</b></li><li><b>Inteligencia Artificial</b></li><li>Y mucho más!</li></ul>En este curso te <b>acompañaré en el proceso</b> por el cual aprenderás las bases del lenguaje, para luego determinar qué camino quieres seguir.<br>Te invito a que me acompañes a conocer este <b>Gran Lenguaje</b>!<br>Yo soy <b>Álvaro Chirou</b>, tengo <b>más de 20 Años</b> de experiencia trabajando en <b>Tecnología</b>, he dado conferencias en eventos internacionales como <b>OWASP</b>, tengo más de <b>500.000 estudiantes en Udemy</b> y <b>100 formaciones profesionales impartidas en la misma.</b><br>Junto a mi compañero <b>Walter Coto</b> donde con él hemos dado formaciones profesionales en conjunto también en la plataforma de Udemy, hoy les traemos esta formación especialmente pensada para el lenguaje más demandado por el mercado.<br>Tendrás acceso de por vida al curso, recibirás actualizaciones y respuestas a tus preguntas a través de la plataforma de Udemy.<br>Empieza a aprender ya mismo!<br>Nos vemos dentro!<br>Tus profesores: <b>Álvaro Chirou y Walter Coto</b>.",
+                "contenidos": [
+                        {
+                                "code": "CON001",
+                                "nombre": "Clase 1",
+                                "descripcion": "Introducción a la programación"
+                        },
+                        {
+                                "code": "CON002",
+                                "nombre": "Clase 2",
+                                "descripcion": "Estructuras de control"
+                        },
+                        {
+                                "code": "CON003",
+                                "nombre": "Clase 3",
+                                "descripcion": "Funciones y módulos"
+                        },
+                        {
+                                "code": "CON004",
+                                "nombre": "Clase 4",
+                                "descripcion": "Programación orientada a objetos"
+                        },
+                        {
+                                "code": "CON005",
+                                "nombre": "Clase 5",
+                                "descripcion": "Manejo de excepciones"
+                        },
+                        {
+                                "code": "CON006",
+                                "nombre": "Clase 6",
+                                "descripcion": "Archivos y bases de datos"
+                        },
+                        {
+                                "code": "CON007",
+                                "nombre": "Clase 7",
+                                "descripcion": "Desarrollo web con HTML y CSS"
+                        },
+                        {
+                                "code": "CON008",
+                                "nombre": "Clase 8",
+                                "descripcion": "JavaScript y la programación del lado del cliente"
+                        },
+                        {
+                                "code": "CON009",
+                                "nombre": "Clase 9",
+                                "descripcion": "Introducción a frameworks de desarrollo web"
+                        },
+                        {
+                                "code": "CON010",
+                                "nombre": "Clase 10",
+                                "descripcion": "Proyecto final de programación"
+                        }
+                ]
+        },
+        {
+                "id": 2,
+                "code": "CUR002",
+                "url": "/cliente/cursos/cursosDetalles.html",
+                "author": "María Pérez",
+                "name": "Desarrollo Web Completo 2024",
+                "score": "4.8",
+                "stars": "10",
+                "votes": "18,500",
+                "price": 59.90,
+                "pricePrevious": "219.90 S/",
+                "portada": "/cliente/principal/pictures/carousel/image2.png",
+                "detalles": "<span>30 horas de vídeo bajo demanda</span><span>30 artículos</span><span>180 recursos descargables</span><span>Acceso en dispositivos móviles y TV</span><span>Certificado de finalización</span>",
+                "lastUpdate": "8/2024",
+                "language": "Español",
+                "habilidades": "HTML, CSS, JavaScript",
+                "requisitos": "Interés en desarrollo web",
+                "shortDescription": "Domina el desarrollo web desde cero con HTML, CSS, y JavaScript.",
+                "description": "Este curso te enseñará todo lo que necesitas para convertirte en un desarrollador web completo, con proyectos prácticos y actualizaciones constantes."
+        },
+        {
+                "id": 3,
+                "code": "CUR003",
+                "url": "/cliente/cursos/cursosDetalles.html",
+                "author": "Carlos García",
+                "name": "Data Science con Python",
+                "score": "4.7",
+                "stars": "9",
+                "votes": "12,450",
+                "price": 69.90,
+                "pricePrevious": "249.90 S/",
+                "portada": "/cliente/principal/pictures/carousel/image3.png",
+                "detalles": "<span>40 horas de vídeo bajo demanda</span><span>25 artículos</span><span>200 recursos descargables</span><span>Acceso en dispositivos móviles y TV</span><span>Certificado de finalización</span>",
+                "lastUpdate": "7/2024",
+                "language": "Español",
+                "habilidades": "Python, análisis de datos, visualización de datos",
+                "requisitos": "Conocimientos básicos de Python",
+                "shortDescription": "Aprende Data Science con Python y domina el análisis de datos.",
+                "description": "Curso práctico para aprender Data Science con Python, abarcando desde análisis hasta visualización de datos, con ejemplos reales."
+        },
+        {
+                "id": 4,
+                "code": "CUR004",
+                "url": "/cliente/cursos/cursosDetalles.html",
+                "author": "Ana Martínez",
+                "name": "Introducción a la Inteligencia Artificial",
+                "score": "4.5",
+                "stars": "8",
+                "votes": "9,700",
+                "price": 79.90,
+                "pricePrevious": "299.90 S/",
+                "portada": "/cliente/principal/pictures/carousel/image4.png",
+                "detalles": "<span>35 horas de vídeo bajo demanda</span><span>20 artículos</span><span>150 recursos descargables</span><span>Acceso en dispositivos móviles y TV</span><span>Certificado de finalización</span>",
+                "lastUpdate": "6/2024",
+                "language": "Español",
+                "habilidades": "Machine Learning, redes neuronales",
+                "requisitos": "Conocimientos previos de programación",
+                "shortDescription": "Introducción al mundo de la Inteligencia Artificial.",
+                "description": "Aprende los fundamentos de la inteligencia artificial y cómo se aplican en el mundo real, con ejercicios prácticos y actualizaciones continuas."
+        },
+        {
+                "id": 5,
+                "code": "CUR005",
+                "url": "/cliente/cursos/cursosDetalles.html",
+                "author": "Juan López",
+                "name": "JavaScript desde Cero a Profesional",
+                "score": "4.9",
+                "stars": "10",
+                "votes": "15,200",
+                "price": 89.90,
+                "pricePrevious": "199.90 S/",
+                "portada": "/cliente/principal/pictures/carousel/image5.png",
+                "detalles": "<span>50 horas de vídeo bajo demanda</span><span>45 artículos</span><span>300 recursos descargables</span><span>Acceso en dispositivos móviles y TV</span><span>Certificado de finalización</span>",
+                "lastUpdate": "5/2024",
+                "language": "Español",
+                "habilidades": "JavaScript, DOM, eventos",
+                "requisitos": "Ninguno",
+                "shortDescription": "Aprende JavaScript desde cero y domina la programación web.",
+                "description": "Curso integral de JavaScript que cubre desde los conceptos básicos hasta el desarrollo avanzado, con proyectos prácticos."
+        },
+        {
+                "id": 6,
+                "code": "CUR006",
+                "url": "/cliente/cursos/cursosDetalles.html",
+                "author": "Sofía Torres",
+                "name": "Desarrollo de Apps con React Native",
+                "score": "4.8",
+                "stars": "9",
+                "votes": "8,900",
+                "price": 99.90,
+                "pricePrevious": "249.90 S/",
+                "portada": "/cliente/principal/pictures/carousel/image6.png",
+                "detalles": "<span>60 horas de vídeo bajo demanda</span><span>30 artículos</span><span>250 recursos descargables</span><span>Acceso en dispositivos móviles y TV</span><span>Certificado de finalización</span>",
+                "lastUpdate": "4/2024",
+                "language": "Español",
+                "habilidades": "React Native, desarrollo móvil",
+                "requisitos": "Conocimientos básicos de JavaScript",
+                "shortDescription": "Domina el desarrollo de apps móviles con React Native.",
+                "description": "Aprende a desarrollar aplicaciones móviles usando React Native, un curso práctico y completo con ejercicios para cada módulo."
+        },
+        {
+                "id": 7,
+                "code": "CUR007",
+                "url": "/cliente/cursos/cursosDetalles.html",
+                "author": "Luis Fernández",
+                "name": "Programación Avanzada en Python",
+                "score": "4.7",
+                "stars": "9",
+                "votes": "14,500",
+                "price": 109.90,
+                "pricePrevious": "259.90 S/",
+                "portada": "/cliente/principal/pictures/carousel/image7.png",
+                "detalles": "<span>45 horas de vídeo bajo demanda</span><span>35 artículos</span><span>220 recursos descargables</span><span>Acceso en dispositivos móviles y TV</span><span>Certificado de finalización</span>",
+                "lastUpdate": "3/2024",
+                "language": "Español",
+                "habilidades": "Programación avanzada, desarrollo de aplicaciones complejas",
+                "requisitos": "Conocimientos básicos de Python",
+                "shortDescription": "Aprende a programar en Python a un nivel avanzado, desarrollando aplicaciones robustas y escalables.",
+                "description": "Este curso avanzado te enseñará las técnicas y herramientas necesarias para desarrollar aplicaciones complejas en Python, abarcando desde manejo avanzado de excepciones hasta optimización de código."
+        }
+]

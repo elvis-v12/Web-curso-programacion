@@ -1,0 +1,415 @@
+.MisEstadisticas{
+width: 100%;
+height: 100%;
+}
+.MisEstadisticas-contenedor {
+    padding: 20px;
+    margin-left: 100px;
+    width: 93%;
+    flex-grow: 1;
+    height: 100%; /* Ocupar toda la altura del viewport */
+    overflow-y: hidden; /* Evitar desbordamiento en el contenido principal */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.EncabezadoEstadisticas {
+    display: block; /* Cambiado a block para que los elementos estén en bloque */
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+.EncabezadoEstadisticas-regresar {
+    text-decoration: none;
+    color: #007BFF;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Añadir margen para espacio entre regresar y título */
+    width: 115px;
+    height: 30px;
+    justify-content: center;
+}
+.EncabezadoEstadisticas-regresar:hover{
+    border: 1px solid #0008;
+    border-radius: 20px;
+}
+.EncabezadoEstadisticas-regresar svg {
+    margin-right: 8px;
+    width: 20px;
+}
+
+.EncabezadoEstadisticas-titulo {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+.EncabezadoEstadisticas-items {
+    display: block;
+}
+.EncabezadoEstadisticas-titulo{
+    color: #000;
+    font-weight: bold;
+}
+
+
+
+.EstadisticasVitales {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.EstadisticaGeneral{
+    width: 10%;
+    height: 10%;
+    color: chartreuse;
+
+    display: flex;
+}
+.EstadisticaGeneral-texto p{
+  margin-top: 0px;
+}
+.EstadisticaGeneral-icono .svg-inline--fa{
+    width: 30px;
+}
+.EstadisticaGeneral {
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1;
+    margin: 0 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.EstadisticaGeneral-icono {
+    margin-bottom: 10px;
+}
+
+.EstadisticaGeneral-texto h3 {
+    font-size: 20px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.EstadisticaGeneral-texto p {
+    font-size: 14px;
+    color: #888;
+}
+
+.DistribucionGraficas {
+    margin-top: 30px;
+    display: flex;
+}
+
+
+/*Metas*/
+.ProgresoMeta1{
+    display: flex;
+    padding-right: 10px; /* Espacio para evitar que la barra de desplazamiento cubra el contenido */
+}
+
+.ProgresoMeta{
+  width: 69%;
+  height: 440px;
+}
+
+/*Meta cuando aparece */
+.AddGoal{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.GraficoAreasConocimiento{
+    width: 20%;
+    margin-left: 10px;
+ position: relative;
+ height: 440px;
+}
+
+.GraficoAreasConocimiento-graficoContainer {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen en columna */
+    align-items: center; /* Opcional: centra los elementos horizontalmente */
+}
+
+.GraficoAreasConocimiento-graficoDonut {
+    margin-bottom: 20px; /* Espacio entre el gráfico y las categorías */
+}
+
+.GraficoAreasConocimiento-categorias {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra las categorías debajo del gráfico */
+}
+
+.GraficoAreasConocimiento-categorias-item {
+    display: flex;
+    align-items: center;
+}
+
+.GraficoAreasConocimiento-categorias-item div {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+
+.ProgresoMeta, .GraficoAreasConocimiento {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.EncabezadoProgreso {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+}
+.EncabezadoProgreso-textos{
+    height: 100%;
+}
+.EncabezadoProgreso-titulo{
+    color: #F8E71C;
+    font-size:15px ;
+    margin: 0;
+}
+
+.EncabezadoProgreso-subtitulo {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+.AgregarMeta{
+    height: 100%;
+}
+.svg-inline--fa{
+    height: 20px;
+}
+
+
+
+.AgregarMeta {
+    display: flex;
+    align-items: center;
+}
+
+.AgregarMeta svg {
+    margin-right: 8px;
+}
+
+.AgregarMeta p {
+    margin: 0;
+    color: #888;
+}
+
+.AgregarMeta button {
+    padding: 8px 16px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.AgregarMeta button:hover {
+    background-color: #0056b3;
+}
+
+.GraficoAreasConocimiento-titulo {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.GraficoAreasConocimiento-graficoContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.GraficoAreasConocimiento-categorias-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.GraficoAreasConocimiento-categorias-item div {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+canvas {
+    border-radius: 8px;
+}
+
+
+
+
+/* Estilos del modal */
+.Modal-wrapper {
+    position: fixed; /* Fijo en la pantalla */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #1e2a3a; /* Fondo oscuro similar al de la imagen */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    color: white;
+    z-index: 1000;
+}
+
+.SetGoalForm-title {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 20px;
+}
+
+.SetGoalForm-rocket {
+    margin-right: 10px;
+}
+
+.SetGoalForm h2 {
+    font-size: 1.5rem;
+    color: white; /* Color de texto blanco */
+    margin: 0;
+}
+
+.SetGoalForm-form {
+    margin-bottom: 20px;
+}
+
+.SetGoalForm-form-title {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: white; /* Color del texto */
+}
+
+.SetGoalForm-dropdown {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #2c3e50; /* Color de fondo del input */
+    color: #ccc; /* Color del texto del placeholder */
+    border: 1px solid #34495e;
+   padding: 10px;
+   margin-top: 14px;
+    width: 95%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*Opciones de selecion*/
+.SetGoalForm-dropdown-options {
+    display: flex;  /* Usamos flexbox para manejar la disposición de los botones */
+    justify-content: center;  /* Centramos los botones horizontalmente */
+    flex-wrap: wrap;  /* Permite que los botones se ajusten a la siguiente línea si es necesario */
+    background: #2c3e50;
+    text-align: center;
+    justify-content: center;
+    margin-top: 17px;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.SetGoalForm-dropdown-item {
+    width: 97%;  /* Cada botón ocupa casi la mitad del contenedor */
+    margin: 10px 0px 0px 0px;
+    padding: 6px;
+    background-color: #1ABC9C;
+    transition: background-color 0.3s;
+    color: white;  /* Color del texto del botón */
+    cursor: pointer;  /* Cambia el cursor al pasar por encima del botón */
+    border: none;
+    border-radius: 2px;
+    text-align: center;  /* Asegura que el texto esté centrado */
+    font-size: 16px;  /* Tamaño de fuente */
+    transition: background-color 0.3s ease;  /* Añade una transición suave para el hover */
+
+}
+
+.SetGoalForm-dropdown-item:hover {
+    background-color: #045343;  /* Cambia el color de fondo al pasar el ratón por encima */
+    transition: background-color 0.3s ease;  /* Añade una transición suave para el hover */
+}
+
+/*Opcion de contenido*/
+.optionContent{
+    display: block;  /* Asegúrate de que el div sea visible */
+}
+
+.SetGoalForm-dropdown:hover{
+  background: #0c1633;
+}
+.SetGoalForm-dropdown p{
+    margin: 0;
+}
+.SetGoalForm-dropdown-icon {
+    background: none;
+    border: none;
+    color: #ccc;
+}
+
+.SetGoalForm-actions-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.SetGoalForm-actions-buttons-primary {
+    background-color: #1ABC9C; /* Color del botón "Guardar" */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.SetGoalForm-actions-buttons-primary:disabled {
+    background-color: #16a085; /* Botón "Guardar" cuando está deshabilitado */
+}
+
+.SetGoalForm-actions-buttons-secondary {
+    background-color: #34495e; /* Color del botón "Cancelar" */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.SetGoalForm-actions-buttons-primary:hover {
+    background-color: #17A589; /* Efecto hover en "Guardar" */
+}
+
+.SetGoalForm-actions-buttons-secondary:hover {
+    background-color: #2c3e50; /* Efecto hover en "Cancelar" */
+}
+
+/* Fondo oscuro detrás del modal */
+.Modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    z-index: 999;
+}
