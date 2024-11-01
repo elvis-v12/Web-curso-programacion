@@ -82,6 +82,7 @@ import { CursosService } from "../../server/script/service/CursosService.js";
                   this.commentsContainer.appendChild(commentElement);
             }
 
+ 
             changeSession(direction) {
                   const contents = this.getAllContents();
                   const newIndex = this.currentSessionIndex + direction;
@@ -143,7 +144,7 @@ import { CursosService } from "../../server/script/service/CursosService.js";
                   ];
                   return months[monthNumber - 1];
             }
-            
+
             createCommentElement(comment) {
                   const commentElement = document.createElement('article');
                   commentElement.className = 'comentario';
