@@ -1,16 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
 * {
 	margin: 0;
-	padding: 0;
 	box-sizing: border-box;
 }
 
 a {
 	text-decoration: none;
-}
-
-li {
-	list-style: none;
 }
 
 :root {
@@ -73,7 +68,10 @@ body {
 	overflow-x: hidden;
 	scrollbar-width: none;
 	font-weight: bold;  
-	border-radius: 0px 25px 25px 0;      
+	border-radius: 0px 25px 25px 0;
+	ul{
+		padding: 0;
+	}
 
 }
 #sidebar::--webkit-scrollbar {
@@ -665,7 +663,7 @@ body {
 		min-width: 420px;
 	}
 }
-.section {
+.section {list-style: none;
 	display: none;
 	/* Todas las secciones ocultas por defecto */
 }

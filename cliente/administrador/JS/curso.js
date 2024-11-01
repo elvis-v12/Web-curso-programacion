@@ -2,7 +2,7 @@ import { CursosService } from "./CursosService.js";
 (() => {
     document.addEventListener('DOMContentLoaded', async () => {
         new CursoView()
-
+        
     });
     class CursoView {
         cursoService = new CursosService();

@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="/App_cliente/CSS/Estilo_Modulo.css">
     <link rel="stylesheet" href="/App_cliente/CSS/Estilo_certificado.css">
     <link rel="stylesheet" href="/App_cliente/CSS/Mi_progreso.css">
-    <link rel="stylesheet" href="/App_cliente/CSS/Estilo_Miscursos.css">
     <link rel="stylesheet" href="/App_cliente/CSS/EstiloSeccionCursos.css">
 </head>
 <body>
@@ -35,7 +34,6 @@
             </div>
             <ul class="nav">
                 <li><a href="#" id="toggle-main" class="active"><i class="fa fa-home"></i></a></li>
-                <li><a href="#" id="toggle-user"><i class="fa fa-user"></i></a></li>
                 <li><a href="#" id="toggle-stats"><i class="fa fa-list"></i></a></li>
                 <li><a href="#Video_Seccioin" id="toggle-video"><i class="fa fa-briefcase"></i></a></li>
                 <li><a href="#contact" id="toggle-contact"><i class="fa fa-comments"></i></a></li>
@@ -81,8 +79,8 @@
     <div class="container">
        
         <!-- Contenido principal -->
-        <main class="main-content">
-             <!-- seccion de infomeaciom de  rutas  -->
+        <main class="main-content" id="mainContainer" >
+            <!-- seccion de infomeaciom de  rutas  -->
             <section class="Section">
                 <div class="Glow_Glow__X0pi3 SkillMatcherBanner_SkillMatcherBanner__Glow__0qfka" style="--glow-size: 2070px">
                   <div class="SkillMatcherBanner_SkillMatcherBanner__D2QUu">
@@ -114,8 +112,8 @@
                 </div>
               </section>
           <!-- seccion de informacion de  suscricion  -->
-                <section class="SimpleBanner_SimpleBanner__dbnVG" data-qa="free_student_banner">
-                  <div class="SimpleBanner_SimpleBanner__icon__hc__V">
+          <section class="SimpleBanner_SimpleBanner__dbnVG" data-qa="free_student_banner" id="simpleBanner">
+            <div class="SimpleBanner_SimpleBanner__icon__hc__V">
                     <svg width="1em" height="1em" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path fill="#42ba87" fill-rule="evenodd"
                         d="M7 10.75c-.69 0-1.25.56-1.25 1.25v7c0 .69.56 1.25 1.25 1.25h10c.69 0 1.25-.56 1.25-1.25v-7c0-.69-.56-1.25-1.25-1.25zM4.25 12A2.75 2.75 0 0 1 7 9.25h10A2.75 2.75 0 0 1 19.75 12v7A2.75 2.75 0 0 1 17 21.75H7A2.75 2.75 0 0 1 4.25 19zm3.157-6.16C7.926 3.784 9.774 2.25 12 2.25A4.75 4.75 0 0 1 16.75 7a.75.75 0 0 1-1.5 0A3.25 3.25 0 0 0 12 3.75a3.24 3.24 0 0 0-3.139 2.457.75.75 0 0 1-1.454-.368"
@@ -1721,7 +1719,7 @@
 
 
     <!--Mis cursos-->
-    <div class="MisEstadisticas">
+    <div class="MisEstadisticas" style="display: none;">
         <main class="MisEstadisticas-contenedor">
             <article class="EncabezadoEstadisticas">
                 <a href="/home" class="EncabezadoEstadisticas-regresar">
@@ -1805,7 +1803,7 @@
                         <!-- Contenido dinámico generado por JavaScript -->
                     </div>
                 </div>
-                <canvas role="img" height="400" width="649" style="display: block; box-sizing: border-box; height: 361.8px; width: 724.717px;"></canvas>
+                <canvas role="img" height="400" width="749" style="display: block; box-sizing: border-box; height: 361.8px; width: 724.717px;"></canvas>
             
                 <!-- Modal -->
                 <div class="Modal-background" id="modalBackground" style="display: none;"></div> <!-- Fondo oscuro -->
@@ -1877,256 +1875,10 @@
 
 
  <!--Seccion de cursos comprados y cursoso por completar-->
- <div class="col-md-8" id="Descripcion">
-    <div class="seccionCursos">
-        <div class="cabeceraCursos">
-            <div class="tituloCabecera">
-                <img src="/cliente/principal/imagenes/LogoMarca.png" alt="iconoCabecera" class="Logo_inicio">
-                <h2 class="titulo">Mis Cursos</h2>
-            </div>
-        </div>
-        
-        <!-- Contenedor de filtros y búsqueda -->
-        <div class="contenedorFiltros">
-            <div class="texto-tamaño-16 texto-negrita">Cursos en Progreso y Comprados</div>
-            
-            <div class="filtrosBusqueda flex-entre flex-envolver">
-                <!-- Buscador de cursos con autocompletar -->
-                <div class="busquedaCurso sin-margen-abajo form-group margen-base-abajo entrada--icono">
-                    <div class="form-group__texto">
-                        <label id="buscarCursos-label" for="buscarCursos"></label>
-                        <input id="buscarCursos" name="buscarCursos" type="search" autocomplete="off" placeholder="Busca tu curso">
-                        <button type="button" class="link" id="buscarBtn">
-                            <span class="icono-buscar">🔍</span>
-                        </button>
-                        <div id="autocomplete-list" class="autocomplete-items"></div> <!-- Aquí aparecerán las sugerencias -->
-                    </div>
-                </div>
-                
-                <!-- Filtro de categoría -->
-                <div class="filtroCategoria flex-envolver">
-                    <div class="seleccionCategoria sin-margen-abajo">
-                        <div class="etiquetaFiltro">Categoría</div>
-                        <div class="css-contenedor">
-                            <select id="filtroCategoria">
-                                <option value="Todos">Todos</option>
-                                <option value="Programación">Programación</option>
-                                <option value="Diseño">Diseño</option>
-                                <option value="Marketing">Marketing</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Filtro de tipo de curso -->
-                <div class="seleccionTipo sin-margen-abajo">
-                    <div class="etiquetaFiltro">Estado</div>
-                    <div class="css-contenedor">
-                        <select id="filtroEstado">
-                            <option value="Todos">Todos</option>
-                            <option value="En Progreso">En Progreso</option>
-                            <option value="Completado">Completado</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        
-
-        <div class="scrollable" >
-            <div class="fila" id="listaCursos">
-                <div class="col-sm-6 col-md-6 col-lg-4 curso-tarjeta" data-nombre="Full Stack Development">
-                    <div class="margenTarjeta">
-                        <div class="tarjeta">
-                            <div class="envolturaImgTarjeta">
-                                <div class="envolturaImgInterna">
-                                    <img src="imagenes/full-stack.png" class="imgTarjeta" alt="Full Stack">
-                                    <div class="superposiciónImg"></div>
-                                    <div class="envolturaNivel">
-                                        <div class="nivel">Intermedio</div>
-                                    </div>
-                                    <button type="button" class="imgReproducir">
-                                        <img src="/sfa-assets/images/svg/Play_Button.svg" class="iconoReproducir" alt="Reproducir">
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="cuerpoTarjeta">
-                                <div class="bloqueLogoSocio">
-                                    <img src="/sfa-assets/images/svg/netacad_logo_black.svg" class="logoSocio" alt="Full Stack">
-                                </div>
-                                <div class="parteSuperiorCuerpoTarjeta">
-                                    <div class="flex">
-                                        <img src="/sfa-assets/images/svg/gray_book_icon.svg" alt="Icono de Libro" class="iconoLibro">
-                                        <div class="tipoCurso">Curso</div>
-                                    </div>
-                                    <div class="contenedorAcciones">
-                                        <button type="button" class="botonDesplegable btn--fantasma sin-padding btn btn-primary">
-                                            <img src="/sfa-assets/images/svg/more-green.svg" class="iconoMas" alt="Más Acción">
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="cabeceraTarjeta">Full Stack Development</div>
-                                <div class="flex flex-medio">
-                                    <div class="descTarjeta">
-                                        Aprenderas a desarrollar en diferentes lenguajes de programación.
-                                    </div>
-                                </div>
-                                <div class="parteInferiorTarjeta">
-                                    <button class="btn">Empezar Curso</button>
-                                    <div class="duracionCurso">Duración: 8 horas</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Añadir más tarjetas aquí -->
-                <div class="col-sm-6 col-md-6 col-lg-4 curso-tarjeta " data-nombre="Introducción a la Programación">
-                    <div class="margenTarjeta">
-                        <div class="tarjeta">
-                            <div class="envolturaImgTarjeta">
-                                <div class="envolturaImgInterna">
-                                    <img src="imagenes/full-stack.png" class="imgTarjeta" alt="Full Stack">
-                                    <div class="superposiciónImg"></div>
-                                    <div class="envolturaNivel">
-                                        <div class="nivel">Intermedio</div>
-                                    </div>
-                                    <button type="button" class="imgReproducir">
-                                        <img src="/sfa-assets/images/svg/Play_Button.svg" class="iconoReproducir" alt="Reproducir">
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="cuerpoTarjeta">
-                                <div class="bloqueLogoSocio">
-                                    <img src="/sfa-assets/images/svg/netacad_logo_black.svg" class="logoSocio" alt="Full Stack">
-                                </div>
-                                <div class="parteSuperiorCuerpoTarjeta">
-                                    <div class="flex">
-                                        <img src="/sfa-assets/images/svg/gray_book_icon.svg" alt="Icono de Libro" class="iconoLibro">
-                                        <div class="tipoCurso">Curso</div>
-                                    </div>
-                                    <div class="contenedorAcciones">
-                                        <button type="button" class="botonDesplegable btn--fantasma sin-padding btn btn-primary">
-                                            <img src="/sfa-assets/images/svg/more-green.svg" class="iconoMas" alt="Más Acción">
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="cabeceraTarjeta">Introducción a la Programación</div>
-                                <div class="flex flex-medio">
-                                    <div class="descTarjeta">
-                                        Aprenderas a desarrollar en diferentes lenguajes de programación.
-                                    </div>
-                                </div>
-                                <div class="parteInferiorTarjeta">
-                                    <button class="btn">Empezar Curso</button>
-                                    <div class="duracionCurso">Duración: 8 horas</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--OTRO 3-->
-                <div class="col-sm-6 col-md-6 col-lg-4 curso-tarjeta" data-nombre="JavaScript Avanzado">
-                    <div class="margenTarjeta">
-                        <div class="tarjeta">
-                            <div class="envolturaImgTarjeta">
-                                <div class="envolturaImgInterna">
-                                    <img src="imagenes/full-stack.png" class="imgTarjeta" alt="Full Stack">
-                                    <div class="superposiciónImg"></div>
-                                    <div class="envolturaNivel">
-                                        <div class="nivel">Intermedio</div>
-                                    </div>
-                                    <button type="button" class="imgReproducir">
-                                        <img src="/sfa-assets/images/svg/Play_Button.svg" class="iconoReproducir" alt="Reproducir">
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="cuerpoTarjeta">
-                                <div class="bloqueLogoSocio">
-                                    <img src="/sfa-assets/images/svg/netacad_logo_black.svg" class="logoSocio" alt="Full Stack">
-                                </div>
-                                <div class="parteSuperiorCuerpoTarjeta">
-                                    <div class="flex">
-                                        <img src="/sfa-assets/images/svg/gray_book_icon.svg" alt="Icono de Libro" class="iconoLibro">
-                                        <div class="tipoCurso">Curso</div>
-                                    </div>
-                                    <div class="contenedorAcciones">
-                                        <button type="button" class="botonDesplegable btn--fantasma sin-padding btn btn-primary">
-                                            <img src="/sfa-assets/images/svg/more-green.svg" class="iconoMas" alt="Más Acción">
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="cabeceraTarjeta">JavaScript Avanzado</div>
-                                <div class="flex flex-medio">
-                                    <div class="descTarjeta">
-                                        Aprenderas a desarrollar en diferentes lenguajes de programación.
-                                    </div>
-                                </div>
-                                <div class="parteInferiorTarjeta">
-                                    <button class="btn">Empezar Curso</button>
-                                    <div class="duracionCurso">Duración: 8 horas</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--CUrso 4 -->
-                <div class="col-sm-6 col-md-6 col-lg-4 curso-tarjeta" data-nombre="Python avanzado">
-                    <div class="margenTarjeta">
-                        <div class="tarjeta">
-                            <div class="envolturaImgTarjeta">
-                                <div class="envolturaImgInterna">
-                                    <img src="imagenes/full-stack.png" class="imgTarjeta" alt="Full Stack">
-                                    <div class="superposiciónImg"></div>
-                                    <div class="envolturaNivel">
-                                        <div class="nivel">Intermedio</div>
-                                    </div>
-                                    <button type="button" class="imgReproducir">
-                                        <img src="/sfa-assets/images/svg/Play_Button.svg" class="iconoReproducir" alt="Reproducir">
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="cuerpoTarjeta">
-                                <div class="bloqueLogoSocio">
-                                    <img src="/sfa-assets/images/svg/netacad_logo_black.svg" class="logoSocio" alt="Full Stack">
-                                </div>
-                                <div class="parteSuperiorCuerpoTarjeta">
-                                    <div class="flex">
-                                        <img src="/sfa-assets/images/svg/gray_book_icon.svg" alt="Icono de Libro" class="iconoLibro">
-                                        <div class="tipoCurso">Curso</div>
-                                    </div>
-                                    <div class="contenedorAcciones">
-                                        <button type="button" class="botonDesplegable btn--fantasma sin-padding btn btn-primary">
-                                            <img src="/sfa-assets/images/svg/more-green.svg" class="iconoMas" alt="Más Acción">
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="cabeceraTarjeta">Python avanzado</div>
-                                <div class="flex flex-medio">
-                                    <div class="descTarjeta">
-                                        Aprenderas a desarrollar en diferentes lenguajes de programación.
-                                    </div>
-                                </div>
-                                <div class="parteInferiorTarjeta">
-                                    <button class="btn">Empezar Curso</button>
-                                    <div class="duracionCurso">Duración: 8 horas</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
 
     <!--Contenido Videos preguntas y comentarios-->
 <!-- Contenido Videos preguntas y comentarios -->
-<div class="cajas" id="Video_Seccioin">
+<div class="cajas" id="Video_Seccioin" style="display: none;">
     <section class="MyRoutes_MyRoutes__MzB6R">
         <div class="MyRoutes_MyRoutes__list-panel__PUY_f">
             <h2 class="MyRoutes_MyRoutes__title__N3ELK" data-trans="myLearningPaths_title">
@@ -2249,9 +2001,9 @@
     
     
     <!--Aside de los componentes de visualizacion de los cursos -->
-    <main class="layout-desktop-module_main__OGBpc layout-desktop-module_containerBody__nl8w0" id="contact" id="main-content-container" id="Video_Seccioin" >
+    <main style="display: none;" class="layout-desktop-module_main__OGBpc layout-desktop-module_containerBody__nl8w0" id="contact" id="main-content-container" id="Video_Seccioin" >
         <!-- Aside desplegable -->
-<aside class="layout-desktop-module_sidebarSecondLeft__WDyMW">
+<aside class="layout-desktop-module_sidebarSecondLeft__WDyMW" >
     <div class="career-sidebar_menu__mYehl">
         <!-- Navigator de desplazamiento -->
         <div class="navigation-sidebar-module_navigationSidebar__KRL8f">
@@ -2318,7 +2070,7 @@
                 </div>
 
                 <div class="mail-card_container__SfFGa">
-                    <div class="mail-card_image__ldHj5"><img alt="" src="/cliente/App_cliente/imagenes/LogoEMAGIL.png" width="200" height="120"></div>
+                    <div class="mail-card_image__ldHj5"><img alt="" src="App_cliente/imagenes/LogoEMAGIL.png" width="200" height="120"></div>
                     <span class="fonts-module_title-small__ctZzA">¿Dudas o consultas?</span>
                     <span class="fonts-module_headline-medium__XtzA8">Envía un mail</span>
                     <div>

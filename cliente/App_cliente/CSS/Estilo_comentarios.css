@@ -1,4 +1,9 @@
 /* Contenedor principal para la sesión de video */
+
+:root {
+
+    --color_dasboard:#020617;
+}
 .cajas {
     padding: 20px;
     margin-left: 100px;
@@ -11,6 +16,7 @@
     flex-direction: column; /* Alinear los elementos en columna */
     justify-content: center; /* Alineación central vertical */
     align-items: center; /* Centrar horizontalmente */
+    background: var(--color_dasboard);
 }
 .MyRoutes_MyRoutes__MzB6R{
     margin: 0px 60px 0px 60px;

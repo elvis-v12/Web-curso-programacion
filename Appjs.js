@@ -61,7 +61,9 @@ app.get('/AppCliente', (req, res) => {
     res.sendFile(path.join(__dirname, '/cliente/App_cliente/App_estudiante.html'));
 });
 
-
+app.get('/AppClienteNinos', (req, res) => {
+    res.sendFile(path.join(__dirname, '/cliente/App_cliente/App_estudianteNinos.html'));
+});
 
 
 // Ruta para recibir datos del formulario de registro

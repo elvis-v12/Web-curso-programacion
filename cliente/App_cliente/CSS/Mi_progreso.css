@@ -1,3 +1,19 @@
+
+:root {
+	--grey: #F1F0F6;
+	--dark-grey: #8D8D8D;
+	--light: #fff;
+	--dark: #000;
+	--green: #81D43A;
+	--light-green: #E3FFCB;
+	--blue: #1775F1;
+	--light-blue: #D0E4FF;
+	--dark-blue: #0C5FCD;
+	--red: #FC3B56;
+    --black1:#13161c;
+    --greenbajo:#7ed321;
+    --color_dasboard:#020617;
+}
 .MisEstadisticas{
 width: 100%;
 height: 100%;
@@ -9,7 +25,7 @@ height: 100%;
     flex-grow: 1;
     height: 100%; /* Ocupar toda la altura del viewport */
     overflow-y: hidden; /* Evitar desbordamiento en el contenido principal */
-    background-color: white;
+    background-color: var(--color_dasboard);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -49,7 +65,7 @@ height: 100%;
     display: block;
 }
 .EncabezadoEstadisticas-titulo{
-    color: #000;
+    color: var(--grey);
     font-weight: bold;
 }
 
@@ -58,7 +74,7 @@ height: 100%;
 .EstadisticasVitales {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 .EstadisticaGeneral{
     width: 10%;
@@ -101,6 +117,39 @@ height: 100%;
 .DistribucionGraficas {
     margin-top: 30px;
     display: flex;
+}
+.ProgresoMeta1 {
+    display: flex;
+    padding-right: 10px;
+    max-height: 340px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Estilos de la barra de desplazamiento para navegadores basados en WebKit */
+.ProgresoMeta1::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+.ProgresoMeta1::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color del fondo de la barra */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.ProgresoMeta1::-webkit-scrollbar-thumb {
+    background: #007BFF; /* Color de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.ProgresoMeta1::-webkit-scrollbar-thumb:hover {
+    background: #0056b3; /* Color al pasar el ratón por encima */
+}
+
+/* Estilos opcionales para Firefox */
+.ProgresoMeta1 {
+    scrollbar-width: thin; /* Ancho de la barra de desplazamiento */
+    scrollbar-color: #007BFF #f1f1f1; /* Color de la barra y del fondo */
 }
 
 

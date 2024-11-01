@@ -92,3 +92,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    var homeLink = document.getElementById('toggle-main');
+    var mainContainer = document.getElementById('mainContainer');
+
+    function hideAllSections() {
+        if (mainContainer) mainContainer.style.display = 'none';
+        // Oculta las demás secciones también...
+    }
+
+    if (homeLink) {
+        homeLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            hideAllSections();
+            if (mainContainer) mainContainer.style.display = 'block'; // Mostrar el contenedor al hacer clic
+
+            // Agrega o remueve clases activas según sea necesario
+            homeLink.classList.add('active');
+            // Asegúrate de desactivar otras secciones si es necesario
+        });
+    }
+});
