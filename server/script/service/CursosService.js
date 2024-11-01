@@ -83,7 +83,7 @@ export class CursosService {
 
                 }
         }
-        findByCodeByUser = async ({username ,code }) => {
+        findByCodeByUser = async ({ username, code }) => {
                 try {
                         const response = await fetch("/server/data/dataCourseUser.json")
                         if (!response.ok) {
@@ -96,4 +96,26 @@ export class CursosService {
 
                 }
         }
+
+        findCommentsByCourseModuleSession = async ({ course, session }) => {
+                try {
+                        const response = await fetch("/server/data/dataComentarios.json");
+                        if (!response.ok) {
+                                throw new Error("Error en la respuesta del servidor");
+                        }
+                        const comments = await response.json();
+
+                        // Filter comments by course, module, and session codes
+                        const filteredComments = comments.filter(comment =>
+                                comment.courseCode === course &&
+                                comment.sessionCode === session
+                        );
+
+                        return filteredComments;
+                } catch (error) {
+                        console.error("Error al obtener comentarios:", error);
+                        return []; // Return an empty array in case of an error
+                }
+        };
+
 }

@@ -65,7 +65,7 @@
         <main class="main">
             <header class="main__header">
                 <div class="main__header-left">
-                    <label class="curso__name" for="curso__name">Curso Profesional de Git GitHub</label>
+                    <label class="curso__name" for="curso__name"></label>
                     <div class="curso__progreso">
                         <label class="curso__progreso-number" for="curso__progreso-number"></label>
                         <div class="curso__progreso_barra">
@@ -104,17 +104,36 @@
             </header>
             <div class="main__body">
                 <div class="main__left">
-                    <div class="curso__content-video">
-
+                    <div class="curso__content-video"></div>
+                    <div class="curso__content-info">
+                        <label class="session__name" for="session__name"></label>
+                        <label class="session__fecha" for="session__fecha">Publicado el 20 de mayo de 2019</label>
+                        <div class="session__recursos">
+                            <label class="session__recursos-title">Archivos de clase</label>
+                            <div class="session__recursos_content"></div>
+                        </div>
                     </div>
-
                 </div>
-                <div class="main__right">
-
-                </div>
+                <aside class="main__right">
+                    <header class="main__aside">
+                        <ul class="main__aside-tabs">
+                            <li id="main__aside-comentarios" class="main__aside-tab active" id="">comentarios</li>
+                        </ul>
+                    </header>
+                    <div class="main__right-content">
+                        <section class="comentarios active">
+                            <div class="comentarios__content">
+                            </div>
+                            <div class="comenarios__options">
+                                <form action="" class="comentarios__form">
+                                    <input type="text" name="" id="" placeholder="Escribe tu comentario">
+                                </form>
+                            </div>
+                        </section>
+                    </div>
+                </aside>
             </div>
         </main>
-        <aside class="comentarios"></aside>
     </div>
 
     <script type="module" src="curso.js"></script>
