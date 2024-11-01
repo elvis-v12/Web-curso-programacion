@@ -1,92 +1,116 @@
 import { CursosService } from "../../server/script/service/CursosService.js";
 
 (() => {
-        document.addEventListener('DOMContentLoaded', (e) => {
-                new CursoProgress({ code: "CUR001" });
-        });
+      document.addEventListener('DOMContentLoaded', (e) => {
+            new CursoProgress({ code: "CUR001" });
+      });
 
-        class CursoProgress {
+      class CursoProgress {
 
-                cursosService = new CursosService();
-                currentSessionIndex = 0;
+            cursosService = new CursosService();
+            currentSessionIndex = 0;
 
-                constructor({ code }) {
-                        this.cursosService.findByCodeByUser({ username: "USER001", code: code }).then(curso => {
-                                this.curso = curso;
-                                this.elements();
-                                this.init();
-                                this.updateSessionInfo();
-                                this.updateProgress();
-                        });
-                }
-
-                elements() {
-                        this.progress = document.querySelector('.curso__progreso-number');
-                        this.progressContainerInterno = document.querySelector('.curso__progreso_barra-interna');
-                        this.sessionName = document.querySelector('.curso__name');
-                        this.sessionNumber = document.querySelector('.main__header_btn-left span');
-                        this.previousButton = document.getElementById('main__header_btn-previous');
-                        this.nextButton = document.getElementById('main__header_btn-next');
-                }
-
-                init() {
-                        this.previousButton.addEventListener('click', () => this.changeSession(-1));
-                        this.nextButton.addEventListener('click', () => this.changeSession(1));
-                }
-
-                // Method to navigate sessions and mark them as seen
-                changeSession(direction) {
-                        const contents = this.getAllContents();
-                        const newIndex = this.currentSessionIndex + direction;
-
-                        // Check if the new index is within bounds
-                        if (newIndex >= 0 && newIndex < contents.length) {
-                                this.currentSessionIndex = newIndex;
-                                contents[this.currentSessionIndex].visto = true; // Mark session as seen
-
-                                this.updateSessionInfo();
-                                this.updateProgress();
-                        }
-
-                        // Disable buttons if at the boundaries
+            constructor({ code }) {
+                  this.cursosService.findByCodeByUser({ username: "USER001", code: code }).then(curso => {
+                        this.curso = curso;
+                        this.elements();
+                        this.init();
+                        this.updateSessionInfo();
+                        this.updateProgress();
                         this.updateButtonStates();
-                }
+                        this.updateVideo(); // Initial video load
+                  });
+            }
 
-                // Update session name and number based on the current session
-                updateSessionInfo() {
-                        const contents = this.getAllContents();
-                        const currentContent = contents[this.currentSessionIndex];
+            elements() {
+                  this.progress = document.querySelector('.curso__progreso-number');
+                  this.progressContainerInterno = document.querySelector('.curso__progreso_barra-interna');
+                  this.sessionName = document.querySelector('.curso__name');
+                  this.sessionNumber = document.querySelector('.main__header_btn-left span');
+                  this.previousButton = document.getElementById('main__header_btn-previous');
+                  this.nextButton = document.getElementById('main__header_btn-next');
+                  this.videoContainer = document.querySelector('.curso__content-video');
+            }
 
-                        this.sessionName.textContent = currentContent.nombre; // Update session name
-                        this.sessionNumber.textContent = this.currentSessionIndex + 1; // Update session number (1-based index)
-                }
+            init() {
+                  this.previousButton.addEventListener('click', () => this.changeSession(-1));
+                  this.nextButton.addEventListener('click', () => this.changeSession(1));
+            }
 
-                // Enable/disable navigation buttons based on session index
-                updateButtonStates() {
-                        const contents = this.getAllContents();
-                        this.previousButton.disabled = this.currentSessionIndex === 0;
-                        this.nextButton.disabled = this.currentSessionIndex === contents.length - 1;
-                }
+            changeSession(direction) {
+                  const contents = this.getAllContents();
+                  const newIndex = this.currentSessionIndex + direction;
 
-                // Get all contents in a flat array
-                getAllContents() {
-                        return this.curso.modules.flatMap(module => module.contenidos);
-                }
+                  if (newIndex >= 0 && newIndex < contents.length) {
+                        this.currentSessionIndex = newIndex;
+                        contents[this.currentSessionIndex].visto = true;
 
-                // Calculate and update the progress display
-                updateProgress() {
-                        const progressValue = this.calculateProgress();
-                        this.progress.innerHTML = `${progressValue}%`;
-                        this.progressContainerInterno.style.width = `${progressValue}%`;
-                }
+                        this.updateSessionInfo();
+                        this.updateProgress();
+                        this.updateButtonStates();
+                        this.updateVideo(); // Update video for the current session
+                  }
+            }
 
-                // Calculate the current progress percentage
-                calculateProgress() {
-                        const contents = this.getAllContents();
-                        const totalContents = contents.length;
-                        const seenContents = contents.filter(content => content.visto).length;
-                        const progress = totalContents > 0 ? (seenContents / totalContents) * 100 : 0;
+            updateSessionInfo() {
+                  const contents = this.getAllContents();
+                  const currentContent = contents[this.currentSessionIndex];
+
+                  this.sessionName.textContent = currentContent.nombre;
+                  this.sessionNumber.textContent = this.currentSessionIndex + 1;
+            }
+
+            updateButtonStates() {
+                  const contents = this.getAllContents();
+
+                  if (this.currentSessionIndex === 0) {
+                        this.previousButton.disabled = true;
+                        this.previousButton.classList.add('boton-desactivado');
+                  } else {
+                        this.previousButton.disabled = false;
+                        this.previousButton.classList.remove('boton-desactivado');
+                  }
+
+                  if (this.currentSessionIndex === contents.length - 1) {
+                        this.nextButton.disabled = true;
+                        this.nextButton.classList.add('boton-desactivado');
+                  } else {
+                        this.nextButton.disabled = false;
+                        this.nextButton.classList.remove('boton-desactivado');
+                  }
+            }
+
+            getAllContents() {
+                  return this.curso.modules.flatMap(module => module.contenidos);
+            }
+
+            updateProgress() {
+                  const progressValue = this.calculateProgress();
+                  this.progress.innerHTML = `${progressValue}%`;
+                  this.progressContainerInterno.style.width = `${progressValue}%`;
+            }
+
+            calculateProgress() {
+                  const contents = this.getAllContents();
+                  const totalContents = contents.length;
+
+                  if (this.currentSessionIndex === totalContents - 1) {
+                        return 100; // Set to 100% if at the last session
+                  } else {
+                        const progress = ((this.currentSessionIndex + 1) / totalContents) * 100;
                         return progress.toFixed(2);
-                }
-        }
+                  }
+            }
+
+            updateVideo() {
+                  const contents = this.getAllContents();
+                  const currentContent = contents[this.currentSessionIndex];
+                  const videoUrl = currentContent.contenido;
+                  // Attempt to embed the video
+                  this.videoContainer.innerHTML = `
+                      <iframe width="100%" height="500" src="${videoUrl.replace("watch?v=", "embed/")}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  `;
+            }
+
+      }
 })();

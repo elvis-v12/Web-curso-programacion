@@ -72,7 +72,11 @@ body {
       background-color: #13161C;
 }
 
-.main {}
+.main {
+      height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr;
+}
 
 .main__header {
       display: flex;
@@ -196,4 +200,27 @@ body {
             }
       }
 
+}
+
+.main__body {
+      display: grid;
+      grid-template-columns: auto 400px;
+
+      .main__left {
+            overflow: auto;
+
+            .curso__content-video {
+                  iframe {
+                        border-radius: 10px;
+                        box-shadow: 0 0 10px 2px #08090c;
+                  }
+            }
+      }
+
+      .main__right {}
+}
+
+.boton-desactivado {
+      cursor: inherit !important;
+      opacity: 0;
 }
