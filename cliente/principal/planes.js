@@ -13,8 +13,9 @@ class Index {
       }
 
       init() {
+            this.numeritoCarro = document.querySelector('#numerito')
             this.priceComparison = document.querySelector('.price-comparison');
-
+            this.numeritoCarro.innerHTML = Carrito.getTotalQuantity();
             if (!this.priceComparison) {
                   console.error("Elemento '.price-comparison' no encontrado en el DOM.");
                   return;
@@ -118,6 +119,7 @@ class Index {
 
                   botonAddCarro.addEventListener('click', () => {
                         Carrito.addProduct(plan);
+                        this.numeritoCarro.innerHTML = Carrito.getTotalQuantity();
                   });
 
             });

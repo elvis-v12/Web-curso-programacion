@@ -5,13 +5,16 @@ export class Carrito {
 
                 const existingItemIndex = cart.findIndex(item => item.code === curso.code);
                 if (existingItemIndex !== -1) {
-                        console.log(curso);
-                        
                         cart[existingItemIndex].quantity += 1;
                 } else {
                         cart.push({ ...curso, quantity: 1 });
                 }
 
                 localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        static getTotalQuantity() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                return cart.reduce((total, item) => total + item.quantity, 0);
         }
 }
