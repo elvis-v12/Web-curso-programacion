@@ -1,7 +1,7 @@
 export class CursosService {
-        static findAll = async () => {
+        findAll = async () => {
                 try {
-                        const response = await fetch("/server/data/dataCourses.json")
+                        const response = await fetch("dataCourses.json")
                         if (!response.ok) {
                                 throw new Error("Error en la respuesta del servidor")
                         }
@@ -13,7 +13,7 @@ export class CursosService {
         }
         findCoursesNovedades = async () => {
                 try {
-                        const response = await fetch("/server/data/dataCoursesNovedades.json")
+                        const response = await fetch("dataCoursesNovedades.json")
                         if (!response.ok) {
                                 throw new Error("Error en la respuesta del servidor")
                         }
@@ -26,7 +26,7 @@ export class CursosService {
 
         async searchCourses(searchTerm) {
                 try {
-                        const response = await fetch("/server/data/dataCoursesNovedades.json")
+                        const response = await fetch("dataCoursesNovedades.json")
                         if (!response.ok) {
                                 throw new Error("Error en la respuesta del servidor")
                         }
@@ -72,20 +72,7 @@ export class CursosService {
 
         findById = async ({ code }) => {
                 try {
-                        const response = await fetch("/server/data/dataCourse.json")
-                        if (!response.ok) {
-                                throw new Error("Error en la respuesta del servidor")
-                        }
-                        const data = await response.json()
-                        const curso = data.find(curso => curso.code === code)
-                        return curso
-                } catch (error) {
-
-                }
-        }
-        findByCodeByUser = async ({username ,code }) => {
-                try {
-                        const response = await fetch("/server/data/dataCourseUser.json")
+                        const response = await fetch("dataCourse.json")
                         if (!response.ok) {
                                 throw new Error("Error en la respuesta del servidor")
                         }

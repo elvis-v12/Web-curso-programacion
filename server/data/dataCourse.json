@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "code": "CUR001",
+    "url": "./cliente/cursos/cursosDetalles.html",
+    "author": "Alvaro Chirou",
+    "name": "Python Practicando. Desde 0 hasta Desarrollador en Python",
+    "score": "4,6",
+    "stars": "9",
+    "votes": "21.363",
+    "price": 49.90,
+    "pricePrevous": "199,90 S/",
+    "portada": "/cliente/principal/pictures/carousel/image.png",
+    "detalles": "<span>25,5 horas de vídeo bajo demanda</span><span>21 artículos</span><span>147 recursos descargables</span><span>Acceso en dispositivos móviles y TV</span><span>Certificado de finalización</span>",
+    "lastUpdate": "9/2024",
+    "language": "Español",
+    "habilidades": "",
+    "requisitos": "",
+    "shortDescription": "Aprende Python, donde iniciamos desde 0, sin conocimientos previos hasta desarrollar aplicaciones con mucha practica!",
+    "description": "<b>Python</b> es Hoy uno de los lenguajes <b>más utilizados por Excelencia</b>.<br>Esto se debe por su <b>simpleza</b> al momento de <b>Desarrollar aplicaciones</b>.<br>Por su capacidad de <b>procesamiento a altas velocidades</b> con grandes volúmenes de información.<br>Es un <b>increíble lenguaje</b> con el cual si no sabes programar, <b>podrás aprender</b>.<br>Y si ya sabes desarrollarlo, te aseguro que en el <b>mercado cada vez se solicitan más desarrolladores en Python</b>.<br><b>Aspirar al trabajo que desean, o mejorar sus ingresos con un aumento de salario</b>.<br>Python se utiliza para muchísimas cosas como:<br><ul><li><b>Machine Learning</b></li><li><b>Data Science</b></li><li><b>Inteligencia Artificial</b></li><li>Y mucho más!</li></ul>En este curso te <b>acompañaré en el proceso</b> por el cual aprenderás las bases del lenguaje, para luego determinar qué camino quieres seguir.<br>Te invito a que me acompañes a conocer este <b>Gran Lenguaje</b>!<br>Yo soy <b>Álvaro Chirou</b>, tengo <b>más de 20 Años</b> de experiencia trabajando en <b>Tecnología</b>, he dado conferencias en eventos internacionales como <b>OWASP</b>, tengo más de <b>500.000 estudiantes en Udemy</b> y <b>100 formaciones profesionales impartidas en la misma.</b><br>Junto a mi compañero <b>Walter Coto</b> donde con él hemos dado formaciones profesionales en conjunto también en la plataforma de Udemy, hoy les traemos esta formación especialmente pensada para el lenguaje más demandado por el mercado.<br>Tendrás acceso de por vida al curso, recibirás actualizaciones y respuestas a tus preguntas a través de la plataforma de Udemy.<br>Empieza a aprender ya mismo!<br>Nos vemos dentro!<br>Tus profesores: <b>Álvaro Chirou y Walter Coto</b>.",
+    "modules": [
+      {
+        "code": "MOD001",
+        "name": "Módulo 1: Introducción a Python",
+        "description": "En este módulo aprenderás las bases del lenguaje Python",
+        "contenidos": [
+          {
+            "code": "CON001",
+            "nombre": "Clase 1",
+            "descripcion": "Introducción a la programación",
+            "contenido": "https://youtu.be/QDYfEBY9NM4",
+            "recursos": [
+              {
+                "code": "RES001",
+                "nombre": "Recursos",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "nombre": "Recursos 2",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          },
+          {
+            "code": "CON002",
+            "nombre": "Clase 2",
+            "descripcion": "Estructuras de control",
+            "contenido": "https://youtu.be/QDYfEBY9NM4",
+            "recursos": [
+              {
+                "code": "RES001",
+                "nombre": "Recursos",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "nombre": "Recursos 2",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          },
+          {
+            "code": "CON003",
+            "nombre": "Clase 3",
+            "descripcion": "Funciones y módulos",
+            "contenido": "https://youtu.be/QDYfEBY9NM4",
+            "recursos": [
+              {
+                "code": "RES001",
+                "nombre": "Recursos",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "nombre": "Recursos 2",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "MOD002",
+        "name": "Módulo 2: Python Intermedio",
+        "description": "En este módulo aprenderás las bases del lenguaje Python",
+        "contenidos": [
+          {
+            "code": "CON004",
+            "nombre": "Clase 4",
+            "descripcion": "Programación orientada a objetos",
+            "contenido": "https://youtu.be/QDYfEBY9NM4",
+            "recursos": [
+              {
+                "code": "RES001",
+                "nombre": "Recursos",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "nombre": "Recursos 2",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          },
+          {
+            "code": "CON005",
+            "nombre": "Clase 5",
+            "descripcion": "Manejo de excepciones",
+            "contenido": "https://youtu.be/QDYfEBY9NM4",
+            "recursos": [
+              {
+                "code": "RES001",
+                "nombre": "Recursos",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "nombre": "Recursos 2",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          },
+          {
+            "code": "CON006",
+            "nombre": "Clase 6",
+            "descripcion": "Archivos y bases de datos",
+            "contenido": "https://youtu.be/QDYfEBY9NM4",
+            "recursos": [
+              {
+                "code": "RES001",
+                "nombre": "Recursos",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "nombre": "Recursos 2",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "MOD004",
+        "name": "Módulo 4: Web",
+        "description": "En este módulo aprenderás las bases del lenguaje Python",
+        "contenidos": [
+          {
+            "code": "CON007",
+            "nombre": "Clase 7",
+            "descripcion": "Desarrollo web con HTML y CSS",
+            "contenido": "https://youtu.be/QDYfEBY9NM4",
+            "recursos": [
+              {
+                "code": "RES001",
+                "nombre": "Recursos",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "nombre": "Recursos 2",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          },
+          {
+            "code": "CON008",
+            "nombre": "Clase 8",
+            "descripcion": "JavaScript y la programación del lado del cliente",
+            "contenido": "https://youtu.be/QDYfEBY9NM4",
+            "recursos": [
+              {
+                "code": "RES001",
+                "nombre": "Recursos",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "nombre": "Recursos 2",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          },
+          {
+            "code": "CON009",
+            "nombre": "Clase 9",
+            "descripcion": "Introducción a frameworks de desarrollo web",
+            "contenido": "https://youtu.be/QDYfEBY9NM4",
+            "recursos": [
+              {
+                "code": "RES001",
+                "nombre": "Recursos",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "nombre": "Recursos 2",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "MOD005",
+        "name": "Módulo 5: Final",
+        "description": "En este módulo aprenderás las bases del lenguaje Python",
+        "contenidos": [
+          {
+            "code": "CON010",
+            "nombre": "Clase 10",
+            "descripcion": "Proyecto final de programación",
+            "contenido": "https://youtu.be/QDYfEBY9NM4",
+            "recursos": [
+              {
+                "code": "RES001",
+                "nombre": "Recursos",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "nombre": "Recursos 2",
+                "descripcion": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
