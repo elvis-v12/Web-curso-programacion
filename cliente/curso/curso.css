@@ -207,12 +207,14 @@ body {
 .main__body {
       display: grid;
       grid-template-columns: auto 26.5vw;
+      grid-template-rows: 1fr;
       gap: 10px;
-
+      overflow: hidden;
 
       .main__left {
             overflow: auto;
-            max-height: 90vh;
+            scrollbar-width: thin;
+            scrollbar-color: #2d323a #1e2229;
 
             .curso__content-video {
                   iframe {
@@ -242,14 +244,34 @@ body {
 
                   .session__recursos {
                         margin: 30px 0;
-                        display: flex;
-                        flex-direction: column;
-                        gap: 20px;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+
+                        .active {
+                              border-bottom: 1px solid white;
+                              color: white;
+                        }
                   }
 
-                  .session__recursos_content {}
+                  .session__recursos-title {
+                        font-size: .9rem;
+                        padding: 10px 20px;
+                        text-align: center;
+                        cursor: pointer;
+                        border-bottom: 1px solid #2D323A;
+                        color: #87909D;
 
-                  .session__recursos-title {}
+                        &:hover {
+                              border-bottom: 1px solid white;
+                              color: white;
+                        }
+                  }
+
+
+                  .session__recursos_content {
+                        grid-column: span 2;
+                        margin: 20px 0 0 0;
+                  }
 
                   .session__recurso {
                         display: flex;
@@ -286,7 +308,9 @@ body {
       .main__right {
             background-color: #1E2229;
             border-radius: 10px;
-            overflow: hidden;
+            overflow: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #2d323a #1e2229;
             display: flex;
             flex-direction: column;
 

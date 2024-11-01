@@ -38,7 +38,8 @@ import { CursosService } from "../../server/script/service/CursosService.js";
                   this.publicationDateLabel = document.querySelector('.session__fecha');
                   this.commentsContainer = document.querySelector('.comentarios__content');
                   this.commentInput = document.querySelector('.comentarios__form input');
-
+                  this.resourcesTab = document.getElementById("sessionRecursos");
+                  this.summaryTab = document.getElementById("sessionResumen");
             }
 
             init() {
@@ -46,6 +47,8 @@ import { CursosService } from "../../server/script/service/CursosService.js";
                   this.previousButton.addEventListener('click', () => this.changeSession(-1));
                   this.nextButton.addEventListener('click', () => this.changeSession(1));
                   this.commentInput.addEventListener('keydown', (event) => this.handleCommentSubmit(event));
+                  this.resourcesTab.addEventListener("click", () => this.showResources());
+                  this.summaryTab.addEventListener("click", () => this.showSummary());
             }
             // evento del input para comentario
             handleCommentSubmit(event) {
@@ -82,7 +85,6 @@ import { CursosService } from "../../server/script/service/CursosService.js";
                   this.commentsContainer.appendChild(commentElement);
             }
 
- 
             changeSession(direction) {
                   const contents = this.getAllContents();
                   const newIndex = this.currentSessionIndex + direction;
@@ -114,11 +116,6 @@ import { CursosService } from "../../server/script/service/CursosService.js";
                   const currentContent = contents[this.currentSessionIndex];
 
                   try {
-
-                        console.log(this.curso.code);
-                        console.log(currentContent.code);
-
-
                         const comments = await this.cursosService.findCommentsByCourseModuleSession({
                               course: this.curso.code,
                               session: currentContent.code
@@ -279,8 +276,9 @@ import { CursosService } from "../../server/script/service/CursosService.js";
             updateResources() {
                   const contents = this.getAllContents();
                   const currentContent = contents[this.currentSessionIndex];
-
                   this.resourcesContainer.innerHTML = '';
+
+
 
                   currentContent.recursos.forEach(resource => {
                         const resourceElement = document.createElement('a');
@@ -305,6 +303,49 @@ import { CursosService } from "../../server/script/service/CursosService.js";
                         this.resourcesContainer.appendChild(resourceElement);
                   });
             }
+
+            showResources() {
+                  this.resourcesTab.classList.add("active");
+                  this.summaryTab.classList.remove("active");
+
+                  const contents = this.getAllContents();
+                  const currentContent = contents[this.currentSessionIndex];
+
+                  // Populate with resources
+                  this.resourcesContainer.innerHTML = '';
+                  currentContent.recursos.forEach(resource => {
+                        const resourceElement = document.createElement('a');
+                        resourceElement.href = resource.url;
+                        resourceElement.className = 'session__recurso';
+                        resourceElement.target = '_blank';
+                        resourceElement.innerHTML = `
+                          <span class="session__recurso_icon">
+                              <svg width="1em" height="1em" fill="none" viewBox="0 0 23 22" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill="#87909D" fill-rule="evenodd" 
+                                      d="M7.833 3.438a3.896 3.896 0 0 0-3.895 3.895v7.334a3.896 3.896 0 0 0 3.895 3.896h7.334a3.896 3.896 0 0 0 3.896-3.896V8.315a3.9 3.9 0 0 0-1.142-2.755l-.981-.981a3.9 3.9 0 0 0-2.755-1.142zm-5.27 3.895a5.27 5.27 0 0 1 5.27-5.27h6.352a5.27 5.27 0 0 1 3.727 1.543l.982.982a5.27 5.27 0 0 1 1.544 3.727v6.352a5.27 5.27 0 0 1-5.271 5.27H7.833a5.27 5.27 0 0 1-5.27-5.27z"
+                                      clip-rule="evenodd"></path>
+                                  <path fill="#87909D" fill-rule="evenodd" 
+                                      d="M14.25 2.063c.38 0 .688.307.688.687V5.5c0 1.14.923 2.063 2.062 2.063h2.75a.687.687 0 1 1 0 1.375H17A3.437 3.437 0 0 1 13.563 5.5V2.75c0-.38.307-.687.687-.687M6.23 8.25c0-.38.307-.687.687-.687h3.666a.687.687 0 1 1 0 1.375H6.917a.687.687 0 0 1-.688-.688m9.853 3.896H6.917a.688.688 0 0 1 0-1.375h9.166a.687.687 0 1 1 0 1.375m-9.854 2.52c0-.379.308-.687.688-.687h9.166a.687.687 0 1 1 0 1.375H6.917a.687.687 0 0 1-.688-.687"
+                                      clip-rule="evenodd"></path>
+                              </svg>
+                          </span>
+                          <p class="session__recurso_name">${resource.nombre}</p>
+                      `;
+                        this.resourcesContainer.appendChild(resourceElement);
+                  });
+            }
+            showSummary() {
+                  this.summaryTab.classList.add("active");
+                  this.resourcesTab.classList.remove("active");
+
+                  const contents = this.getAllContents();
+                  const currentContent = contents[this.currentSessionIndex];
+                  console.log(currentContent);
+
+
+                  // Populate with summary
+                  this.resourcesContainer.innerHTML = currentContent.resumen;
+            }
       }
       function formatDate(dateString) {
             const months = [
@@ -324,6 +365,5 @@ import { CursosService } from "../../server/script/service/CursosService.js";
 
       // Example usage
       const formattedDate = formatDate("2023-11-07");
-      console.log(formattedDate); // Outputs: "7 de noviembre de 2023"
 
 })();

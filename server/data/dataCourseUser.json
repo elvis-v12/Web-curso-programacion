@@ -31,6 +31,7 @@
             "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
             "fechaPublicacion": "20/08/2019",
             "visto": false,
+            "resumen": "<p>En esta clase se presenta una <strong>introducción a la programación</strong> en Python. Aprenderás los conceptos básicos de programación y cómo aplicarlos en Python.</p><ul><li>Introducción a la sintaxis de Python</li><li>Ejemplos de código inicial</li><li>Conceptos clave en programación</li></ul>",
             "recursos": [
               {
                 "code": "RES001",
@@ -53,6 +54,7 @@
             "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
             "fechaPublicacion": "20/05/2019",
             "visto": false,
+            "resumen": "<p>Se explorarán las <strong>estructuras de control</strong> en Python, como las estructuras condicionales y los bucles. Comprenderás cómo controlar el flujo de tu programa.</p><ul><li>Uso de <em>if</em>, <em>else</em> y <em>elif</em></li><li>Bucles <em>for</em> y <em>while</em></li><li>Prácticas de control de flujo</li></ul>",
             "recursos": [
               {
                 "code": "RES001",
@@ -75,6 +77,7 @@
             "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
             "fechaPublicacion": "20/05/2019",
             "visto": false,
+            "resumen": "<p>Aprenderás a crear y utilizar <strong>funciones y módulos</strong> en Python. Esto te permitirá estructurar mejor tu código y hacerlo más reutilizable.</p><ul><li>Definición de funciones y parámetros</li><li>Importación de módulos</li><li>Ejercicios de funciones</li></ul>",
             "recursos": [
               {
                 "code": "RES001",
@@ -104,6 +107,7 @@
             "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
             "fechaPublicacion": "20/05/2019",
             "visto": false,
+            "resumen": "<p>Introducción a la <strong>programación orientada a objetos</strong> en Python. Aprenderás a trabajar con clases y objetos, una habilidad fundamental en desarrollo de software.</p><ul><li>Creación de clases y objetos</li><li>Métodos y encapsulación</li><li>Conceptos de herencia y polimorfismo</li></ul>",
             "recursos": [
               {
                 "code": "RES001",
@@ -126,6 +130,7 @@
             "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
             "fechaPublicacion": "20/05/2019",
             "visto": false,
+            "resumen": "<p>Se enseñará el <strong>manejo de excepciones</strong> para gestionar errores en el código y mejorar la robustez de las aplicaciones.</p><ul><li>Uso de <em>try</em>, <em>except</em>, <em>finally</em></li><li>Creación de excepciones personalizadas</li><li>Ejercicios de manejo de errores</li></ul>",
             "recursos": [
               {
                 "code": "RES001",
@@ -148,6 +153,7 @@
             "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
             "fechaPublicacion": "20/05/2019",
             "visto": false,
+            "resumen": "<p>Clase dedicada a la manipulación de <strong>archivos y bases de datos</strong>. Aprenderás a leer y escribir en archivos y a conectar con bases de datos.</p><ul><li>Lectura y escritura en archivos de texto</li><li>Serialización de datos con JSON</li><li>Conexión a bases de datos SQL</li></ul>",
             "recursos": [
               {
                 "code": "RES001",
@@ -176,6 +182,7 @@
             "nombre": "Desarrollo web con HTML y CSS",
             "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
             "visto": false,
+            "resumen": "<p>Introducción al <strong>desarrollo web</strong> con HTML y CSS. Aprenderás las bases para construir interfaces web sencillas.</p><ul><li>Creación de estructuras con HTML</li><li>Estilización básica con CSS</li><li>Prácticas de diseño de interfaces</li></ul>",
             "recursos": [
               {
                 "code": "RES001",
@@ -198,6 +205,7 @@
             "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
             "fechaPublicacion": "20/05/2019",
             "visto": false,
+            "resumen": "<p>Clase sobre <strong>JavaScript y la programación del lado del cliente</strong>. Aprenderás a hacer páginas web interactivas utilizando JavaScript.</p><ul><li>Conceptos de programación en JavaScript</li><li>Manipulación del DOM</li><li>Interactividad en páginas web</li></ul>",
             "recursos": [
               {
                 "code": "RES001",
@@ -220,6 +228,7 @@
             "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
             "fechaPublicacion": "20/05/2019",
             "visto": false,
+            "resumen": "<p>Introducción a <strong>frameworks de desarrollo web</strong> en Python. Conocerás cómo utilizar frameworks para simplificar el desarrollo web.</p><ul><li>Frameworks populares como Flask y Django</li><li>Creación de aplicaciones web básicas</li><li>Ejemplos prácticos de desarrollo web</li></ul>",
             "recursos": [
               {
                 "code": "RES001",
@@ -249,6 +258,7 @@
             "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
             "fechaPublicacion": "20/05/2019",
             "visto": false,
+            "resumen": "<p>Proyecto final de <strong>programación en Python</strong>, donde pondrás en práctica todo lo aprendido en el curso para desarrollar una aplicación completa.</p><ul><li>Desarrollo de una aplicación Python</li><li>Aplicación de conceptos de programación orientada a objetos</li><li>Pruebas y optimización</li></ul>",
             "recursos": [
               {
                 "code": "RES001",
