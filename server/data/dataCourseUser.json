@@ -26,63 +26,63 @@
         "contenidos": [
           {
             "code": "CON001",
-            "nombre": "Clase 1",
-            "descripcion": "Introducción a la programación",
+            "descripcion": "Clase 1",
+            "nombre": "Introducción a la programación",
             "contenido": "https://youtu.be/QDYfEBY9NM4",
-            "visto": true,
+            "visto": false,
             "recursos": [
               {
                 "code": "RES001",
-                "nombre": "Recursos",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 1"
               },
               {
                 "code": "RES002",
-                "nombre": "Recursos 2",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 2"
               }
             ]
           },
           {
             "code": "CON002",
-            "nombre": "Clase 2",
-            "descripcion": "Estructuras de control",
+            "descripcion": "Clase 2",
+            "nombre": "Estructuras de control",
             "contenido": "https://youtu.be/QDYfEBY9NM4",
-            "visto": true,
+            "visto": false,
             "recursos": [
               {
                 "code": "RES001",
-                "nombre": "Recursos",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 1"
               },
               {
                 "code": "RES002",
-                "nombre": "Recursos 2",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 2"
               }
             ]
           },
           {
             "code": "CON003",
-            "nombre": "Clase 3",
-            "descripcion": "Funciones y módulos",
+            "descripcion": "Clase 3",
+            "nombre": "Funciones y módulos",
             "contenido": "https://youtu.be/QDYfEBY9NM4",
-            "visto": true,
+            "visto": false,
             "recursos": [
               {
                 "code": "RES001",
-                "nombre": "Recursos",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 1"
               },
               {
                 "code": "RES002",
-                "nombre": "Recursos 2",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 2"
               }
             ]
@@ -96,63 +96,63 @@
         "contenidos": [
           {
             "code": "CON004",
-            "nombre": "Clase 4",
-            "descripcion": "Programación orientada a objetos",
+            "descripcion": "Clase 4",
+            "nombre": "Programación orientada a objetos",
             "contenido": "https://youtu.be/QDYfEBY9NM4",
             "visto": false,
             "recursos": [
               {
                 "code": "RES001",
-                "nombre": "Recursos",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 1"
               },
               {
                 "code": "RES002",
-                "nombre": "Recursos 2",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 2"
               }
             ]
           },
           {
             "code": "CON005",
-            "nombre": "Clase 5",
-            "descripcion": "Manejo de excepciones",
+            "descripcion": "Clase 5",
+            "nombre": "Manejo de excepciones",
             "contenido": "https://youtu.be/QDYfEBY9NM4",
             "visto": false,
             "recursos": [
               {
                 "code": "RES001",
-                "nombre": "Recursos",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 1"
               },
               {
                 "code": "RES002",
-                "nombre": "Recursos 2",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 2"
               }
             ]
           },
           {
             "code": "CON006",
-            "nombre": "Clase 6",
-            "descripcion": "Archivos y bases de datos",
+            "descripcion": "Clase 6",
+            "nombre": "Archivos y bases de datos",
             "contenido": "https://youtu.be/QDYfEBY9NM4",
             "visto": false,
             "recursos": [
               {
                 "code": "RES001",
-                "nombre": "Recursos",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 1"
               },
               {
                 "code": "RES002",
-                "nombre": "Recursos 2",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 2"
               }
             ]
@@ -166,63 +166,63 @@
         "contenidos": [
           {
             "code": "CON007",
-            "nombre": "Clase 7",
-            "descripcion": "Desarrollo web con HTML y CSS",
+            "descripcion": "Clase 7",
+            "nombre": "Desarrollo web con HTML y CSS",
             "contenido": "https://youtu.be/QDYfEBY9NM4",
             "visto": false,
             "recursos": [
               {
                 "code": "RES001",
-                "nombre": "Recursos",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 1"
               },
               {
                 "code": "RES002",
-                "nombre": "Recursos 2",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 2"
               }
             ]
           },
           {
             "code": "CON008",
-            "nombre": "Clase 8",
-            "descripcion": "JavaScript y la programación del lado del cliente",
+            "descripcion": "Clase 8",
+            "nombre": "JavaScript y la programación del lado del cliente",
             "contenido": "https://youtu.be/QDYfEBY9NM4",
             "visto": false,
             "recursos": [
               {
                 "code": "RES001",
-                "nombre": "Recursos",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 1"
               },
               {
                 "code": "RES002",
-                "nombre": "Recursos 2",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 2"
               }
             ]
           },
           {
             "code": "CON009",
-            "nombre": "Clase 9",
-            "descripcion": "Introducción a frameworks de desarrollo web",
+            "descripcion": "Clase 9",
+            "nombre": "Introducción a frameworks de desarrollo web",
             "contenido": "https://youtu.be/QDYfEBY9NM4",
             "visto": false,
             "recursos": [
               {
                 "code": "RES001",
-                "nombre": "Recursos",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 1"
               },
               {
                 "code": "RES002",
-                "nombre": "Recursos 2",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 2"
               }
             ]
@@ -236,21 +236,21 @@
         "contenidos": [
           {
             "code": "CON010",
-            "nombre": "Clase 10",
-            "descripcion": "Proyecto final de programación",
+            "descripcion": "Clase 10",
+            "nombre": "Proyecto final de programación",
             "contenido": "https://youtu.be/QDYfEBY9NM4",
             "visto": false,
             "recursos": [
               {
                 "code": "RES001",
-                "nombre": "Recursos",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 1"
               },
               {
                 "code": "RES002",
-                "nombre": "Recursos 2",
-                "descripcion": "Descargar recursos",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
                 "url": "Contenido 2"
               }
             ]
