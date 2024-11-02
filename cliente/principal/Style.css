@@ -722,6 +722,233 @@ a {
   .cta:hover, .cta:focus {
     transform: scale(1.1);
   }
+  /*Seccion de beca postulacion*/
+        /* Contenedor principal de la sección */
+        .scholarship-section {
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro */
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            color: #ffffff;
+            margin: 2rem auto;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .contenido_beca{
+            display: flex;
+            align-items: center;
+            justify-content: center;    
+    }
+
+        /* Título principal */
+        .scholarship-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #00d1b2;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Texto principal */
+        .scholarship-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 500px;
+            padding: 1rem;
+            font-size: 1rem; /* Tamaño uniforme del texto */
+        }
+
+        .scholarship-text p {
+            margin: 0.5rem 0;
+            color: #b0c4c7;
+        }
+
+        .highlight-text {
+            color: #ffcc66;
+            font-weight: bold;
+        }
+
+        /* Lista de habilidades y beneficios */
+        .skills-benefits {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin: 1rem 0;
+        }
+
+        .skills-benefits li {
+            font-size: 0.95rem;
+            margin: 0.4rem 0;
+            color: #d6e6e8;
+            display: flex;
+            align-items: center;
+        }
+
+        .skills-benefits li i {
+            color: #00d1b2;
+            margin-right: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Información adicional de la marca */
+        .brand-info {
+            font-size: 0.9rem;
+            color: #a8bfc2;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        /* Botón de acción */
+        .apply-button {
+            background-color: #00d1b2;
+            color: #003e52;
+            font-size: 1rem;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 209, 178, 0.2);
+            margin-top: 1rem;
+            align-self: center;
+        }
+
+        .apply-button:hover {
+            background-color: #00bfa5;
+            transform: translateY(-3px);
+        }
+
+        /* Imagen */
+        .scholarship-image {
+           width: 370px;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-left: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+
+ /* Caja de bienvenida */
+.SeccsiondeBienvenida {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(145deg, #2d2d2d, #4a4a4a); /* Degradado sutil */
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    max-width: 90%; /* Limita el ancho al 90% de la pantalla */
+    max-height: 90vh; /* Limita la altura al 90% de la pantalla */
+    overflow-y: auto; /* Permite desplazamiento vertical si el contenido es extenso */
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Estilo del título */
+.SeccsiondeBienvenida h3 {
+    font-size: 2rem;
+    color: #00e6b8; /* Color brillante para el título */
+    margin-bottom: 1rem;
+}
+
+/* Texto general */
+.SeccsiondeBienvenida p {
+    font-size: 1rem;
+    color: #d0d7dd; /* Color claro para mejorar la legibilidad */
+    margin: 1rem 0;
+}
+
+/* Lista de beneficios */
+.SeccsiondeBienvenida ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center;
+}
+
+/* Elementos de la lista */
+.SeccsiondeBienvenida li {
+    font-size: 1rem;
+    color: #f0f0f0; /* Color claro para mejor contraste */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Iconos */
+.SeccsiondeBienvenida li i {
+    color: #00e6b8; /* Color brillante para íconos */
+    margin-right: 0.5rem; /* Espacio entre el ícono y el texto */
+    font-size: 1.3rem; /* Tamaño del ícono */
+    vertical-align: middle; /* Alinea el ícono con el texto */
+}
+
+/* Texto fuerte */
+.SeccsiondeBienvenida li strong {
+    font-weight: bold;
+}
+
+/* Botón de acción */
+.close-button {
+    background-color: #00e6b8;
+    color: #333;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 230, 184, 0.2);
+}
+
+.close-button:hover {
+    background-color: #00cfa3;
+    transform: translateY(-3px);
+}
+
+
+        /* Fondo de superposición */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+        }
+        /* Responsive para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .scholarship-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .scholarship-text {
+                align-items: center;
+                text-align: center;
+            }
+
+            .scholarship-image {
+                max-width: 80%;
+                margin: 0 auto;
+            }
+        }
+
   
   /* Let's write the media query */
   @media (max-width: 576px) {

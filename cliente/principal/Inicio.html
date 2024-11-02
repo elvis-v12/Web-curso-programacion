@@ -35,8 +35,8 @@
             </a>
       </div>
       <div class="login">
-          <button class="signup">Registrate</button>
-          <button>Login</button>
+        <button class="signup" onclick="window.location.href='/cliente/autentificacion/signup.html'">Registrate</button>
+        <button onclick="window.location.href='/cliente/autentificacion/login.html'">Login</button>        
       </div>
   </nav>
 
@@ -218,6 +218,50 @@
     </ul>
     <button id="toggleButton" class="toggle-btn">Ver todas las escuelas </button>
   </header>
+  
+  <section class="scholarship-section">
+    <h2 class="scholarship-title">Impulsa Tu Crecimiento Profesional</h2>
+    <div class="contenido_beca">
+    <div class="scholarship-text">
+        <p class="highlight-text">Obtén una beca en Dark Code para una educación de calidad y un futuro en tecnología.</p>
+        <p>Completa los cursos necesarios y postula a una beca que te abrirá puertas en el mundo de la programación.</p>
+        
+        <ul class="skills-benefits">
+            <li><i class="fas fa-laptop-code"></i>Desarrollo avanzado en programación</li>
+            <li><i class="fas fa-network-wired"></i>Networking en la industria</li>
+            <li><i class="fas fa-brain"></i>Habilidades en solución de problemas</li>
+            <li><i class="fas fa-chart-line"></i>Proyectos prácticos para crecer profesionalmente</li>
+            <li><i class="fas fa-user-shield"></i>Buenas prácticas en seguridad</li>
+        </ul>
+
+        <p class="brand-info">En Dark Code, creemos en la educación para transformar vidas y construir futuros. Esta beca te ayudará a destacar en la industria.</p>
+        <button onclick="mostrarBienvenida()" class="apply-button">Acceder a la Beca</button>
+    </div>
+    <img src="imagenes/TY.webp" alt="Imagen de estudiante" class="scholarship-image">
+</div>
+
+
+</section>
+
+<!-- Div de bienvenida que se muestra en el centro -->
+<div class="overlay" id="overlay" onclick="cerrarBienvenida()"></div>
+<div class="SeccsiondeBienvenida" id="SeccsiondeVienvenida">
+    <h3>Bienvenido a la Postulación de la Beca Dark Code</h3>
+    <p>En Dark Code estamos comprometidos en ayudarte a desarrollar tus habilidades tecnológicas y a alcanzar el éxito en tu carrera. Nuestra beca te ofrece acceso exclusivo a nuestros cursos online por un período de tiempo específico, permitiéndote formarte en las competencias más demandadas del mercado. Al obtener esta beca, disfrutarás de una experiencia educativa única que te abrirá nuevas oportunidades en el mundo de la tecnología.</p>
+    
+    <h4>¿Qué ganarás con nuestra beca?</h4>
+    <ul>
+        <li><i class="fas fa-check-circle"></i> <strong>Acceso completo a todos los cursos</strong></li>
+        <li><i class="fas fa-check-circle"></i> <strong>Formación flexible y online</strong></li>
+        <li><i class="fas fa-check-circle"></i> <strong>Certificaciones de finalización</strong> </li>
+        <li><i class="fas fa-check-circle"></i> <strong>Acceso a talleres exclusivos</strong></li>
+        <li><i class="fas fa-check-circle"></i> <strong>Oportunidades de networking</strong></li>
+        <li><i class="fas fa-check-circle"></i> <strong>Soporte personalizado</strong></li>
+    </ul>
+
+    <p>La beca es tu puerta de entrada para dominar las habilidades técnicas que el mercado laboral demanda hoy. ¡Esta es tu oportunidad para capacitarte sin límites y construir un futuro exitoso en la tecnología!</p>
+    <button onclick="redirigirRegistro()" class="close-button" >Aceptar</button>
+</div>
 
   
   <section id="about-us" class="about-us">
@@ -404,5 +448,6 @@
     <script src="/server/beca/beca.js"></script>
      <script src="/server/Pricipal_carrucel.js"></script>
     <script src="js/Buscador.js"></script>
+    <script src="js/Bienbenida.js"></script>
   </body>
 </html>
