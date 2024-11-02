@@ -407,122 +407,120 @@ body {
           label {
             font-size: 12px;
             cursor: pointer;
-            color: rgb(211, 18, 18);
+            color: #ffffff;
           }
 
           svg {
             width: 24px;
             height: 24px;
           }
-        }
-
-        .liked {
-          background-color: #fff !important;
-
-          svg {
-            fill: red !important;
-            stroke: red;
-          }
 
           path {
-            fill: red !important;
+            fill: rgba(255, 0, 0, 0);
+            stroke: rgb(255, 255, 255);
           }
+        }
+
+        .liked path {
+          fill: red !important;
+          stroke: red !important;
         }
       }
-
-      .comentario__right {
-        font-size: .7rem;
-
-        .comentario__content {
-          padding: 6px 7px 12px;
-          border-radius: 0 .75rem .75rem .75rem;
-          background-color: #2d323a;
-        }
-
-        .comentario__header {
-          .comentario__name {
-            font-size: 14px;
-            color: white;
-          }
-
-          .comentario__fecha {
-            font-size: 12px;
-            color: #87909d;
-          }
-        }
-
-        .comentario__body {
-          color: #c4c8ce;
-          font-size: 14px;
-        }
-
-        .comentario__option {
-          display: flex;
-          justify-content: space-between;
-          padding: 8px 0 0;
-
-          button {
-            cursor: pointer;
-            display: flex;
-            gap: 10px;
-            font-size: 12px;
-            color: #c4c8ce;
-            border: none;
-            background: none;
-
-            svg {
-              width: 16px;
-              height: 16px;
-            }
-
-          }
-        }
-
-        .comentario__reply {
-          padding: 0;
-
-          .comentario__line_extend {
-            position: absolute;
-            background-color: #2d323a;
-            height: 86%;
-            width: 2.5px;
-            top: 30px;
-            left: -23px;
-            border-radius: 2px;
-            z-index: 10;
-            transform: rotate(180deg);
-          }
-
-          .comentario {
-            padding: 10px 10px 10px 0px;
-          }
-        }
-      }
-
     }
-  }
 
-  .comenarios__options {
-    margin: 20px 10px;
+    .comentario__right {
+      font-size: .7rem;
 
-    .comentarios__form {
-      display: flex;
+      .comentario__content {
+        padding: 6px 7px 12px;
+        border-radius: 0 .75rem .75rem .75rem;
+        background-color: #2d323a;
+      }
 
-      input {
-        width: 100%;
-        background-color: #181B21;
-        color: #87909d;
-        border: none;
-        border-radius: 10px;
-        padding: 9px 10px;
-        font-size: .86rem;
+      .comentario__header {
+        .comentario__name {
+          font-size: 14px;
+          color: white;
+        }
 
-        &::placeholder {
+        .comentario__fecha {
+          font-size: 12px;
           color: #87909d;
         }
       }
+
+      .comentario__body {
+        color: #c4c8ce;
+        font-size: 14px;
+      }
+
+      .comentario__option {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0 0;
+
+        button {
+          cursor: pointer;
+          display: flex;
+          gap: 10px;
+          font-size: 12px;
+          color: #c4c8ce;
+          border: none;
+          background: none;
+
+          svg {
+            width: 16px;
+            height: 16px;
+          }
+
+        }
+      }
+
+      .comentario__reply {
+        padding: 0;
+
+        .comentario__line_extend {
+          position: absolute;
+          background-color: #2d323a;
+          height: 86%;
+          width: 2.5px;
+          top: 30px;
+          left: -23px;
+          border-radius: 2px;
+          z-index: 10;
+          transform: rotate(180deg);
+        }
+
+        .comentario {
+          padding: 10px 10px 10px 0px;
+        }
+      }
+    }
+
+  }
+}
+
+.comenarios__options {
+  margin: 20px 10px;
+
+  .comentarios__form {
+    display: flex;
+
+    input {
+      width: 100%;
+      background-color: #181B21;
+      color: #87909d;
+      border: none;
+      border-radius: 10px;
+      padding: 9px 10px;
+      font-size: .86rem;
+
+      &::placeholder {
+        color: #87909d;
+      }
     }
   }
+}
 }
 
 .boton-desactivado {
