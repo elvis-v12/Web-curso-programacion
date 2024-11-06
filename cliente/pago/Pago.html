@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Incluye Font Awesome en tu proyecto -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="tailwindcss-colors.css" />
+    <link rel="stylesheet" href="PAGO.css" />
+    <title>Payment Page</title>
+  </head>
+  <body>
+    <div class="container">
+    <div class="container">
+      <form action="#">
+        
+        <!-- Información de Autenticación -->
+        <div class="info-auth">
+          <h3 class="title">Identificación</h3>
+          <div class="inputBox">
+            <label for="name">Nombre Completo</label>
+            <input type="text" id="name" placeholder="Nombre y Apellidos" required />
+          </div>
+          <div class="inputBox">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" placeholder="ejemplo@correo.com" required />
+          </div>
+          <div class="inputBox">
+            <label for="document">Documento de Identidad</label>
+            <input type="text" id="document" placeholder="DNI, Cédula o Pasaporte" required maxlength="15" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          </div>
+          <div class="inputBox">
+            <label for="phone">Teléfono</label>
+            <input type="text" id="phone" placeholder="Número de teléfono" required maxlength="15" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          </div>
+        </div>
+  
+        <!-- Selección de Método de Pago -->
+        <div class="payment-section">
+          <h3 class="title">Seleccione un método de Pago</h3>
+          <div class="payment-method">
+            <input type="radio" name="payment-method" id="method-1" onclick="toggleCardInfo('card-info', true)" />
+            <label for="method-1" class="payment-method-item">
+              <img src="images/visa (2).webp" alt="Visa" />
+            </label>
+
+            <input type="radio" name="payment-method" id="method-2" onclick="toggleCardInfo('card-info', true)" />
+            <label for="method-2" class="payment-method-item">
+              <img src="images/Mastercard.webp" alt="Mastercard" />
+            </label>
+
+            <input type="radio" name="payment-method" id="method-3" onclick="toggleCardInfo('card-info', false)" />
+            <label for="method-3" class="payment-method-item">
+              <img src="images/paypaaal.webp" alt="PayPal" />
+            </label>
+
+            <input type="radio" name="payment-method" id="method-4" onclick="toggleCardInfo('card-info', false)" />
+            <label for="method-4" class="payment-method-item">
+              <img src="images/yape-.webp" alt="Yape" />
+            </label>
+          </div>
+
+          <!-- Información de Tarjeta (solo visible para Visa/Mastercard) -->
+        <div id="card-info" class="form-container" style="display: none;">
+          <h3 class="title">Información de la Tarjeta</h3>
+          <div class="inputBox">
+            <label for="cardName">Titular de la Tarjeta</label>
+            <input type="text" id="cardName" placeholder="Nombre completo" required />
+          </div>
+          <div class="inputBox">
+            <label for="cardNumber">Número de la Tarjeta</label>
+            <input type="text" id="cardNumber" placeholder="1111 - 2222 - 3333 - 4444" required maxlength="19" oninput="formatCardNumber(this)" />
+          </div>
+          <div class="inputBox">
+            <label for="expiryDate">Fecha de Vencimiento</label>
+            <input type="text" id="expiryDate" placeholder="MM/AA" required maxlength="5" oninput="formatExpiryDate(this)" />
+          </div>
+          <div class="inputBox">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="CVV" required maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          </div>
+        </div>
+        <input type="submit" value="Proceed to Checkout" class="submit_btn" />
+      </form>
+    </div>
+    
+<div class="compra_Informacion">
+  <div class="checkout-container">
+    <section aria-label="Resumen" class="summary-section">
+        <h2 class="summary-title">Resumen</h2>
+        <div class="summary-item">
+            <span>Precio original:</span>
+            <span>S/1.009.60</span>
+        </div>
+        <div class="summary-item">
+            <span>Descuentos:</span>
+            <span>- S/800.00</span>
+        </div>
+        <div class="divider"></div>
+        <div class="summary-total">
+            <span>Total:</span>
+            <span>S/209.60</span>
+        </div>
+    </section>
+    <div class="checkout-button-container">
+        <p class="terms-text">
+            Al completar su compra acepta estos 
+            <a href="#" target="_blank" rel="noopener noreferrer">Términos de servicio</a>.
+        </p>
+        <button class="purchase-button">
+          <i class="fas fa-lock lock-icon"></i>
+            <span>Completar pago</span>
+        </button>
+        <p class="money-back-text">Garantía de devolución de dinero de 30 días</p>
+    </div>
+</div>
+
+<div aria-label="Order details" class="order-summary">
+  <h2 class="order-summary-header">Orden de compra</h2>
+  <ul class="order-items-list">
+      <li class="order-item">
+          <div class="item-summary">
+              <img src="https://img-b.udemycdn.com/course/100x100/851712_fc61_6.jpg" width="50" height="50" alt="buyables" class="item-image" loading="lazy">
+              <div class="item-title">The Complete JavaScript Course 2024: From Zero to Expert!</div>
+          </div>
+          <div class="item-price">
+              <div class="purchase-price"><span>S/49.90</span></div>
+              <div class="original-price"><span><s>S/229.90</s></span></div>
+          </div>
+      </li>
+  </ul>
+</div>
+
+</div>
+
+  </div>
+        
+    <script src="PAGO.js" defer></script>
+    <script>
+      // Función para mostrar/ocultar la información de la tarjeta
+      function toggleCardInfo(cardInfoId, show) {
+          const cardInfo = document.getElementById(cardInfoId);
+          cardInfo.style.display = show ? 'block' : 'none';
+      }
+    </script>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+
+  </body>
+</html>

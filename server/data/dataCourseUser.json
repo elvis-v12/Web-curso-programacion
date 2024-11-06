@@ -1,0 +1,281 @@
+[
+  {
+    "id": 1,
+    "code": "CUR001",
+    "url": "./cliente/cursos/cursosDetalles.html",
+    "author": "Alvaro Chirou",
+    "name": "Python Practicando. Desde 0 hasta Desarrollador en Python",
+    "score": "4,6",
+    "stars": "9",
+    "votes": "21.363",
+    "price": 49.90,
+    "pricePrevous": "199,90 S/",
+    "portada": "/cliente/principal/pictures/carousel/image.png",
+    "detalles": "<span>25,5 horas de vídeo bajo demanda</span><span>21 artículos</span><span>147 recursos descargables</span><span>Acceso en dispositivos móviles y TV</span><span>Certificado de finalización</span>",
+    "lastUpdate": "9/2024",
+    "language": "Español",
+    "habilidades": "",
+    "requisitos": "",
+    "shortDescription": "Aprende Python, donde iniciamos desde 0, sin conocimientos previos hasta desarrollar aplicaciones con mucha practica!",
+    "description": "<b>Python</b> es Hoy uno de los lenguajes <b>más utilizados por Excelencia</b>.<br>Esto se debe por su <b>simpleza</b> al momento de <b>Desarrollar aplicaciones</b>.<br>Por su capacidad de <b>procesamiento a altas velocidades</b> con grandes volúmenes de información.<br>Es un <b>increíble lenguaje</b> con el cual si no sabes programar, <b>podrás aprender</b>.<br>Y si ya sabes desarrollarlo, te aseguro que en el <b>mercado cada vez se solicitan más desarrolladores en Python</b>.<br><b>Aspirar al trabajo que desean, o mejorar sus ingresos con un aumento de salario</b>.<br>Python se utiliza para muchísimas cosas como:<br><ul><li><b>Machine Learning</b></li><li><b>Data Science</b></li><li><b>Inteligencia Artificial</b></li><li>Y mucho más!</li></ul>En este curso te <b>acompañaré en el proceso</b> por el cual aprenderás las bases del lenguaje, para luego determinar qué camino quieres seguir.<br>Te invito a que me acompañes a conocer este <b>Gran Lenguaje</b>!<br>Yo soy <b>Álvaro Chirou</b>, tengo <b>más de 20 Años</b> de experiencia trabajando en <b>Tecnología</b>, he dado conferencias en eventos internacionales como <b>OWASP</b>, tengo más de <b>500.000 estudiantes en Udemy</b> y <b>100 formaciones profesionales impartidas en la misma.</b><br>Junto a mi compañero <b>Walter Coto</b> donde con él hemos dado formaciones profesionales en conjunto también en la plataforma de Udemy, hoy les traemos esta formación especialmente pensada para el lenguaje más demandado por el mercado.<br>Tendrás acceso de por vida al curso, recibirás actualizaciones y respuestas a tus preguntas a través de la plataforma de Udemy.<br>Empieza a aprender ya mismo!<br>Nos vemos dentro!<br>Tus profesores: <b>Álvaro Chirou y Walter Coto</b>.",
+    "modules": [
+      {
+        "code": "MOD001",
+        "name": "Módulo 1: Introducción a Python",
+        "description": "En este módulo aprenderás las bases del lenguaje Python",
+        "contenidos": [
+          {
+            "code": "CON001",
+            "descripcion": "Clase 1",
+            "nombre": "Introducción a la programación",
+            "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
+            "fechaPublicacion": "20/08/2019",
+            "visto": false,
+            "resumen": "<p>En esta clase se presenta una <strong>introducción a la programación</strong> en Python. Aprenderás los conceptos básicos de programación y cómo aplicarlos en Python.</p><ul><li>Introducción a la sintaxis de Python</li><li>Ejemplos de código inicial</li><li>Conceptos clave en programación</li></ul>",
+            "recursos": [
+              {
+                "code": "RES001",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          },
+          {
+            "code": "CON002",
+            "descripcion": "Clase 2",
+            "nombre": "Estructuras de control",
+            "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
+            "fechaPublicacion": "20/05/2019",
+            "visto": false,
+            "resumen": "<p>Se explorarán las <strong>estructuras de control</strong> en Python, como las estructuras condicionales y los bucles. Comprenderás cómo controlar el flujo de tu programa.</p><ul><li>Uso de <em>if</em>, <em>else</em> y <em>elif</em></li><li>Bucles <em>for</em> y <em>while</em></li><li>Prácticas de control de flujo</li></ul>",
+            "recursos": [
+              {
+                "code": "RES001",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          },
+          {
+            "code": "CON003",
+            "descripcion": "Clase 3",
+            "nombre": "Funciones y módulos",
+            "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
+            "fechaPublicacion": "20/05/2019",
+            "visto": false,
+            "resumen": "<p>Aprenderás a crear y utilizar <strong>funciones y módulos</strong> en Python. Esto te permitirá estructurar mejor tu código y hacerlo más reutilizable.</p><ul><li>Definición de funciones y parámetros</li><li>Importación de módulos</li><li>Ejercicios de funciones</li></ul>",
+            "recursos": [
+              {
+                "code": "RES001",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "MOD002",
+        "name": "Módulo 2: Python Intermedio",
+        "description": "En este módulo aprenderás las bases del lenguaje Python",
+        "contenidos": [
+          {
+            "code": "CON004",
+            "descripcion": "Clase 4",
+            "nombre": "Programación orientada a objetos",
+            "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
+            "fechaPublicacion": "20/05/2019",
+            "visto": false,
+            "resumen": "<p>Introducción a la <strong>programación orientada a objetos</strong> en Python. Aprenderás a trabajar con clases y objetos, una habilidad fundamental en desarrollo de software.</p><ul><li>Creación de clases y objetos</li><li>Métodos y encapsulación</li><li>Conceptos de herencia y polimorfismo</li></ul>",
+            "recursos": [
+              {
+                "code": "RES001",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          },
+          {
+            "code": "CON005",
+            "descripcion": "Clase 5",
+            "nombre": "Manejo de excepciones",
+            "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
+            "fechaPublicacion": "20/05/2019",
+            "visto": false,
+            "resumen": "<p>Se enseñará el <strong>manejo de excepciones</strong> para gestionar errores en el código y mejorar la robustez de las aplicaciones.</p><ul><li>Uso de <em>try</em>, <em>except</em>, <em>finally</em></li><li>Creación de excepciones personalizadas</li><li>Ejercicios de manejo de errores</li></ul>",
+            "recursos": [
+              {
+                "code": "RES001",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          },
+          {
+            "code": "CON006",
+            "descripcion": "Clase 6",
+            "nombre": "Archivos y bases de datos",
+            "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
+            "fechaPublicacion": "20/05/2019",
+            "visto": false,
+            "resumen": "<p>Clase dedicada a la manipulación de <strong>archivos y bases de datos</strong>. Aprenderás a leer y escribir en archivos y a conectar con bases de datos.</p><ul><li>Lectura y escritura en archivos de texto</li><li>Serialización de datos con JSON</li><li>Conexión a bases de datos SQL</li></ul>",
+            "recursos": [
+              {
+                "code": "RES001",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "MOD004",
+        "name": "Módulo 4: Web",
+        "description": "En este módulo aprenderás las bases del lenguaje Python",
+        "contenidos": [
+          {
+            "code": "CON007",
+            "descripcion": "Clase 7",
+            "nombre": "Desarrollo web con HTML y CSS",
+            "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
+            "visto": false,
+            "resumen": "<p>Introducción al <strong>desarrollo web</strong> con HTML y CSS. Aprenderás las bases para construir interfaces web sencillas.</p><ul><li>Creación de estructuras con HTML</li><li>Estilización básica con CSS</li><li>Prácticas de diseño de interfaces</li></ul>",
+            "recursos": [
+              {
+                "code": "RES001",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          },
+          {
+            "code": "CON008",
+            "descripcion": "Clase 8",
+            "nombre": "JavaScript y la programación del lado del cliente",
+            "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
+            "fechaPublicacion": "20/05/2019",
+            "visto": false,
+            "resumen": "<p>Clase sobre <strong>JavaScript y la programación del lado del cliente</strong>. Aprenderás a hacer páginas web interactivas utilizando JavaScript.</p><ul><li>Conceptos de programación en JavaScript</li><li>Manipulación del DOM</li><li>Interactividad en páginas web</li></ul>",
+            "recursos": [
+              {
+                "code": "RES001",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          },
+          {
+            "code": "CON009",
+            "descripcion": "Clase 9",
+            "nombre": "Introducción a frameworks de desarrollo web",
+            "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
+            "fechaPublicacion": "20/05/2019",
+            "visto": false,
+            "resumen": "<p>Introducción a <strong>frameworks de desarrollo web</strong> en Python. Conocerás cómo utilizar frameworks para simplificar el desarrollo web.</p><ul><li>Frameworks populares como Flask y Django</li><li>Creación de aplicaciones web básicas</li><li>Ejemplos prácticos de desarrollo web</li></ul>",
+            "recursos": [
+              {
+                "code": "RES001",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "MOD005",
+        "name": "Módulo 5: Final",
+        "description": "En este módulo aprenderás las bases del lenguaje Python",
+        "contenidos": [
+          {
+            "code": "CON010",
+            "descripcion": "Clase 10",
+            "nombre": "Proyecto final de programación",
+            "contenido": "https://www.youtube-nocookie.com/embed/7iobxzd_2wY?si=pJPRUFTteN_Bd94h",
+            "fechaPublicacion": "20/05/2019",
+            "visto": false,
+            "resumen": "<p>Proyecto final de <strong>programación en Python</strong>, donde pondrás en práctica todo lo aprendido en el curso para desarrollar una aplicación completa.</p><ul><li>Desarrollo de una aplicación Python</li><li>Aplicación de conceptos de programación orientada a objetos</li><li>Pruebas y optimización</li></ul>",
+            "recursos": [
+              {
+                "code": "RES001",
+                "descripcion": "Recursos",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 1"
+              },
+              {
+                "code": "RES002",
+                "descripcion": "Recursos 2",
+                "nombre": "Descargar recursos",
+                "url": "Contenido 2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,652 @@
+:root {
+	--grey: #F1F0F6;
+	--dark-grey: #8D8D8D;
+	--light: #fff;
+	--dark: #000;
+	--green: #81D43A;
+	--light-green: #E3FFCB;
+	--blue: #1775F1;
+	--light-blue: #D0E4FF;
+	--dark-blue: #0C5FCD;
+	--red: #FC3B56;
+    --black1:#13161c;
+    --greenbajo:#7ed321;
+    --color_dasboard:#020617;
+}
+.SeccionBeca{
+width: 100%;
+height: 100%;
+display: inline-block;
+}
+.SeccionBeca {
+    padding: 20px;
+    margin-left: 100px;
+    width: 93%;
+    flex-grow: 1;
+    height: 100%; /* Ocupar toda la altura del viewport */
+    overflow-y: hidden; /* Evitar desbordamiento en el contenido principal */
+    background: var(--color_dasboard);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*Seccion desplegable*/
+/* Estilos para el nav de beca */
+.beca-nav {
+    background-color: #004080; /* Color de fondo del menú */
+    padding: 10px;
+    position: sticky; /* Hace que el nav sea "sticky" y se mantenga en la parte superior */
+    top: 0; /* Se mantiene en la parte superior del contenedor */
+    
+}
+
+.beca-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacio entre los enlaces */
+}
+
+.beca-nav ul li {
+    display: inline;
+}
+
+.beca-nav ul li a {
+    color: #ffffff; /* Color del texto */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px; /* Espaciado dentro de los enlaces */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.beca-nav ul li a:hover {
+    background-color: #0066cc; /* Color al pasar el mouse */
+}
+
+.cajaContenedora {
+    margin-top: 20px; /* Espaciado superior para separar el nav del contenido */
+}
+
+/* Estilo para las secciones */
+.beca-seccion {
+    display: none; /* Por defecto, las secciones están ocultas */
+    margin-top: 20px; /* Margen entre secciones */
+}
+
+/* Mostrar sección activa */
+.beca-seccion.active {
+    display: block; /* Solo se mostrará la sección activa */
+}
+
+/*Seccion de beca */
+/* Contenedor de la sección de cursos */
+#cursos-a-completar {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la sección */
+#cursos-a-completar h3 {
+    color: #004080;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #004080;
+    padding-bottom: 5px;
+}
+
+/* Párrafo introductorio */
+#cursos-a-completar p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de todas las tarjetas de cursos */
+.curso-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Tarjeta de cada curso */
+.curso-card {
+    background-color: #ffffff;
+    border: 1px solid #cce4ff;
+    border-radius: 8px;
+    padding: 15px;
+    width: calc(33.333% - 20px); /* Tres tarjetas por fila */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    overflow: hidden;
+}
+
+/* Hover en la tarjeta */
+.curso-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Imagen del curso */
+.curso-imagen {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px 6px 0 0; /* Bordes superiores redondeados */
+    margin-bottom: 10px;
+}
+
+/* Título del curso */
+.curso-card h4 {
+    color: #004080;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Descripción del curso */
+.curso-descripcion {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+/* Contenedor de avance */
+.curso-avance {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9em;
+}
+
+/* Barra de avance */
+.barra-avance {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 10px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Barra de porcentaje */
+.porcentaje {
+    background-color: #004080;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    transition: width 0.3s ease;
+}
+
+
+/*seccion de cursos complados*/
+/* Contenedor de la sección de cursos completados */
+#cursos-completados {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de todas las tarjetas de cursos completados */
+.curso-completado-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Tarjeta de cada curso completado */
+.curso-completado-card {
+    background-color: #ffffff;
+    border: 1px solid #cce4ff;
+    border-radius: 8px;
+    padding: 15px;
+    width: calc(50% - 20px); /* Dos tarjetas por fila */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    overflow: hidden;
+}
+
+/* Barra de avance (contenedor) */
+.barra-avance {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 10px;
+    width: 100%; /* Ancho completo */
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+/* Barra de porcentaje (barra interior que muestra el progreso) */
+.porcentaje {
+    background-color: #00a651;
+    height: 100%;
+    transition: width 0.3s ease;
+    border-radius: 5px 0 0 5px;
+}
+
+/*Seccion de postulacion*/
+/* Contenedor del formulario */
+#formulario-postulacion {
+  
+    border: 2px solid #0066cc; /* Azul suave */
+    border-radius: 8px;
+    padding: 0px 20px 20px 20px;
+    width: 100%;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 102, 204, 0.2); /* Sombra en azul suave */
+}
+
+/* Título del formulario */
+#formulario-postulacion h3 {
+    color: var(--grey); /* Verde más suave para el título principal */
+    text-align: center;
+    font-size: 1.8em;
+
+}
+
+/* Secciones del formulario */
+.form-section {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Título de cada sección */
+.form-section h4 {
+    color: var(--grey); /* Verde más suave para el título principal */
+    font-size: 1.2em;
+    border-bottom: 1px solid #0066cc;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+/* Contenedor principal del grupo de formulario */
+/* Contenedor principal del grupo de formulario */
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Reduce el espacio entre los elementos */
+}
+
+/* Cada fila de label-input ocupa el 48% del ancho */
+.form-row {
+    display: flex;
+    flex-direction: column;
+    width: 48%; /* Ajusta para que haya dos elementos por fila, eliminando espacio adicional */
+    margin: 0;
+}
+
+/* Etiqueta del formulario */
+.form-row label {
+    color: #aaa;
+    font-size: 0.9em;
+   
+}
+
+/* Campos de entrada */
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="tel"],
+.form-row input[type="date"] {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    outline: none;
+    width: 100%; /* Ocupa todo el ancho del contenedor form-row */
+    transition: border-color 0.3s ease;
+}
+
+.form-row input:focus {
+    border-color: #00ff66;
+}
+
+/* Estilo adicional para ajustar el contenedor principal del formulario */
+.becaForm {
+    width: 100%;
+    max-width: 800px; /* Limita el ancho máximo para mantener el diseño compacto */
+    margin: auto; /* Centra el formulario en la página */
+}
+
+
+/* Estilo adicional para ajustar el contenedor principal del formulario */
+.becaForm {
+    width: 100%;
+    max-width: 800px; /* Limita el ancho máximo para mantener el diseño compacto */
+    margin: auto; /* Centra el formulario en la página */
+}
+
+.contenido {
+    display: flex;
+    width: 100%;
+}
+
+/* Botones */
+/* Botones */
+.form-buttons {
+    display: flex;
+    justify-content: space-between; /* Distribuye los botones */
+    gap: 10px;
+}
+
+.form-buttons button {
+    background-color: #00aaff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1; /* Permite que los botones se expandan para llenar el espacio */
+}
+
+.form-buttons button:hover {
+    background-color: #0088cc;
+}
+
+.button-back {
+    background-color: #555;
+}
+
+.button-back:hover {
+    background-color: #333;
+}
+
+.button-submit {
+    background-color: #00ff66;
+}
+
+/*Estado de solicitud de beca*/
+/* Contenedor principal del estado de solicitud con efecto 3D */
+#estado-solicitud {
+
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 20px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2), 0 0px 10px rgba(0, 255, 255, 0.5); /* Efecto 3D */
+    width: 100%;
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+}
+
+/* Efecto de hover para resaltar */
+
+
+/* Título de la sección */
+#estado-solicitud h3 {
+    color: #00ff66;
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 255, 102, 0.3); /* Sombra en el texto para efecto 3D */
+}
+
+/* Descripción */
+#estado-solicitud p {
+    font-size: 1em;
+    color: #ccc;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Lista de detalles */
+#estado-solicitud ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#estado-solicitud li {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+/* Destacar las etiquetas de "Estado" y "Fecha de Envío" */
+#estado-solicitud strong {
+    color: #00ff66;
+}
+
+/* Animación para elementos de la lista */
+#estado-solicitud li {
+    position: relative;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+
+/* Contenedor de cada robot */
+/* Contenedor centrado para el robot */
+.robot-centered {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Contenedor del robot */
+.robot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Estilos del robot */
+.robot {
+    width: 60px;
+    position: relative;
+}
+
+/* Cabeza del robot */
+.robot-head {
+    background-color: #00ff66;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ojos del robot */
+.robot-eye {
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.left-eye {
+    left: 15px;
+}
+
+.right-eye {
+    right: 15px;
+}
+
+/* Boca del robot en espera */
+.espera-mouth {
+    width: 15px;
+    height: 3px;
+    background-color: #000;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 10px;
+}
+
+/* Boca del robot feliz */
+.feliz{
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+.feliz-mouth {
+    width: 20px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 12px;
+}
+
+/* Cuerpo del robot */
+.robot-body {
+    background-color: #333;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    position: relative;
+    top: -5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+/* Brazos del robot */
+.robot-arm {
+    width: 8px;
+    height: 25px;
+    background-color: #00ff66;
+    position: absolute;
+    top: 10px;
+    border-radius: 2px;
+}
+
+.left-arm {
+    left: -15px;
+}
+
+.right-arm {
+    right: -15px;
+}
+
+/* Texto de estado */
+.robot-text {
+    color: #00ff66;
+    font-size: 1em;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Animación de "En Revisión" (Parpadeo) */
+@keyframes blink {
+    0%, 100% {
+        background-color: #000;
+    }
+    50% {
+        background-color: #555;
+    }
+}
+
+#robot-espera .robot-eye {
+    animation: blink 1s infinite;
+}
+
+/* Animación de "Aceptado" (Saludo) */
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+#robot-aceptado .right-arm {
+    animation: wave 1s infinite ease-in-out;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*Seccion de contactanos*/
+/* Contenedor principal de la sección Ayuda y Contacto */
+#ayuda-contacto {
+    
+    border: 1px solid #007bff; /* Borde azul */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    text-align: center;
+}
+
+/* Título de la sección */
+#ayuda-contacto h3 {
+    color: #00ff66; /* Verde neón */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+/* Texto introductorio */
+#ayuda-contacto p {
+    color: #ccc; /* Gris claro */
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+/* Lista de opciones de contacto */
+#ayuda-contacto ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#ayuda-contacto li {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #ffffff; /* Blanco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Estilo para los enlaces */
+#ayuda-contacto a {
+    color: #00aaff; /* Azul brillante */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#ayuda-contacto a:hover {
+    color: #66d9ff; /* Azul claro en hover */
+}
+
+/* Iconos de contacto */
+#ayuda-contacto li::before {
+    content: "•"; /* Añade un icono de punto */
+    color: #00ff66;
+    font-size: 1.2em;
+    margin-right: 5px;
+}
