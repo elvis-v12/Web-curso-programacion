@@ -41,6 +41,9 @@ app.use(express.static(path.join(__dirname, '/cliente/App_cliente/imagenes'))); 
 app.use(express.static(path.join(__dirname, 'sfa-assets/images/svg'))); // Sirviendo SVGs
 app.use(express.static(path.join(__dirname, 'cliente')));  // Sirve la carpeta "cliente"
 app.use("/cliente", express.static(path.join(__dirname, "cliente")));
+app.use(express.static(path.join(__dirname, '/server/ServerLogin')));
+app.use('/server/ServerLogin', express.static(path.join(__dirname, 'server/ServerLogin')));
+
 
 // Rutas para servir dinámicas '.html'
 app.get('/Login', (req, res) => {
@@ -55,6 +58,16 @@ app.get('/Registro', (req, res) => {
     res.sendFile(path.join(__dirname, '/cliente/autentificacion/signup.html'));
 });
 
+app.get('/server/ServerLogin/disableBack.js', (req, res) => {
+    res.type('application/javascript'); // Especificar el tipo MIME correcto
+    res.sendFile(path.join(__dirname, 'server/ServerLogin/disableBack.js'));
+});
+
+app.get('/server/ServerLogin/logout.js', (req, res) => {
+    res.type('application/javascript');
+    res.sendFile(path.join(__dirname, 'server/ServerLogin/logout.js'));
+});
+
 app.get('/Principal', (req, res) => {
     res.sendFile(path.join(__dirname, '/cliente/principal/Inicio.html'));
 });
@@ -67,6 +80,19 @@ app.get('/AppClienteNinos', (req, res) => {
     res.sendFile(path.join(__dirname, '/cliente/App_cliente/App_estudianteNinos.html'));
 });
 
+app.get('/server/ServerLogin/registro.js', (req, res) => {
+    res.type('application/javascript');
+    res.sendFile(path.join(__dirname, 'server/ServerLogin/registro.js'));
+});
+app.get('/favicon.ico', (req, res) => {
+    res.sendFile(path.join(__dirname, 'favicon.ico'));
+});
+app.use((req, res, next) => {
+    res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+    res.set('Pragma', 'no-cache');
+    res.set('Expires', '0');
+    next();
+});
 
 // Ruta para recibir datos del formulario de registro
 app.post('/registro', async (req, res) => {
@@ -164,6 +190,23 @@ app.post('/login', (req, res) => {
         });
     });
 });
+
+
+// Ruta para cerrar sesión
+app.post('/logout', (req, res) => {
+    if (req.session) {
+        req.session.destroy((err) => {
+            if (err) {
+                console.error('Error al cerrar sesión:', err);
+                return res.status(500).send({ success: false, message: 'Error al cerrar sesión.' });
+            }
+            res.status(200).send({ success: true });
+        });
+    } else {
+        res.status(400).send({ success: false, message: 'No hay sesión activa.' });
+    }
+});
+
 
 // Iniciar el servidor
 app.listen(app.get('port'), () => {
