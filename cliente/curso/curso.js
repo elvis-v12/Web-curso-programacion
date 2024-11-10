@@ -61,6 +61,7 @@ import { CursoContent } from "./session-content.js";
                         this.updateButtonStates();
                         this.updateComments();
                   }
+
             }
 
             updateSessionInfo() {
