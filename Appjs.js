@@ -32,6 +32,7 @@ app.use(session({
 app.use(express.static(path.join(__dirname, '/cliente/autentificacion')));
 app.use(express.static(path.join(__dirname, '/server/ServerLogin')));
 app.use(express.static(path.join(__dirname, '/server/Principal')));
+app.use(express.static(path.join(__dirname, '/server/pago')));
 app.use('/App_cliente', express.static(path.join(__dirname, 'cliente/App_cliente')));
 app.use('/server/App_cliente', express.static(path.join(__dirname, 'server/App_cliente')));
 app.use(express.static(path.join(__dirname, '/cliente')));
@@ -39,6 +40,7 @@ app.use(express.static(path.join(__dirname, 'cliente')));
 app.use(express.static(path.join(__dirname, '/cliente/App_cliente/imagenes'))); // Sirviendo imágenes
 app.use(express.static(path.join(__dirname, 'sfa-assets/images/svg'))); // Sirviendo SVGs
 app.use(express.static(path.join(__dirname, 'cliente')));  // Sirve la carpeta "cliente"
+app.use("/cliente", express.static(path.join(__dirname, "cliente")));
 
 // Rutas para servir dinámicas '.html'
 app.get('/Login', (req, res) => {

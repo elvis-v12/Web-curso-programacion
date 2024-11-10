@@ -1,19 +1,29 @@
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evitar el envío del formulario
-
-    // Obtener los valores del formulario
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-
-    // Validar usuario y contraseña
-    if (email === 'admin@gmail.com' && password === 'admin') {
-        // Redirigir a la página de administración (index.html)
-        window.location.href = '/cliente/administrador/index.html';
-    } else {
-        alert('Credenciales incorrectas. Inténtelo de nuevo.');
-    }
-});
-
-
-
-//conexion a base datos
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+  
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+  
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+  
+      // Validar las credenciales
+      if (email === "administrador@gmail.com" && password === "administrador7") {
+        window.location.href = "/cliente/administrador/index.html";
+  
+        alert("Correo electrónico o contraseña incorrectos.");
+      }
+    });
+  });
+  
+  let profileDropdownList = document.querySelector(".profile-dropdown-list");
+  let btn = document.querySelector(".profile-dropdown-btn");
+  
+  let classList = profileDropdownList.classList;
+  
+  const toggle = () => classList.toggle("active");
+  
+  window.addEventListener("click", function (e) {
+    if (!btn.contains(e.target)) classList.remove("active");
+  });
+  

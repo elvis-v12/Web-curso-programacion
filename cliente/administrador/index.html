@@ -13,6 +13,8 @@
 <link rel="stylesheet" href="CSS/mensajeria.css">
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="CSS/curso.css">
+  <link rel="stylesheet" href="CSS/becas.css">
+  <link rel="stylesheet" href="CSS/certificado.css">
   <title>Admin</title>
 </head>
 
@@ -150,7 +152,6 @@
               <div class="head">
                 <div>
                   <h2>$1500</h2>
-                  <p>Suscripción Semanal</p>
                 </div>
                 <i class='bx bx-trending-up icon'></i>
               </div>
@@ -161,7 +162,6 @@
               <div class="head">
                 <div>
                   <h2>$234</h2>
-                  <p>Suscripción Mensual</p>
                 </div>
                 <i class='bx bx-trending-down icon down'></i>
               </div>
@@ -622,73 +622,160 @@
       <div id="learning-paths" class="section">
         <h1>Rutas de Aprendizaje</h1>
         <!-- Contenido para rutas de aprendizaje -->
+         
       </div>
 
       <div id="certificates" class="section">
         <h1>Certificados</h1>
         <!-- Contenido para certificados -->
+<!-- Tabla de certificados -->
+<div class="certificados">
+  <table id="tabla-certificados">
+      <thead>
+          <tr>
+              <th>Nombre del Estudiante</th>
+              <th>Curso</th>
+              <th>Nota</th>
+              <th>Fecha del Curso</th>
+              <th>Profesor</th>
+              <th>Acción</th>
+          </tr>
+      </thead>
+      <tbody>
+          <!-- Filas generadas dinámicamente por JavaScript -->
+      </tbody>
+  </table>
+</div>
+
+<!-- Modal para mostrar el certificado -->
+<div id="modal-certificado" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <iframe id="iframe-certificado" src="" frameborder="0" class="iframe-certificado"></iframe>
+      <!-- Botón para descargar el certificado como PDF -->
+      <button id="descargar-certificado" class="button-link" onclick="descargarCertificadoPDF()">Descargar Certificado en PDF</button>
+  </div>
+</div>
       </div>
 
       <!-- Contenido para solicitudes de becas -->
       <div id="scholarship-requests" class="section">
         <h1>Solicitudes de Becas</h1>
-        <div class="filter-container">
-          <select>
-            <option value="all">Todos los estados</option>
-            <option value="pending">En Proceso de Evaluación</option>
-            <option value="accepted">Aceptada</option>
-            <option value="rejected">Rechazada</option>
-            <option value="granted">Otorgada</option>
-          </select>
-          <select>
-            <option value="all">Todos los cursos</option>
-            <option value="curso1">Curso 1</option>
-            <option value="curso2">Curso 2</option>
-          </select>
-          <button class="btn-add">Ver Estadísticas</button>
+          <!-- Filtros de búsqueda -->
+          <div class="filtros">
+            <select id="filtroEstado" onchange="filtrarPostulantes()">
+                <option value="">Estado de Solicitud</option>
+                <option value="Pendiente">Pendiente</option>
+                <option value="Aprobado">Aprobado</option>
+                <option value="Rechazado">Rechazado</option>
+            </select>
+            <input type="number" id="filtroEdad" placeholder="Edad" onchange="filtrarPostulantes()">
+            <input type="number" id="filtroPromedio" placeholder="Promedio mínimo" onchange="filtrarPostulantes()">
+            <input type="text" id="busquedaNombre" placeholder="Buscar por nombre" onkeyup="filtrarPostulantes()">
         </div>
-        <div class="table-data">
-          <div class="order">
-            <div class="head">
-              <h3>Solicitudes de Becas</h3>
-              <div class="form-input">
-                <input type="search" placeholder="Buscar..." />
-                <button type="submit" class="search-btn">
-                  <i class="bx bx-search"></i>
-                </button>
-              </div>
-              <i class="bx bx-filter"></i>
-            </div>
-            <table>
-              <thead>
-                <tr>
-                  <th>Nombre del Estudiante</th>
-                  <th>Correo Electrónico</th>
-                  <th>Curso Solicitado</th>
-                  <th>Estado</th>
-                  <th>Fecha de Solicitud</th>
-                  <th>Acciones</th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- Ejemplo de Fila -->
-                <tr>
-                  <td>María López</td>
-                  <td>maria.lopez@example.com</td>
-                  <td>Curso de Python</td>
-                  <td>
-                    <span class="status pending">En Proceso de Evaluación</span>
-                  </td>
-                  <td>01-10-2023</td>
-                  <td>
-                    <button class="btn-view">Ver Detalles</button>
-                    <button class="btn-accept">Aceptar</button>
-                    <button class="btn-reject">Rechazar</button>
-                  </td>
-                </tr>
-              </tbody>
+
+        <!-- Tabla de postulantes -->
+        <div class="postulantes">
+            <table id="tabla-postulantes">
+                <thead>
+                    <tr>
+                        <th>Nombre y Apellidos</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Promedio</th>
+                        <th>Estado de Solicitud</th>
+                        <th>Fecha de Solicitud</th>
+                        <th>Más Info</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas generadas dinámicamente por JavaScript -->
+                </tbody>
             </table>
-          </div>
+            <!-- Paginación -->
+            <div class="pagination">
+                <button onclick="cambiarPagina('anterior')">Anterior</button>
+                <span id="paginaActual">1</span>
+                <button onclick="cambiarPagina('siguiente')">Siguiente</button>
+            </div>
+        </div>
+
+        <!-- Modal de detalles -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal()">&times;</span>
+                 <h2>Información del Postulante</h2>
+        
+        <div class="modal-body">
+            <div class="left-section">
+                <div class="profile-avatar">
+                    <img src="avatar_placeholder.png" alt="Avatar del Postulante" class="avatar">
+                </div>
+            </div>
+            
+            <div class="right-section">
+                <!-- Información personal -->
+                <div class="profile-info">
+                    <div class="info-item">
+                        <label>Nombre Completo:</label>
+                        <span id="nombre"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Fecha de Nacimiento:</label>
+                        <span id="fechaNacimiento"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Sexo:</label>
+                        <span id="sexo"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Teléfono:</label>
+                        <span id="telefono"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Correo Electrónico:</label>
+                        <span id="email"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Dirección:</label>
+                        <span id="direccion"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Promedio:</label>
+                        <span id="promedio"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Estado de Solicitud:</label>
+                        <span id="estadoSolicitud"></span>
+                    </div>
+                </div>
+
+                <!-- Documentos Adjuntos -->
+                <div class="documents-section">
+                    <h3>Documentos Adjuntos</h3>
+                    <ul id="documentos" class="document-list">
+                        <!-- Enlaces a documentos -->
+                    </ul>
+                </div>
+
+                <!-- Cursos -->
+                <div class="courses-section">
+    <h3>Cursos Libres Completados</h3>
+    <div class="course-cards" id="cursosLibres">
+        <!-- Tarjetas de cursos completados generadas dinámicamente -->
+    </div>
+
+    <h3>Cursos Elegidos para Beca</h3>
+    <div class="course-cards" id="cursosPostulados">
+        <!-- Tarjetas de cursos postulados generadas dinámicamente -->
+    </div>
+</div>
+            </div>
+        </div>
+                <div class="modal-actions">
+                    <button class="btn-accept" onclick="gestionarBeca('aprobar')">Aprobar Beca</button>
+                    <button class="btn-reject" onclick="gestionarBeca('rechazar')">Rechazar Beca</button>
+                </div>
+            </div>
         </div>
       </div>
 
@@ -773,6 +860,10 @@
   <script src="JS/script.js"></script>
   <script type="module" src="JS/curso.js"></script>
   <script src="JS/mensajeria.js"></script>
+  <script src="JS/beca.js"></script>
+  <script src="JS/certificados.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </body>
 
 </html>

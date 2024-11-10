@@ -141,8 +141,8 @@ main {
 }
 
 .producto-detalles {
-    background-color: var(--clr-main);
-    color: var(--clr-white);
+    background-color: var(--crl-black);
+    color: var(--crl-black);
     padding: .5rem;
     border-radius: 1rem;
     margin-top: -2rem;
@@ -327,7 +327,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--clr-gray);
+    background-color: var(--crl-black);
     color: var(--clr-main);
     padding: .5rem;
     padding-right: 1.5rem;
@@ -357,7 +357,7 @@ main {
 
 .carrito-acciones-vaciar {
     border: 0;
-    background-color: var(--clr-gray);
+    background-color: var(--crl-black);
     padding: 1rem;
     border-radius: 1rem;
     color: var(--clr-main);
@@ -371,7 +371,7 @@ main {
 
 .carrito-acciones-total {
     display: flex;
-    background-color: var(--clr-gray);
+    background-color: var(--crl-black);
     padding: 1rem;
     color: var(--clr-main);
     text-transform: uppercase;
@@ -382,7 +382,7 @@ main {
 
 .carrito-acciones-comprar {
     border: 0;
-    background-color: var(--clr-main);
+    background-color: var(--clr-main-light);
     padding: 1rem;
     color: var(--clr-white);
     text-transform: uppercase;
