@@ -1,0 +1,124 @@
+/* Estilos Generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #020617;
+    color: #333;
+}
+
+
+/* fondo de la sección */
+.course-section {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    gap: 2rem;
+    padding: 2rem;  
+    max-width: auto; 
+
+    background-color: transparent; 
+    border-radius: 12px;
+    
+}
+
+.course-card {
+    background-color: transparent;
+    border-radius: 15px;
+    overflow: hidden;
+    
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 300px;
+    width: 100%;
+}
+
+.course-card:hover {
+    transform: scale(1.02);
+}
+
+.course-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.course-content {
+    padding: 1rem;
+}
+
+.course-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color:#f5f5f7;
+}
+
+.course-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+/*docente*/
+.course-info {
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+    color: #f8f9fc;
+}
+
+/* Botón de Acción */
+.course-action-btn {
+    background-color: #f3f6f8;
+    color: #000000;
+    border: 2px transparent;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    margin: 8px;  
+    box-sizing: border-box;  
+    width: calc(100% - 16px);  
+}
+
+.course-action-btn:hover {
+    background-color:#60a5fa;
+}
+
+
+/* Barra de Progreso */
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color:#d4d4d8;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #84cc16;
+    border-radius: 4px 0 0 4px;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.progress-percentage {
+    font-size: 0.9rem ;
+    font-weight: bold;
+    color: #edeef3;
+}

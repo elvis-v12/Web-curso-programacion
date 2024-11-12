@@ -1,0 +1,162 @@
+[
+    {
+        "courseCode": "CUR001",
+        "moduleCode": "MOD001",
+        "sessionCode": "CON001",
+        "user": {
+            "userId": "USER001",
+            "name": "Ana López",
+            "photo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.APUPLLycqR6YuXfxkiVNsAHaEb%26pid%3DApi&f=1&ipt=fff29220efcd9b831d88ad61ab5b84b8d1801dd233883b514ad09eaab3d14543&ipo=images"
+        },
+        "comment": "<p>Este curso es excelente para empezar! <strong>Muy recomendado.</strong></p>",
+        "commentDate": "2023-10-31",
+        "replies": [
+            {
+                "userId": "USER002",
+                "name": "Carlos Perez",
+                "comment": "<p>¡Totalmente de acuerdo! La explicación es muy clara.</p>",
+                "commentDate": "2023-11-01",
+                "photo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.-zkHkBtwPlT6NJZNyFGGIwHaFh%26pid%3DApi&f=1&ipt=8253ece79b331a43a09dbdf499dfdad1830e7e72d18f9de59e90ff20ad423ebc&ipo=images",
+                "like": 27
+            }
+        ],
+        "like": 92
+    },
+    {
+        "courseCode": "CUR001",
+        "moduleCode": "MOD002",
+        "sessionCode": "CON004",
+        "user": {
+            "userId": "USER003",
+            "name": "Luis Hernández",
+            "photo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.kgxEeA-w3IlDJo4yz9SrxAHaEK%26pid%3DApi&f=1&ipt=3d26c18d02f11d746dd07fef379ddb8d9e1ca7e5e86f4993b856b6c30566c11b&ipo=images"
+        },
+        "comment": "<ul><li>Me gustaría ver más ejemplos de código.</li><li>¿Alguien sabe cómo optimizar el rendimiento en Python?</li></ul>",
+        "commentDate": "2023-11-02",
+        "replies": [
+            {
+                "userId": "USER004",
+                "name": "Sofia Ramirez",
+                "comment": "<p>Para rendimiento puedes investigar sobre <strong>profiling</strong> en Python.</p>",
+                "commentDate": "2023-11-02",
+                "photo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.-7M0KUhS8s1RLxTruVot-AHaHa%26pid%3DApi&f=1&ipt=4fc7344c26c455f0e95dca3424323a02b6fb91b11dd37940bf9b75ab01067393&ipo=images",
+                "like": 36
+            }
+        ],
+        "like": 62
+    },
+    {
+        "courseCode": "CUR002",
+        "moduleCode": "MOD003",
+        "sessionCode": "CON007",
+        "user": {
+            "userId": "USER005",
+            "name": "Mariana Gomez",
+            "photo": ""
+        },
+        "comment": "<p>Este módulo sobre <em>Machine Learning</em> es muy interesante, aunque sería genial incluir prácticas con <strong>datos reales</strong>.</p>",
+        "commentDate": "2023-11-03",
+        "replies": [],
+        "like": 8
+    },
+    {
+        "courseCode": "CUR002",
+        "moduleCode": "MOD004",
+        "sessionCode": "CON008",
+        "user": {
+            "userId": "USER006",
+            "name": "José Martínez",
+            "photo": ""
+        },
+        "comment": "<p>Un módulo excelente para los que comienzan en <strong>Data Science</strong>! Muy bien explicado.</p>",
+        "commentDate": "2023-11-04",
+        "replies": [
+            {
+                "userId": "USER007",
+                "name": "Laura Sánchez",
+                "comment": "<p>¡De acuerdo! Además, la sección de recursos adicionales es muy útil.</p>",
+                "commentDate": "2023-11-04",
+                "photo": "",
+                "like": 35
+            },
+            {
+                "userId": "USER008",
+                "name": "Miguel Torres",
+                "comment": "<p>¿Alguien sabe si hay ejercicios prácticos al final del curso?</p>",
+                "commentDate": "2023-11-04",
+                "photo": "",
+                "like": 22
+            }
+        ],
+        "like": 70
+    },
+    {
+        "courseCode": "CUR003",
+        "moduleCode": "MOD005",
+        "sessionCode": "CON010",
+        "user": {
+            "userId": "USER009",
+            "name": "Patricia Navarro",
+            "photo": ""
+        },
+        "comment": "<p>La sesión de introducción a <em>Big Data</em> es muy informativa, aunque me gustaría ver un enfoque más práctico.</p>",
+        "commentDate": "2023-11-05",
+        "replies": [
+            {
+                "userId": "USER010",
+                "name": "Andrés García",
+                "comment": "<p>Es cierto, creo que algunos casos de estudio prácticos serían perfectos.</p>",
+                "commentDate": "2023-11-05",
+                "photo": "",
+                "like": 38
+            }
+        ],
+        "like": 46
+    },
+    {
+        "courseCode": "CUR003",
+        "moduleCode": "MOD006",
+        "sessionCode": "CON011",
+        "user": {
+            "userId": "USER011",
+            "name": "Lucia Rivera",
+            "photo": ""
+        },
+        "comment": "<p>Interesante contenido sobre <strong>visualización de datos</strong>. La sección de <em>herramientas</em> es bastante completa.</p>",
+        "commentDate": "2023-11-06",
+        "replies": [
+            {
+                "userId": "USER012",
+                "name": "Felipe Diaz",
+                "comment": "<p>¡Totalmente! La parte sobre <strong>Tableau</strong> me fue muy útil.</p>",
+                "commentDate": "2023-11-06",
+                "photo": "",
+                "like": 13
+            }
+        ],
+        "like": 25
+    },
+    {
+        "courseCode": "CUR004",
+        "moduleCode": "MOD007",
+        "sessionCode": "CON013",
+        "user": {
+            "userId": "USER013",
+            "name": "Sandra Vázquez",
+            "photo": ""
+        },
+        "comment": "<p>Este módulo de <strong>inteligencia artificial</strong> está bien estructurado, aunque se podría mejorar la parte de <em>redes neuronales</em>.</p>",
+        "commentDate": "2023-11-07",
+        "replies": [
+            {
+                "userId": "USER014",
+                "name": "Javier Ortiz",
+                "comment": "<p>¡Buena sugerencia! Una profundización en <em>Deep Learning</em> sería increíble.</p>",
+                "commentDate": "2023-11-07",
+                "photo": "",
+                "like": 22
+            }
+        ],
+        "like": 74
+    }
+]

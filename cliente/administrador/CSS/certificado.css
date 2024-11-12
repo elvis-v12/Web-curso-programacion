@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+
+/* Contenedor principal para la interfaz de administración */
+.admin-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #020617;
+  color: white;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #f4f4f4;
+}
+
+table tbody tr:hover {
+  background-color: #e0f7fa;
+}
+
+/* Estilo de botones */
+button {
+  padding: 8px 12px;
+  background-color:#020617;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #020617;
+}
+
+/* Estilo para enlaces */
+a {
+  color: #020617;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.button-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #020617;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+a.button-link:hover {
+  background-color: #020617;
+}
+
+/* Estilos para el certificado */
+.certificado {
+  width: 900px;
+  height: 600px;
+  text-align: center;
+  background: url("/cliente/administrador/Certificado.webp") no-repeat center center;
+  background-size: 100% 100%;
+  padding: 50px 30px;
+  color: #2e2e2e;
+  position: relative;
+}
+
+.certificado h1 {
+  margin-top: 50px;
+  font-size: 2.6em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #020617;
+  font-family: "Times New Roman", serif;
+}
+
+.certificado h2 {
+  font-size: 1.2em;
+  margin: 20px 0;
+  letter-spacing: 1px;
+  font-family: Arial, sans-serif;
+}
+
+.certificado h3 {
+  font-size: 2.5em;
+  font-family: "Great Vibes", cursive;
+  color: #344d18;
+  margin-bottom: 2.5px;
+}
+
+.linea-nombre {
+  width: 300px;
+  border-top: 1px solid #555;
+  margin: 3px auto;
+}
+
+.certificado p {
+  font-size: 1em;
+  max-width: 80%;
+  margin: 15px auto;
+  line-height: 1.5;
+  color: #2b2a2a;
+  font-family: Arial, sans-serif;
+}
+
+.firmas {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.firma {
+  text-align: center;
+}
+
+.firma p.nombre {
+  font-family: "Great Vibes", cursive;
+  font-size: 1.7em;
+  color: #020617;
+  margin-bottom: 1px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.firma .linea-firma {
+  width: 150px;
+  border-top: 1px solid #020617;
+  margin: 2.5px auto;
+}
+
+.firma span {
+  font-size: 0.9em;
+  color: #3a3939;
+}
+
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;  
+    justify-content: center;  
+    align-items: center; 
+    z-index: 1000;
+    text-align: center;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Asegurar que no haya desbordamiento */
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    color:#020617;
+}
+/* Estilo del iframe */
+.iframe-certificado {
+    display: block;
+    border: none;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+/* Botón de descarga */
+ 
+.button-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #020617;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #020617;
+}
+
+
+

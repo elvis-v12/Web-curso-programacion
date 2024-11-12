@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Registro</title>
+</head>
+
+<body>
+  <div class="container">
+    <section class="form-section">
+      <h2>Registro</h2>
+      <form id="signupForm">
+        <label>Nombres</label>
+        <input type="text" placeholder="Ingrese su nombre" id="nombres" required autofocus />
+        <label>Apellidos</label>
+        <input type="text" placeholder="Ingrese su apellido" id="apellidos" required />
+        <label>Fecha de Nacimiento</label>
+        <input type="date" placeholder="Ingrese su Fecha de Nacimiento" id="fechaNacimiento" required />
+        <label>E-Mail</label>
+        <input type="email" placeholder="Ingrese su correo electrónico" id="email" required />
+        <label>Contraseña</label>
+        <input type="password" placeholder="Digite una contraseña para su cuenta" id="contraseña" required />
+        <input type="submit" value="Registro" />
+      </form>
+    </section>
+
+    <!-- Caja de alternancia al costado, más clara -->
+    <section class="toggle-box">
+      <p>¿Ya tienes una cuenta?</p>
+      <a href="login.html">
+        <button id="loginBtn">INICIAR</button>
+      </a>
+    </section>
+  </div>
+
+  <script src="/server/ServerLogin/registro.js"></script>
+<script src="/server/ServerLogin/disableBack.js"></script>
+</body>
+
+</html>

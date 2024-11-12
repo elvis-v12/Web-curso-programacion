@@ -1,0 +1,23 @@
+[
+        {
+                "id": 1,
+                "portada": "/cliente/principal/pictures/novedades/image.png",
+                "name": "Desafío internacional Bebras 2024: ¡sumate!",
+                "description": "Estudiantes y docentes de EBI y EMS podrán preparar el desafío internacional que busca promover el desarrollo del pensamiento computacional. ¡Son más de 70 los países que ya están participando!",
+                "date": "10 de septiembre de 2024"
+        },
+        {
+                "id": 2,
+                "portada": "/cliente/principal/pictures/novedades/image2.png",
+                "name": "Llega la Feria Educativa Ceibal para las Áreas STEM 2024",
+                "description": "Propuestas de desarrollo profesional docente en educación STEM a cargo del Departamento de Matemática de Ceibal.",
+                "date": "10 de septiembre de 2024"
+        },
+        {
+                "id": 3,
+                "portada": "/cliente/principal/pictures/novedades/image3.png",
+                "name": "Se amplía la participación de grados en RoboGarden",
+                "description": "A partir de ahora pueden acceder a la plataforma libremente docentes y estudiantes desde 1° a 6° y grupos de Ciencias de la Computación de 7° de Educación Básica Integrada. ",
+                "date": "06 de septiembre de 2024"
+        }
+]

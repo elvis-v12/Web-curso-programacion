@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+:root {
+	--grey: #F1F0F6;
+	--dark-grey: #8D8D8D;
+	--light: #fff;
+	--dark: #000;
+	--green: #81D43A;
+	--light-green: #E3FFCB;
+	--blue: #006fe9;
+	--light-blue: #D0E4FF;
+	--dark-blue: #0C5FCD;
+	--red: #FC3B56;
+    --black1:#13161c;
+    --greenbajo:#7ed321;
+    --color_dasboard:#020617;
+}
+.container {
+    display: flex;
+    min-height: 90vh;
+    padding: 15px;
+    background: var(--color_dasboard);
+    margin: 0;
+}
+
+.container form {
+    width: 70%;
+    max-width: 1000px; /* Ancho máximo ajustado */
+    padding: 20px;
+    background: var(--color_dasboard);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Ajuste para Información de Autenticación y Método de Pago */
+.info-auth {
+    flex: 1 1 45%; /* Ajuste de ancho */
+    background-color: var(--grey);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-section {
+    flex: 1 1 45%; /* Ajuste de ancho */
+    background: var(--grey);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+.title {
+    font-size: 20px;
+    color: var(--color_dasboard);
+    padding-bottom: 10px;
+    
+}
+
+/* Estilos para inputBox */
+.inputBox {
+    margin: 15px 0;
+}
+
+.inputBox label {
+    font-size: 14px;
+    color: var(--color_dasboard);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.inputBox input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 4px;
+}
+
+.inputBox input:focus {
+    border-color: #5e8f94;
+    outline: none;
+}
+.inputBox input:hover{
+    border: 1px solid var(--blue);
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+}
+
+/* Métodos de Pago */
+.payment-method {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    padding: 6px 0;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.payment-method-item {
+    width: 80px;
+    height: 80px;
+    padding: 8px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-right: 12px;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+/* Cambia el color del borde cuando el elemento está seleccionado */
+input:checked + .payment-method-item {
+    border-color: #6366f1;
+}
+
+/* Añade un indicador de selección en la esquina superior derecha */
+input:checked + .payment-method-item::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #6366f1;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEwLjAwMDcgMTUuMTcwOUwxOS4xOTMxIDUuOTc4NTJMMjAuNjA3MyA3LjM5MjczTDEwLjAwMDcgMTcuOTk5M0wzLjYzNjcyIDExLjYzNTRMNS4wNTA5MyAxMC4yMjEyTDEwLjAwMDcgMTUuMTcwOVoiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMSkiPjwvcGF0aD48L3N2Zz4=");
+    background-size: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Imagen en el botón de selección */
+.payment-method-item > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Oculta los radio buttons */
+.payment-method input {
+    display: none;
+}
+
+/* Botón de Envío */
+.submit_btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: var(--blue);
+    color: var(--grey);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+}
+
+
+/* Elimina los botones de incremento/decremento de los campos numéricos */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    display: none;
+}
+
+
+/*Seccion de informacion de compra*/
+.checkout-container {
+    width: 100%;
+    max-width: 340px;
+    margin: 30px 30px 0px 30px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: var(--light-blue);
+    background-color: var(--color_dasboard);
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary-section {
+    margin-bottom: 20px;
+}
+
+.summary-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.divider {
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--light-blue);
+}
+
+.checkout-button-container {
+    text-align: center;
+    width: 100%;
+  padding: 1rem 0;
+}
+
+.terms-text {
+    font-size: 12px;
+    color: var(--light-blue);
+    margin-bottom: 10px;
+}
+
+.terms-text a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.purchase-button {
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    max-width: 100%; /* Limita el ancho máximo al contenedor */
+    min-width: 8rem; /* Ancho mínimo de 8rem */
+    padding: 0 1.2rem; /* Espacio horizontal */
+    height: 50px; /* Altura del botón */
+    background-color: var(--grey);
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    user-select: none; /* Previene selección de texto */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    transition: background-color 0.3s; /* Efecto de transición al pasar el ratón */
+}
+
+.purchase-button:hover {
+    background-color: #13161C; /* Color al pasar el ratón */
+    color: var(--grey);
+}
+
+
+.lock-icon {
+    margin-right: 8px;
+}
+
+.money-back-text {
+    font-size: 12px;
+    color: #888;
+}
+
+/*Seccion de orden de compra*/
+/* Contenedor principal */
+.order-summary {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin: auto;
+    background-color: var(--color_dasboard);
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: var(--light-blue);
+}
+
+/* Título de la orden de compra */
+.order-summary-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--grey);
+}
+
+/* Lista de artículos */
+.order-items-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para cada artículo individual */
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Contenedor del resumen del artículo */
+.item-summary {
+    display: flex;
+    align-items: center;
+}
+
+/* Imagen del artículo */
+.item-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+/* Título del artículo */
+.item-title {
+    font-size: 14px;
+    color: var(--light-blue);
+    font-weight: 600;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+/* Contenedor de precios */
+.item-price {
+    text-align: right;
+}
+
+/* Precio de compra */
+.purchase-price span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Precio original con tachado */
+.original-price span {
+    font-size: 14px;
+    color: #888;
+    text-decoration: line-through;
+}

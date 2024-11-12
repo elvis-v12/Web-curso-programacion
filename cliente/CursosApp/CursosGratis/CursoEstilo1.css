@@ -1,0 +1,895 @@
+
+:root {
+    --accent-color: #641BFF;
+    --heading-font-family: 'Poppins', sans-serif;
+    --body-font-family: 'Lato', sans-serif;
+    --colordefondo:#0e1c36;
+    --colordefondobtn:#082f49;
+  }
+  
+body{
+    margin: 0;
+}
+.Principal_contenedor{
+    height: 100%;
+    width: 100%;
+}/* Aseguramos que el contenedor nav ocupe todo el ancho y tenga un fondo */
+.Nav-header {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--colordefondo);
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+
+}
+
+.Nav-header .LogoIcono{
+    height: 50px;
+    width: 50px;
+}
+/* Exploración - Alineación y diseño del botón */
+.Explore {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.ExploreButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.ExploreButton svg {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: middle; /* Centra el SVG verticalmente con el texto */
+    margin-left: .5rem; /* Añade un espacio entre el texto y el ícono */
+}
+
+.NewAlgoliaSearch {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 520px;
+}
+
+.aa-Form {
+    display: flex;
+    align-items: center;
+    background-color: var(--colordefondo);
+    border: 1px solid #40587c;
+    border-radius: 8px;
+    padding: 0; /* Ajuste del padding para una mejor alineación */
+    width: 100%;
+}
+
+.aa-InputWrapper {
+    display: flex;
+    align-items: center;
+    background-color: var(--colordefondo);
+    padding: 8px;
+    border-radius: 8px;
+    width: 100%;
+    border: 1px solid #40587c; /* Bordes visibles */
+}
+
+.aa-Input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.aa-SubmitButton {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.aa-SubmitButton svg {
+    width: 1rem;
+    color: #fff; /* Color del icono para hacerlo visible */
+}
+
+/* Menú */
+/* Ajuste del menú */
+.Menu {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Espacio entre el buscador y el menú */
+    justify-content: flex-start;
+}
+
+.Menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Espacio entre cada ítem del menú */
+    margin: 0;
+    padding: 0;
+}
+
+.Menu ul li {
+    font-size: 14px; /* Tamaño del texto de cada ítem */
+    position: relative; /* Para agregar efectos en hover */
+}
+
+.Menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px; /* Ajuste del padding para mejor espacio */
+    display: inline-block;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.Menu a:hover {
+    color: #94c53d; /* Color al hacer hover */
+    border-bottom: 2px solid #94c53d; /* Subrayado al hacer hover */
+}
+
+.Menu ul li.active a {
+    color: #94c53d;
+    border-bottom: 2px solid #94c53d; /* Subrayado para el elemento activo */
+}
+
+/* Sección del curso */
+
+/* General */
+.heading {
+    padding: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Añadir espacio entre los elementos principales */
+
+    margin: 0 auto;
+}
+
+/* Contenedor de la introducción */
+.introduction-container {
+    width: 45%; /* Ajustar ancho para la mitad del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
+.intro-asset--wrapper--yDCdR {
+    position: relative;
+    width: 100%;
+    height: 364px; /* Asegurarse de que la altura sea consistente con la imagen */
+    
+}
+
+.intro-asset--asset--uXC50 {
+    background-color: #000;
+    position: relative; /* Asegurarse que los elementos internos se posicionen en relación con este contenedor */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 364px;
+}
+.ud-btn-large{
+    border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.intro-asset--img-aspect--3gluH img {
+    width: 100%;
+    height: 100%; /* Asegurarse de que la imagen ocupe todo el contenedor */
+    object-fit: cover; /* Asegurar que la imagen se ajuste bien */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.intro-asset--text--tUkoV {
+    position: absolute;
+    bottom: 0; /* Fija el texto en la parte inferior */
+    left: 0;
+    right: 0;
+    text-align: center; /* Centra el texto horizontalmente */
+    padding-bottom: 1rem; /* Ajusta el espacio en la parte inferior si es necesario */
+    color: #fff; /* Asegura que el texto sea visible */
+    z-index: 1; /* Coloca el texto por encima de otros elementos */
+}
+.intro-asset--asset--uXC50 {
+    position: relative;
+    height: 100%; /* O la altura que desees */
+}
+
+.intro-asset--asset--uXC50 .intro-asset--text--tUkoV {
+    position: absolute; /* Cambia a posición absoluta para que esté en relación con el contenedor */
+    bottom: 0; /* Fija el texto en la parte inferior del contenedor */
+    left: 0;
+    right: 0;
+    text-align: center; /* Centra el texto horizontalmente */
+    padding-bottom: 1.6rem; /* Ajusta el espacio si es necesario */
+  }
+
+
+  .ud-icon-xxlarge {
+    width: 6.4rem;
+    height: 6.4rem;
+  }
+  .intro-asset--asset--uXC50 .intro-asset--placeholder--5HTOK {
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    width: 100%; 
+  }
+  .intro-asset--asset--uXC50 .intro-asset--placeholder--5HTOK > :not(:first-child) {
+    margin-left: 0;
+  }
+
+  .intro-asset--asset--uXC50 .intro-asset--img-aspect--3gluH img, .intro-asset--asset--uXC50 .intro-asset--overlay--kOavR {
+    display: block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute; /* Esto ya está bien para la imagen de fondo */
+    
+  }
+  .ud-btn > :not(:first-child) {
+    margin-left: .4rem;
+  }
+  .ud-heading-md {
+    align-items: flex-start; /* Mueve el texto a la parte inferior */
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-size: 1.6rem;
+  }
+
+.ud-play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black; /* Color del ícono de reproducción */
+    background-color: white; /* Fondo blanco circular */
+    border-radius: 50%; /* Hace que el fondo sea circular */
+    width: 60px; /* Ajusta el tamaño del círculo */
+    height: 60px; /* Ajusta el tamaño del círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añadir sombra para darle un toque de relieve */
+}
+
+.ud-play-overlay i {
+    font-size: 24px; /* Ajusta el tamaño del ícono de reproducción */
+}
+
+/*Seccion de la informaciom de los cursos */
+/* Contenedor principal */
+.ud-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    height: auto;
+}
+
+/* Título principal */
+.ud-heading-xxl {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+.ud-heading-xxl, .ud-text-lg, .clp-lead__badge-ratings-enrollment {
+    margin-bottom: 15px; /* Aumentar el espacio entre cada bloque */
+}
+/* Subtítulo */
+.ud-text-lg {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Badges y ratings */
+.clp-lead__badge-ratings-enrollment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Badge de tutorial gratuito */
+.ribbon-module--ribbon--vVul- {
+    background-color: #ff4757; /* Cambiar el color del badge a un tono más suave */
+    padding: 5px 12px;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Calificaciones y detalles de los estudiantes */
+.styles--rating-wrapper--YkK4n {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.star-rating-module--star-wrapper--i1cJH {
+    color: #f39c12;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 10px; /* Añadir espacio entre las estrellas y el texto */
+}
+
+.enrollment {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Duración del video */
+.course-content-length--course-content-length--J-A-b {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    gap: 5px;
+}
+
+/* Estilos del ícono de video */
+.course-content-length--video-icon--gY7CC {
+    color: #0073b1;
+    font-size: 16px;
+}
+
+/* Información del creador del curso */
+.instructor-links--instructor-links--8GNDS {
+    margin-bottom: 10px;
+}
+
+.instructor-links--names--fJWai {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.instructor-links--names--fJWai a {
+    color: #0073b1;
+    text-decoration: none;
+}
+
+.instructor-links--names--fJWai a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para los íconos */
+.ud-icon {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #555;
+}
+
+/* Estilos de idioma y subtítulos */
+.clp-lead__element-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.clp-lead__element-item {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+/* Botones de inscripción y compartir */
+.purchase-section-container--purchase-section-container--mgZp7 {
+    margin-top: 20px;
+}
+
+.ud-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
+}
+.centro_de_incriocionbtn{
+    display: flex;
+}
+.ud-btn-primary {
+        background-color: var(--colordefondo);
+        color: white;
+        width: 50%; /* Asegura que el botón ocupe todo el ancho */
+        border: none;
+        margin: 2px;
+}
+
+.ud-btn-primary:hover {
+    background-color: var(--colordefondobtn);
+}
+
+.ud-btn-secondary {
+    background-color: #f8f8f8;
+    color: #333;
+    width: 100%; /* Asegura que el botón ocupe todo el ancho */
+    margin-top: 10px;
+}
+
+.ud-btn-secondary:hover {
+    background-color: #ddd;
+}
+
+/* Contenedor con altura máxima */
+.ud-container {
+    max-height: 364px;
+    overflow: hidden;
+}
+
+ .profile img {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	object-fit: cover;
+	cursor: pointer;
+}
+/*Seccion del certificado de informacion de curso*/
+.Diploma-content {
+    display: flex;
+    background-color: #0e1c36;
+    padding: 20px;
+    color: white;
+    justify-content: center; /* Mantener los elementos centrados */
+    align-items: center; /* Alinear verticalmente */
+    gap: 40px; /* Espacio controlado entre la imagen y el texto */
+}
+
+.Diploma-figure img {
+    width: 300px; /* Ajustar el tamaño de la imagen del diploma */
+    border-radius: 10px;
+    border: 3px solid white; /* Borde alrededor del diploma */
+}
+
+.Diploma-description {
+    max-width: 400px;
+    text-align: left; /* Opcional, puedes dejarlo en 'center' si prefieres el texto centrado */
+}
+
+.Heading-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.Heading-subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.Heading-subtitle strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.Link {
+    background-color: #1a73e8;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.Link:hover {
+    background-color: #135ab0;
+}
+
+/*Seccion de modulos del curso*/
+/* General layout for the content and its wrapper */
+.Content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #0e1c36; /* Fondo oscuro */
+    color: #ffffff; /* Texto en blanco */
+}
+
+.u-wrapper {
+    margin: 0 auto;
+}
+
+.Heading--center {
+    text-align: center;
+}
+
+.Heading-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff; /* Texto en blanco */
+}
+
+/* Content layout and organization */
+.Content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; /* Elementos alineados horizontalmente */
+    margin-right: 2%; /* Margen entre los divs */
+}
+
+.Content-resources, .Content-feed {
+    width: 48%; /* Ambos bloques ocupan el 48% del espacio */
+    margin-right: 20px; /* Margen derecho */
+}
+
+.Content-resources {
+ 
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.Content-feed {
+
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.Content-subtitle {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ffffff; /* Texto en blanco */
+}
+
+/* Resources styles */
+.ResourcesSchedule {
+    list-style: none;
+    padding: 0;
+}
+
+.ResourcesSchedule li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ResourcesSchedule-icon {
+    margin-right: 10px;
+}
+
+.ResourcesSchedule-text {
+    font-size: 18px;
+    color: #ffffff; /* Texto en blanco */
+}
+
+.Resources-rule {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.ResourcesRequire-title, .ResourcesSoftware-title, .ResourcesLongDescription-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff; /* Texto en blanco */
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #ffffff; /* Texto en blanco */
+}
+
+/* Class content and lists */
+.ContentBlock-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ContentBlock-list {
+    list-style: none;
+    padding: 0;
+}
+
+.ContentBlock-list-item {
+    margin-bottom: 10px;
+}
+
+.ContentClass {
+    display: block;
+    background-color: #1e3a63; /* Fondo azul oscuro para las clases */
+    color: #ffffff; /* Texto en blanco */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.ContentClass:hover {
+    background-color: #1b2e4a; /* Color de fondo al pasar el ratón */
+}
+
+.ContentClass-content {
+    display: flex;
+    align-items: center;
+    color: #ffffff; /* Texto en blanco */
+    padding: 10px;
+}
+
+.ContentClass-content-title {
+    margin-left: 10px;
+    color: #ffffff; /* Texto en blanco */
+}
+
+/* Adjustments for SVG icons */
+.svg-inline--fa {
+    width: 24px;
+    height: 24px;
+    fill: #ffffff; /* Íconos en blanco */
+}
+
+/* ContentPaywall */
+.ContentPaywall {
+    text-align: center;
+    padding: 20px;
+}
+
+.ContentPaywall-cta {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.ContentBlock-rule {
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.ContentBlock-head-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff; /* Texto en blanco */
+}
+
+
+/*Suscripcionnes */
+
+.Messages-module_Messages__title__SV-SP {
+    color: #fff;
+    font-size: 1.375rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 60px;
+    text-align: start;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    background: var(--colordefondo);
+  }
+
+  .price-comparison {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+
+    flex-wrap: wrap; /* Para que se adapten en pantallas pequeñas */
+    background: var(--colordefondo);
+  }
+  
+  .price-column {
+    background-color: white;
+    box-shadow: 0 7px 30px rgba(52, 31, 97, 0.1);
+    padding: 2rem;
+    flex-grow: 1;
+    flex-basis: calc(33.333% - 2rem); /* Mantiene el espacio entre las tarjetas */
+    max-width: 305px; /* Aumenta el ancho máximo de las tarjetas */
+    border-radius: 8px;
+    margin: 1rem;
+  }
+  
+  .price-column.popular {
+    position: relative;
+    background-color: var(--accent-color);
+    box-shadow: 0 7px 30px rgba(52, 13, 135, 0.3);
+    color: white;
+    margin-top: -1rem; /* Reduce el margen superior */
+    padding-top: 2.5rem; /* Ajusta el padding superior */
+    padding-bottom: 2.5rem; /* Ajusta el padding inferior */
+
+  }
+  
+  .price-column:first-child {
+    border-top-right-radius: 0; 
+    border-bottom-right-radius: 0; 
+  }
+  
+  .price-column:last-child {
+    border-top-left-radius: 0; 
+    border-bottom-left-radius: 0; 
+  }
+  
+  .price-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--heading-font-family);
+    font-weight: bold;
+  }
+  
+  .price {
+    font-size: 3.5rem;
+    display: flex;
+  }
+  
+  .dollar-sign {
+    font-size: 1.5rem;
+    margin-top: .5rem;
+    margin-right: .25rem;
+  }
+  
+  .per-month {
+    font-size: .75rem;
+    align-self: flex-end;
+    margin-bottom: 1.1rem;
+    text-transform: uppercase;
+  }
+  
+  .plan-name {
+    text-transform: uppercase;
+    font-size: .9rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+  
+  .divider {
+    height: 1px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .price-column.popular .divider {
+    background-color: rgba(255, 255, 255, .2);
+  }
+  
+  .feature {
+    display: flex;
+    align-items: center;
+    margin: .5rem;
+  }
+  
+  .feature img {
+    height: 1.1em;
+    width: 1.1em;
+    margin-right: .5rem;
+  }
+  
+  .feature.inactive {
+    color: #999;
+    text-decoration-line: line-through;
+  }
+  
+  .most-popular {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    right: .5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: var(--heading-font-family);
+  }
+  
+  .cta {
+    border: none;
+    background-color: var(--accent-color);
+    color: white;
+    width: 100%;
+    padding: .75rem 1rem;
+    cursor: pointer;
+    font-family: var(--heading-font-family);
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 3rem;
+    transition: 100ms;
+    transform: scale(1);
+  }
+  
+  .price-column.popular .cta {
+    background-color: white;
+    color: var(--accent-color);
+  }
+  
+  .cta:hover, .cta:focus {
+    transform: scale(1.1);
+  }
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .Content-wrapper {
+        flex-direction: column; /* En pantallas pequeñas, cambia a disposición vertical */
+    }
+
+    .Content-resources, .Content-feed {
+        width: 100%; /* Ambos divs ocupan el 100% en pantallas pequeñas */
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .Content {
+        width: 100%;
+        margin-right: 0;
+    }
+    .Content-wrapper {
+        flex-direction: column;
+    }
+}
+
+
+/* Hacer responsive para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .heading {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    }
+
+    .introduction-container, .lead-container {
+        width: 100%; /* Hacer que ambos contenedores ocupen todo el ancho */
+    }
+
+    .ud-heading-xxl {
+        font-size: 24px;
+    }
+
+    .ud-text-lg {
+        font-size: 16px;
+    }
+
+    .intro-asset--img-aspect--3gluH img {
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .enroll-btn {
+        width: 100%; /* Hacer que el botón ocupe todo el ancho en móviles */
+    }
+}
