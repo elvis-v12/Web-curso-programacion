@@ -11,6 +11,7 @@
     --bg-text-black-200:#f2f2f2;
     --bg-text-black-90:#030918;
     --bg-text-black-91:#7933ff;
+    --bg-font-s:#004439;
     --bg-text-black-92:#007bff;
 }
 body.dark{
@@ -45,7 +46,8 @@ a{
 
 .Inicoo_principal {
     object-fit: cover;
-    width: 100%; /* Asegura que la imagen ocupe el ancho completo de su contenedor */
+    position: relative;
+    width: 80%; /* Asegura que la imagen ocupe el ancho completo de su contenedor */
     height: auto; /* Mantiene la proporción de la imagen */
     border-radius: 15px; /* Bordes redondeados para un diseño más moderno */
     background-color: rgba(0, 0, 0, 0); /* Hace el fondo de la imagen completamente transparente */
@@ -60,11 +62,20 @@ a{
 
 
 nav {
+    position: fixed; /* Hace que el nav se mantenga fijo */
+    top: 0;
+    left: 0;
+    width: 100%; /* Se asegura de que cubra todo el ancho */
+    z-index: 1000; /* Se asegura de que esté por encima de otros elementos */
     padding: 0 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80px;
+    background: linear-gradient(to top right, #001814 20%, #004d40 80%);
+    /* #000000 es el negro en la parte inferior izquierda,
+       #004d40 es el verde en la parte superior derecha */
+    margin: 0;
 }
 
 nav .logo {
@@ -96,6 +107,26 @@ nav .boton-menu {
     font-style: normal;
     cursor: pointer;
 }
+
+
+.boton-carrito {
+    position: relative; /* Posición relativa para ser el contenedor base del span */
+    display: inline-block; /* Para asegurarte de que el span se posicione correctamente */
+}
+
+.numerito {
+    position: absolute; /* Posición absoluta para que quede sobre el ícono */
+    top: -10px; /* Ajusta el valor según lo necesario para subirlo */
+    right: -10px; /* Ajusta el valor para posicionarlo a la derecha */
+    background-color: var(--accent-color); /* Color de fondo para destacar el número */
+    color: white; /* Color del texto */
+    font-size: 0.8rem; /* Tamaño del texto */
+    padding: 0.2rem 0.4rem; /* Espaciado interno */
+    border-radius: 50%; /* Forma circular */
+    font-weight: bold; /* Texto en negrita */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+}
+
 
 nav .login button {
     padding: 8px 14px;
@@ -135,14 +166,8 @@ nav .cart-icon:hover {
 .iconoprincipal_nav {
     height: 80px;
     width: 80px;
-    background-color: #002e26;
-    filter: drop-shadow(0px 4px 4px #005246);
-    transition: filter 0.3s ease;
 }
 
-.iconoprincipal_nav:hover {
-    filter: drop-shadow(0px 6px 6px #00a17b);
-}
 
 
 header{
@@ -201,9 +226,7 @@ header .left a span{
     margin-left: 10px;
 }
 
-header img{
-    width: 600px;
-}
+
 /*Seccion de buscador*/
 /* Estilos generales del contenedor */
 .CoursesSearch_CoursesSearch__vXhJ8 {

@@ -88,55 +88,47 @@
       </form>
     </div>
     
-<div class="compra_Informacion">
-  <div class="checkout-container">
-    <section aria-label="Resumen" class="summary-section">
-        <h2 class="summary-title">Resumen</h2>
-        <div class="summary-item">
+    <div class="compra_Informacion">
+      <div class="checkout-container">
+        <section aria-label="Resumen" class="summary-section">
+          <h2 class="summary-title">Resumen</h2>
+          <div class="summary-item">
             <span>Precio original:</span>
-            <span>S/1.009.60</span>
-        </div>
-        <div class="summary-item">
+            <span class="precio-original"></span> <!-- Clase agregada para facilitar el selector -->
+          </div>
+          <div class="summary-item">
             <span>Descuentos:</span>
-            <span>- S/800.00</span>
-        </div>
-        <div class="divider"></div>
-        <div class="summary-total">
+            <span class="descuento"></span> <!-- Clase agregada para facilitar el selector -->
+          </div>
+          <div class="divider"></div>
+          <div class="summary-total">
             <span>Total:</span>
-            <span>S/209.60</span>
-        </div>
-    </section>
-    <div class="checkout-button-container">
-        <p class="terms-text">
-            Al completar su compra acepta estos 
+            <span class="total-final"></span> <!-- Clase agregada para facilitar el selector -->
+          </div>
+        </section>
+        <div class="checkout-button-container">
+          <p class="terms-text">
+            Al completar su compra acepta estos
             <a href="#" target="_blank" rel="noopener noreferrer">Términos de servicio</a>.
-        </p>
-        <button class="purchase-button">
-          <i class="fas fa-lock lock-icon"></i>
+          </p>
+          <button class="purchase-button">
+            <i class="fas fa-lock lock-icon"></i>
             <span>Completar pago</span>
-        </button>
-        <p class="money-back-text">Garantía de devolución de dinero de 30 días</p>
+          </button>
+          <p class="money-back-text">Garantía de devolución de dinero de 30 días</p>
+        </div>
+      </div>
+    
+      <div aria-label="Order details" class="order-summary">
+        <h2 class="order-summary-header">Orden de compra</h2>
+        <ul class="order-items-list">
+          <!-- Aquí se agregarán los productos dinámicamente -->
+        </ul>
+      </div>
     </div>
-</div>
-
-<div aria-label="Order details" class="order-summary">
-  <h2 class="order-summary-header">Orden de compra</h2>
-  <ul class="order-items-list">
-      <li class="order-item">
-          <div class="item-summary">
-              <img src="https://img-b.udemycdn.com/course/100x100/851712_fc61_6.jpg" width="50" height="50" alt="buyables" class="item-image" loading="lazy">
-              <div class="item-title">The Complete JavaScript Course 2024: From Zero to Expert!</div>
-          </div>
-          <div class="item-price">
-              <div class="purchase-price"><span>S/49.90</span></div>
-              <div class="original-price"><span><s>S/229.90</s></span></div>
-          </div>
-      </li>
-  </ul>
-</div>
-
-</div>
-
+    
+    
+    
   </div>
         
     <script src="PAGO.js" defer></script>
@@ -147,7 +139,7 @@
           cardInfo.style.display = show ? 'block' : 'none';
       }
     </script>
-
+<script src="js/compra.js"></script>
     <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
 
   </body>
