@@ -1,20 +1,28 @@
+require('dotenv').config(); // Carga las variables de entorno del archivo .env
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const bcrypt = require('bcryptjs'); // Añadir bcrypt
-const session = require('express-session'); // Middleware de sesión
-
-const setupDatabase = require('./server/ServerLogin/dbConnection.js');  // Ruta corregida
+const bcrypt = require('bcryptjs');
+const session = require('express-session');
+const helmet = require('helmet');
+const paymentRoutes = require('./server/ServerLogin/payment.routes.js'); // Rutas de pago
+const setupDatabase = require('./server/ServerLogin/dbConnection.js'); // Configuración de la base de datos
 
 const app = express();
 app.set('port', 3000);
 
+// Middleware para procesar JSON y formularios
+app.use(express.json()); // Analiza JSON en el cuerpo de la solicitud
+app.use(express.urlencoded({ extended: true })); // Permite procesar datos de formularios
+
+app.use('/api/payments', paymentRoutes); // Registrar las rutas en /api/payments
+
+
 // Configurar la base de datos
 setupDatabase(app);
-
-// Middleware para bodyParser
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+// Registrar rutas de pago
+app.use('/api/payments', paymentRoutes); // Rutas para Stripe
 
 // Configuración del middleware de sesiones
 app.use(session({
@@ -23,12 +31,66 @@ app.use(session({
     saveUninitialized: true,
     cookie: {
         sameSite: 'lax',
-        secure: false  // Cambiar a true si usas HTTPS en producción
+        secure: false // Cambiar a true si usas HTTPS en producción
     }
+}));
+const cors = require('cors');
+app.use(cors());
+
+
+// Middleware de seguridad
+// Middleware de seguridad
+// Middleware de seguridad con ajustes de CSP
+app.use(helmet({
+    contentSecurityPolicy: {
+        directives: {
+            "default-src": ["'self'"], // Permitir recursos del mismo dominio
+            "script-src": [
+                "'self'",
+                "'unsafe-inline'",
+                "https://cdn.jsdelivr.net",
+                "https://cdnjs.cloudflare.com",
+                "https://unpkg.com",
+                "https://code.jquery.com",
+                "https://www.paypal.com",
+                "https://js.stripe.com"
+            ],
+            "style-src": [
+                "'self'",
+                "'unsafe-inline'",
+                "https://fonts.googleapis.com",
+                "https://cdnjs.cloudflare.com",
+                "https://unpkg.com",
+                "https://cdn.jsdelivr.net"
+            ],
+            "font-src": [
+                "'self'",
+                "data:",
+                "https://fonts.gstatic.com",
+                "https://cdnjs.cloudflare.com",
+                "https://unpkg.com",
+                "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/fonts/",
+                "https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/" // Fuentes de Remixicon
+            ],
+            "img-src": [
+                "'self'",
+                "data:",
+                "https:",
+                "https://images.unsplash.com"
+            ],
+            "frame-src": [
+                "'self'",
+                "https://js.stripe.com" // Permitir frames de Stripe
+            ],
+            "script-src-attr": ["'self'", "'unsafe-inline'"],
+            "style-src-attr": ["'self'", "'unsafe-inline'"],
+        },
+    },
 }));
 
 
-// Servir archivos estáticos de todo los archivos (CSS, JS)
+
+// Servir archivos estáticos
 app.use(express.static(path.join(__dirname, '/cliente/autentificacion')));
 app.use(express.static(path.join(__dirname, '/server/ServerLogin')));
 app.use(express.static(path.join(__dirname, '/server/Principal')));
@@ -36,10 +98,8 @@ app.use(express.static(path.join(__dirname, '/server/pago')));
 app.use('/App_cliente', express.static(path.join(__dirname, 'cliente/App_cliente')));
 app.use('/server/App_cliente', express.static(path.join(__dirname, 'server/App_cliente')));
 app.use(express.static(path.join(__dirname, '/cliente')));
-app.use(express.static(path.join(__dirname, 'cliente')));
 app.use(express.static(path.join(__dirname, '/cliente/App_cliente/imagenes'))); // Sirviendo imágenes
 app.use(express.static(path.join(__dirname, 'sfa-assets/images/svg'))); // Sirviendo SVGs
-app.use(express.static(path.join(__dirname, 'cliente')));  // Sirve la carpeta "cliente"
 app.use("/cliente", express.static(path.join(__dirname, "cliente")));
 app.use(express.static(path.join(__dirname, '/server/ServerLogin')));
 app.use('/server/ServerLogin', express.static(path.join(__dirname, 'server/ServerLogin')));
@@ -53,33 +113,26 @@ app.get('/Localstoras.js', (req, res) => {
     res.type('application/javascript');
     res.sendFile(path.join(__dirname, 'cliente/App_cliente/Localstoras.js'));
 });
-
 app.get('/Registro', (req, res) => {
     res.sendFile(path.join(__dirname, '/cliente/autentificacion/signup.html'));
 });
-
 app.get('/server/ServerLogin/disableBack.js', (req, res) => {
     res.type('application/javascript'); // Especificar el tipo MIME correcto
     res.sendFile(path.join(__dirname, 'server/ServerLogin/disableBack.js'));
 });
-
 app.get('/server/ServerLogin/logout.js', (req, res) => {
     res.type('application/javascript');
     res.sendFile(path.join(__dirname, 'server/ServerLogin/logout.js'));
 });
-
 app.get('/Principal', (req, res) => {
     res.sendFile(path.join(__dirname, '/cliente/principal/Inicio.html'));
 });
-
 app.get('/AppCliente', (req, res) => {
     res.sendFile(path.join(__dirname, '/cliente/App_cliente/App_estudiante.html'));
 });
-
 app.get('/AppClienteNinos', (req, res) => {
     res.sendFile(path.join(__dirname, '/cliente/App_cliente/App_estudianteNinos.html'));
 });
-
 app.get('/server/ServerLogin/registro.js', (req, res) => {
     res.type('application/javascript');
     res.sendFile(path.join(__dirname, 'server/ServerLogin/registro.js'));
@@ -106,7 +159,6 @@ app.post('/registro', async (req, res) => {
                 return res.status(500).send({ success: false, message: 'Error en la conexión a la base de datos.' });
             }
 
-            // Verificar si el correo ya existe
             const checkEmailQuery = 'SELECT * FROM registro WHERE email = ?';
             conn.query(checkEmailQuery, [email], (err, result) => {
                 if (err) {
@@ -118,14 +170,12 @@ app.post('/registro', async (req, res) => {
                     return res.status(400).send({ success: false, message: 'El correo ya está registrado.' });
                 }
 
-                // Encriptar la contraseña antes de guardar en la base de datos
                 bcrypt.hash(contraseña, 10, (err, hashedPassword) => {
                     if (err) {
                         console.error('Error al encriptar la contraseña:', err);
                         return res.status(500).send({ success: false, message: 'Error al encriptar la contraseña.' });
                     }
 
-                    // Insertar el nuevo usuario con la contraseña encriptada
                     const query = 'INSERT INTO registro (nombres, apellidos, fecha_nacimiento, email, contraseña) VALUES (?, ?, ?, ?, ?)';
                     conn.query(query, [nombres, apellidos, fechaNacimiento, email, hashedPassword], (err, result) => {
                         if (err) {
@@ -145,8 +195,7 @@ app.post('/registro', async (req, res) => {
     }
 });
 
-
-// login de usuario
+// Ruta para iniciar sesión
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
 
@@ -178,19 +227,16 @@ app.post('/login', (req, res) => {
                 if (req.session) {
                     req.session.userId = user.id;
                     req.session.userName = user.nombres;
-            
-                    // Enviar el nombre de usuario en la respuesta JSON
                     return res.status(200).json({ success: true, userName: user.nombres });
                 } else {
                     return res.status(500).send({ success: false, message: 'Sesión no disponible.' });
                 }
             } else {
                 return res.status(400).send({ success: false, message: 'Contraseña incorrecta.' });
-            }        
+            }
         });
     });
 });
-
 
 // Ruta para cerrar sesión
 app.post('/logout', (req, res) => {
@@ -206,8 +252,10 @@ app.post('/logout', (req, res) => {
         res.status(400).send({ success: false, message: 'No hay sesión activa.' });
     }
 });
-
-
+// Ruta genérica para manejar 404
+app.use((req, res) => {
+    res.status(404).send({ success: false, message: 'Ruta no encontrada.' });
+});
 // Iniciar el servidor
 app.listen(app.get('port'), () => {
     console.log(`Server on port`, app.get('port'));

@@ -11,16 +11,20 @@ const totalFinal = document.querySelector(".total-final");
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Productos en el carrito:", productosEnCarrito);
 
-  // Validar que los elementos del DOM existan
+  // Inicializa Stripe con tu clave pública después de que el DOM esté cargado
+  const stripe = Stripe('pk_test_51Q1H4cRodaQYZrxYzxybKMw54ev4rcVyh9MdwJSPD5DmMQHtLCDVry7f6whX6XNU6Pw7QD4wH2wTmoqNe7ZxYrIv003BaJGgt9');
+  const elements = stripe.elements();
+
+  // Crea un elemento de tarjeta con Stripe Elements
+  const cardElement = elements.create('card', { style: { base: { fontSize: '16px' } } });
+  cardElement.mount('#hidden-card-element');
+
   if (!resumenOrden || !totalPrecioOriginal || !totalDescuento || !totalFinal) {
-    console.error(
-      "No se encontraron los elementos del DOM necesarios. Verifica tu estructura HTML."
-    )
+    console.error("No se encontraron los elementos del DOM necesarios.");
     return;
   }
 
-  // Si hay productos en el carrito, genera el contenido
-  if (productosEnCarrito && productosEnCarrito.length > 0) {
+  if (productosEnCarrito.length > 0) {
     resumenOrden.innerHTML = ""; // Limpia la lista
 
     productosEnCarrito.forEach((producto) => {
@@ -39,20 +43,76 @@ document.addEventListener("DOMContentLoaded", () => {
       resumenOrden.appendChild(li);
     });
 
-    // Calcular totales
     const totalOriginal = productosEnCarrito.reduce(
       (acc, producto) => acc + producto.precio * producto.cantidad,
       0
     );
-    const descuento = totalOriginal * 0.2; // Ejemplo: 20% de descuento
+    const descuento = totalOriginal * 0.2;
     const totalFinalPrecio = totalOriginal - descuento;
 
-    // Mostrar los totales
     totalPrecioOriginal.textContent = `S/${totalOriginal.toFixed(2)}`;
     totalDescuento.textContent = `- S/${descuento.toFixed(2)}`;
     totalFinal.textContent = `S/${totalFinalPrecio.toFixed(2)}`;
   } else {
-    // Si no hay productos, mostrar un mensaje
     resumenOrden.innerHTML = `<p>No hay productos en el carrito.</p>`;
   }
+
+  // Agrega el evento de clic al botón "Completar pago"
+  document.querySelector('.purchase-button').addEventListener('click', async () => {
+    const cardName = document.getElementById('cardName').value.trim();
+
+    if (!cardName) {
+      alert('Por favor, completa el nombre del titular de la tarjeta.');
+      return;
+    }
+
+    const total = productosEnCarrito.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0);
+    const confirm = window.confirm(`El total a pagar es S/${total.toFixed(2)}. ¿Deseas continuar con el pago?`);
+
+    if (!confirm) {
+      return;
+    }
+
+    const button = document.querySelector('.purchase-button');
+    button.disabled = true;
+    button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Procesando...';
+
+    try {
+      // Usa Stripe para crear un token seguro con el elemento de tarjeta
+      const { token, error } = await stripe.createToken(cardElement, {
+        name: cardName,
+      });
+
+      if (error) {
+        throw new Error(error.message);
+      }
+
+      // Envía el token al servidor para procesar el pago
+      const response = await fetch('/api/payments/process-payment', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          token: token.id,
+          amount: total.toFixed(2), // Envía el monto total
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        alert('Pago procesado exitosamente.');
+        window.location.href = "/success";
+      } else {
+        alert(`Error procesando el pago: ${data.message}`);
+      }
+    } catch (error) {
+      console.error('Error al procesar el pago:', error);
+      alert('Hubo un error al procesar el pago. Por favor, inténtalo de nuevo.');
+    } finally {
+      button.disabled = false;
+      button.innerHTML = '<i class="fas fa-lock lock-icon"></i> Completar pago';
+    }
+  });
 });
