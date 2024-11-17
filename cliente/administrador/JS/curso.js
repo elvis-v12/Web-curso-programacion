@@ -145,7 +145,7 @@ import { CursosService } from "./CursosService.js";
                   this.btnSaveContentCourse().addEventListener('click', (e) => {
                         e.preventDefault();
                         this.curso.titulo = this.formCourseName().value;
-                        this.curso.precio = this.formCoursePrice().value ;
+                        this.curso.precio = this.formCoursePrice().value;
                         this.curso.idioma = this.formCourseLanguage().value;
                         this.curso.descripcion = this.formCourseDescription().innerHTML;
                         this.curso.resumen = this.formCourseSummary().innerHTML;
@@ -155,7 +155,7 @@ import { CursosService } from "./CursosService.js";
                         this.cursoService
                               .saveCambiosCourses(this.curso)
                               .then((message) => {
-                                    alert(message); // Mostrar mensaje del servidor
+                                    alert("Se cambiaron los datos exitosamente"); // Mostrar mensaje del servidor
                               })
                               .catch((error) => {
                                     console.error("Error al guardar el curso:", error);
