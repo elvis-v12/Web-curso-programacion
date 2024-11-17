@@ -5,9 +5,12 @@ const cors = require('cors');
 
 const app = express();
 
+// Middleware para procesar JSON
+app.use(express.json()); // <---- IMPORTANTE: Esto debe ir antes de las rutas
+
 // Configurar CORS antes de otras rutas y middlewares
 app.use(cors({
-        origin: 'http://127.0.0.1:3001'
+        origin: 'http://127.0.0.1:3000'
 }));
 
 // Inicializar la base de datos y otras configuraciones

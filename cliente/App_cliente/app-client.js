@@ -4,6 +4,7 @@
         const cursosRecientesHTML = () => document.querySelector('#cursos-recientes');
         const cursosCompletarHTML = () => document.querySelector('#cursos-completar');
         const cursosCompletadosHTML = () => document.querySelector('#cursos-completados-cont');
+        //metodos de peticiones
         const addCursos = async (content, url, formato) => {
                 const response = await fetch(url);
                 if (!response.ok) {
@@ -107,4 +108,6 @@
         addCursos(cursosRecientesHTML(), 'http://localhost:3000/api/cursos-recientes', curso);
         addCursos(cursosCompletarHTML(), 'http://localhost:3000/api/cursos-incompletos?user=1', cursoCompletar);
         addCursos(cursosCompletadosHTML(), 'http://localhost:3000/api/cursos-completos?user=1', cursoCompleto);
+        
+
 })();

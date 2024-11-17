@@ -13,7 +13,7 @@ export class CursosService {
         }
         findCoursesNovedades = async () => {
                 try {
-                        const response = await fetch("dataCoursesNovedades.json")
+                        const response = await fetch("http://localhost:3000/api/cursos-recomendados")
                         if (!response.ok) {
                                 throw new Error("Error en la respuesta del servidor")
                         }
@@ -71,16 +71,66 @@ export class CursosService {
         }
 
         findById = async ({ code }) => {
+                console.log(code);
+
                 try {
-                        const response = await fetch("dataCourse.json")
+                        const response = await fetch("http://localhost:3000/api/cursos?code=" + code)
                         if (!response.ok) {
                                 throw new Error("Error en la respuesta del servidor")
                         }
                         const data = await response.json()
-                        const curso = data.find(curso => curso.code === code)
-                        return curso
+                        return data;
                 } catch (error) {
 
                 }
         }
+
+        // saveCambiosCourses = async (curso) => {
+        //         try {
+        //                 const response = await fetch("http://localhost:3000/api/cursos-save", {
+        //                         method: "PUT", // Cambia a POST si deseas usar otro método
+        //                         headers: {
+        //                                 "Content-Type": "application/json", // Especificar que el cuerpo está en formato JSON
+        //                         },
+        //                         body: JSON.stringify(curso), // Convertir el objeto curso a JSON
+        //                 });
+
+        //                 if (!response.ok) {
+        //                         throw new Error("Error en la respuesta del servidor");
+        //                 }
+
+        //                 const data = await response.json();
+        //                 return data;
+        //         } catch (error) {
+        //                 console.error(error);
+        //         }
+        // };
+        saveCambiosCourses = async (curso) => {
+                try {
+                        console.log("Datos enviados:", JSON.stringify(curso, null, 2));
+
+
+                        const response = await fetch("http://localhost:3000/api/cursos-save", {
+                                method: "PUT",
+                                headers: {
+                                        "Content-Type": "application/json",
+                                },
+                                body: JSON.stringify(curso),
+                        });
+
+                        if (!response.ok) {
+                                console.error("Error en la respuesta del servidor:", response.status, response.statusText);
+                                const errorText = await response.text();
+                                console.error("Detalle del error:", errorText);
+                                throw new Error("Error en la respuesta del servidor");
+                        }
+
+                        const data = await response.json();
+                        return data;
+                } catch (error) {
+                        console.error("Error capturado:", error);
+                }
+        };
+
+
 }

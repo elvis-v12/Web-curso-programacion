@@ -71,14 +71,15 @@ export class CursosService {
         }
 
         findById = async ({ code }) => {
+                console.log(code);
+                
                 try {
-                        const response = await fetch("/server/data/dataCourse.json")
+                        const response = await fetch("http://localhost:3000/api/cursos?code=" + code)
                         if (!response.ok) {
                                 throw new Error("Error en la respuesta del servidor")
                         }
                         const data = await response.json()
-                        const curso = data.find(curso => curso.code === code)
-                        return curso
+                        return data;
                 } catch (error) {
 
                 }
