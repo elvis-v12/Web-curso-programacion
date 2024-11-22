@@ -189,7 +189,7 @@ router.get('/cursos-incompletos', (req, res) => {
         });
 
     })
-})
+});
 
 router.get('/cursos-completos', (req, res) => {
     req.getConnection((err, connection) => {
@@ -218,7 +218,7 @@ router.get('/cursos-completos', (req, res) => {
         });
 
     })
-})
+});
 
 //rutas
 router.get('/ruta-crear', (req, res) => {
@@ -232,6 +232,118 @@ router.get('/ruta-crear', (req, res) => {
                 return res.status(500).send('Error al crear la ruta: ' + err);
             }
             res.send("Se creó la ruta");
+        });
+    });
+});
+
+//solicitud
+router.post('/solicitud-save', (req, res) => {
+    const solicitud = req.body;
+
+    // Validar que los datos obligatorios estén presentes
+    if (!solicitud.id_usuario || !solicitud.nombre || !solicitud.dni) {
+        return res.status(400).json({
+            error: 'Faltan datos obligatorios: id_usuario, nombre, dni'
+        });
+    }
+
+    req.getConnection((err, connection) => {
+        if (err) {
+            console.error('Error al conectar a la base de datos:', err);
+            return res.status(500).json({ error: 'Error al conectar a la base de datos' });
+        }
+
+        const query = `
+            INSERT INTO solicitud (
+                id_usuario, nombre, dni, fecha_nacimiento, numero_telefono, email, sexo, pais, departamento, distrito, direccion_domiciliaria, codigo_postal, referencia, estado
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        `;
+
+        const values = [
+            solicitud.id_usuario,
+            solicitud.nombre,
+            solicitud.dni,
+            solicitud.fecha_nacimiento,
+            solicitud.numero_telefono,
+            solicitud.email,
+            solicitud.sexo,
+            solicitud.pais,
+            solicitud.departamento,
+            solicitud.distrito,
+            solicitud.direccion_domiciliaria,
+            solicitud.codigo_postal,
+            solicitud.referencia,
+            solicitud.estado
+        ];
+
+        connection.query(query, values, (err, result) => {
+            if (err) {
+                console.error('Error al ejecutar la consulta:', err);
+                return res.status(500).json({ error: 'Error al ejecutar la consulta' });
+            }
+
+            res.json({ message: 'Solicitud guardada exitosamente', id_solicitud: result.insertId });
+        });
+    });
+});
+
+router.get('/solicitud-estado/:id_usuario', (req, res) => {
+    const id_usuario = req.params.id_usuario;
+
+    req.getConnection((err, connection) => {
+        if (err) {
+            console.error('Error al conectar a la base de datos:', err);
+            return res.status(500).json({ error: 'Error al conectar a la base de datos' });
+        }
+
+        const query = `
+            SELECT estado, fecha
+            FROM solicitud
+            WHERE id_usuario = ?
+            LIMIT 1
+        `;
+
+        connection.query(query, [id_usuario], (err, results) => {
+            if (err) {
+                console.error('Error al ejecutar la consulta:', err);
+                return res.status(500).json({ error: 'Error al ejecutar la consulta' });
+            }
+
+            if (results.length === 0) {
+                return res.status(404).json({ error: 'Solicitud no encontrada' });
+            }
+
+            res.json({ estado: results[0].estado });
+        });
+    });
+});
+
+router.post('/solicitud-check', (req, res) => {
+    const { id_usuario } = req.body;
+
+    if (!id_usuario) {
+        return res.status(400).json({ error: 'Falta el ID del usuario' });
+    }
+
+    req.getConnection((err, connection) => {
+        if (err) {
+            console.error('Error al conectar a la base de datos:', err);
+            return res.status(500).json({ error: 'Error al conectar a la base de datos' });
+        }
+
+        const query = `
+            SELECT id_solicitud
+            FROM solicitud
+            WHERE id_usuario = ? AND estado = 'En espera'
+        `;
+
+        connection.query(query, [id_usuario], (err, results) => {
+            if (err) {
+                console.error('Error al ejecutar la consulta:', err);
+                return res.status(500).json({ error: 'Error al ejecutar la consulta' });
+            }
+
+            res.json({ hasSolicitud: results.length > 0 });
         });
     });
 });
