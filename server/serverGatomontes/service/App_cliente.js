@@ -313,7 +313,10 @@ router.get('/solicitud-estado/:id_usuario', (req, res) => {
                 return res.status(404).json({ error: 'Solicitud no encontrada' });
             }
 
-            res.json({ estado: results[0].estado });
+            res.json({ 
+                estado: results[0].estado,
+                fecha: results[0].fecha
+            });
         });
     });
 });
