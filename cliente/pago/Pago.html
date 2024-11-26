@@ -64,30 +64,18 @@
             </label>
           </div>
 
-          <!-- Información de Tarjeta (solo visible para Visa/Mastercard) -->
-          <div id="card-info" class="form-container" style="display: none;">
-            <h3 class="title">Información de la Tarjeta</h3>
-            <div class="inputBox">
-              <label for="cardName">Titular de la Tarjeta</label>
-              <input type="text" id="cardName" placeholder="Nombre completo" required />
-            </div>
-            <div class="inputBox">
-              <label for="cardNumber">Número de la Tarjeta</label>
-              <input type="text" id="cardNumber" placeholder="1111 - 2222 - 3333 - 4444" required maxlength="19" oninput="formatCardNumber(this)" />
-            </div>
-            <div class="inputBox">
-              <label for="expiryDate">Fecha de Vencimiento</label>
-              <input type="text" id="expiryDate" placeholder="MM/AA" required maxlength="5" oninput="formatExpiryDate(this)" />
-            </div>
-            <div class="inputBox">
-              <label for="cvv">CVV</label>
-              <input type="text" id="cvv" placeholder="CVV" required maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
-            </div>
-          </div>
+        <!-- Información de Tarjeta (solo visible para Visa/Mastercard) -->
+      <!-- Información de Tarjeta (visible cuando se selecciona Visa/Mastercard) -->
+      <div id="card-info" class="form-container" style="display: none;">
+        <div class="inputBox">
+            <label for="cardName">Titular de la Tarjeta</label>
+            <input type="text" id="cardName" placeholder="Nombre del titular" required />
+        </div>
+        <label for="card-element">Detalles de la tarjeta</label>
+        <div id="card-element"></div> <!-- Contenedor para Stripe Elements -->
+        <div id="card-errors" role="alert"></div>
+      </div>
 
-
-          <!-- Stripe Element oculto -->
-<div id="hidden-card-element" style="display: none;"></div>
       </form>
     </div>
     
@@ -137,6 +125,6 @@
 <script src="js/compra.js"></script>
 <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
 <script src="https://js.stripe.com/v3/"></script>
-
+<script src="js/Format.js"></script>
   </body>
 </html>

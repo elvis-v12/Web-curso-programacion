@@ -16,12 +16,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const elements = stripe.elements();
 
   // Crea un elemento de tarjeta con Stripe Elements
-  const cardElement = elements.create('card', { style: { base: { fontSize: '16px' } } });
-  cardElement.mount('#hidden-card-element');
+  const cardElement = elements.create('card', {
+    style: {
+      base: {
+        fontSize: '16px',
+        color: '#32325d',
+        '::placeholder': {
+          color: '#aab7c4',
+        },
+      },
+      invalid: {
+        color: '#fa755a',
+      },
+    },
+  });
+  cardElement.mount('#card-element'); // Asegúrate de que este ID coincida con tu HTML
 
   if (!resumenOrden || !totalPrecioOriginal || !totalDescuento || !totalFinal) {
-    console.error("No se encontraron los elementos del DOM necesarios.");
-    return;
+    throw new Error("No se encontraron los elementos del DOM necesarios.");
   }
 
   if (productosEnCarrito.length > 0) {
@@ -32,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       li.classList.add("order-item");
       li.innerHTML = `
         <div class="item-summary">
-          <img src="../../V_R_Productos/${producto.foto || "default.jpg"}" width="50" height="50" alt="${producto.nombreProducto}" class="item-image" loading="lazy">
+          <img src="${producto.foto || 'https://via.placeholder.com/50'}" width="50" height="50" alt="${producto.nombreProducto}" class="item-image" loading="lazy">
           <div class="item-title">${producto.nombreProducto}</div>
         </div>
         <div class="item-price">
@@ -59,10 +71,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Agrega el evento de clic al botón "Completar pago"
   document.querySelector('.purchase-button').addEventListener('click', async () => {
-    const cardName = document.getElementById('cardName').value.trim();
+    // Validar campos requeridos
+    const name = document.getElementById('name')?.value?.trim();
+    const email = document.getElementById('email')?.value?.trim();
+    const cardName = document.getElementById('cardName')?.value?.trim();
 
-    if (!cardName) {
-      alert('Por favor, completa el nombre del titular de la tarjeta.');
+    console.log({ name, email, cardName }); // Depuración para verificar valores
+
+    if (!name || !email || !cardName) {
+      alert('Por favor, completa todos los campos requeridos antes de continuar.');
+      return;
+    }
+
+    // Validar formato del correo electrónico
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert('Por favor, ingresa un correo electrónico válido.');
       return;
     }
 
@@ -84,7 +108,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (error) {
-        throw new Error(error.message);
+        console.error('Error al generar el token:', error);
+        alert(`Error: ${error.message}`);
+        return; // Detiene el flujo si hay un error
       }
 
       // Envía el token al servidor para procesar el pago

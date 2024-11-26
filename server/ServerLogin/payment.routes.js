@@ -4,30 +4,26 @@ const router = express.Router();
 
 router.post('/process-payment', async (req, res) => {
     console.log('Cuerpo de la solicitud recibido:', req.body);
-    const { cardName, cardNumber, expiryDate, cvv } = req.body;
+    const { token, amount } = req.body;
 
-    if (!cardName || !cardNumber || !expiryDate || !cvv) {
-        return res.status(400).json({ success: false, message: 'Todos los campos son obligatorios.' });
+    if (!token || !amount) {
+        return res.status(400).json({ success: false, message: 'El token y el monto son obligatorios.' });
     }
 
     try {
-        const [exp_month, exp_year] = expiryDate.split('/');
-        const paymentMethod = await stripe.paymentMethods.create({
-            type: 'card',
-            card: {
-                number: cardNumber.replace(/\s/g, ''),
-                exp_month,
-                exp_year,
-                cvc: cvv,
-            },
-            billing_details: { name: cardName },
-        });
-
         const paymentIntent = await stripe.paymentIntents.create({
-            amount: 1000, // Monto en centavos
+            amount: Math.round(amount * 100), // Convertir a centavos
             currency: 'usd',
-            payment_method: paymentMethod.id,
+            payment_method_data: {
+                type: 'card',
+                card: { token: token },
+            },
             confirm: true,
+            automatic_payment_methods: {
+                enabled: true, // Habilitar métodos de pago automáticos
+            },
+            // Proporcionar una return_url para métodos de pago que lo requieran
+            return_url: 'http://localhost:3000/success',
         });
 
         res.status(200).json({ success: true, paymentIntent });
