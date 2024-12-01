@@ -6,15 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
 
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-/>
-<link rel="stylesheet" href="CSS/mensajeria.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="CSS/mensajeria.css">
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="CSS/curso.css">
   <link rel="stylesheet" href="CSS/becas.css">
   <link rel="stylesheet" href="CSS/certificado.css">
+  <link rel="stylesheet" href="CSS/addcourse.css">
   <title>Admin</title>
 </head>
 
@@ -78,6 +76,12 @@
         <a href="#">
           <i class="bx bxs-message-dots"></i>
           <span class="text">Mensajería</span>
+        </a>
+      </li>
+      <li data-section="add-courses">
+        <a href="#">
+          <i class="bx bxs-book"></i>
+          <span class="text">Añadir Cursos</span>
         </a>
       </li>
     </ul>
@@ -478,8 +482,8 @@
 
       <section id="coursesEdit" class="section">
         <header class="coursesEdit_tabs">
-          <div class="coursesEdit_tabs__item coursesEdit-1">Datos</div>
-          <div class="coursesEdit_tabs__item coursesEdit-2 active">Contenido</div>
+          <div class="coursesEdit_tabs__item coursesEdit-1 active">Datos</div>
+          <div class="coursesEdit_tabs__item coursesEdit-2 ">Contenido</div>
         </header>
         <!-- Parte de cmodificar datos de un curso -->
         <div class="coursesEdit__content coursesEdit__content-datos coursesEdit-1"
@@ -619,163 +623,309 @@
 
       </section>
 
+      <section id="coursesNew" class="section">
+        <header class="coursesEdit_tabs">
+          <div class="coursesEdit_tabs__item coursesEdit-1 active">Datos</div>
+          <div class="coursesEdit_tabs__item coursesEdit-2 ">Contenido</div>
+        </header>
+        <!-- Parte de cmodificar datos de un curso -->
+        <div class="coursesEdit__content coursesEdit__content-datos coursesEdit-1"
+          style="visibility:hidden; display:none">
+          <form class="form-course-content">
+            <!-- Div para los campos de datos -->
+            <div class="course-data">
+              <div class="course-data__field">
+                <label for="course-name">Nombre</label>
+                <input type="text" id="course-name" name="name" placeholder="Nombre del curso" required>
+              </div>
+
+              <div class="course-data__field">
+                <label for="course-price">Precio</label>
+                <input type="number" id="course-price" name="price" placeholder="Precio del curso" required>
+              </div>
+
+              <div class="course-data__field">
+                <label for="course-language">Lenguaje</label>
+                <input type="text" id="course-language" name="language" placeholder="Lenguaje del curso" required>
+              </div>
+
+              <!-- Div editable para Descripción -->
+              <div class="course-data__field">
+                <label for="course-description">Descripción</label>
+                <div id="course-description" class="editable-field" contenteditable="true"
+                  placeholder="Descripción del curso"></div>
+                <div class="editor-options">
+                  <button type="button" class="btn-bold">Negrita</button>
+                  <button type="button" class="btn-list">Lista</button>
+                  <button type="button" class="btn-list-ordered">Lista Enumerada</button>
+                </div>
+              </div>
+
+              <!-- Div editable para Resumen -->
+              <div class="course-data__field">
+                <label for="course-summary">Resumen</label>
+                <div id="course-summary" class="editable-field" contenteditable="true" placeholder="Resumen del curso">
+                </div>
+                <div class="editor-options">
+                  <button type="button" class="btn-bold">Negrita</button>
+                  <button type="button" class="btn-list">Lista</button>
+                  <button type="button" class="btn-list-ordered">Lista Enumerada</button>
+                </div>
+              </div>
+
+              <!-- Div editable para Detalles -->
+              <div class="course-data__field">
+                <label for="course-details">Detalles</label>
+                <div id="course-details" class="editable-field" contenteditable="true" placeholder="Detalles del curso">
+                </div>
+                <div class="editor-options">
+                  <button type="button" class="btn-bold">Negrita</button>
+                  <button type="button" class="btn-list">Lista</button>
+                  <button type="button" class="btn-list-ordered">Lista Enumerada</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Div para el botón de envío -->
+            <div class="form-options-content-menu">
+              <button type="submit">Guardar cambios</button>
+            </div>
+          </form>
+        </div>
+        <!-- Parte de cmodificar contenido de un curso -->
+        <div class="coursesEdit__content coursesEdit__content-contenido coursesEdit-2 "
+          style="visibility:hidden; display:none">
+          <div class="module-list">
+            <h3>Módulos del Curso</h3>
+            <ul class="module-items">
+              <li class="add-module-item">
+                <button class="btn-add-module">Agregar Nuevo Módulo</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="module-edit-form">
+            <h3>Editar o Agregar Módulo</h3>
+            <form class="form-module-content">
+              <div class="module-data">
+                <div class="module-data__field">
+                  <label for="module-name">Nombre del Módulo</label>
+                  <input type="text" id="module-name" placeholder="Nombre del módulo" required>
+                </div>
+                <div class="module-data__field">
+                  <label for="module-description">Descripción</label>
+                  <div id="module-description" class="editable-field" contenteditable="true"></div>
+                  <div class="editor-options">
+                    <button type="button" class="btn-bold">Negrita</button>
+                    <button type="button" class="btn-list">Lista</button>
+                    <button type="button" class="btn-list-ordered">Lista Enumerada</button>
+                  </div>
+                </div>
+              </div>
+              <div class="form-options-content-menu">
+                <button type="submit">Guardar Módulo</button>
+              </div>
+            </form>
+
+            <!-- Formulario para sesiones dentro de cada módulo -->
+            <div class="session-edit-form">
+              <h3>Editar o Agregar Sesión</h3>
+              <form class="form-session-content">
+                <div class="session-data">
+                  <div class="session-data__field">
+                    <label for="session-name">Nombre de la Sesión</label>
+                    <input type="text" id="session-name" placeholder="Nombre de la sesión" required>
+                  </div>
+                  <div class="session-data__field">
+                    <label for="session-description">Descripción</label>
+                    <div id="session-description" class="editable-field" contenteditable="true"></div>
+                    <div class="editor-options">
+                      <button type="button" class="btn-bold">Negrita</button>
+                      <button type="button" class="btn-list">Lista</button>
+                      <button type="button" class="btn-list-ordered">Lista Enumerada</button>
+                    </div>
+                  </div>
+                  <div class="session-data__field">
+                    <label for="session-content">Contenido (Video URL)</label>
+                    <input type="url" id="session-content" placeholder="URL del video" required>
+                  </div>
+                  <div class="session-edit-resources">
+                    <label>Recursos de la Sesión</label>
+                  </div>
+                  <div class="session-data__field">
+                    <label for="session-cover">Portada de la Sesión</label>
+                    <input type="file" id="session-cover">
+                  </div>
+                </div>
+                <div class="form-options-content-menu">
+                  <button type="submit">Guardar Sesión</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+
       <div id="learning-paths" class="section">
         <h1>Rutas de Aprendizaje</h1>
         <!-- Contenido para rutas de aprendizaje -->
-         
+
       </div>
 
       <div id="certificates" class="section">
         <h1>Certificados</h1>
         <!-- Contenido para certificados -->
-<!-- Tabla de certificados -->
-<div class="certificados">
-  <table id="tabla-certificados">
-      <thead>
-          <tr>
-              <th>Nombre del Estudiante</th>
-              <th>Curso</th>
-              <th>Nota</th>
-              <th>Fecha del Curso</th>
-              <th>Profesor</th>
-              <th>Acción</th>
-          </tr>
-      </thead>
-      <tbody>
-          <!-- Filas generadas dinámicamente por JavaScript -->
-      </tbody>
-  </table>
-</div>
+        <!-- Tabla de certificados -->
+        <div class="certificados">
+          <table id="tabla-certificados">
+            <thead>
+              <tr>
+                <th>Nombre del Estudiante</th>
+                <th>Curso</th>
+                <th>Nota</th>
+                <th>Fecha del Curso</th>
+                <th>Profesor</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Filas generadas dinámicamente por JavaScript -->
+            </tbody>
+          </table>
+        </div>
 
-<!-- Modal para mostrar el certificado -->
-<div id="modal-certificado" class="modal">
-  <div class="modal-content">
-      <span class="close" onclick="cerrarModal()">&times;</span>
-      <iframe id="iframe-certificado" src="" frameborder="0" class="iframe-certificado"></iframe>
-      <!-- Botón para descargar el certificado como PDF -->
-      <button id="descargar-certificado" class="button-link" onclick="descargarCertificadoPDF()">Descargar Certificado en PDF</button>
-  </div>
-</div>
+        <!-- Modal para mostrar el certificado -->
+        <div id="modal-certificado" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <iframe id="iframe-certificado" src="" frameborder="0" class="iframe-certificado"></iframe>
+            <!-- Botón para descargar el certificado como PDF -->
+            <button id="descargar-certificado" class="button-link" onclick="descargarCertificadoPDF()">Descargar
+              Certificado en PDF</button>
+          </div>
+        </div>
       </div>
 
       <!-- Contenido para solicitudes de becas -->
       <div id="scholarship-requests" class="section">
         <h1>Solicitudes de Becas</h1>
-          <!-- Filtros de búsqueda -->
-          <div class="filtros">
-            <select id="filtroEstado" onchange="filtrarPostulantes()">
-                <option value="">Estado de Solicitud</option>
-                <option value="Pendiente">Pendiente</option>
-                <option value="Aprobado">Aprobado</option>
-                <option value="Rechazado">Rechazado</option>
-            </select>
-            <input type="number" id="filtroEdad" placeholder="Edad" onchange="filtrarPostulantes()">
-            <input type="number" id="filtroPromedio" placeholder="Promedio mínimo" onchange="filtrarPostulantes()">
-            <input type="text" id="busquedaNombre" placeholder="Buscar por nombre" onkeyup="filtrarPostulantes()">
+        <!-- Filtros de búsqueda -->
+        <div class="filtros">
+          <select id="filtroEstado" onchange="filtrarPostulantes()">
+            <option value="">Estado de Solicitud</option>
+            <option value="Pendiente">Pendiente</option>
+            <option value="Aprobado">Aprobado</option>
+            <option value="Rechazado">Rechazado</option>
+          </select>
+          <input type="number" id="filtroEdad" placeholder="Edad" onchange="filtrarPostulantes()">
+          <input type="number" id="filtroPromedio" placeholder="Promedio mínimo" onchange="filtrarPostulantes()">
+          <input type="text" id="busquedaNombre" placeholder="Buscar por nombre" onkeyup="filtrarPostulantes()">
         </div>
 
         <!-- Tabla de postulantes -->
         <div class="postulantes">
-            <table id="tabla-postulantes">
-                <thead>
-                    <tr>
-                        <th>Nombre y Apellidos</th>
-                        <th>Fecha de Nacimiento</th>
-                        <th>Promedio</th>
-                        <th>Estado de Solicitud</th>
-                        <th>Fecha de Solicitud</th>
-                        <th>Más Info</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Filas generadas dinámicamente por JavaScript -->
-                </tbody>
-            </table>
-            <!-- Paginación -->
-            <div class="pagination">
-                <button onclick="cambiarPagina('anterior')">Anterior</button>
-                <span id="paginaActual">1</span>
-                <button onclick="cambiarPagina('siguiente')">Siguiente</button>
-            </div>
+          <table id="tabla-postulantes">
+            <thead>
+              <tr>
+                <th>Nombre y Apellidos</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Promedio</th>
+                <th>Estado de Solicitud</th>
+                <th>Fecha de Solicitud</th>
+                <th>Más Info</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Filas generadas dinámicamente por JavaScript -->
+            </tbody>
+          </table>
+          <!-- Paginación -->
+          <div class="pagination">
+            <button onclick="cambiarPagina('anterior')">Anterior</button>
+            <span id="paginaActual">1</span>
+            <button onclick="cambiarPagina('siguiente')">Siguiente</button>
+          </div>
         </div>
 
         <!-- Modal de detalles -->
         <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="cerrarModal()">&times;</span>
-                 <h2>Información del Postulante</h2>
-        
-        <div class="modal-body">
-            <div class="left-section">
+          <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2>Información del Postulante</h2>
+
+            <div class="modal-body">
+              <div class="left-section">
                 <div class="profile-avatar">
-                    <img src="avatar_placeholder.png" alt="Avatar del Postulante" class="avatar">
+                  <img src="avatar_placeholder.png" alt="Avatar del Postulante" class="avatar">
                 </div>
-            </div>
-            
-            <div class="right-section">
+              </div>
+
+              <div class="right-section">
                 <!-- Información personal -->
                 <div class="profile-info">
-                    <div class="info-item">
-                        <label>Nombre Completo:</label>
-                        <span id="nombre"></span>
-                    </div>
-                    <div class="info-item">
-                        <label>Fecha de Nacimiento:</label>
-                        <span id="fechaNacimiento"></span>
-                    </div>
-                    <div class="info-item">
-                        <label>Sexo:</label>
-                        <span id="sexo"></span>
-                    </div>
-                    <div class="info-item">
-                        <label>Teléfono:</label>
-                        <span id="telefono"></span>
-                    </div>
-                    <div class="info-item">
-                        <label>Correo Electrónico:</label>
-                        <span id="email"></span>
-                    </div>
-                    <div class="info-item">
-                        <label>Dirección:</label>
-                        <span id="direccion"></span>
-                    </div>
-                    <div class="info-item">
-                        <label>Promedio:</label>
-                        <span id="promedio"></span>
-                    </div>
-                    <div class="info-item">
-                        <label>Estado de Solicitud:</label>
-                        <span id="estadoSolicitud"></span>
-                    </div>
+                  <div class="info-item">
+                    <label>Nombre Completo:</label>
+                    <span id="nombre"></span>
+                  </div>
+                  <div class="info-item">
+                    <label>Fecha de Nacimiento:</label>
+                    <span id="fechaNacimiento"></span>
+                  </div>
+                  <div class="info-item">
+                    <label>Sexo:</label>
+                    <span id="sexo"></span>
+                  </div>
+                  <div class="info-item">
+                    <label>Teléfono:</label>
+                    <span id="telefono"></span>
+                  </div>
+                  <div class="info-item">
+                    <label>Correo Electrónico:</label>
+                    <span id="email"></span>
+                  </div>
+                  <div class="info-item">
+                    <label>Dirección:</label>
+                    <span id="direccion"></span>
+                  </div>
+                  <div class="info-item">
+                    <label>Promedio:</label>
+                    <span id="promedio"></span>
+                  </div>
+                  <div class="info-item">
+                    <label>Estado de Solicitud:</label>
+                    <span id="estadoSolicitud"></span>
+                  </div>
                 </div>
 
                 <!-- Documentos Adjuntos -->
                 <div class="documents-section">
-                    <h3>Documentos Adjuntos</h3>
-                    <ul id="documentos" class="document-list">
-                        <!-- Enlaces a documentos -->
-                    </ul>
+                  <h3>Documentos Adjuntos</h3>
+                  <ul id="documentos" class="document-list">
+                    <!-- Enlaces a documentos -->
+                  </ul>
                 </div>
 
                 <!-- Cursos -->
                 <div class="courses-section">
-    <h3>Cursos Libres Completados</h3>
-    <div class="course-cards" id="cursosLibres">
-        <!-- Tarjetas de cursos completados generadas dinámicamente -->
-    </div>
+                  <h3>Cursos Libres Completados</h3>
+                  <div class="course-cards" id="cursosLibres">
+                    <!-- Tarjetas de cursos completados generadas dinámicamente -->
+                  </div>
 
-    <h3>Cursos Elegidos para Beca</h3>
-    <div class="course-cards" id="cursosPostulados">
-        <!-- Tarjetas de cursos postulados generadas dinámicamente -->
-    </div>
-</div>
-            </div>
-        </div>
-                <div class="modal-actions">
-                    <button class="btn-accept" onclick="gestionarBeca('aprobar')">Aprobar Beca</button>
-                    <button class="btn-reject" onclick="gestionarBeca('rechazar')">Rechazar Beca</button>
+                  <h3>Cursos Elegidos para Beca</h3>
+                  <div class="course-cards" id="cursosPostulados">
+                    <!-- Tarjetas de cursos postulados generadas dinámicamente -->
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="modal-actions">
+              <button class="btn-accept" onclick="gestionarBeca('aprobar')">Aprobar Beca</button>
+              <button class="btn-reject" onclick="gestionarBeca('rechazar')">Rechazar Beca</button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -808,7 +958,7 @@
               </div>
             </div>
           </div>
-    
+
           <div class="chat-container">
             <div class="chat-header" id="chat-header">Seleccione un chat</div>
             <div class="chat-messages" id="chat-messages">
@@ -824,29 +974,17 @@
             </div>
             <div class="chat-input-container">
               <button id="emoji-button"><i class="fas fa-smile"></i></button>
-              <input
-                type="text"
-                id="chat-input"
-                placeholder="Escribe un mensaje..."
-                onkeypress="handleKeyPress(event)"
-              />
-    
+              <input type="text" id="chat-input" placeholder="Escribe un mensaje..."
+                onkeypress="handleKeyPress(event)" />
+
               <!-- Input para archivos, oculto inicialmente -->
-              <input
-                type="file"
-                id="file-input"
-                style="display: none"
-                onchange="handleFileSelect(event)"
-              />
-    
+              <input type="file" id="file-input" style="display: none" onchange="handleFileSelect(event)" />
+
               <!-- Botón de adjuntar archivos, que activa el input de archivos -->
-              <button
-                id="attach-button"
-                onclick="document.getElementById('file-input').click();"
-              >
+              <button id="attach-button" onclick="document.getElementById('file-input').click();">
                 <i class="fas fa-paperclip"></i>
               </button>
-    
+
               <button onclick="sendMessage()" id="send-button">
                 <i class="fas fa-paper-plane"></i>
               </button>
@@ -854,6 +992,86 @@
           </div>
         </div>
       </div>
+
+      <div id="add-courses" class="section">
+        <h1>Nuevos cursos</h1>
+        <div class="coursesEdit__content coursesEdit__content-datos coursesEdit-1">
+          <form class="form-course-content">
+            <!-- Div para los campos de datos -->
+            <div class="course-data">
+              <div class="course-data__field">
+                <label for="course-name">Nombre</label>
+                <input type="text" id="course-name" name="name" placeholder="Nombre del curso" required>
+              </div>
+
+              <div class="course-data__field">
+                <label for="course-price">Precio</label>
+                <input type="number" id="course-price" name="price" placeholder="Precio del curso" required>
+              </div>
+
+              <div class="course-data__field">
+                <label for="course-language">Lenguaje</label>
+                <input type="text" id="course-language" name="language" placeholder="Lenguaje del curso" required>
+              </div>
+
+              <!-- Select para rutas de aprendizaje -->
+              <div class="course-data__field">
+                <label for="course-learning-path">Ruta de Aprendizaje</label>
+                <select id="course-learning-path" name="learning-path" required>
+                  <option value="" disabled selected>Selecciona una ruta de aprendizaje</option>
+                  <option value="1">Desarrollo Web</option>
+                  <option value="2">Ciencia de Datos</option>
+                  <option value="3">Desarrollo Móvil</option>
+                  <option value="4">Computación en la Nube</option>
+                  <option value="5">Inteligencia Artificial y Machine Learning</option>
+                </select>
+              </div>
+
+              <!-- Div editable para Descripción -->
+              <div class="course-data__field">
+                <label for="course-description">Descripción</label>
+                <div id="course-description" class="editable-field" contenteditable="true"
+                  placeholder="Descripción del curso"></div>
+                <div class="editor-options">
+                  <button type="button" class="btn-bold">Negrita</button>
+                  <button type="button" class="btn-list">Lista</button>
+                  <button type="button" class="btn-list-ordered">Lista Enumerada</button>
+                </div>
+              </div>
+
+              <!-- Div editable para Resumen -->
+              <div class="course-data__field">
+                <label for="course-summary">Resumen</label>
+                <div id="course-summary" class="editable-field" contenteditable="true" placeholder="Resumen del curso">
+                </div>
+                <div class="editor-options">
+                  <button type="button" class="btn-bold">Negrita</button>
+                  <button type="button" class="btn-list">Lista</button>
+                  <button type="button" class="btn-list-ordered">Lista Enumerada</button>
+                </div>
+              </div>
+
+              <!-- Div editable para Detalles -->
+              <div class="course-data__field">
+                <label for="course-details">Detalles</label>
+                <div id="course-details" class="editable-field" contenteditable="true" placeholder="Detalles del curso">
+                </div>
+                <div class="editor-options">
+                  <button type="button" class="btn-bold">Negrita</button>
+                  <button type="button" class="btn-list">Lista</button>
+                  <button type="button" class="btn-list-ordered">Lista Enumerada</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Div para el botón de envío -->
+            <div class="form-options-content-menu-new-course">
+              <button>Crear nuevo curso</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
     </main>
   </section>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -862,6 +1080,7 @@
   <script src="JS/mensajeria.js"></script>
   <script src="JS/beca.js"></script>
   <script src="JS/certificados.js"></script>
+  <script type="module" src="JS/add-course.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </body>

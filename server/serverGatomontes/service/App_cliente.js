@@ -8,16 +8,13 @@ router.get('/cursos', (req, res) => {
             return res.status(500).send('Error al conectar a la base de datos');
         }
 
-        const query = `SELECT *
-                    FROM webcursos.cursos c
-                    WHERE c.id_curso = ${req.query.code}
-                    `;
+        const query = `SELECT * FROM webcursos.cursos c JOIN webcursos.profesor p ON c.id_profesor = p.id_profesor;`;
 
         connection.query(query, (err, resultados) => {
             if (err) {
                 return res.status(500).send('Error al obtener los cursos');
             }
-            res.send(resultados[0]);
+            res.send(resultados);
         });
     });
 });
@@ -239,6 +236,8 @@ router.get('/ruta-crear', (req, res) => {
 //solicitud
 router.post('/solicitud-save', (req, res) => {
     const solicitud = req.body;
+    console.log(solicitud);
+
 
     // Validar que los datos obligatorios estén presentes
     if (!solicitud.id_usuario || !solicitud.nombre || !solicitud.dni) {
@@ -313,7 +312,7 @@ router.get('/solicitud-estado/:id_usuario', (req, res) => {
                 return res.status(404).json({ error: 'Solicitud no encontrada' });
             }
 
-            res.json({ 
+            res.json({
                 estado: results[0].estado,
                 fecha: results[0].fecha
             });
@@ -347,6 +346,40 @@ router.post('/solicitud-check', (req, res) => {
             }
 
             res.json({ hasSolicitud: results.length > 0 });
+        });
+    });
+});
+
+router.post('/new-course', (req, res) => {
+    req.getConnection((err, connection) => {
+        if (err) {
+            return res.status(500).send('Error al conectar a la base de datos');
+        }
+
+        // Desestructuración de los datos enviados desde el frontend
+        const { titulo, precio, idioma, idCategoria, descripcion, resumen, detalles } = req.body;
+
+        // Verificar que todos los campos requeridos estén presentes
+        // Verificar que todos los campos requeridos estén presentes
+        if (!titulo || !precio || !idioma || !idCategoria) {
+            return res.status(400).send({
+                error: 'Faltan campos obligatorios',
+                valoresRecibidos: { titulo, precio, idioma, idCategoria, descripcion, resumen, detalles }
+            });
+        }
+
+
+        // Consulta SQL para insertar los datos
+        const query = `
+            INSERT INTO webcursos.cursos (titulo, precio, idioma, id_categoria, descripcion, resumen, detalles, idRuta, id_profesor, portada)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        `;
+
+        connection.query(query, [titulo, precio, idioma, idCategoria, descripcion, resumen, detalles, 1, 1, "ruta/portada.jpg"], (err, resultados) => {
+            if (err) {
+                return res.status(500).send('Error al crear el curso: ' + err.message);
+            }
+            res.status(201).send({ message: 'Curso creado exitosamente', id: resultados.insertId });
         });
     });
 });

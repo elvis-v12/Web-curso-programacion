@@ -106,7 +106,9 @@ import { CursosService } from "./CursosService.js";
             }
 
             async renderCourses(cursos = null) {
-                  const cursosNovedades = cursos || await this.cursoService.findCoursesNovedades() || [];
+                  const cursosNovedades = cursos || await this.cursoService.findAll() || [];
+                  console.log(cursosNovedades);
+                  
 
                   cursosNovedades.forEach(curso => {
                         this.coursesContent().innerHTML += cursoTemplade(curso);
